@@ -85,32 +85,6 @@ body {
   border-radius: 3px;
 }
 
-.eleven p {
-  font-size: 2rem;
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.idea-11 strong {
-  padding: 3px 5px;
-  border-radius: 3px;
-  display: inline-block;
-}
-
-.eleven .idea-12 {
-  font-size: 4rem;
-}
-
-.idea-12 span,
-.idea-13 span,
-.wish-hbd span {
-  display: inline-block;
-}
-
-.idea-13 span {
-  font-size: 15rem;
-}
 
 .five p {
   font-size: 2rem;
