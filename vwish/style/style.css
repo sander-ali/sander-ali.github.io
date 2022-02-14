@@ -85,30 +85,30 @@ body {
   border-radius: 3px;
 }
 
-.tenth p {
+.eleven p {
   font-size: 2rem;
   position: absolute;
   left: 0;
   right: 0;
 }
 
-.idea-3 strong {
+.idea-11 strong {
   padding: 3px 5px;
   border-radius: 3px;
   display: inline-block;
 }
 
-.five .idea-5 {
+.eleven .idea-12 {
   font-size: 4rem;
 }
 
-.idea-5 span,
-.idea-6 span,
+.idea-12 span,
+.idea-13 span,
 .wish-hbd span {
   display: inline-block;
 }
 
-.idea-6 span {
+.idea-13 span {
   font-size: 15rem;
 }
 
