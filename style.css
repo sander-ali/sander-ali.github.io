@@ -65,10 +65,7 @@ main {
 }
 
 hr {
-    background-color: var(--color-bg-secondary);
-    border: none;
-    height: 1px;
-    margin: 4rem 0;
+   border-top: 5px solid #095484;
 }
 
 section {
