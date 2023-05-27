@@ -24,6 +24,14 @@ I completed my PhD in 2019 at the [Information Systems Lab](https://www.research
 
 <br>
 
+### News ###
+
+  * Runner-up for UG2+ Coded Target Restoration Challenge at CVPR 2023.
+  * Co-authored paper "NTIRE 2023 Challenge on Image Denoising: Methods and Results" to appear in CVPR workshop 2023.
+  * Oral Presentation of paper "SPIN: Simulated Poisoning and Inversion Network for Federated Learning-Based 6G Vehicular Networks" at IEEE International Conference on Communications (ICC), 2023.
+  * [ Web App for Image Denoising ](https://huggingface.co/spaces/sunder-ali/Image_Denoising_Demo) --Method included in NTIRE Benchmark Study--
+  * Serving as Guest Editor for special issue [Open Radio Access Networks: Architecture, Challenges, Opportunities, and Use Cases in Vehicular Networks](https://vtsociety.org/files/ieeevts/2023-02/ORAN-SI-CFP-IEEE-TVT2023_Updated.pdf) at IEEE Transactions on Vehicular Technology, 2023.
+
 ### Research Interests ###
   * Computer Vision
   * Privacy Preserving Machine Learning

@@ -4,13 +4,12 @@ title: ""
 ---
 
 ## Teaching ##
-I have served as a TA and guest lecturer in the following courses (two semesters each):
+I am currently teaching following courses at Undergraduate and Postgraduate Level
 
 #### Postgraduate ####
-* Speech Technology
-* Speech Processing 
-* Machine Learning and Adaptive Intelligence 
+* Advanced Data Science
+* Advanced Machine Learning 
 
 #### Undergraduate ####
-* Data-driven Computing 
-* Electronics II 
+* Computer Vision and Image Processing
+* Data Science
