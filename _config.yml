@@ -1,5 +1,5 @@
-title: "Erfan Loweimi"
-author: "Erfan Loweimi"
+title: "Sunder Ali Khowaja"
+author: "Sunder Ali Khowaja"
 description: ""
 permalink: /:title/
 lang: "en"
@@ -36,13 +36,11 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:erfan.loweimi@gmail.com"}
-  - {title: Google Scholar, icon: google, url: "https://scholar.google.co.uk/citations?user=ke3k7XEAAAAJ&hl=en"}
-  - {title: Research Gate, icon: researchgate, url: "https://www.researchgate.net/profile/Erfan-Loweimi"}
-  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/erfan-loweimi-b5454759/?originalSubdomain=uk"}
-  - {title: Github, icon: github, url: "https://github.com/eloweimi"}
-  - {title: Twitter, icon: twitter, url: "https://twitter.com/loweimi?lang=en"}
-  - {title: ORCiD, icon: orcid, url: "https://orcid.org/0000-0002-8761-021X"}
+  - {title: Mail, icon: envelope, url: "mailto:sunder.ali@ieee.org"}
+  - {title: Google Scholar, icon: google, url: "https://scholar.google.com/citations?user=JG9e8TsAAAAJ&hl=en&oi=ao"}
+  - {title: Research Gate, icon: researchgate, url: "https://www.researchgate.net/profile/Sunder-Khowaja"}
+  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/sanderali/"}
+  - {title: Github, icon: github, url: "https://github.com/sander-ali"}
 
 
 comments:
