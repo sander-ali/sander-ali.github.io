@@ -52,7 +52,62 @@ IEEE Internet of Things Journal, 2023. (Impact Factor: 10.238)
 
 ## 2021 ##
 
+19. K. Dev **<sup>&#8224;</sup>, S. A. Khowaja <sup>&#8224;</sup>**, A. S. Bist, V. Saini, S. Bhatia, “[Triage of Potential COVID-19 Patients from Chest X-ray Images using Hierarchical Convolutional Networks](https://link.springer.com/article/10.1007/s00521-020-05641-9)”, Neural Computing and Applications, 2021. (Impact Factor: 5.102) (**<sup>&#8224;</sup>** Equal contribution).
 
+20. K. Dev **<sup>&#8224;</sup>, S. A. Khowaja <sup>&#8224;</sup>**, B. S. Chowdhry, P. Kumar, S. Tanwar, G. Fortino, “[DDI: A Novel Architecture for Joint Active user Detection and IoT Device Identification in Grant-Free NOMA Systems for 6G and Beyond Networks](https://ieeexplore.ieee.org/abstract/document/9475985)”, IEEE Internet of Things Journal, 2021. (Impact Factor: 10.238) (**<sup>&#8224;</sup>** Equal contribution).
+
+21. **S. A. Khowaja**, P. Khuwaja, “[Q-learning and LSTM based deep active learning strategy for malware defense in industrial IoT applications](https://link.springer.com/article/10.1007/s11042-020-10371-0)”, Multimedia Tools and Applications, 2021. (Impact Factor: 2.577)
+
+22. **S. A. Khowaja**, P. Khuwaja, K. Dev, G. D. Aniello, “[VIRFIM: an AI and Internet of Medical Things-driven framework for healthcare using smart sensors](https://link.springer.com/article/10.1007/s00521-021-06434-4)”, Neural Computing and Applications, 2021. (Impact Factor: 5.102)
+
+23. **S. A. Khowaja**, K. Dev, P. Khowaja, P. Bellavista, “[Toward energy-efficient distributed federated learning for 6G networks](https://ieeexplore.ieee.org/abstract/document/9690145)”, IEEE Wireless Communications, 2021. (Impact Factor: 12.777)
+
+24. M. A. Jarwar **<sup>&#8224;</sup>, S. A. Khowaja <sup>&#8224;</sup>**, K. Dev, M. Adhikari, S.Hakak, “[NEAT: A resilient deep representational learning for fault detection using acoustic signals in IIoT environment](https://ieeexplore.ieee.org/abstract/document/9527336)”, IEEE Internet of Things Journal, 2021. (Impact Factor: 10.238)
+
+25. **S. A. Khowaja**, B. N. Yahya, S.-L. Lee, “[Cascaded and Recursive ConvNets (CRCNN): An effective and flexible approach for image denoising](https://www.sciencedirect.com/science/article/abs/pii/S0923596521002009)”, Signal Processing: Image Communication, 2021. (Impact Factor: 3.453)
+
+26. P. Khuwaja, **S. A. Khowaja**, K. Dev, “[Adversarial Learning Networks for FinTech applications using Heterogeneous Data Sources](https://ieeexplore.ieee.org/abstract/document/9499113)”, IEEE Internet of Things Journal, 2021. (Impact Factor: 10.238)
+
+27. H. Wang, X. Li, R. H. Jhaveri, T. R. Gadekallu, M. Zhu, T. A. Ahanger, **S. A. Khowaja**, “[Sparse Bayesian learning based channel estimation in FBMC/OQAM industrial IoT networks](https://www.sciencedirect.com/science/article/abs/pii/S0140366421002048)”, Computer Communications, 2021. (Impact Factor: 5.047)
+
+28. D.Liu, Y. Zhang, W. Wang, K. Dev, **S. A. Khowaja**, “[Flexible data integrity checking with original data recovery in IoT-enabled maritime transportation systems](https://ieeexplore.ieee.org/abstract/document/9609639)”, IEEE Transactions on Intelligent Transportation Systems, 2021. (Impact Factor: 9.551)
+
+29. K. Dev, R. K. Poluru, K. R. Lokesh, P. K. R. Maddikunta, **S. A. Khowaja**, “[Optimal Radius for Enhanced Lifetime in IoT using Hybridization of Rider and Grey Wolf Optimization](https://ieeexplore.ieee.org/abstract/document/9388896)”, IEEE Transactions on Green Communications and Networking, 2021. (Impact Factor: 3.525)
+
+30. G. Kumar, S. Basri, A. A. Imam, **S. A. Khowaja**, L.F. Capretz, A. O. Balogun, “[Data Harmonization of Heterogeneous Textual Data: A Systematic Literature Review](https://www.mdpi.com/2076-3417/11/17/8275)”, Applied Sciences, 2021. (Impact Factor: 2.838)
+
+## 2020 ##
+
+31. **S. A. Khowaja**, A. G. Prabono, F. Setiawan, B. N. Yahya, S.-L. Lee, “[Toward soft real-time stress detection using wrist-worn devices for human workspaces](https://link.springer.com/article/10.1007/s00500-020-05338-0)”, Soft Computing, 2020. (Impact Factor: 3.732)
+
+32. **S. A. Khowaja**, B. N. Yahya, S.-L. Lee, “[CAPHAR: context-aware personalized human activity recognition using associative learning in smart environments](https://hcis-journal.springeropen.com/articles/10.1186/s13673-020-00240-y)”, Human-Centric Computing and Information Sciences, 2020. (Impact Factor: 6.558)
+
+33. **S. A. Khowaja**, S.-L. Lee, “[Hybrid and hierarchical fusion networks: a deep cross-modal learning architecture for action recognition](https://link.springer.com/article/10.1007/s00521-019-04578-y)”, Neural Computing and Applications, 2020. (Impact Factor: 5.102)
+
+34. F. Setiawan, A. G. Prabono, **S. A. Khowaja**, W. Kim, K. Park, B. N. Yahya, S.-L. Lee, J. P. Hong, “[Fine-grained emotion recognition: fusion of physiological signals and facial expressions on spontaneous emotion corpus](https://www.inderscienceonline.com/doi/abs/10.1504/IJAHUC.2020.110824)”, International Journal of Ad Hoc and Ubiquitous Computing, 2020. (Impact Factor: 0.663)
+
+## 2019 ##
+
+35. **S. A. Khowaja**, S.-L. Lee, “[Semantic Image Networks for Human Action Recognition](https://link.springer.com/article/10.1007/s11263-019-01248-3)”, International Journal of Computer Vision, 2019. (Impact Factor: 13.369)
+
+36. **S. A. Khowaja**, P. Khuwaja, I. A. Ismaili, “[A framework for retinal vessel segmentation from fundus images using hybrid feature set and hierarchical classification](https://link.springer.com/article/10.1007/s11760-018-1366-x)”, Signal, Image, and Video Processing, 2019. (Impact Factor: 1.583)
+
+37. P. Khuwaja, **S. A. Khowaja**, I. Khoso, I. Lashari, “[Prediction of stock movement using phase space reconstruction and extreme learning machines](https://www.tandfonline.com/doi/abs/10.1080/0952813X.2019.1620870)”, Journal of Experimental and Theoretical Artificial Intelligence, 2019. (Impact Factor: 2.296)
+
+
+## 2018 ##
+
+38. **S. A. Khowaja**, A. G. Prabono, F. Setiawan, B. N. Yahya, S.-L. Lee, “[Contextual Activity based Healthcare Internet of Things, Services, and People (HIoTSP): An Architectural Framework for Healthcare Monitoring using Wearable Sensors](https://www.sciencedirect.com/science/article/abs/pii/S1389128618308594)”, Computer Networks, 2018. (Impact Factor: 5.493)
+
+## 2017 ## 
+
+39. **S. A. Khowaja**, B. N. Yahya, S.-L. Lee, “[Hierarchical classification method based on selective learning of slacked hierarchy for activity recognition systems](https://www.sciencedirect.com/science/article/abs/pii/S0957417417304645)”, Expert Systems With Applications, 2017. (Impact Factor: 8.665)
+
+40. **S. A. Khowaja**, A. G. Prabono, F. Setiawan, B. N. Yahya, S.-L. Lee, “[An Effective Threshold Based Measurement Technique For Fall Detection Using Smart Devices](https://journals.sfu.ca/ijietap/index.php/ijie/article/view/3300)”, International Journal of Industrial Engineering: Theory, Applications and Practice, 2017. (Impact Factor: 0.633)
+
+## 2016 ##
+
+41. **S. A. Khowaja**, M.A Unar, I.A Ismaili, P. Khuwaja, “[Supervised method for blood vessel segmentation from coronary angiogram images using 7-D feature vector](https://www.tandfonline.com/doi/abs/10.1080/13682199.2016.1159815)”, The Imaging Science Journal, 2016. (Impact Factor: 0.5) 
 
 <br>
 
