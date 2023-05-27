@@ -28,8 +28,6 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
  # - {title: "About", file: "/about.md"}
   - {title: "CV", url: "/files/CV.pdf"}
   - {title: "Publications", file: "publications.md"}
-  - {title: "Talks", file: "talks.md"}
-  - {title: "Tutorials", file: "tutorials.md"}
   - {title: "Teaching", file: "teaching.md"}
   - {title: "Awards", file: "awards.md"}
   - {title: "Roles", file: "roles.md"}
