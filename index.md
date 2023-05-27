@@ -9,7 +9,7 @@ title: "About"
 
 
 
-Greetings! I am an Associate Professor with the Department of Telecommunication Engineering in the Faculty of Engineering and Technology, <u>University of Sindh</u> (2023-). Prior to that, I was a Assistant Professor with the Department of Telecommunication Engineering in the Faculty of Engineering and Technology, <u>University of Sindh</u> (2018-2023) and Lecturer in the same Department (2011-2018). I have experience working with multinational companies as System Support Engineer at Comstar ISA Ltd. (2008-2010) and Network Engineer - Projects at New Horizon IT Ltd. (2010-2011). I did my Postdoc in Department of Mechatronics Engineering at <u>Tech University of Korea</u> (2021-2022) working with Professor [Ik Hyun Lee](https://sites.google.com/view/kpu-vip/members/professor). 
+Greetings! I am an Associate Professor with the Department of Telecommunication Engineering in the Faculty of Engineering and Technology, <u>University of Sindh</u> (2023-). Prior to that, I was Assistant Professor with the Department of Telecommunication Engineering in the Faculty of Engineering and Technology, <u>University of Sindh</u> (2018-2023) and Lecturer in the same Department (2011-2018). I have experience working with multinational companies as System Support Engineer at Comstar ISA Ltd. (2008-2010) and Network Engineer - Projects at New Horizon IT Ltd. (2010-2011). I did my Postdoc in Department of Mechatronics Engineering at <u>Tech University of Korea</u> (2021-2022) working with Professor [Ik Hyun Lee](https://sites.google.com/view/kpu-vip/members/professor). 
 
 <br>
 
