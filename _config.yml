@@ -16,12 +16,7 @@ show_sidebar: false        # show a sidebar instead of the usual header
 show_title: true
 
 # Styling
-<style>
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-</style>
+
 
 
 dark_header: true
@@ -38,13 +33,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {title: "Teaching", file: "teaching.md"}
   - {title: "Awards", file: "awards.md"}
   - {title: "Roles", file: "roles.md"}
-<button onclick="myFunction()">dark mode</button>
-<script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
+
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:sunder.ali@ieee.org"}

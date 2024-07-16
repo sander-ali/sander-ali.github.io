@@ -2,7 +2,12 @@
 layout: page
 title: "About"
 ---
-
+<style>
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
 <div style="margin-top: -20px;">
 <img src="/files/Thumbnail.png" alt="MUET2018" style="width: 26.7%; margin-left: 35px; float: right;">
 
@@ -43,3 +48,11 @@ I completed my PhD in 2019 at the [Information Systems Lab](https://www.research
   * Self-Supervised Federated Learning
   * Model Privacy and Security
   * Responsible AI
+
+<button onclick="myFunction()">dark mode</button>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
