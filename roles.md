@@ -79,7 +79,8 @@ title: ""
    - 1st National Conference on Emerging Trends in Information and Engineering Technologies (NCETIET), 2020.
 
 
-* #### Supervisor  
-   - Co-supervising one PhD student, University of Petronas, 2019-2023
+* #### Supervisor 
+   - Supervising four Masters students at Technological University Dublin, Ireland. 	 
+   - Co-supervised one PhD student, University of Petronas, 2019-2023
    - Primary supervisor of Six M.E. students, University of Sindh and Mehran University of Engineering and Technology, 2017 - 2023.
 
