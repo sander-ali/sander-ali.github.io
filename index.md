@@ -10,6 +10,10 @@ title: "About"
 </style>
 <div style="margin-top: -20px;">
 <img src="/files/Thumbnail.png" alt="MUET2018" style="width: 26.7%; margin-left: 35px; float: right;">
+
+</div>
+
+
 <button onclick="myFunction()">Toggle dark mode</button>
 
 <script>
@@ -18,10 +22,6 @@ function myFunction() {
    element.classList.toggle("dark-mode");
 }
 </script>
-</div>
-
-
-
 
 I bring a rich blend of academic and industrial experience to the computer vision, deep learning, and privacy preservation domain. I am a senior member of IEEE along with an Associate Investigator at CONNECT Centre and Academic Collaborator at ADAPT Centre, Ireland. My educational journey began with a Ph.D. in Industrial and Information Systems Engineering from [Hankuk University of Foreign Studies](https://www.hufs.ac.kr/hufs/index.do#link)in Yongin, Republic of Korea, where I focused on Ambient Intelligence and Affective Computing Methods using Machine Learning, Wearable Sensors, and Imaging techniques under the guidance of [Prof. Seok-Lyong Lee](https://scholar.google.com/citations?user=OPcK7J0AAAAJ&hl=en&oi=ao). I further honed my skills with a Postdoctoral Research Fellowship at [Tech University of Korea](https://www.tukorea.ac.kr/en/index.do#none) under the guidance of [Prof. Ik Hyun Lee](https://scholar.google.com/citations?user=nxxe9zEAAAAJ&hl=en&oi=ao).
 
