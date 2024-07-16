@@ -9,12 +9,13 @@ title: "About"
 }
 </style>
 <div style="margin-top: -20px;">
+<button onclick="myFunction()">dark mode</button>
 <img src="/files/Thumbnail.png" alt="MUET2018" style="width: 26.7%; margin-left: 35px; float: right;">
 
 </div>
 
 
-<button onclick="myFunction()">Toggle dark mode</button>
+
 
 <script>
 function myFunction() {
