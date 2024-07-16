@@ -5,10 +5,18 @@ title: ""
 
 <br>
 
+* #### Research Centre Collaborations
+   - Academic Collaborator (ADAPT Centre)
+   - Associate Investigator (CONNECT Centre)
+
+* #### Track Chair [IEEE 43rd International Conference on Consumer Electronics (ICCE)](https://icce.org/2025/)
+
 * #### Academic Editor (PLOS One) 
 
 * #### Guest Editor Roles
-   - IEEE Transactions on Vehicular Technology (Active)
+   - IEEE Open Journal of the Communications Society (Active)
+   - IEEE Transactions on Green Communications and Networking (Completed)
+   - IEEE Transactions on Vehicular Technology (Completed)
    - IEEE Transactions on Consumer Electronics (Completed)
    - Journal of King Saud University: Computer and Information Sciences (Completed)
    - Sustainable Energy Technologies and Assessments (Completed)
@@ -54,7 +62,8 @@ title: ""
    - IEEE Transactions on Affective Computing
 
 
-* #### Technical Program Committee Member  
+* #### Technical Program Committee Member
+   - 27th European Conference on Artificial Intelligence (ECAI), 2024.  
    - 5th International Conference on Sustainable Technologies for Industry 5.0, 2023.
    - 3rd Workshop on Network Management for 6G Communication Systems held at IEEE Global Communications Conference (Globecom) 2022.
    - 1st Workshop on Blockchain Technologies for Trustworthy Decentralized AI Ecosystems in conjunction with 5th IEEE Conference on Blokchain, 2022.
