@@ -2,7 +2,7 @@
 layout: page
 title: "About"
 ---
-<style>
+<!--<style>
 body {
   padding: 25px;
   background-color: white;
@@ -14,7 +14,7 @@ body {
   background-color: black;
   color: white;
 }
-</style>
+</style> -->
 <div style="margin-top: -20px;">
 <img src="/files/Thumbnail.png" alt="MUET2018" style="width: 26.7%; margin-left: 35px; float: right;">
 <!--<button onclick="myFunction()">Toggle dark mode</button>
