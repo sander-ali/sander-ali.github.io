@@ -28,13 +28,19 @@ I completed my PhD in 2019 at the [Information Systems Lab](https://www.research
 
 ### News ###
 
-  * Runner-up for UG2+ Coded Target Restoration Challenge at CVPR 2023.
-  * Co-authored paper "NTIRE 2023 Challenge on Image Denoising: Methods and Results" to appear in CVPR workshop 2023.
-  * Oral Presentation of paper "SPIN: Simulated Poisoning and Inversion Network for Federated Learning-Based 6G Vehicular Networks" at IEEE International Conference on Communications (ICC), 2023.
+  * Paper Accepted at Information Fusion Journal (Impact Factor 14.4).
+  * Co-authored paper "NTIRE 2024 Challenge on Blind Enhancement of Compressed Image: Methods and Results" in CVPR workshop 2024.
+  * Best Paper Award "ZETA: ZEro-Trust Attack Framework with Split Learning for Autonomous Vehicles in 6G Networks" at IEEE Wireless Communications and Networking Conference (WCNC) 2024.
+  * [ Code Release for Blind Compressed Image Enhancement ](https://github.com/sander-ali/JPEG_Compression_Enhancement_RDAB) --Method included in NTIRE Benchmark Study--
+  * [ Code Release for Blind Low Light Image Enhancement ](https://github.com/sander-ali/Low_Light_Image_Enhancement_RDLE)
   * [ Web App for Image Denoising ](https://huggingface.co/spaces/sunder-ali/Image_Denoising_Demo) --Method included in NTIRE Benchmark Study--
-  * Serving as Guest Editor for special issue [Open Radio Access Networks: Architecture, Challenges, Opportunities, and Use Cases in Vehicular Networks](https://vtsociety.org/files/ieeevts/2023-02/ORAN-SI-CFP-IEEE-TVT2023_Updated.pdf) at IEEE Transactions on Vehicular Technology, 2023.
+  * Serving as Guest Editor for special issue [Industrial Communication Networks (ICNets) for Industry 5.0](https://www.comsoc.org/publications/journals/ieee-ojcoms/cfp/industrial-communication-networks-icnets-industry-50) at IEEE Open Journal of the Communications Society, 2024.
 
 ### Research Interests ###
   * Computer Vision
+  * Deep Learning
+  * Generative AI
   * Privacy Preserving Machine Learning
   * Self-Supervised Federated Learning
+  * Model Privacy and Security
+  * Responsible AI
