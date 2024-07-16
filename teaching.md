@@ -13,3 +13,7 @@ I am currently teaching following courses at Undergraduate and Postgraduate Leve
 #### Undergraduate ####
 * Computer Vision and Image Processing
 * Data Science
+* Object Oriented Programming (Python)
+* Object Oriented Programming (Java)
+* Python for Data Management
+* Systems and Database Administration
