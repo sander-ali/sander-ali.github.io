@@ -5,7 +5,7 @@ description: "Brief Timeline of YOLO models from v1 to v8"
 date: 2023-08-01 09:00:00-0400
 categories: [Artificial Intelligence, Object Detection, YOLO, Training]
 tags: [YOLO, Object Detection, Deep Learning, Anchor Boxes, Network Architecture]
-thumbnail: assets/img/blog/YOLO_timeline_2023.png
+thumbnail: assets/img/blog/YOLO_timeline_2023.PNG
 ---
 
 The YOLO framework has undergone several iterations since its initial release in 2015 by Joseph Redmon and a team of collaborators (https://arxiv.org/pdf/1506.02640.pdf). It revolutionized real-time object detection capabilities. Redmon and Ali Farhadi subsequently developed YOLO V2 in 2016 (https://arxiv.org/pdf/1612.08242.pdf) and YOLO V3 in 2018 (https://arxiv.org/pdf/1804.02767.pdf), introducing advancements such as anchor boxes, the Darknet-19 architecture, and fully convolutional predictions in V2, and the Darknet-53 architecture and multi-scale predictions in V3.

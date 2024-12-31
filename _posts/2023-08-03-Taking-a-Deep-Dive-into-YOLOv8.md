@@ -4,7 +4,7 @@ title: "Taking a Deep Dive into YOLOv8"
 description: "Details on YOLOv8"
 date: 2023-08-03 09:00:00-0400
 tags: [YOLOv8, Python, Github, Object Detection, Object Segmentation]
-thumbnail: assets/img/blog/YOLOv8_dive_2023.png
+thumbnail: assets/img/blog/YOLOv8_dive_2023.PNG
 ---
 
 Ultralytics unveiled YOLOv8 on January 10, 2023, which has garnered over one million downloads since its debut. This blog post aims to delve into the intricacies of YOLOv8.

@@ -3,7 +3,7 @@ layout: post
 title: "Summarizing YouTube Videos using Python and Online AI Tools"
 date: 2023-08-06 09:00:00-0400
 tags: [Text Summarization, Video Summarization, ChatGPT, Whisper Api, Python]
-thumbnail: assets/img/blog/Summarize_Youtube_2023.jpg
+thumbnail: assets/img/blog/Summarize_Youtube_2023.JPG
 ---
 
 If you have a lot of videos to transcribe and summarize, using speech-to-text technology can be a time-consuming and tedious process. OpenAI’s Whisper technology has made it easier to transcribe your videos into an audio file, and then use ChatGPT’s advanced summarization algorithm to create concise summaries. Let’s take a look!

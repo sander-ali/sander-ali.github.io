@@ -3,7 +3,7 @@ layout: post
 title: Open Source AI taking forward leaps
 date: 2024-07-22 09:00:00-0400
 tags: [Open Source AI, LLM, Mistral AI, Apple AI, Salesforce]
-thumbnail: assets/img/blog/Open_models_1.png
+thumbnail: assets/img/blog/Open_models_1.PNG
 ---
 
 

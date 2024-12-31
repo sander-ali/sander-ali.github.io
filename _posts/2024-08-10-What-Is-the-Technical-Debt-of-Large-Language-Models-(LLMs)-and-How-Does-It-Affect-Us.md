@@ -3,7 +3,7 @@ layout: post
 title: "What Is the Technical Debt of Large Language Models (LLMs) and How Does It Affect Us"
 date: 2024-08-10 09:00:00-0400
 tags: [LLM Debt, LLM, Model Complexity, LLM Scalability, LLM Complexity]
-thumbnail: assets/img/blog/LLM_technical_debt.png
+thumbnail: assets/img/blog/LLM_technical_debt.PNG
 ---
 
 {% include figure.liquid loading="eager" path="assets/img/blog/LLM_technical_debt.png" class="img-fluid rounded z-depth-1" %}

@@ -4,7 +4,7 @@ title: Where do Pakistan stand in AI race?
 description: "A discussion on where Pakistan resides in terms of AI race."
 date: 2020-08-18 09:00:00-0400
 tags: ["AI Race", "AI in Pakistan", "Pakistan and AI", "Ministry of Science and Technology", "PIAIC"]
-thumbnail: assets/img/blog/Pakistan_AI_race.png
+thumbnail: assets/img/blog/Pakistan_AI_race.PNG
 ---
 
 The emergence of Artificial Intelligence (AI) has left a positive influence on the world. Let it be the complex task of image analysis, text translation, speech recognition, and so forth. The aspect which makes AI relatable and interesting is its proof of work which is mostly not observed in the field of Cloud/Edge computing and Blockchain. A wide range of industries have adopted and transformed themselves with the use of AI, let it be Amazon, Netflix, Google, Microsoft, and many more. I can write about the feats which AI has achieved in recent years from beating humans in games to autonomous self-driving cars but that's not the point of this article. This column aims to let people know where we as a nation stand in the race of adopting AI technologies and on which of its aspects our government needs to focus. Let's explore a few areas where AI can help in improving the country's economy.

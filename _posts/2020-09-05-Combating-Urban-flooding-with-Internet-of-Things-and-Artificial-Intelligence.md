@@ -3,7 +3,7 @@ layout: post
 title: Combating Urban flooding with Internet of Things and Artificial Intelligence
 date: 2020-09-05 09:00:00-0400
 tags: [Internet of Things, Artificial Intelligence, Urban Flooding, Karachi, Pakistan]
-thumbnail: assets/img/blog/urban_flooding_2020.png
+thumbnail: assets/img/blog/urban_flooding_2020.PNG
 ---
 
 It's no denying that we have been witnessing unprecedented leaps in natural disasters across the world, let it be wildfires, COVID pandemic, floods, drought, extreme weather, and so forth. Every country, developed or developing, takes note of it and be ready for the next cycle of occurrence. However, Pakistan is an exception and it is evident by the current situation of urban floods and power outages. It's a long debate as to why precautions are not being taken or why it lacks coping strategies when it's apparent that the floods pose a problem every year. This article deviates towards the short/long term solutions for the current situation of urban floods with the help of Artificial Intelligence. I'll deal with the most pressing concern, i.e. urban floods due to heavy rainfall.
