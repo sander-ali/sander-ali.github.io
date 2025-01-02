@@ -3,7 +3,7 @@ layout: page
 title: Serving as Special Session Chair at IEEE GEM 2024
 date: 2024-06-05
 description: Call for papers in Special Session at IEEE Gaming, Entertainment and Media (GEM) conference, 2024
-img: assets/img/news/Video-Games-Stock.PNG
+img: assets/img/news/Video-Games-Stock.png
 
 images:
   lightbox2: false
@@ -14,12 +14,12 @@ images:
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/Video-Games-Stock.PNG"
+    <a href="/assets/img/news/Video-Games-Stock.png"
       data-pswp-width="1200"
       data-pswp-height="800"
       target="_blank">
-      <img src="/assets/img/news/Video-Games-Stock.PNG" 
-           alt="Elementary School Robotics Demo 1" 
+      <img src="/assets/img/news/Video-Games-Stock.png" 
+           alt="Chair Session IEEE GEM" 
            style="width: 250px; height: 180px; object-fit: cover; border-radius: 8px;" />
     </a>
     

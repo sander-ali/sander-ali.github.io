@@ -19,7 +19,7 @@ images:
       data-pswp-height="800"
       target="_blank">
       <img src="/assets/img/news/TMI_Distinguished_Reviewer.jpg" 
-           alt="szabist_guest_lecture1" 
+           alt="TMI Distinguished Reviewer" 
            style="width: 250px; height: 180px; object-fit: cover; border-radius: 8px;" />
     </a>
     
