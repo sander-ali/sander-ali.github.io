@@ -46,11 +46,11 @@ Code: https://github.com/vllm-project/aibrix
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="https://media.licdn.com/dms/image/v2/D4E22AQFlZuYgl8bQjA/feedshare-shrink_800/B4EZUzdeHUHcAg-/0/1740325119829?e=1743033600&v=beta&t=5VYLdjzXvdYPSEPNqLYruzsbH0Xqe20Oj8OLviS3Zzc"
+    <a href="/assets/img/news/AI news/1.jpg"
       data-pswp-width="1200" 
       data-pswp-height="800"
       target="_blank">
-      <img src="https://media.licdn.com/dms/image/v2/D4E22AQFlZuYgl8bQjA/feedshare-shrink_800/B4EZUzdeHUHcAg-/0/1740325119829?e=1743033600&v=beta&t=5VYLdjzXvdYPSEPNqLYruzsbH0Xqe20Oj8OLviS3Zzc" 
+      <img src="/assets/img/news/AI news/1.jpg" 
            alt="Byte Dance" 
            style="width: 250px; height: 180px; object-fit: cover; border-radius: 8px;" />
   </div>
@@ -69,11 +69,11 @@ docs: https://ai.google.dev/gemini-api/docs/structured-output?lang=python
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="https://media.licdn.com/dms/image/v2/D4E22AQEO3kocTf7jdQ/feedshare-shrink_800/B4EZTvPT69GgAg-/0/1739180557438?e=1743033600&v=beta&t=lyN2d0MfeZ8YhHk8RKNjsgAa0Rg6MXXmxjm-LKJXLwk"
+    <a href="/assets/img/news/AI news/2.jpg"
       data-pswp-width="1200" 
       data-pswp-height="800"
       target="_blank">
-      <img src="https://media.licdn.com/dms/image/v2/D4E22AQEO3kocTf7jdQ/feedshare-shrink_800/B4EZTvPT69GgAg-/0/1739180557438?e=1743033600&v=beta&t=lyN2d0MfeZ8YhHk8RKNjsgAa0Rg6MXXmxjm-LKJXLwk" 
+      <img src="/assets/img/news/AI news/2.jpg" 
            alt="Google Gemini 2.0" 
            style="width: 250px; height: 180px; object-fit: cover; border-radius: 8px;" />
   </div>
