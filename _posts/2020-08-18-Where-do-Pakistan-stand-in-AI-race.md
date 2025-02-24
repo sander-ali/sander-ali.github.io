@@ -58,15 +58,15 @@ I can go on with the applications of AI in stock markets, surveillance industry,
 
 [1] Airbnb.com
 
-[2] [Ref 2](https://news.psu.edu/story/429727/2016/10/04/research/artificial-intelligence-could-help-farmers-diagnose-crop-diseases)
+[2] [https://news.psu.edu/story/429727/2016/10/04/research/artificial-intelligence-could-help-farmers-diagnose-crop-diseases]
 
-[3] [Ref 3](http://www.bluerivertechnology.com/)
+[3] [http://www.bluerivertechnology.com/]
 
-[4] [Ref 4](https://www.eu-startups.com/2019/11/berlin-based-plantix-raises-e6-6-million-in-funding-to-further-improve-its-agricultural-app/)
+[4] [https://www.eu-startups.com/2019/11/berlin-based-plantix-raises-e6-6-million-in-funding-to-further-improve-its-agricultural-app/]
 
-[5] [Ref 5](https://www.f6s.com/skysquirreltechnologiesinc)
+[5] [https://www.f6s.com/skysquirreltechnologiesinc]
 
-[6] [Ref 6](https://www.awhere.com/)
+[6] [https://www.awhere.com/]
 
 [7] Xie, X., Zhong, Z., Zhao, W., Zheng, C., Wang, F. and Liu, J., 2020. Chest CT for typical 2019-nCoV pneumonia: relationship to negative RT-PCR testing. Radiology, p.200343.
 
@@ -78,4 +78,4 @@ I can go on with the applications of AI in stock markets, surveillance industry,
 
 [11] Setiawan, F., Khowaja, S.A., Prabono, A.G., Yahya, B.N. and Lee, S.L., 2018, July. A framework for real time emotion recognition based on human ans using pervasive device. In 2018 IEEE 42nd Annual Computer Software and Applications Conference (COMPSAC) (Vol. 1, pp. 805–806). IEEE.
 
-[12] [Ref12](https://www.weforum.org/agenda/2020/07/covid-19-study-6-strains-severity-kings-college-london/)
+[12] [https://www.weforum.org/agenda/2020/07/covid-19-study-6-strains-severity-kings-college-london/]

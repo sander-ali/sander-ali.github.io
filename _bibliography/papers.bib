@@ -2,24 +2,42 @@
 ---
 @string{aps = {American Physical Society,}}
 
-@article{selffed2024,
-  title={SelfFed: Self-supervised federated learning for data heterogeneity and label scarcity in medical images},
-  author={Khowaja, Sunder Ali and Dev, Kapal, and Anwar, Syed Muhammad, and Linguraru, Marius George},
-  journal={Expert Systems With Applications}, 
-  volume={261},
-  pages={125493},
+@article{BELA2025,
+  title={Block Encryption LAyer (BELA): Zero-Trust Defense Against Model Inversion Attacks for Federated Learning in 5G/6G Systems},
+  author={Khowaja, Sunder Ali and Khuwaja, Parus and Dev, Kapal and Singh, Keshav and Li, Xingwang and Nikolaos, Bartzoudis and Comsa, Ciprian R},  
+  journal={IEEE Open Journal of the Communications Society}, 
+  volume={6},
+  pages={807-819},
   year={2025},
-  publisher={Elsevier},
-  html={https://www.sciencedirect.com/science/article/pii/S0957417424023601},
-  pdf={https://www.sciencedirect.com/science/article/pii/S0957417424023601},
-  abstract={Self-supervised learning in the federated learning paradigm has been gaining a lot of interest both in industry and research due to the collaborative learning capability on unlabeled yet isolated data. However, self-supervised based federated learning strategies suffer from performance degradation due to label scarcity and diverse data distributions, i.e., data heterogeneity. In this paper, we propose the SelfFed framework for medical images to overcome data heterogeneity and label scarcity issues. The first phase of the SelfFed framework helps to overcome the data heterogeneity issue by leveraging the pre-training paradigm that performs augmentative modeling using Swin Transformer-based encoder in a decentralized manner. The label scarcity issue is addressed by fine-tuning paradigm that introduces a contrastive network and a novel aggregation strategy. We perform our experimental analysis on publicly available medical imaging datasets to show that SelfFed performs better when compared to existing baselines and works. Our method achieves a maximum improvement of 8.8% and 4.1% on Retina and COVID-FL datasets on non-IID datasets. Further, our proposed method outperforms existing baselines even when trained on a few (10%) labeled instances.},
-  doi= {10.1016/j.eswa.2024.125493},
+  publisher={IEEE},
+  abstract={Federated Learning (FL) paradigm has been very popular in the implementation of 5G and beyond communication systems as it provides necessary security for the users in terms of data. However, the FL paradigm is still vulnerable to model inversion attacks, which allow malicious attackers to reconstruct data by using the trained model gradients. Such attacks can be carried out using generative adversarial networks (GANs), generative models, or by backtracking the model gradients. A zero-trust mechanism involves securing access and interactions with model gradients under the principle of “never trust, always verify.” This proactive approach ensures that sensitive information, such as model gradients, is kept private, making it difficult for adversaries to infer the private details of the users. This paper proposes a zero-trust based Block Encryption LAyer (BELA) module that provides defense against the model inversion attacks in FL settings. The BELA module mimics the Batch normalization (BN) layer in the deep neural network architecture that considers the random sequence. The sequence and the parameters are private to each client, which helps in providing defense against the model inversion attacks. We also provide extensive theoretical analysis to show that the proposed module is integratable in a variety of deep neural network architectures. Our experimental analysis on four publicly available datasets and various network architectures show that the BELA module can increase the mean square error (MSE) up to 194% when a reconstruction attempt is performed by an adversary using existing state-of-the-art methods},
+  html={https://ieeexplore.ieee.org/abstract/document/10829858},
+  doi= {10.1109/OJCOMS.2025.3526768},
   dimensions={true},
-  google_scholar_id={u_35RYKgDlwC},
-  bibtex_show={true},
+  google_scholar_id={u9iWguZQMMsC},
   altmetric={false},
+  bibtex_show={true},
   selected={true},
-  preview = {SelfFed_ESWA_2024.png}
+  preview = {BELA_2025.jpg}
+}
+
+@article{turb2025,
+  title={Image Registration and Deep NeuroFuzzy Networks for Mitigating Atmospheric Turbulence Effects in Consumer-Based Optical Imaging},
+  author={Khowaja, Sunder Ali and Ali, Usman and Dev, Kapal and Lee, Ik Hyun},  
+  journal={IEEE Transactions on Consumer Electronics}, 
+  volume={},
+  pages={},
+  year={2025},
+  publisher={IEEE},
+  abstract={Consumer-based optical imaging systems are characterized as big data processing systems, which are drastically affected by atmospheric turbulences that add geometric distortions and blur effect to the images when used in outdoor condition. Physics-grounded simulators have been proposed recently to generate synthetic data but the generalization to the real-world turbulent images is not so good. In this paper, we combine the characteristics of image registration, deep neurofuzzy methods, and channel-attention based discriminative learning strategy to propose image registration, neurofuzzy based denoising, and deblurring network (RND2Net). The RND2Net is designed on a principle that it does not require turbulent image pairs (ground truth images) to train the network, which closely resembles the real-world situation used as consumer devices. The registration module focuses on the region-based fusion techniques while the denoising and deblurring module incorporates deep neurofuzzy network along with dense residual blocks and channel attention mechanism to train the network. The RND2Net is also designed to reduce the noise and blur effect from images, while generalizing on the down-stream tasks, such as text recognition. Experimental results show that the RND2Net yields better performance quantitatively as qualitatively on synthetic and real-world datasets in comparison to existing state-of-the-art methods},
+  html={https://ieeexplore.ieee.org/abstract/document/10838578},
+  doi= {10.1109/TCE.2025.3528544},
+  dimensions={true},
+  google_scholar_id={XiSMed-E-HIC},
+  altmetric={false},
+  bibtex_show={true},
+  selected={true},
+  preview = {turbulence_2025.jpg}
 }
 
 @article{RSMA2024,
