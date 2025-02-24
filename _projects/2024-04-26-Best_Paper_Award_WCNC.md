@@ -38,4 +38,4 @@ IEEE Wireless Communications and Networking Conference (WCNC) is the world premi
 The workshop was support by one6G (https://one6g.org/) that aims to become a forum to address technological research in support of the usage scenarios defined for the IMT-2030 vision, namely, (i) immersive communication, massive communication, and hyper-reliable and low-latency communication). (ii) coverage extension (e.g., ubiquitous connectivity), and (iii) service extension beyond communication.
 
 The paper can be accessed at:
-https://ieeexplore.ieee.org/document/10571158
+[link](https://ieeexplore.ieee.org/document/10571158)

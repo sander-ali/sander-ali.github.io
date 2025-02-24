@@ -86,7 +86,7 @@ An audio file of the same name will be saved to your device.
 
 With the progression of Generative AI, several tools are now available that can convert the audio file to its textual counterpart. However, in this article, we consider the use of Whisper API from OpenAI.
 
-In order to utilize Whisper API you need to visit the website [https://openai.com/index/openai-api/] and create an account. Whisper API provides $18 worth of credit to every new account as they have a Free Tier. For this demo, the number of credits obtained with the free account are enough, however, to be safe, you can check the usage of your credits on your personal page. The option for usage statistics will be available on the top right corner.
+In order to utilize Whisper API you need to visit the website [link](https://openai.com/index/openai-api/) and create an account. Whisper API provides $18 worth of credit to every new account as they have a Free Tier. For this demo, the number of credits obtained with the free account are enough, however, to be safe, you can check the usage of your credits on your personal page. The option for usage statistics will be available on the top right corner.
 
 You will require an API key to access Whisper API from python IDE. You can navigate to “API Keys” page from “User” tab and press generate a new key. From the settings section, you also need to retrieve the organization ID.
 
