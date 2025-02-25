@@ -21,7 +21,7 @@ images:
       target="_blank">
       <img src="/assets/img/news/logo_SAK_15.PNG" 
            alt="Comapny Logo" 
-           style="width: 1200px; height: 800px; object-fit: cover; border-radius: 8px;" />
+           />
 </a>
 
   </div>
