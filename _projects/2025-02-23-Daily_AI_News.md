@@ -42,14 +42,12 @@ To understand MLA (multi-head latent attention) better,
 see https://www.linkedin.com/posts/danielhanchen_deepseek-v3-is-the-most-powerful-open-source-activity-7278488573006200832-KtA_/
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/1.jpg"
-      data-pswp-width="1200" 
-      data-pswp-height="800"
       target="_blank">
       <img src="/assets/img/news/AI news/1.jpg" 
            alt="Byte Dance" 
-           style="width: 640px; height: 480px; object-fit: cover; border-radius: 8px;" />
+            />
 </a>
 
   </div>
@@ -85,12 +83,10 @@ Paper: https://huggingface.co/papers/2502.05171
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/2.jpg"
-      data-pswp-width="1200" 
-      data-pswp-height="800"
       target="_blank">
       <img src="/assets/img/news/AI news/2.jpg" 
            alt="Google Gemini 2.0" 
-           style="width: 800px; height: 800px; object-fit: cover; border-radius: 8px;" />
+            />
 </a>
 
   </div>
@@ -178,14 +174,13 @@ The era of bloated teams is over.
 The age of the autonomous business has begun.
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/3.jpg"
-      data-pswp-width="1200" 
-      data-pswp-height="800"
+
       target="_blank">
       <img src="/assets/img/news/AI news/3.jpg" 
            alt="Google Gemini 2.0" 
-           style="width: 800px; height: 800px; object-fit: cover; border-radius: 8px;" />
+          />
 </a>
 
   </div>
@@ -209,14 +204,12 @@ Big moves in AI! Microsoft is gearing up to host OpenAI’s latest models, with 
 AI is evolving fast—how do you see GPT-5 shaping the future?
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/4.jpg"
-      data-pswp-width="1200" 
-      data-pswp-height="800"
       target="_blank">
       <img src="/assets/img/news/AI news/4.jpg" 
            alt="Google Gemini 2.0" 
-           style="width: 800px; height: 800px; object-fit: cover; border-radius: 8px;" />
+           />
 </a>
 
   </div>
@@ -239,14 +232,12 @@ Claude 3.7 Sonnet and Claude Code mark an important step towards AI systems that
 We look forward to seeing what you'll create. And we welcome your feedback as we continue to build. https://www.anthropic.com/news/claude-3-7-sonnet
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/5.jpg"
-      data-pswp-width="1200" 
-      data-pswp-height="800"
       target="_blank">
       <img src="/assets/img/news/AI news/5.jpg" 
            alt="Google Gemini 2.0" 
-           style="width: 640px; height: 480px; object-fit: cover; border-radius: 8px;" />
+          />
 </a>
 
   </div>
@@ -276,14 +267,12 @@ Blog: https://www.galileo.ai/blog/agent-leaderboard
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/6.jpg"
-      data-pswp-width="1200" 
-      data-pswp-height="800"
       target="_blank">
       <img src="/assets/img/news/AI news/6.jpg" 
            alt="Google Gemini 2.0" 
-           style="width: 640px; height: 480px; object-fit: cover; border-radius: 8px;" />
+           />
 </a>
 
   </div>
