@@ -14,10 +14,8 @@ images:
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/logo_SAK_15.PNG"
-      data-pswp-width="1200" 
-      data-pswp-height="800"
       target="_blank">
       <img src="/assets/img/news/logo_SAK_15.PNG" 
            alt="Comapny Logo" 
