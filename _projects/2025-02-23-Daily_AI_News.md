@@ -7,7 +7,7 @@ img: assets/img/news/logo_SAK_15.PNG
 
 images:
   lightbox2: false
-  photoswipe: true
+  photoswipe: false
   spotlight: false
   venobox: false
 ---
