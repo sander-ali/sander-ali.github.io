@@ -25,56 +25,59 @@ images:
   </div>
 </div>
 
-<h1> 25th February 2025 </h1>
+<h1> 27th February 2025 </h1>
 
-<h1> News 1 </h1>
+<h1> AI Built a civilization on its own </h1>
 
-🚀 Breaking: Perplexity is launching Comet, an agentic browser for the future of AI-driven research.
+This is fascinating! Researchers placed 1,000 AI agents in a Minecraft server, and they developed their own civilization with government, culture, and economy 😳
 
-A major leap in AI-assisted browsing, Comet is designed to take on deep research and complex tasks—so users can focus on insights, not just searches.
+Powered by OpenAI’s o1 model, Altera’s AI agents mimic the human brain with many modules operating in parallel - simulating cognitive functions like attention, memory, and social cognition.
 
-What is an agentic browser?
+The results? Pretty jaw-dropping.
 
-🌐It doesn’t just retrieve links—it actively researches, synthesizes, and generates answers.
-🌐It can autonomously complete multi-step tasks, like comparing sources or summarizing trends.
-🌐It makes browsing more interactive and goal-driven, helping users get to decisions faster.
+Left to their own devices, these AI agents:
 
-This is an ambitious engineering challenge, and Perplexity is inviting early adopters to join the waitlist!
+- Formed alliances: Teaming up to share resources and tackle challenges.
 
-Source: Perplexity AI
+- Built trade networks: Using gems as currency, they bartered goods and services.
 
-https://www.pymnts.com/artificial-intelligence-2/2025/perplexity-announces-ai-powered-web-browser-comet/
+- Created governance: Rudimentary laws and leadership structures emerged to maintain order.
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/1.jpg"
-      target="_blank">
-      <img src="/assets/img/news/AI news/1.jpg" 
-           alt="COMET" 
-            />
-</a>
+- Developed culture: Some agents even crafted rituals, hinting at early forms of religion.
 
-  </div>
-</div>
+Imagine the potential of models like this at scale, simulating and testing solutions to real-world societal issues.
 
-<h1> News 2 </h1>
+Soon, global leaders might rely on AI simulations to optimize major decisions before implementation.
 
-The Ultra-Scale Playbook: Training LLMs on GPU Clusters
+Fascinating times.
 
-Hugging Face has published a free, open-source manual that provides detailed instructions for efficiently training large AI models.
+Source: https://x.com/Rainmaker1973/status/1890637161843593572
 
-"The largest factor for democratizing AI will always be teaching everyone how to build AI and in particular how to create, train and fine-tune high performance models." - Thomas Wolf, co-founder and CSO of Hugging Face
 
-PDF: https://huggingface.co/spaces/nanotron/ultrascale-playbook/resolve/main/The_Ultra-Scale_Playbook_Training_LLMs_on_GPU_Clusters.pdf
+<h1> Build Real-time apps with Google DeepMind Gemini </h1>
 
-Link: https://huggingface.co/spaces/nanotron/ultrascale-playbook
+Want to build Real-time Apps with Google DeepMind Gemini? FastRTC lets you build Python based real-time apps using Gradio-UI. 🔥 
+
+🔄 Transforms Python functions into bidirectional audio/video streams with minimal code
+
+🗣️ Built-in voice detection and automatic turn-taking simplifies conversation interfaces
+
+💻 Supports audio, video, and combined audio-video
+
+🧱 Build with Gradio UI + FastAPI/WebRTC/WebSocket
+
+Gemini Demo (fork and add your api key): https://huggingface.co/spaces/fastrtc/gemini-audio-video
+
+Docs: https://fastrtc.org/advanced-configuration/
+
+Big Kudos to Freddy Boulton from Hugging Face! This make building real time demos with Python really simple!
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/2.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/2.jpg" 
-           alt="HUgging Face" 
+           alt="FastRTC" 
             />
 </a>
 
@@ -82,23 +85,31 @@ Link: https://huggingface.co/spaces/nanotron/ultrascale-playbook
 </div>
 
 
-<h1> News 3 from Shanghai AI Laboratory </h1>
+<h1>Granite LLMs and VLMs</h1>
 
-With test-time scaling, SLMs can beat large language models in reasoning tasks (BDTechTalks, February 2025)
+🔥 Hot of the press: Announcing new Granite LLMs & VLMs! Here's all you need to know:
 
-"A new study by Shanghai AI Laboratory shows that with the test-time scaling (TTS) techniques, an SLM with 1 billion parameters can outperform a 405B LLM on the complex MATH and AIME benchmarks.
+1/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞 3.2 𝐈𝐧𝐬𝐭𝐫𝐮𝐜𝐭 (8𝐁 𝐚𝐧𝐝 2𝐁): Introduce chain-of-thought reasoning that can be toggled on/off, significantly improving complex-instruction handling without sacrificing general performance. 
 
-Test-time scaling (TTS) is the process of giving LLMs extra compute cylces during inference to improve their performance on various tasks. Leading reasoning models, such as OpenAI o1 and DeepSeek-R1, use “internal TTS,” which means they are trained to “think” slowly by generating a long string of chain-of-thought (CoT) tokens.
+2/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞 𝐕𝐢𝐬𝐢𝐨𝐧 3.2 2𝐁: A multimodal model focused on document understanding, matching the performance of open models five times its size.
 
-The study focuses on “external TTS,” where model reasoning is enhanced with outside help from process reward models (PRMs) and advanced search algorithms such as Monte Carlo Tree Search (MCTS), beam search, and “diverse verifier tree search” (DVTS). External TTS is suitable for repurposing existing models for reasoning tasks without further fine-tuning them.
+3/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞-𝐓𝐢𝐦𝐞𝐬𝐞𝐫𝐢𝐞𝐬-𝐓𝐓𝐌-𝐑2.1: Expands TTM forecasting to include daily and weekly predictions alongside the existing minutely and hourly tasks.
 
-Models such as DeepSeek-R1 and OpenAI o3 use “internal TTS,” where the model is trained to generate long chain-of-thought (CoT) sequences instead of using external tools.
+4/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞 𝐆𝐮𝐚𝐫𝐝𝐢𝐚𝐧 3.2: Now features additional model sizes, including a mixture-of-experts (MoE) variant derived from the 3B-A800M language model, offering greater efficiency with minimal performance trade-offs.
 
-There are various TTS strategies and choosing the best one depends on the specifics of your model and your problem."
+5/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞-𝐄𝐦𝐛𝐞𝐝𝐝𝐢𝐧𝐠-30𝐌-𝐒𝐩𝐚𝐫𝐬𝐞: Adds sparse embedding capabilities to the Granite Embedding series, balancing efficiency and scalability for diverse resource and latency requirements.
 
-Blog: https://bdtechtalks.substack.com/p/with-test-time-scaling-slms-can-beat
+All new models are Open Source under the Apache 2.0 license and can be accessed through IBM watsonx.ai, Hugging Face, Ollama, LMStudio, and Replicate.
 
-Paper: https://arxiv.org/abs/2502.06703
+Get started here: 
+
+- Announcement blog with Benchmarks: https://www.ibm.com/new/announcements/ibm-granite-3-2-open-source-reasoning-and-vision
+
+- Cookbooks: https://github.com/ibm-granite-community/granite-snack-cookbook
+
+- Granite Playground: https://www.ibm.com/granite/playground/
+
+- HuggingFace models: https://huggingface.co/collections/ibm-granite/granite-32-language-models-67b3bc8c13508f6d064cff9a
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -106,7 +117,7 @@ Paper: https://arxiv.org/abs/2502.06703
 
       target="_blank">
       <img src="/assets/img/news/AI news/3.jpg" 
-           alt="SLMs" 
+           alt="Granite" 
           />
 </a>
 
@@ -114,79 +125,91 @@ Paper: https://arxiv.org/abs/2502.06703
 </div>
 
 
-<h1> News 4 A Phone Call Between Two AI Agents </h1>
+<h1> DeepSeek releases DeepEP </h1>
 
-Impressive. Two AI agents on a phone call realize they’re both AI and instantly switch to encoded audio signal communication.
+Open-source is on fire. DeepSeek just released DeepEP and it makes large-scale LLMs super fast.
 
-They use a data-over-sound library called "ggwave" to send messages faster than speech.
+This means better performance for Mixture-of-Experts models without wasting compute.
 
-The project won 1st place in a hackathon. 
+Here's everything you need to know:
 
-Project: https://github.com/PennyroyalTea/gibberlink 
+What is Mixture-of-Experts?
+
+MoE models don’t rely on a single massive model. Instead, they use multiple AI "experts" that only activate when needed based on the input. 
+
+How does DeepEP help?
+
+DeepEP helps these experts communicate faster across multiple GPUs, reduces bottlenecks, and makes training and inference much faster. 
+
+It does this using Expert Parallelism (EP). 
+
+What is Expert Parallelism?
+
+EP is the technique that allows these experts to run on separate GPUs at the same time instead of waiting in line. 
+
+This makes MoE models scale efficiently.
+
+Key Features:
+
+▸ Fast GPU communication (153 GB/s inside a machine, 46 GB/s between machines)
+
+▸ Low-latency inference (163 µs response time)
+
+▸ FP8 support for efficient AI computations 
+
+GitHub: https://github.com/deepseek-ai/DeepEP 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/4.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/4.jpg" 
-           alt="GibberLink" 
+           alt="DeepEP" 
            />
 </a>
 
   </div>
 </div>
 
-<h1> News 5 from Apple </h1>
+<h1>Large Language Diffusion with mAsking </h1>
 
-💰 Apple Commits $500B to U.S. Tech & Manufacturing
+What is LLaDA and How it is Revolutionizing Language Models with Diffusion?
 
-Apple has announced its largest-ever U.S. investment, set to reshape AI, silicon engineering, and manufacturing over the next four years.
+LLaDA (Large Language Diffusion with mAsking) is a groundbreaking approach to language modeling that departs from traditional autoregressive methods. a diffusion model with an unprecedented 8B scale, trained entirely from scratch, rivaling LLaMA3 8B in performance. 
 
-🍎New factory in Texas to produce AI-optimized servers
+A text generation method different from the traditional left-to-right approach Instead of generating text sequentially, LLaDA employs a diffusion-based process to predict multiple tokens simultaneously. This innovation enables bidirectional processing and enhances the handling of tasks such as text reversal and reasoning.
 
-🍎Doubling the U.S. Advanced Manufacturing Fund to $10B
+Benchmark results reveal that LLaDA performs competitively with models like LLaMA3, positioning it as a promising alternative in the field of large language models.
 
-🍎Expanding R&D hubs focused on AI and silicon engineering
+Blog: https://commitz.vercel.app/articles/llada--revolutionizing-language-models-with-diffusion-1740222154959
 
-🍎20,000 new hires, primarily in AI, software, and hardware
-
-With Apple deepening its footprint in AI and domestic manufacturing, what does this mean for the future of U.S. tech? 👇
-
-Source: Apple
+Paper: https://arxiv.org/pdf/2502.09992
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/5.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/5.jpg" 
-           alt="Apple" 
+           alt="LLaDA" 
           />
 </a>
 
   </div>
 </div>
 
-<h1> News 6 </h1>
+<h1> LangChain presents LangGraph Swarm </h1>
 
-New Agent/Function Calling Leaderboard from Galileo evaluates 17 LLMs across 14 benchmarks. Foundation models like Google DeepMind Gemini-2.0-flash and OpenAI GPT-4o lead, but open models are catching up. 👀
+🐝 LangGraph Swarm - A lightweight library for building swarm-style multi-agent systems with LangGraph
 
-🎯 Evaluates single-turn, multi-turn, error handling, and context management using Tool Selection Quality (TSQ)
+- Multi-agent collaboration - enable specialized agents to work together and hand off context to each other
 
-🎲 TSQ measures if models choose the right tools, use correct parameters, and know when NOT to use tools at all, evaluated with LLM as a Judge
+- Customizable handoff tools for communication between agents
 
-📊 Uses datasets from BFCL, τ-bench, xLAM, and ToolACE covering 400+ domains
+Watch the video: https://www.youtube.com/watch?v=JeyDrn1dSUQ
 
-🏆 Gemini-2.0-flash leads the pack with 0.938 score, followed by GPT-4o at 0.900
+Try it out with `pip install langgraph-swarm`
 
-🚀 Open models are catching up - mistral-small-2501 achieves 0.832
-
-🚫 Some models like DeepSeek excluded due to limited function calling support
-
-📌 Monthly updates planned to keep pace with new model releases
-
-Leaderboard: https://huggingface.co/spaces/galileo-ai/agent-leaderboard
-
-Blog: https://www.galileo.ai/blog/agent-leaderboard
+Repo: https://github.com/langchain-ai/langgraph-swarm-py
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -194,40 +217,47 @@ Blog: https://www.galileo.ai/blog/agent-leaderboard
     <a href="/assets/img/news/AI news/6.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/6.jpg" 
-           alt="Google Gemini 2.0" 
+           alt="LangGraph" 
            />
 </a>
 
   </div>
 </div>
 
-<h1> News 7 </h1>
-Artificial intelligence (AI)-powered search engine Perplexity AI is planning on launching its own web browser.
+<h1> Amazon rebuilt Alexa with Generative AI </h1>
 
-The company said in a post on X on Monday (Feb. 24) that the browser, dubbed Comet, was “coming soon,” and invited people to sign up on a waitlist in a reply.
+Amazon wants to compete with OpenAI ChatGPT and Google DeepMind Gemini App 👀 Amazon just announced Alexa+ a complete refresh of Alexa, here is what we technically know so far:
 
-“Just like Perplexity reinvented search, we’re also reinventing the browser,” a Perplexity spokesperson told TechCrunch via email, the publication reported on Monday. “Stay tuned for updates.”
+🚀 Alexa+ will be powered by Amazon Nova and Anthropic Claude
 
-The company said in October that its search engine served over 100 million queries per week.
+🔗 New “Tool” APIs for 10k+ services & devices, e.g OpenTable, Ticketmaster, Ring, Uber
 
-“Perplexity now serves over 100M queries every week,” Perplexity CEO Aravind Srinivas wrote in a post on X at the time. “Next stop: 100M+ queries every day.”
+🤖 Browser use to complete tasks autonomously.
 
-In December, Perplexity reportedly closed a $500 million funding round, tripling the startup’s valuation to $9 billion, according to a PYMNTS rerpot. The company’s backers included SoftBank, Nvidia and Amazon founder Jeff Bezos, according to the report. Perplexity had a valuation of $520 million early in 2024. During that summer, it was valued at $3 billion.
+💬 Browser-based experience at Alexa(.)com
 
-In November, the company introduced an AI-powered shopping assistant for U.S. consumers.
+⚡ Smart routing with between models for low latency
 
-Through Buy With Pro, shoppers can research and purchase products, Perplexity said in a Nov. 18 blog post.
+📰 200+ news sources (AP, Reuters, TIME) for real-time information
 
-“It marks a big leap forward in how we serve our users — empowering seamless native actions right from an answer,” the company said in the post. “Shopping online just got 10x more easy and fun.”
+🔄 New SDK for building multi-agents to integrate their agents with Alexa+ (not sure what this means).
 
-The feature is only available to Perplexity Pro users in the U.S. It lets users check out on the company’s website or app for select products from select merchants, according to the post. Consumers who save their shipping and billing information on the portal can use a one-click checkout option.
+📚 Integration for document, emails, manuals, recipes.
 
-Additionally, Perplexity unveiled a visual search tool called Snap to Shop, which helps consumers find an item by uploading a photo. Snap to Shop will display relevant products based on the photo, with no need for a product description or name, according to the post.
+💰 $19.99/month or free with Prime.
 
-In other search engine news, a recent Bank of America Global Research report found that global daily visits to Google search are “stable” despite the surge in the number of artificial intelligence (AI)-powered chatbots like ChatGPT, Perplexity and Claude.
+🗓️ Early access in U.S, no info on E.U. access
 
-In January, the global average daily visits to Google were up 1% to 2.7 billion from December and down just 1% year over year, according to the report. The daily visits include desktop and mobile searches.
+source: https://www.aboutamazon.com/news/devices/amazon-2025-devices-alexa-event-live-updates
 
-Google’s continued search engine dominance comes as AI chatbots continue to grow in popularity. Last month, visits to ChatGPT were up 4% month over month and 148% year over year to 128 million globally.
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <a href="/assets/img/news/AI news/7.jpg"
+      target="_blank">
+      <img src="/assets/img/news/AI news/7.jpg" 
+           alt="Alexa+" 
+           />
+</a>
 
-source: https://www.pymnts.com/artificial-intelligence-2/2025/ntt-data-cdao-c-suite-leaders-have-angst-about-genai-still-go-full-throttle/
+  </div>
+</div>
