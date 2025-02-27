@@ -187,9 +187,9 @@ Paper: https://arxiv.org/pdf/2502.09992
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/5.jpg"
+    <a href="/assets/img/news/AI news/5.JPG"
       target="_blank">
-      <img src="/assets/img/news/AI news/5.jpeg" 
+      <img src="/assets/img/news/AI news/5.JPG" 
            alt="LLaDA" 
           />
 </a>
