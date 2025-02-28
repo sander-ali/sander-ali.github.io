@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-02-28
+date: 2025-02-25
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -267,3 +267,10 @@ We’re excited to see how researchers at Meta and beyond will leverage Aria Gen
 
   </div>
 </div>
+
+<iframe
+    src="https://<space-subdomain>.hf.space"
+    frameborder="0"
+    width="850"
+    height="450"
+></iframe>
