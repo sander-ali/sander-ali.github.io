@@ -267,10 +267,3 @@ We’re excited to see how researchers at Meta and beyond will leverage Aria Gen
 
   </div>
 </div>
-
-<iframe
-    src="https://SunderAli17-toonmage.hf.space"
-    frameborder="0"
-    width="850"
-    height="450"
-></iframe>
