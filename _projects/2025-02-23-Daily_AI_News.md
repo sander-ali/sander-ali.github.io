@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-02-25
+date: 2025-02-28
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,59 +25,36 @@ images:
   </div>
 </div>
 
-<h1> 27th February 2025 </h1>
+<h1> 28th February 2025 </h1>
 
-<h1> AI Built a civilization on its own </h1>
+<h1> Microsoft released Phi-4 </h1>
 
-This is fascinating! Researchers placed 1,000 AI agents in a Minecraft server, and they developed their own civilization with government, culture, and economy 😳
+Phi-4 mini update! Microsoft released Phi-4 mini Instruct (3.8B) and Phi-4 Multimodal Instruct (5.6B) with audio and image support by integrating modality-specific LoRAs while keeping the base language model entirely frozen.
 
-Powered by OpenAI’s o1 model, Altera’s AI agents mimic the human brain with many modules operating in parallel - simulating cognitive functions like attention, memory, and social cognition.
+Multimodal TL;DR:
 
-The results? Pretty jaw-dropping.
+🖼️ Understands text, images, and audio in 23 different languages
 
-Left to their own devices, these AI agents:
+🌐 Uses a novel "Mixture-of-LoRAs" approach for multilinguality
 
-- Formed alliances: Teaming up to share resources and tackle challenges.
+🧠 5.6B parameter model trained on 5T tokens, 2.3M speech hours, and 1.1T image-text tokens
 
-- Built trade networks: Using gems as currency, they bartered goods and services.
+🥇 #1 on Hugging Face OpenASR leaderboard for speech recognition (better than whisper).
 
-- Created governance: Rudimentary laws and leadership structures emerged to maintain order.
+🤗 MIT License and on Hugging Face
 
-- Developed culture: Some agents even crafted rituals, hinting at early forms of religion.
+✨ Paper teasers a Phi-4-Mini reasoning version
 
-Imagine the potential of models like this at scale, simulating and testing solutions to real-world societal issues.
+Models: https://huggingface.co/collections/microsoft/phi-4-677e9380e514feb5577a40e4
 
-Soon, global leaders might rely on AI simulations to optimize major decisions before implementation.
-
-Fascinating times.
-
-Source: https://x.com/Rainmaker1973/status/1890637161843593572
-
-
-<h1> Build Real-time apps with Google DeepMind Gemini </h1>
-
-Want to build Real-time Apps with Google DeepMind Gemini? FastRTC lets you build Python based real-time apps using Gradio-UI. 🔥 
-
-🔄 Transforms Python functions into bidirectional audio/video streams with minimal code
-
-🗣️ Built-in voice detection and automatic turn-taking simplifies conversation interfaces
-
-💻 Supports audio, video, and combined audio-video
-
-🧱 Build with Gradio UI + FastAPI/WebRTC/WebSocket
-
-Gemini Demo (fork and add your api key): https://huggingface.co/spaces/fastrtc/gemini-audio-video
-
-Docs: https://fastrtc.org/advanced-configuration/
-
-Big Kudos to Freddy Boulton from Hugging Face! This make building real time demos with Python really simple!
+Paper: https://huggingface.co/microsoft/Phi-4-multimodal-instruct/blob/main/phi_4_mm.tech_report.02252025.pdf
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/2.jpg"
+    <a href="/assets/img/news/AI news/1.jpg"
       target="_blank">
-      <img src="/assets/img/news/AI news/2.jpg" 
-           alt="FastRTC" 
+      <img src="/assets/img/news/AI news/1.jpg" 
+           alt="Phi-4" 
             />
 </a>
 
@@ -85,31 +62,51 @@ Big Kudos to Freddy Boulton from Hugging Face! This make building real time demo
 </div>
 
 
-<h1>Granite LLMs and VLMs</h1>
+<h1> DeepSeek's 4th Release </h1>
 
-🔥 Hot of the press: Announcing new Granite LLMs & VLMs! Here's all you need to know:
+DeepSeek's 4th release - this time 3 repos! One for DualPipe, which aims to overlap communication and computation better. Another for expert parallel load balancing and the other having data for their communication / computation overlap.
 
-1/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞 3.2 𝐈𝐧𝐬𝐭𝐫𝐮𝐜𝐭 (8𝐁 𝐚𝐧𝐝 2𝐁): Introduce chain-of-thought reasoning that can be toggled on/off, significantly improving complex-instruction handling without sacrificing general performance. 
+DualPipe repo: https://github.com/deepseek-ai/DualPipe.
 
-2/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞 𝐕𝐢𝐬𝐢𝐨𝐧 3.2 2𝐁: A multimodal model focused on document understanding, matching the performance of open models five times its size.
+Load balancing: https://github.com/deepseek-ai/eplb
 
-3/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞-𝐓𝐢𝐦𝐞𝐬𝐞𝐫𝐢𝐞𝐬-𝐓𝐓𝐌-𝐑2.1: Expands TTM forecasting to include daily and weekly predictions alongside the existing minutely and hourly tasks.
+Data profiler: https://github.com/deepseek-ai/profile-data
 
-4/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞 𝐆𝐮𝐚𝐫𝐝𝐢𝐚𝐧 3.2: Now features additional model sizes, including a mixture-of-experts (MoE) variant derived from the 3B-A800M language model, offering greater efficiency with minimal performance trade-offs.
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+    <a href="/assets/img/news/AI news/2.jpg"
+      target="_blank">
+      <img src="/assets/img/news/AI news/2.jpg" 
+           alt="DeepSeek" 
+            />
+</a>
 
-5/ 𝐆𝐫𝐚𝐧𝐢𝐭𝐞-𝐄𝐦𝐛𝐞𝐝𝐝𝐢𝐧𝐠-30𝐌-𝐒𝐩𝐚𝐫𝐬𝐞: Adds sparse embedding capabilities to the Granite Embedding series, balancing efficiency and scalability for diverse resource and latency requirements.
+  </div>
+</div>
 
-All new models are Open Source under the Apache 2.0 license and can be accessed through IBM watsonx.ai, Hugging Face, Ollama, LMStudio, and Replicate.
 
-Get started here: 
+<h1>The Rise of NVIDIA</h1>
 
-- Announcement blog with Benchmarks: https://www.ibm.com/new/announcements/ibm-granite-3-2-open-source-reasoning-and-vision
+AI doesn't stop! NVIDIA just smashed expectations yet again, posting a record $130.5 billion in revenue for the year 😳
 
-- Cookbooks: https://github.com/ibm-granite-community/granite-snack-cookbook
+Key Q4 2024 financial highlights:
 
-- Granite Playground: https://www.ibm.com/granite/playground/
+- NVIDIA reported quarterly revenue of $39.3B (+12% increase from the previous quarter & a 78% increase Year-over-Year).
 
-- HuggingFace models: https://huggingface.co/collections/ibm-granite/granite-32-language-models-67b3bc8c13508f6d064cff9a
+- The company achieved a GAAP EPS of $0.89, beating analyst forecasts of $0.85 (+14% QoQ & +82% YoY).
+
+- Data center revenue hit a record $30.8B (+112% YoY). This growth is driven by strong demand for NVIDIA’s Hopper and Blackwell AI platforms.
+
+We can remember that the DeepSeek AI model from China has raised big concerns about reduced demand for high-end GPUs, which led to a significant market cap drop for NVIDIA last month.
+
+It's now clear that's not the case.
+
+In fact, Nvidia's CEO Jensen Huang just said the opposite is going to happen.
+
+"The next generation of AI will need 100x more compute than older models as a result of new reasoning approaches that think “about how best to answer” questions step by step" - Jensen Huang
+
+AI continues to eat the world, and all roads still lead to NVIDIA.
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -117,7 +114,7 @@ Get started here:
 
       target="_blank">
       <img src="/assets/img/news/AI news/3.jpg" 
-           alt="Granite" 
+           alt="NVIDIA" 
           />
 </a>
 
@@ -125,91 +122,106 @@ Get started here:
 </div>
 
 
-<h1> DeepSeek releases DeepEP </h1>
+<h1> Chain-of-Draft </h1>
 
-Open-source is on fire. DeepSeek just released DeepEP and it makes large-scale LLMs super fast.
+Say goodbye to Chain-of-Thought.
 
-This means better performance for Mixture-of-Experts models without wasting compute.
+Say hello to Chain-of-Draft.
 
-Here's everything you need to know:
+To address the issue of latency in reasoning LLMs, this work introduces Chain-of-Draft (CoD).
 
-What is Mixture-of-Experts?
+Read on for more:
 
-MoE models don’t rely on a single massive model. Instead, they use multiple AI "experts" that only activate when needed based on the input. 
+What is it about?
 
-How does DeepEP help?
+CoD is a new prompting strategy that drastically cuts down verbose intermediate reasoning while preserving strong performance.
 
-DeepEP helps these experts communicate faster across multiple GPUs, reduces bottlenecks, and makes training and inference much faster. 
+Minimalist intermediate drafts
 
-It does this using Expert Parallelism (EP). 
+Instead of long step-by-step CoT outputs, CoD asks the model to generate concise, dense-information tokens for each reasoning step. 
 
-What is Expert Parallelism?
+This yields up to 80% fewer tokens per response yet maintains accuracy on math, commonsense, and other benchmarks.
 
-EP is the technique that allows these experts to run on separate GPUs at the same time instead of waiting in line. 
+Low latency, high accuracy
 
-This makes MoE models scale efficiently.
+On GSM8k math problems, CoD achieved 91% accuracy with an 80% token reduction compared to CoT. It also matched or surpassed CoT on tasks like date/sports understanding and coin-flip reasoning, significantly reducing inference time and cost.
 
-Key Features:
+Flexible & interpretable
 
-▸ Fast GPU communication (153 GB/s inside a machine, 46 GB/s between machines)
+Despite fewer words, CoD keeps the essential logic visible, similar to how humans jot down key points instead of full explanations. This preserves interpretability for debugging and ensures the model doesn’t rely on “hidden” latent reasoning.
 
-▸ Low-latency inference (163 µs response time)
+Thoughts:
 
-▸ FP8 support for efficient AI computations 
+By showing that less is more, CoD can serve real-time applications where cost and speed matter. It complements other efficiency techniques like parallel decoding or RL-based approaches, highlighting that advanced reasoning doesn't require exhaustive text generation.
 
-GitHub: https://github.com/deepseek-ai/DeepEP 
+Paper: https://arxiv.org/pdf/2502.18600
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/4.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/4.jpg" 
-           alt="DeepEP" 
+           alt="COD" 
            />
 </a>
 
   </div>
 </div>
 
-<h1>Large Language Diffusion with mAsking </h1>
+<h1>Phi4 Multimodal and mini models </h1>
 
-What is LLaDA and How it is Revolutionizing Language Models with Diffusion?
+Announcing Phi-4 multimodal and mini models in Azure AI Foundry!
 
-LLaDA (Large Language Diffusion with mAsking) is a groundbreaking approach to language modeling that departs from traditional autoregressive methods. a diffusion model with an unprecedented 8B scale, trained entirely from scratch, rivaling LLaMA3 8B in performance. 
+✨ Phi-4-mini and Phi-4-multimodal will be available through Azure AI Foundry, Hugging Face, the NVIDIA API Catalog, with an MIT License, allowing for commercial use:
 
-A text generation method different from the traditional left-to-right approach Instead of generating text sequentially, LLaDA employs a diffusion-based process to predict multiple tokens simultaneously. This innovation enables bidirectional processing and enhances the handling of tasks such as text reversal and reasoning.
+🥇 Phi-4-multimodal (5.6B parameters) excels in speech recognition, translation, summarization, audio understanding, and image analysis. It supports multiple languages (English, Chinese, German, French, Italian, Japanese, Spanish, and Portuguese) and performs strongly in advanced reasoning tasks, particularly in mathematics and logic.
 
-Benchmark results reveal that LLaDA performs competitively with models like LLaMA3, positioning it as a promising alternative in the field of large language models.
+🥈 Phi-4-mini (3.8B parameters) is designed for speed and efficiency. Like the multimodal variant, it excels in text-based reasoning, math, coding, instruction following, and function-calling tasks.
 
-Blog: https://commitz.vercel.app/articles/llada--revolutionizing-language-models-with-diffusion-1740222154959
-
-Paper: https://arxiv.org/pdf/2502.09992
+More details at https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/5.JPG"
       target="_blank">
       <img src="/assets/img/news/AI news/5.JPG" 
-           alt="LLaDA" 
+           alt="Phi4" 
           />
 </a>
 
   </div>
 </div>
 
-<h1> LangChain presents LangGraph Swarm </h1>
+<h1> Microsoft Research Announces Magma 8B </h1>
 
-🐝 LangGraph Swarm - A lightweight library for building swarm-style multi-agent systems with LangGraph
+🔥 Agents can do anything! Microsoft Research just announced the release of Magma 8B!
 
-- Multi-agent collaboration - enable specialized agents to work together and hand off context to each other
+Magma is a new Visual Language Model (VLM) with 8B parameters for multi-modal agents designed to handle complex interactions across virtual and real environments; and it's MIT licensed!
 
-- Customizable handoff tools for communication between agents
+Magma comes with exciting new features such as:
 
-Watch the video: https://www.youtube.com/watch?v=JeyDrn1dSUQ
+- Introduces the Set-of-Mark and Trace-of-Mark techniques for data labeling prior to the fine-tuning
 
-Try it out with `pip install langgraph-swarm`
+- Leverages a large amount of unlabeled video data to learn the spatial-temporal grounding and planning
 
-Repo: https://github.com/langchain-ai/langgraph-swarm-py
+- A strong generalization and ability to be fine-tuned for other agentic tasks
+
+- SOTA in different multi-modal benchmarks spanning across UI navigation, robotics manipulation, image / video understanding and spatial understanding and reasoning
+
+- Generates goal-driven visual plans and actions for agentic use cases
+
+Official Post: https://www.microsoft.com/en-us/research/blog/magma-a-foundation-model-for-multimodal-ai-agents-across-digital-and-physical-worlds/
+
+HuggingFace Hub Model Page: https://huggingface.co/microsoft/Magma-8B
+
+Github Repo: https://github.com/microsoft/Magma/
+
+Project Page: https://microsoft.github.io/Magma/
+
+Technical Report: https://huggingface.co/papers/2502.13130
+
+Demo on HuggingFace Spaces: https://huggingface.co/spaces/microsoft/Magma-UI
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -217,45 +229,39 @@ Repo: https://github.com/langchain-ai/langgraph-swarm-py
     <a href="/assets/img/news/AI news/6.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/6.jpg" 
-           alt="LangGraph" 
+           alt="Magma8b" 
            />
 </a>
 
   </div>
 </div>
 
-<h1> Amazon rebuilt Alexa with Generative AI </h1>
+<h1> Aria Gen 2 by Meta </h1>
 
-Amazon wants to compete with OpenAI ChatGPT and Google DeepMind Gemini App 👀 Amazon just announced Alexa+ a complete refresh of Alexa, here is what we technically know so far:
+Introducing Aria Gen 2, the next generation of glasses from Meta's Project Aria that we hope will enable researchers across industry and academia to unlock new work in machine perception, egocentric & contextual AI, robotics and more.
 
-🚀 Alexa+ will be powered by Amazon Nova and Anthropic Claude
+More details on what Aria Gen 2 can do ➡️ https://www.meta.com/en-gb/blog/project-aria-gen-2-next-generation-egocentric-research-glasses-reality-labs-ai-robotics/
 
-🔗 New “Tool” APIs for 10k+ services & devices, e.g OpenTable, Ticketmaster, Ring, Uber
+Get updates on device availability ➡️ https://docs.google.com/forms/d/e/1FAIpQLSfukXP5q6dclAAA3php-OCO1TcwFc5Opegrvw23wHwEbOFJbA/viewform
 
-🤖 Browser use to complete tasks autonomously.
+Highlights for researchers
 
-💬 Browser-based experience at Alexa(.)com
+• State-of-the-art sensor suite featuring an RGB camera, 6DOF SLAM cameras, eye tracking cameras, spatial microphones, IMUs, barometer, magnetometer, and GNSS + a new PPG sensor (heart rate) and contact microphone. 
 
-⚡ Smart routing with between models for low latency
+• Ultra low-power and on-device machine perception for SLAM, eye tracking, hand tracking, and speech recognition using Meta’s custom silicon.
 
-📰 200+ news sources (AP, Reuters, TIME) for real-time information
+• Capable of six to eight hours of continuous use.
 
-🔄 New SDK for building multi-agents to integrate their agents with Alexa+ (not sure what this means).
+• Open-ear force-canceling speakers, enabling user-in-the-loop system prototyping.
 
-📚 Integration for document, emails, manuals, recipes.
-
-💰 $19.99/month or free with Prime.
-
-🗓️ Early access in U.S, no info on E.U. access
-
-source: https://www.aboutamazon.com/news/devices/amazon-2025-devices-alexa-event-live-updates
+We’re excited to see how researchers at Meta and beyond will leverage Aria Gen 2 to pave the way for future innovations that will shape the next computing platform.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/7.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/7.jpg" 
-           alt="Alexa+" 
+           alt="Aria" 
            />
 </a>
 
