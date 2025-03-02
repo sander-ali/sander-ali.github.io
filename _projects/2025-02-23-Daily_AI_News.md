@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-02-25
+date: 2025-03-02
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,55 +25,30 @@ images:
   </div>
 </div>
 
-<h1> 01st March 2025 </h1>
+<h1> 2nd March 2025 </h1>
 
-<h1> OpenAI announces GPT 4.5 </h1>
+<h1> DeepSeek Profits </h1>
 
-BREAKING: OpenAI announces GPT-4.5
+This is wild! DeepSeek just announced they are making $200 million/year at a 545% profit margin 😳
 
-Here's everything you need to know:
+That makes them one of the most profitable AI businesses in the world now.
 
-- OpenAI: "GPT-4.5 is our largest and most knowledgeable model yet."
+DeepSeek's reported $200M annual revenue and 500%+ profit margin stem from its efficient use of NVIDIA H800 GPUs, costing $87,000 daily, while charging significantly lower rates - $2.19 per million tokens.
 
-- Available as a research preview for ChatGPT Pro users and developers in the API.
+To put this into perspective, OpenAI's o1 charges about 25x more while OpenAI is bleeding money 😬
 
-- Coming to Plus users and others starting next week.
+The best part?
 
-- GPT-4.5 is the next step in scaling unsupervised learning. It increases world knowledge, improves intuition, and reduces hallucination.
+All of this is open-source while OpenAI charges $200/month and still gives you limited functionalities.
 
-- The model doesn't support native reasoning (step-by-step) capabilities but it's generally useful and inherently smarter.
-
-- The team is still experimenting and researching emerging capabilities of this type of scaling. But this is the best chat model yet according to OpenAI folks for tasks requiring deeper knowledge and advanced context understanding.
-
-- GPT-4.5 is useful for improving writing, programming, and practical problem-solving. 
-
-- GPT-4.5 is better at understanding human needs and intent. Trained with data derived from smaller models. Conversations should feel warmer, more intuitive, and emotionally nuanced. The hallucination rate is lower than in other models.
-
-- Human evaluations were done and results demonstrate improvements in creative intelligence and how warm the tone of the GPT-4.5 model is.
-
-- The model was post-trained using a combination of supervised fine-tuning and RLHF. Trained across multiple data centers that required huge amounts of computing resources. Apparently, GPT-4.5 used 10X more pretraining compute than GPT4.
-
-- GPT-4.5 also integrates with other tools like file upload, images, canvas, and search. GPT-4.5 is available to all developers via the API on all paid tiers. It has function calling, structured outputs, streaming, image inputs, and more.
-
-- On the future: reasoning is a core capability, unsupervised learning and reasoning compliment each other, and gpt-4.5 will serve as a strong foundation for future reasoning models and agents.
-
-Price per 1M tokens:
-
-- $75 for input
-- $150 for output
-- $37.50 for cached input
-
-The knowledge cutoff for GPT-4.5 is October 2023. 
-
-- Context window: 128,000 tokens
-- Max output tokens: 16,384 tokens
+DeepSeek is truly built differently.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/1.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/1.jpg" 
-           alt="GPT4.5" 
+           alt="DeepSeek" 
             />
 </a>
 
@@ -81,26 +56,22 @@ The knowledge cutoff for GPT-4.5 is October 2023.
 </div>
 
 
-<h1> ARI by You.com </h1>
+<h1> Omi AI Wearable </h1>
 
-In a world of deep research, go deeper with ARI.
+🎙️🤖 Omi AI Wearable
 
-Meet ARI: The world's first professional-grade deep research agent.
+An open-source wearable device that transforms conversations into real-time transcriptions using LangChain's AI capabilities. Features on-device processing and full iOS/Android support.
 
-✅ Produces polished PDF reports in < 5min (3x faster than other)
+Check out Omi now! 🚀
 
-✅ Analyzes up to 400 sources simultaneously (10x more than others) 
-
-✅ Generates rich visuals, charts, and clickable citations 
-
-Request early access at https://you.com/ari
+https://github.com/BasedHardware/omi
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/2.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/2.jpg" 
-           alt="ARI" 
+           alt="OMi" 
             />
 </a>
 
@@ -108,29 +79,19 @@ Request early access at https://you.com/ari
 </div>
 
 
-<h1>Zep AI introduces Graphiti</h1>
+<h1>People Being Polite to AI</h1>
 
-Zep AI introduces you to Graphiti, an open-source Temporal Knowledge Graph framework that gives AI agents the ability to learn and retain information over time, just like humans do. 🤖
+🤖 Why Are People Polite to AI? A New Survey Has Answers
 
+A recent survey reveals that while most users are polite to AI, their reasons vary—from habit to unexpected concerns about the future.
 
-Graphiti was inspired by Microsoft GraphRAG, but has a key architectural difference: It understands how newly ingested data might change existing data, and is purpose built for data that evolves over time.
+🔹70% of AI users say they are consistently polite
 
+🔹Two-thirds of impolite users say they skip manners for brevity
 
-Why does this matter? Imagine you tell a food delivery app that you've adopted veganism, but it keeps recommending your once-favorite burger joint. Or picture a sales assistant that forgets a key client's purchasing history and constraints, resulting in tone-deaf product pitches. That's the kind of experience that frustrates users and undermines trust in AI.
+🔹12% admit to being polite out of fear of a future AI uprising
 
-
-With Graphiti, AI agents can reason with evolving data, enabling more personalized, context-aware interactions. Whether you're building a chatbot, LLM-powered assistant, or a next-gen AI system, Graphiti provides the foundation for fast, accurate long-term memory.
-
-
-We've implemented Graphiti in Zep, our memory layer for enterprise AI agents, and wrote a paper on how Zep and Graphiti perform versus other approaches to agent memory (it's the State of the Art!).
-
-Quick Start: https://help.getzep.com/graphiti/graphiti/quick-start
-
-Github Repo: https://github.com/getzep/graphiti
-
-Paper: https://arxiv.org/abs/2501.13956
-
-Docs: https://help.getzep.com/graphiti/graphiti/overview
+As AI becomes more integrated into daily life, how much does human behavior toward machines matter?
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -147,19 +108,37 @@ Docs: https://help.getzep.com/graphiti/graphiti/overview
 </div>
 
 
-<h1> Arize Pheonix </h1>
+<h1> LlamaExtract </h1>
 
-Trace & Evaluate your Agent with Arize Phoenix
+LLMs are automating data ETL end-to-end - and it starts with structured extraction.
 
-So, you’ve built your agent. It takes in inputs and tools, processes them, and generates responses. Maybe it’s making decisions, retrieving information, executing tasks autonomously, or all three. But now comes the big question – how effectively is it performing? And more importantly, how do you know?
+LlamaIndex is excited to announce the launch of LlamaExtract 🧑‍🔬🤖: a GenAI-native extraction agent that adapts the latest models to offer accurate structured extraction over large amounts of complex unstructured data (w/ tables, images, charts) across any document type (financial report, resumes, contracts, slides).
 
-Building an agent is one thing; understanding its behavior is another. That’s where tracing and evaluations come in. Tracing allows you to see exactly what your agent is doing step by step—what inputs it receives, how it processes information, and how it arrives at its final output. Think of it like having an X-ray for your agent’s decision-making process.
- 
-Meanwhile, evaluation helps you measure performance, ensuring your agent isn’t just functional, but actually effective. Is it producing the right answers? How relevant are its findings at each step? How well-crafted is the agent’s response? Does it align with your goals?
+You can do the following:
+1. Define the schema in UI or via API to define an extraction agent, and specify different parsing/config modes to use LlamaParse to process complex data.
 
-Arize Phoenix provides a centralized platform to trace, evaluate, and debug your agent's decisions in real time—all in one place. We’ll dive into how you can implement them to refine and optimize your agent. Because building is just the beginning—true intelligence comes from knowing exactly what’s happening under the hood.
+2. Upload a ton of data, get back results, use it in your downstream workflows.
 
-Get started with their blog post: https://huggingface.co/blog/smolagents-phoenix
+FAQ: What’s the difference between this and just prompting OpenAI/Claude/Gemini with Pydantic?
+
+* Parsing Accuracy: We use LlamaParse under the hood to make sure that all your tables/charts are represented well - otherwise you’re going to get hallucinated values. 
+
+* Extraction Accuracy: We also carefully tune and adapt the prompts with SOTA models with retries. We have a bunch of measures in place to make sure your schemas are valid. 
+
+* Templates: We offer pre-built templates e.g. invoices/resumes
+
+* UI: Have developers or business users define extraction agents, reuse it for any sort of downstream data.
+
+* Plus a lot more goodies down the road, including integrating with existing knowledge bases + integrations. Our goal is to make sure you have the best extraction experience possible
+
+Huge shoutout to Neeraj Pradhan for leading this effort. 
+
+Blog: https://www.llamaindex.ai/blog/introducing-llamaextract-unlocking-structured-data-extraction-in-just-a-few-clicks
+
+If you’re interested in trying out LlamaExtract, signup for an account: 
+https://cloud.llamaindex.ai/login
+
+If you’re interested in structured extraction in the enterprise, come talk to them: https://www.llamaindex.ai/contact
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -167,52 +146,60 @@ Get started with their blog post: https://huggingface.co/blog/smolagents-phoenix
     <a href="/assets/img/news/AI news/4.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/4.jpg" 
-           alt="Phoenix" 
+           alt="LlamaExtract" 
            />
 </a>
 
   </div>
 </div>
 
-<h1>Agentic CRM Assistant </h1>
+<h1> Gemini Model update </h1>
 
-LLAMAIndex folks built an amazing, agentic CRM Assistant that can: 
+Model Update! Google DeepMind Gemini 2.0 Flash-Lite is now generally available for production use! Model ID: `gemini-2.0-flash-lite`
 
-➡️ Connect to your HubSpot account 
+💰Free-Tier with 1500 req/day then $0.075/$0.3 per 1M input/output token
 
-➡️ Create, modify, and manage your contacts and deals 
+⚡Outperforms Gemini 1.5 Flash across benchmarks
 
-➡️ Get interesting insights from all your data 
+📏 Supports 1 million input tokens and Structured Outputs
 
-➡️ Draft and send outreach Emails for each lead 
+🚀 Rate Limits: Tier 1 (Paid Use) 4,000 Request per minute (if you need more let us know)
 
-It also uses Composio, Groq and Streamlit!
-
-Learn more here: https://github.com/ComposioHQ/composio/tree/master/python/examples/advanced_agents/sales_kit/CRM_agent
+Try it: http://aistudio.google.com/?model=gemini-2.0-flash-lite
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/5.JPG"
       target="_blank">
       <img src="/assets/img/news/AI news/5.JPG" 
-           alt="CRM Agent" 
+           alt="Google Gemini" 
           />
 </a>
 
   </div>
 </div>
 
-<h1> News from Bird-SQL </h1>
+<h1> IBM to Acquire DataStax </h1>
 
-excited to share that Contextual AI is now #1 on the BIRD benchmark for text-to-SQL retrieval!
+Message from Chairman and CEO at DataStax
 
-Our team achieved an impressive 75.63% score on the test set, placing us at the top of the leaderboard. This benchmark is the gold standard for measuring how accurately AI can translate natural language questions into database queries.
+I’m excited to share that IBM plans to acquire DataStax to accelerate production AI and NoSQL data at scale.
 
-What does this mean for our customers? Faster insights, more accurate data retrieval, and the ability to execute complex quantitative analyses with no SQL expertise required. It also means unlocking advanced AI use cases that require reasoning over unstructured documents alongside structured data.
+I’ve had the awesome privilege to be part of the DataStax journey for the last 5+ years and I couldn’t be more excited for our next chapter. We have long said that there is no AI without data, and this vision will now be amplified with IBM.
 
-To learn more about their state-of-the-art text-to-SQL capabilities, check out their announcement blog and demo video, and request access to the platform today!
+Why I continue to be PUMPED:
 
-Link: https://bird-bench.github.io/
+▪︎ With IBM, we’ll continue to unlock enterprise data to power AI agents and LLMs, accelerating adoption with scalable, secure, and accurate production AI.
+
+▪︎ Combining DataStax’s hybrid vector database and Langflow developer tool with IBM’s watsonx will deliver cutting-edge vector and AI search across the entire data estate, making IBM’s capabilities available to every developer.
+
+▪︎ We’ve advanced Apache Cassandra into the cloud with Astra DB and brought self-managed Cassandra into the cloud-native era with HCD and Mission Control. We’ll continue making Cassandra the standard for scaling-out your cloud-native data.
+
+While our mission remains the same, we look forward to expanding to a much broader audience with the support of IBM.
+
+A huge thank you to our customers, partners, and communities who have been part of this journey. It’s truly a privilege to work with all of you. 🙏
+
+Read more: https://dtsx.io/4kfojYc
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -226,26 +213,24 @@ Link: https://bird-bench.github.io/
   </div>
 </div>
 
-<h1> Mercury Coder </h1>
+<h1> Selene by Atla is live </h1>
 
-🔥 Try the worlds fast coding system. Released earlier today, Mercury Coder represents a major breakthrough in high speed/performance coding models. 
+Testing is believing.
 
-This newly announced language diffusion model recently achieved an impressive ranking of #2 in the Copilot Arena while reaching a throughput of 1,000 tokens per second on high end H100s. 
+Be among the first to try our new full-size model in the Selene Playground (official model & platform launch soon). Run evals on random samples or upload your annotated test cases to compare Selene against other language models (GPT series, Claude, etc.) on accuracy.
 
-Apparently it’s been independently verified and it’s performance rates exceeding 700 tokens per second. 
+🧪 We tested Selene against Claude 3.5 Sonnet using a sample from the human-annotated FLASK dataset, evaluated on ‘logical robustness’ — a difficult metric that assesses whether the model output ensures general applicability and avoids logical contradictions. In this test, Selene beat Claude 3.5 Sonnet by over 15%.
 
-A language diffusion model is a generative approach that starts with random noise and iteratively refines it to produce coherent text, similar to how image diffusion models generate detailed visuals. 
+Give it a go: https://huggingface.co/spaces/AtlaAI/selene
 
-Unlike traditional autoregressive methods, this approach leverages a denoising process that gradually transforms randomness into structured language or this case functional code, massively boosting efficiency and scalability.
-
-Demo: https://chat.inceptionlabs.ai/
+Get in touch with us if we do worse than other models and we'll send you free Atla swag (seriously).
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/7.jpg"
       target="_blank">
       <img src="/assets/img/news/AI news/7.jpg" 
-           alt="Mercury" 
+           alt="Selene" 
            />
 </a>
 
