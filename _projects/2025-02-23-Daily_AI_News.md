@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-04
+date: 2025-03-05
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,17 +25,30 @@ images:
   </div>
 </div>
 
-<h1> 4th March 2025 </h1>
+<h1> 5th March 2025 </h1>
 
-<h1> Google Gemini 2.0 Flash can play Super Mario </h1>
+<h1> A2ZRadiology AI just released MC-MED </h1>
 
-Playing Pokemon with LLMs became a benchmark, but what about Super Mario? Turns out Google DeepMind Gemini 2.0 Flash can play Super Mario in real-time due to its fast latency, multimodal input and long context! 🎮
+We just released MC-MED: 118,385 emergency department visits with continuous physiological waveforms. Nothing like this has existed before.
 
-Gemini 2.0 Flash receives screenshots of the game and then generates Python code (PyAutoGUI commands) for each screenshot to control the game for a short period (the next 1 or 2 seconds). Add a while loop to it and you have it play in real-time. 🤯
+Our Harvard/Stanford team built what AI Medicine researchers have needed for years—a dataset that captures both the clinical complexity and continuous physiological monitoring of emergency department care.
 
-Hao AI Lab built Gaming agents to run platformers and puzzle video games in real time: https://github.com/lmgame-org/GamingAgent
+What's new here:
 
-In addition to Super Mario Bros, it also support 2048 and Tetris. With more games to come.
+- Continuous ECG, PPG and respiratory waveforms matched to clinical events
+
+- Complete patient journeys from arrival to disposition
+
+- Pandemic-era data (2020-2022) reflecting modern emergency care
+
+- Scale that enables serious AI applications
+
+This opens up research that was previously impossible—from early detection of deterioration to precision interventions based on physiological patterns.
+
+Built this with an incredible team: Aman Kansal, Emma (Ying) Chen, Tom Jin, and co-PI Prof. David Kim.
+
+
+Available now on PhysioNet: https://physionet.org/content/mc-med/1.0.0/
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -50,19 +63,26 @@ In addition to Super Mario Bros, it also support 2048 and Tetris. With more game
 </div>
 
 
-<h1> OpenAI's GPT-4.5 Launch Summary </h1>
+<h1> Turn any website into LLM-ready data in just a few lines of code! 🔥 </h1>
 
-🔷️ GPT-4.5 pushes pre-training further, making it significantly more powerful than GPT-4o.
+Introducing Firecrawl an open-source framework that takes a URL, crawls it, and converts it into a clean markdown or structured format.
 
-🔷️ A highly capable agentic model with impressive speed—outperforms the "o-line" approach.
+Key Features:
 
-🔷️ Strong competitor to Sonnet 3.7.
+• 🗂️ Scrape: scrapes a URL and get its content in LLM-ready format (markdown, structured data via LLM Extract , screenshot, html)
 
-🔷️ Combines reasoning, speed, performance, and cost-efficiency, positioning it as the top choice.
+• 📑 Crawl: scrapes all the URLs of a web page and return content in LLM-ready format
 
-🔷️ Likely to be priced at around 50% of Claude’s cost by OpenAI.
+• ↪️ Map: input a website and get all the website urls - extremely fast
 
-TL;DR: This is probably the best base model available, with a strong emphasis on tool use. The only question is when it will be widely accessible.
+• 🔍 Extract: get structured data from single page, multiple pages or entire websites with AI.
+
+The best part?
+
+It's 100% Open Source
+
+
+Github Repo: https://github.com/mendableai/firecrawl 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -77,29 +97,11 @@ TL;DR: This is probably the best base model available, with a strong emphasis on
 </div>
 
 
-<h1>🚀 The Future of IT Support is Here! Meet Nyx. 🔥</h1>
+<h1>Hugging Face launched LLM Reasoning Course</h1>
 
-magine an IT Service Desk that’s always available, always responsive, and always reliable. That’s Nyx, Myned’s fully autonomous IT Service Desk agent, designed to eliminate downtime and frustration with real-time, human-like assistance.
+HuggingFace has just launched a new free course on "LLM Reasoning" for explaining how to build models like DeepSeek-R1. The course has a special focus towards Reinforcement Learning. The content looks great. Worth giving a try.
 
-📅 Join Myned’s live demo on March 4th to see Nyx in action: handling change requests, software installations, and IT issues seamlessly via video, text, and audio.
-
-🔹 Cuts IT support costs
-
-🔹 Minimizes downtime
-
-🔹 Enhances IT team efficiency
-
-🔹 Reduces repetitive tasks
-
-🔹 Boosts overall productivity
-
-Nyx integrates effortlessly with Microsoft Teams, Slack, Zendesk, and ServiceNow, making onboarding smooth and support instant, efficient, and tailored to your business needs.
-
-💡 The future of IT support isn’t coming, it’s already here. Will you be part of it?
-
-Register now for the March 4th demo: 
-
-https://www.linkedin.com/events/7299781766536388609/comments/
+Link : https://huggingface.co/reasoning-course
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -116,31 +118,49 @@ https://www.linkedin.com/events/7299781766536388609/comments/
 </div>
 
 
-<h1> Claude Code </h1>
+<h1> LFGG! Cohere just dropped Aya Vision 32B and 8B </h1>
 
-🚀 The AI Coding Revolution Has Begun – Are You Keeping Up?
+LFGG! Cohere just dropped Aya Vision 32B and 8B - beats Llama 3.2 90B Vision and Gemini Flash 🔥
 
-Anthropic just dropped Claude Code, an official AI coding agent that’s set to transform how we write software. If you’re serious about AI development, this is a game-changer.
+> 8B Model: Best-in-class for its parameter size, outperforming competitors by up to 81% win rates 
 
-💡 Imagine having an AI that thinks, adapts, and writes code directly in your terminal—no VS Code required. That’s exactly what Claude Code brings to the table.
+> 32B Model: Outperforms models 2x its size, achieving 49%-72% win rates
 
-⚡ I’ve been hands-on with AI agents like Claude + Cursor, and trust me, this tech is next level. It’s not just about autocompleting lines of code anymore - it’s about AI driving the entire development process.
+Some notes on the release:
 
-But here’s the problem: AI is evolving at an insane speed. You blink, and you’ll miss the latest breakthroughs! That’s why I’ve put together my newsletter on the most cutting-edge tools, strategies, and real-world applications of AI agents.
+> Supports 23 languages and excelling in tasks like image captioning, visual question answering, and text generation
 
-📌 Inside today's issue:
+> Aya Vision 32B outperforms models more than twice its size (e.g., Llama-3.2 90B Vision, Molmo 72B) with win rates of 50%-64% on AyaVisionBench and 52%-72% on mWildVision
 
-✅ No-code AI agent creation (yes, you can build a planner agent even without writing a single line of code!)
+> 8B achieves 79%-81% win rates against leading models in its parameter class (e.g., Qwen2.5-VL 7B, Gemini Flash 1.5 8B)
 
-✅ AI-powered automation that will 10X your productivity
+> Uses dynamic resizing and Pixel Shuffle to handle high-resolution images, reducing image tokens by 4x for improved latency and throughput
 
-✅ LangGraph, Claude Code, and the future of AI-assisted development
+> Synthetic annotations and translation/rephrasing techniques enhance multilingual data coverage, improving win rates by 17.2% on AyaVisionBench
 
-✅ Best practices for integrating AI into your workflow right now
+> Merging vision-language and base language models boosts generative capabilities, increasing win rates by 11.9% on AyaVisionBench
 
-Stay ahead, master the tools, and build software smarter. Small companies that use AI agents will outperform large teams who don't. 
+Architecture:
 
-Blog and Details: https://martinschroder.substack.com/p/new-anthropic-releases-claude-code
+> Vision Encoder: Initialized with SigLIP2-patch14-384 for high-resolution image processing
+
+> Dynamic Resizing: Splits high-res images into tiles, processed with Pixel Shuffle for token compression
+
+> Text Decoder: Initialized from Cohere Command R7B (8B) and Aya Expanse 32B (32B), fine-tuned with multilingual data
+
+> Vision-Language Connector: Aligns image tokens with language model embeddings
+
+Training (Two-Stage Process):
+
+> Vision-Language Alignment: Trains the connector while freezing the vision encoder and LLM
+
+> SFT: Trains both connector and LLM on multilingual multimodal tasks
+
+> Uses synthetic annotations, translation, and rephrasing to expand multilingual coverage
+
+> Model Merging: Combines base LLM with fine-tuned vision-language model to enhance generative performance
+
+Model weights on Hugging Face and integrated on Transformers day-0 🤗
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -155,27 +175,13 @@ Blog and Details: https://martinschroder.substack.com/p/new-anthropic-releases-c
   </div>
 </div>
 
-<h1> Groovy from Gradio </h1>
+<h1> Phi-4 beats SOTA Models </h1>
 
-Announcement from Gradio
+BOOM! Phi 4 Multimodal (MIT licensed) - the new king of the Open ASR Leaderboard 💥
 
-This is BIG! 🚀 We Are Bridging The Language Gap: JavaScript Speed in Python Environments!
+Beats Nvidia Canary, OpenAI Whisper and more 🤩
 
-Every developer knows the challenge: You want Python's simplicity AND JavaScript's client-side performance.
-
-Introducing Groovy from Gradio - a focused Python-to-JavaScript transpiler that delivers exactly that:
-
-✅ Write functions in familiar Python syntax
-
-✅ Run them with JavaScript's client-side speed ⚡
-
-✅ Receive clear error messages when code can't be transpiled
-
-We are NOT attempting to replace JavaScript - Groovy prioritizes transparency over complete language coverage, making it a practical tool rather than a theoretical exercise.
-
-For teams building with Gradio, this means maintaining one codebase while achieving the performance benefits of client-side execution.
-
-Who else is excited about tools that reduce context-switching in development workflows?
+Bonus: the model can do much more - speech summarisation, diarization and doubles up as an Audio LM too!
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -189,17 +195,30 @@ Who else is excited about tools that reduce context-switching in development wor
   </div>
 </div>
 
-<h1> Google Search is natively integrated into Google DeepMind Gemini 2.0 Flash </h1>
+<h1> GRPO can do more </h1>
 
-Did you know that Google Search is natively integrated into Google DeepMind Gemini 2.0 Flash? Google Search is native tool that can be enable with 1 change. 👀
+Forget basic math problems. GRPO can do more! If you are exploring Reinforcement Learning you should take a look at the this blog post. 👀
 
-When enabled Gemini will automatically Google Search if a user input benefits or requires up to date or external informations. It can generate multiple search queries from 1 user input, e.g. “Who won more World Cups, Germany or Brazil?” → ['How many world cups has germany won', 'How many world cups does Brazil have'] and then uses the information to generate a response. ⚽
+💡 Focuses on ambiguous text judgements (not just clear math answers).
 
-Google Search works with +30 languages and you get 1,500 free uses per day, then its $35 per 1,000 queries. 🔥
+📉 Constant learning rate (1e-6) + warmup beats decaying schedules.
 
-docs: https://ai.google.dev/gemini-api/docs/grounding?lang=python
+📏 Gradient clipping with max_grad_norm 0.2 keeps training stable (PPO’s secret sauce).
 
-code: https://github.com/philschmid/gemini-samples/blob/main/examples/gemini-google-search.ipynb
+📝 Used XML reward +0.2 reward for perfect formatting only if judgement is correct.
+
+⚡ Explores power-scaling rewards (x⁴) to scale down individual rewards for a overall bad batch.
+
+📏 Tested length based rewards for hitting ~128-tokens.
+
+📈 7B model adapts 3x faster than 3B
+
+🔍 High-reward samples reveal structured reasoning patterns, with phrases like "Both of these..." and "However,"
+
+Read: https://kalomaze.bearblog.dev/grpo-judge-experiments-findings-and-empirical-observations/
+
+Based on: https://github.com/willccbb/verifiers
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -213,27 +232,27 @@ code: https://github.com/philschmid/gemini-samples/blob/main/examples/gemini-goo
   </div>
 </div>
 
-<h1> Microsoft Unveils Dragon Copilot </h1>
+<h1> 🚀 Multimodal RAG with Docling and IBM's Granite 3.2! 🚀 </h1>
 
-🚨 BREAKING: Microsoft Unveils Dragon Copilot—The First AI Assistant for Clinical Workflows
+We're thrilled to announce a comprehensive tutorial that guides you through building an AI-powered multimodal Retrieval-Augmented Generation (RAG) system using IBM's latest Granite 3.2 model and Docling. 
 
-No one becomes a doctor to do paperwork.
+Why This Matters:
 
-Yet, clinicians spend nearly 2 hours on administrative tasks for every 1 hour with patients. That’s valuable time lost—time that should be spent on care, not clicks.
+The Granite 3.2 model introduces enhanced reasoning capabilities, enabling more sophisticated understanding and generation of human-like text. When combined with Docling's robust document parsing and conversion features, you can create AI systems that seamlessly process and comprehend diverse data types, including text and images, leading to more accurate and insightful responses.​
 
-Introducing Microsoft Dragon Copilot—the industry’s first AI assistant for clinical workflows that automates documentation, surfaces insights, and streamlines tasks, so clinicians can focus on what truly matters: their patients.
+Key Highlights:
 
-🔹 5 minutes saved per patient encounter
+1. Granite 3.2 Model: Experience the advanced reasoning and multimodal processing capabilities of IBM's latest language model. ​
 
-🔹 70% of clinicians feel less burnout
+2. Docling Integration: Efficiently handle and transform documents from various sources using this open-source toolkit. ​
 
-🔹 93% of patients report a better experience
+3. LangChain for Workflow Orchestration: Streamline and automate document processing and retrieval workflows, ensuring seamless interaction between different system components.​
 
-By combining Dragon Medical One (DMO) & DAX Copilot, Microsoft is bringing the power of voice AI and generative AI into one seamless, secure solution for healthcare.
+This tutorial is ideal for AI developers, researchers, and enthusiasts aiming to deepen their understanding of document management and advanced natural language processing techniques. Embark on this journey to harness the power of multimodal AI and elevate your projects to new heights!​
 
-Launching in the U.S. & Canada in May, with global expansion to follow.
+- tutorial: https://www.ibm.com/think/tutorials/build-multimodal-rag-langchain-with-docling-granite
 
-AI isn’t replacing clinicians—it’s giving them back their time.
+- github: https://github.com/ibm-granite-community/granite-snack-cookbook/blob/main/recipes/RAG/Granite_Multimodal_RAG.ipynb
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
