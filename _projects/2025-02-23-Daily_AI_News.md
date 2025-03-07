@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-05
+date: 2025-03-07
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,30 +25,25 @@ images:
   </div>
 </div>
 
-<h1> 5th March 2025 </h1>
+<h1> 7th March 2025 </h1>
 
-<h1> A2ZRadiology AI just released MC-MED </h1>
+<h1> Big AI News from Google </h1>
 
-We just released MC-MED: 118,385 emergency department visits with continuous physiological waveforms. Nothing like this has existed before.
+Google just open-sourced SpeciesNet, an AI model built to identify wildlife from camera trap images—supercharging conservation efforts worldwide. 
 
-Our Harvard/Stanford team built what AI Medicine researchers have needed for years—a dataset that captures both the clinical complexity and continuous physiological monitoring of emergency department care.
+Why this matters: 
 
-What's new here:
+->Trained on 65M+ images from researchers across the globe
 
-- Continuous ECG, PPG and respiratory waveforms matched to clinical events
+-> Recognizes 2,000+ species + key environmental markers
 
-- Complete patient journeys from arrival to disposition
+-> Powers Wildlife Insights, making biodiversity research scalable
 
-- Pandemic-era data (2020-2022) reflecting modern emergency care
+-> Fully open-source (Apache 2.0)—ready for devs & conservationists
 
-- Scale that enables serious AI applications
+This is AI for good in action.
 
-This opens up research that was previously impossible—from early detection of deterioration to precision interventions based on physiological patterns.
-
-Built this with an incredible team: Aman Kansal, Emma (Ying) Chen, Tom Jin, and co-PI Prof. David Kim.
-
-
-Available now on PhysioNet: https://physionet.org/content/mc-med/1.0.0/
+📸 Image: Google / University of Minnesota
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -63,26 +58,19 @@ Available now on PhysioNet: https://physionet.org/content/mc-med/1.0.0/
 </div>
 
 
-<h1> Turn any website into LLM-ready data in just a few lines of code! 🔥 </h1>
+<h1> Super Mario is the New AI Benchmark 🎮</h1>
 
-Introducing Firecrawl an open-source framework that takes a URL, crawls it, and converts it into a clean markdown or structured format.
+Researchers at Hao AI Lab (University of California) put leading language models to the test—by making them play Super Mario Bros..
 
-Key Features:
+Using the GamingAgent framework, AI models received basic instructions and processed the game frame by frame. According to Hao, the challenge forced AI to plan complex maneuvers and develop strategies to progress.
 
-• 🗂️ Scrape: scrapes a URL and get its content in LLM-ready format (markdown, structured data via LLM Extract , screenshot, html)
+🏆 Top performer? Claude 3.7 Sonnet
 
-• 📑 Crawl: scrapes all the URLs of a web page and return content in LLM-ready format
+💀 Biggest struggle? Reasoning-heavy models like o1
 
-• ↪️ Map: input a website and get all the website urls - extremely fast
+Even OpenAI co-founder Andrej Karpathy weighed in, calling this a "crisis in AI evaluation"—admitting that he’s unsure which benchmark truly measures an AI model’s capabilities today.
 
-• 🔍 Extract: get structured data from single page, multiple pages or entire websites with AI.
-
-The best part?
-
-It's 100% Open Source
-
-
-Github Repo: https://github.com/mendableai/firecrawl 
+Is gaming the future of AI benchmarking? 🤔
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -97,11 +85,13 @@ Github Repo: https://github.com/mendableai/firecrawl
 </div>
 
 
-<h1>Hugging Face launched LLM Reasoning Course</h1>
+<h1>New Announcement by Meta regarding human-robot collaboration</h1>
 
-HuggingFace has just launched a new free course on "LLM Reasoning" for explaining how to build models like DeepSeek-R1. The course has a special focus towards Reinforcement Learning. The content looks great. Worth giving a try.
+Our Meta PARTNR demo operationalizes human-robot collaboration. By sharing some of the challenges and insights, we hope to contribute to the development of the next wave of innovation in this space.
 
-Link : https://huggingface.co/reasoning-course
+Research paper ➡️ https://arxiv.org/abs/2411.00081
+
+Dataset and code ➡️ https://github.com/facebookresearch/partnr-planner
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -118,50 +108,16 @@ Link : https://huggingface.co/reasoning-course
 </div>
 
 
-<h1> LFGG! Cohere just dropped Aya Vision 32B and 8B </h1>
+<h1> Pioneers of Reinforcement Learning Win the 2024 ACM Turing Award! </h1>
 
-LFGG! Cohere just dropped Aya Vision 32B and 8B - beats Llama 3.2 90B Vision and Gemini Flash 🔥
+The "Nobel Prize of Computing" has been awarded to Richard Sutton and Andrew Barto for their groundbreaking contributions to Reinforcement Learning (RL)—a field that has revolutionized artificial intelligence.
 
-> 8B Model: Best-in-class for its parameter size, outperforming competitors by up to 81% win rates 
+Their work laid the foundation for many of the AI systems we see today, from AlphaGo’s historic victory over human Go champions to advancements in robotics, self-driving cars, and OpenAI’s ChatGPT. 
 
-> 32B Model: Outperforms models 2x its size, achieving 49%-72% win rates
+Their research in temporal difference learning, policy optimization, and reward-driven behavior has shaped the way machines learn from experience.
+This award is a recognition of decades of innovation that continue to inspire researchers, engineers, and AI enthusiasts worldwide.
 
-Some notes on the release:
-
-> Supports 23 languages and excelling in tasks like image captioning, visual question answering, and text generation
-
-> Aya Vision 32B outperforms models more than twice its size (e.g., Llama-3.2 90B Vision, Molmo 72B) with win rates of 50%-64% on AyaVisionBench and 52%-72% on mWildVision
-
-> 8B achieves 79%-81% win rates against leading models in its parameter class (e.g., Qwen2.5-VL 7B, Gemini Flash 1.5 8B)
-
-> Uses dynamic resizing and Pixel Shuffle to handle high-resolution images, reducing image tokens by 4x for improved latency and throughput
-
-> Synthetic annotations and translation/rephrasing techniques enhance multilingual data coverage, improving win rates by 17.2% on AyaVisionBench
-
-> Merging vision-language and base language models boosts generative capabilities, increasing win rates by 11.9% on AyaVisionBench
-
-Architecture:
-
-> Vision Encoder: Initialized with SigLIP2-patch14-384 for high-resolution image processing
-
-> Dynamic Resizing: Splits high-res images into tiles, processed with Pixel Shuffle for token compression
-
-> Text Decoder: Initialized from Cohere Command R7B (8B) and Aya Expanse 32B (32B), fine-tuned with multilingual data
-
-> Vision-Language Connector: Aligns image tokens with language model embeddings
-
-Training (Two-Stage Process):
-
-> Vision-Language Alignment: Trains the connector while freezing the vision encoder and LLM
-
-> SFT: Trains both connector and LLM on multilingual multimodal tasks
-
-> Uses synthetic annotations, translation, and rephrasing to expand multilingual coverage
-
-> Model Merging: Combines base LLM with fine-tuned vision-language model to enhance generative performance
-
-Model weights on Hugging Face and integrated on Transformers day-0 🤗
-
+Thank you, Richard Sutton and Andrew Barto, for your dedication and contributions to AI! Your work has not only advanced technology but has also inspired generations of researchers, engineers, and innovators.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -175,13 +131,31 @@ Model weights on Hugging Face and integrated on Transformers day-0 🤗
   </div>
 </div>
 
-<h1> Phi-4 beats SOTA Models </h1>
+<h1> WILD: OpenAI wants $20,000/month for PhD-level AI Agents 😳 </h1>
 
-BOOM! Phi 4 Multimodal (MIT licensed) - the new king of the Open ASR Leaderboard 💥
+Sounds crazy? Because it is.
 
-Beats Nvidia Canary, OpenAI Whisper and more 🤩
+The Information just reported that OpenAI executives have told some investors it planned to sell its AI agents ranging $2-20k/month.
 
-Bonus: the model can do much more - speech summarisation, diarization and doubles up as an Audio LM too!
+Here's the breakdown:
+
+- $2,000/month: Basic agents for "high-income knowledge workers."
+- $10,000/month: Mid-level agents tailored for software development.
+- $20,000/month: Elite, PhD-level research agents.
+
+This means either of two things.
+
+OpenAI's upcoming agents, like the SWE agent, are really, really good that they can easily replace top-tier talent overnight. Otherwise, why charge these prices?
+
+OR
+
+OpenAI has truly mastered sales psychology. $2k-$20k per month isn't priced for value delivery - you can get a top-level PhD researcher for less than that and equip them with OpenAI Pro, Claude, Grok, or any other AI tool.
+
+It's priced to make executives feel they're buying something exclusive and transformative.
+
+So they could brag about it, and be the "first" or "AI-powered", or even use it as an excuse to lay off some employees.
+
+Either way, it's not AGI - it's probably just luxury branding.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -195,29 +169,21 @@ Bonus: the model can do much more - speech summarisation, diarization and double
   </div>
 </div>
 
-<h1> GRPO can do more </h1>
+<h1> Qwen beats DeepSeek R1 and OpenAI 01-mini </h1>
 
-Forget basic math problems. GRPO can do more! If you are exploring Reinforcement Learning you should take a look at the this blog post. 👀
+Today, we release QwQ-32B, our new reasoning model with only 32 billion parameters that rivals cutting-edge reasoning model, e.g., DeepSeek-R1.
 
-💡 Focuses on ambiguous text judgements (not just clear math answers).
+Blog: https://qwenlm.github.io/blog/qwq-32b/
 
-📉 Constant learning rate (1e-6) + warmup beats decaying schedules.
+HF: https://huggingface.co/Qwen/QwQ-32B
 
-📏 Gradient clipping with max_grad_norm 0.2 keeps training stable (PPO’s secret sauce).
+ModelScope: https://modelscope.cn/models/Qwen/QwQ-32B
 
-📝 Used XML reward +0.2 reward for perfect formatting only if judgement is correct.
+Demo: https://huggingface.co/spaces/Qwen/QwQ-32B-Demo
 
-⚡ Explores power-scaling rewards (x⁴) to scale down individual rewards for a overall bad batch.
+Qwen Chat: https://chat.qwen.ai
 
-📏 Tested length based rewards for hitting ~128-tokens.
-
-📈 7B model adapts 3x faster than 3B
-
-🔍 High-reward samples reveal structured reasoning patterns, with phrases like "Both of these..." and "However,"
-
-Read: https://kalomaze.bearblog.dev/grpo-judge-experiments-findings-and-empirical-observations/
-
-Based on: https://github.com/willccbb/verifiers
+This time, we investigate recipes for scaling RL and have achieved some impressive results based on our Qwen2.5-32B. We find that RL training con continuously improve the performance especially in math and coding, and we observe that the continous scaling of RL can help a medium-size model achieve competitieve performance against gigantic MoE model. Feel free to chat with our new models and provide us feedback!
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -232,27 +198,25 @@ Based on: https://github.com/willccbb/verifiers
   </div>
 </div>
 
-<h1> 🚀 Multimodal RAG with Docling and IBM's Granite 3.2! 🚀 </h1>
+<h1> Mistral AI just solved PDF parsing forever. </h1>
 
-We're thrilled to announce a comprehensive tutorial that guides you through building an AI-powered multimodal Retrieval-Augmented Generation (RAG) system using IBM's latest Granite 3.2 model and Docling. 
+Mistral AI just solved PDF parsing forever. Their new OCR API can parse 1000-2000 pages in 1 min.
 
-Why This Matters:
+It achieves state of the art results on tables, multilingual — supports structure: images, bounding boxes, scans, equations.
 
-The Granite 3.2 model introduces enhanced reasoning capabilities, enabling more sophisticated understanding and generation of human-like text. When combined with Docling's robust document parsing and conversion features, you can create AI systems that seamlessly process and comprehend diverse data types, including text and images, leading to more accurate and insightful responses.​
+Key Features:
 
-Key Highlights:
+✅ State-of-the-art accuracy on complex documents (LaTeX, scientific papers, charts, multilingual text).
 
-1. Granite 3.2 Model: Experience the advanced reasoning and multimodal processing capabilities of IBM's latest language model. ​
+⚡ Fastest in its category—processes up to 2,000 pages per minute.
 
-2. Docling Integration: Efficiently handle and transform documents from various sources using this open-source toolkit. ​
+🌍 Multimodal & multilingual—supports thousands of scripts, fonts, and languages.
 
-3. LangChain for Workflow Orchestration: Streamline and automate document processing and retrieval workflows, ensuring seamless interaction between different system components.​
+📄 Doc-as-prompt—extracts structured outputs like JSON for downstream applications.
 
-This tutorial is ideal for AI developers, researchers, and enthusiasts aiming to deepen their understanding of document management and advanced natural language processing techniques. Embark on this journey to harness the power of multimodal AI and elevate your projects to new heights!​
+🔒 Self-hosting option for organizations handling classified or sensitive data.
 
-- tutorial: https://www.ibm.com/think/tutorials/build-multimodal-rag-langchain-with-docling-granite
-
-- github: https://github.com/ibm-granite-community/granite-snack-cookbook/blob/main/recipes/RAG/Granite_Multimodal_RAG.ipynb
+https://mistral.ai/news/mistral-ocr
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
