@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-08
+date: 2025-03-10
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,22 +25,31 @@ images:
   </div>
 </div>
 
-<h1> 8th March 2025 </h1>
+<h1> 10th March 2025 </h1>
 
-<h1> Code Execution from Google DeepMind </h1>
+<h1> New dataset from researchers at Meta </h1>
 
-Here is how the Code Execution from Google DeepMind Gemini 2.0 works. Code execution allows Gemini to generate and then run Python code. This enables the model to automatically perform data analysis, algorithmic tasks or solve problems that are difficult or impossible to achieve through text only.
+New dataset from researchers at Meta — uCO3D, or UnCommon Objects in 3D, is the largest publicly-available object-centric dataset for 3D deep learning and 3D generative AI.
 
-> If the code throws an error it tries to auto-fix, up to 5 times. 
+More on this project ➡️ https://go.fb.me/8u86hq
 
-> Supports file input: 1 million tokens = roughly 2MB (e.g. CSV)
+Documentation and download ➡️ https://go.fb.me/izrajn
 
-> The maximum runtime of the code environment is 30 seconds.
+Highlights
 
-> Python libraries installed: altair, chess, cv2, matplotlib, mpmath, numpy, pandas, pdfminer, reportlab, seaborn, sklearn, statsmodels, striprtf, sympy, and tabulate
+• 170,000 videos depicting diverse objects from all directions.
 
+• 19.3TB of data.
 
-Docs: https://ai.google.dev/gemini-api/docs/code-execution?lang=python
+• Objects come from the LVIS taxonomy of ~1000 categories, grouped into 50 super-categories.
+
+• Full original videos instead of frames — each annotated with object segmentation, camera poses and point clouds.
+
+• 3D Gaussian Splat reconstruction for each video.
+
+• Long and short caption obtained for each scene with a large video-language model.
+
+• Significantly improved annotation quality and size compared to previous datasets of its kind.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -55,39 +64,18 @@ Docs: https://ai.google.dev/gemini-api/docs/code-execution?lang=python
 </div>
 
 
-<h1> AMD introduces Instella</h1>
+<h1> 🚨 Meta Unveils the Compute Puck – The Key to AR Glasses </h1>
 
-NEW: AMD introduces Instella, a series of fully open-source, state-of-the-art 3B parameter language models.
+Meta’s Orion AR glasses wouldn’t be possible without a small but powerful innovation: the Compute Puck. This pocket-sized device offloads processing, enabling lighter, high-performance AR experiences.
 
-It's nice to see AMD pushing out its own small language models. 
+👓Powers Orion’s AI and machine perception
 
-It looks like a very competitive model for its size. 
+👓Reduces heat, boosts battery life, and enhances wireless performance
 
-Here's everything you need to know:
+👓Designed for seamless integration with AR glasses and EMG wristbands
 
-• Architecture: Autoregressive transformer with 36 decoder layers and 32 attention heads. This is a text-only model. 
+The Compute Puck shows how AR is evolving beyond phones and wearables.
 
-• Sequence Length: 4,096 tokens
-
-• Vocabulary: ~50,000 tokens (using OLMo tokenizer)
-
-• Training Hardware: Installa is trained entirely on AMD Instinct MI300X GPUs; specifically, 128 AMD Instinct MI300X GPUs.
-
-• Multi-Stage Training Pipeline: Stage 1 Pre-training: 4.065 trillion tokens covering diverse content (coding, academic, web). Stage 2 Pre-training: Additional 57.575 billion tokens, including specialized datasets for mathematics, coding, and conversational interactions.
-
-• Supervised Fine-Tuning (SFT): 8.9 billion tokens to enhance instruction-following capabilities. It also includes an alignment Stage (DPO): 760 million tokens for alignment to human preferences (Instella-3B-Instruct).
-
-• Performance Highlights: Instella-3B significantly surpasses existing fully open 3B models (+8.08% average improvement). Competes closely with leading open-weight models like Llama-3.2-3B, Gemma-2-2B, and Qwen-2.5-3B. Achieved outstanding performance improvements in benchmarks like ARC Challenge, MMLU, BBH, and GSM8K. The instruction-tuned models excel in interactive, instruction-following tasks, achieving results comparable to or surpassing open-weight models.
-
-• Training Optimizations: Used FlashAttention-2 for efficient attention computation, Torch Compile for performance acceleration, and Fully Sharded Data Parallelism (FSDP) for optimal resource utilization and scalability.
-
-• Open Source: Fully open-sourced model weights, datasets, training hyperparameters, and code available on Hugging Face and GitHub.
-
-• Future Directions: Plans include expanding context length, enhancing reasoning skills, exploring multimodal capabilities, and scaling up models and datasets.
-
-• License and Usage: Available under a ResearchRAIL license, intended for academic and research purposes only.
-
-Blog: https://rocm.blogs.amd.com/artificial-intelligence/introducing-instella-3B/README.html
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -102,28 +90,45 @@ Blog: https://rocm.blogs.amd.com/artificial-intelligence/introducing-instella-3B
 </div>
 
 
-<h1>🔥🔥Distill-Any-Depth: new SOTA MDE🔥🔥</h1>
+<h1>Microsoft & OpenAI, the AI Power Couple, are breaking up 😳</h1>
 
-👉Distill-Any-Depth is the new SOTA monocular depth estimation model trained with a novel knowledge distillation. Source Code, pre-trained models & Hugging Face demo released💙
+Microsoft invested billions in OpenAI. But something just changed.
 
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+Despite revolutionizing the AI landscape, Microsoft is now:
 
-✅Authors: ZJUT, WestLake University, LZU & NTU
+- Quietly stepping away from OpenAI.
 
-✅Multiple D-normalization on pseudo-label distillation
+- Testing new partners: Elon Musk’s xAI, Meta, and DeepSeek.
 
-✅Proposing novel Cross-Context Distillation approach
+- Building its own AI models to rival ChatGPT.
 
-✅Introducing new multi-teacher distillation framework
+Why the sudden shift?
 
-✅Pre-trained Models and code released under MIT
+↳ Cost Control: OpenAI tech is solid but expensive.
 
+Microsoft seeks cheaper, equally powerful solutions.
 
-👉Paper arxiv.org/pdf/2502.19204
+↳ Independence: Reducing dependency means more flexibility.
 
-👉Repo https://github.com/Westlake-AGI-Lab/Distill-Any-Depth
+Microsoft wants full control over its AI future.
 
-🤗Demo https://huggingface.co/spaces/xingyang1/Distill-Any-Depth
+↳ Competition: Microsoft's own AI research is catching up fast.
+
+It no longer needs OpenAI as its sole powerhouse.
+
+On top of that, there's some talking around:
+
+- Rumors of canceled projects (like OpenAI's Stargate).
+
+- Speculation about layoffs and data center closures.
+
+- Questions raised about OpenAI’s leadership status.
+
+Of course, Microsoft isn’t cutting ties completely yet.
+But the relationship just went from exclusive to complicated.
+
+AI's biggest alliance is evolving fast 🍿
+
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -140,27 +145,23 @@ Blog: https://rocm.blogs.amd.com/artificial-intelligence/introducing-instella-3B
 </div>
 
 
-<h1> How good are ReAct Agents under pressure? </h1>
+<h1> Gemini models for Embeddings! </h1>
 
-How good are ReAct Agents under pressure? ReACT (Reasoning and Acting) Agents are AI Agents that combine reasoning with tool calling, enabling them to iteratively think through problems, use tools, and act based on observations to achieve goals. 
+Gemini models for Embeddings! Yes, Google DeepMind just released a new experimental embedding model ranking #1 on MMTEB with 8k context. 👀
 
-LangChain ran benchmarks on far can we push single ReAct Agents by scaling domains (Topic Area, e.g. Customer Support) and available tools.
+- 🧪 Experimental version, free to try in AI Studio and via API
 
-Results:
+- 🥇 Top MMTEB leaderboard with a score of 68.32 (+5.81 lead)
 
-🔬 Evaluated Tool calling trajectory (the order of the called tools) and final output with LLM as a Judge.
+- 💡 Build for finance, science, legal, search, code
 
-🦙 Benchmarked Claude 3.5 sonnet, gpt-4o, o1, o3-mini & Llama 3.3 70B
+- 📏 8K input token context
 
-🧠 Both more context and more tools degrade agent performance
+- 🪆Matryoshka Representation Learning (MRL) for flexible dimensionality
 
-📉 Performance on tasks requiring 3+ tool calls dropped more severely than simpler tasks
+- 🌐 Multilingual in +100 languages
 
-🛠️ o1, o3-mini, and claude-3.5-sonnet outperform gpt-4o and llama-3.3-70B, .
-
-📅 Calendar Scheduling: o1 (71%) and o3-mini (68%) were top performers with the base domain.
-
-Blog: https://blog.langchain.dev/react-agent-benchmarking/
+Blog: https://developers.googleblog.com/en/gemini-embedding-text-model-now-available-gemini-api/
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -174,19 +175,31 @@ Blog: https://blog.langchain.dev/react-agent-benchmarking/
   </div>
 </div>
 
-<h1> 🚨 Breaking: Perplexity Launches Voice Mode on macOS </h1>
+<h1> China's DeepSeek moment 2.0 is here, and it's called Manus AI 😳 </h1>
 
-Perplexity’s latest update brings voice mode to macOS, adding a new way to interact with AI. Now, you can ask questions and get answers—without typing.
+Already viral in China, this AI agent is about to go global.
 
-🔹Hands-free search for faster results
+Think Perplexity or xAI Deep Research meets OpenaAI Operator and Claude Computer - rolled into ONE unstoppable AI agent.
 
-🔹Switch between voice and text seamlessly
+It reportedly can handle up to 50 complex tasks simultaneously:
 
-🔹Stay focused without disrupting your workflow
+- Managing financial transactions
 
-For those who prefer speaking over typing, this update offers a new way to explore ideas and get information.
+- Deep-dive research
 
-How do you see voice AI fitting into your daily routine? 🔊
+- Planning your dream vacation
+
+- Even launching websites - completely autonomously.
+
+Reports already suggest it's outperforming DeepSeek and OpenAI models in real-world benchmarks.
+
+But here comes the crazy part.
+
+Just this week, reports came that OpenAI aims to launch $20k/month AI agents.
+
+Well, Manus just flipped the table as their AI agent is reportedly partially open-source, affordable, and powerful enough to disrupt entire industries.
+
+China is no longer catching up - it's leading in AI globally.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -200,26 +213,15 @@ How do you see voice AI fitting into your daily routine? 🔊
   </div>
 </div>
 
-<h1> Exciting news from AMD </h1>
+<h1> Real-time Dense SLAM with 3D Reconstruction from MASt3R-SLAM 🔥🔥 </h1>
 
-Exciting news from AMD! Thrilled to announce the launch of several new libraries, including our centralized repository: AITER. 
+Dense reconstruction and camera localization have always been a big problem in the computer vision space and especially in real-time. This is even from an uncalibrated single RGB camera. No depth, no stereo, no calibration and it runs in real-time. This is a real breakthrough and will create videos around it on my YouTube channel. Even how we can get it up on running on an edge device which can be portable. 
 
-AITER is designed to accelerate AI workloads by supporting a wide range of high-performance AI operators—all in one unified place. This repository is tailored to address various customer operator-level requests, enabling developers to concentrate on crafting operators while customers integrate these collections seamlessly into their own frameworks, whether private, public, or otherwise.
 
-Key Features:
+A real-time monocular dense SLAM system designed bottom-up from MASt3R, a two-view 3D reconstruction and matching prior. Equipped with this strong prior, the system is robust on in-the-wild video sequences despite making no assumption on a fixed or parametric camera model beyond a unique camera centre. They introduce efficient methods for pointmap matching, camera tracking and local fusion, graph construction and loop closure, and second-order global optimisation. With known calibration, a simple modification to the system achieves state-of-the-art performance across various benchmarks. Altogether. It's a plug-and-play monocular SLAM system capable of producing globally-consistent poses and dense geometry while operating at 15 FPS.
 
-- C++ Level API: Robust support for high-performance computing.
 
-- Python Level API: Easy-to-use interface for rapid development.
-
-- Versatile Kernel Support: Underlying kernels can be sourced from triton, ck, or asm.
-
-- Comprehensive Kernel Coverage: Includes not only inference kernels but also training kernels and GEMM+communication kernels—empowering any kernel+framework combination to overcome architectural limitations.
-
-Proud to support innovation and efficiency in AI development. Check out AITER on GitHub and see how AMD is paving the way for next-generation AI performance!
-
-https://github.com/ROCm/aiter
-
+👉 Check out the project page here and code: https://edexheim.github.io/mast3r-slam/
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -233,37 +235,44 @@ https://github.com/ROCm/aiter
   </div>
 </div>
 
-<h1> 🚀 Big news for AI agents! </h1>
+<h1> The world's first diffusion LLM is here - faster, cheaper, and what else? </h1>
 
-With the latest release of smolagents, you can now securely execute Python code in sandboxed Docker or E2B environments. 🦾🔒
+Diffusion models - used in text-to-image AI like Stable Diffusion.
+LLMs - you already know!
 
-Here's why this is a game-changer for agent-based systems: 🧵👇
+This new type of LLM - Diffusion Large Language Models (DLMMs) - combines both.
 
-1️⃣ Security First 🔐
+The model was developed by Inception Labs, called Mercury Coder, specifically for code generation.
 
-Running AI agents in unrestricted Python environments is risky! With sandboxing, your agents are isolated, preventing unintended file access, network abuse, or system modifications.
+It is the first working large-scale diffusion-based LLM.
 
-2️⃣ Deterministic & Reproducible Runs 📦
+As an end user, two points stood out to me as the most attractive: 
 
-By running agents in containerized environments, you ensure that every execution happens in a controlled and predictable setting—no more environment mismatches or dependency issues!
+1- It’s up to 10x faster & 10x cheaper than traditional LLMs.
 
-3️⃣ Resource Control & Limits 🚦
+2- It runs on standard Nvidia H100 GPUs—no specialized hardware needed.
 
-Docker and E2B allow you to enforce CPU, memory, and execution time limits, so rogue or inefficient agents don’t spiral out of control.
+Traditional LLMs (like GPT-4, Claude, etc.) generate text one token at a time, waiting for the previous token before predicting the next. This process is inherently sequential and slow.
 
-4️⃣ Safer Code Execution in Production 🏭
+(Btw, it’s crazy how fast GenAI is evolving—now we have “traditional LLMs,” even though LLMs have only been around for a few years!)
 
-Deploy AI agents confidently, knowing that any generated code runs in an ephemeral, isolated environment, protecting your host machine and infrastructure.
+Back to this new DLMM, it works differently:
 
-5️⃣ Easy to Integrate 🛠️
+🔹It generates the entire output at once—but in a rough, noisy state.
 
-With smolagents, you can simply configure your agent to use Docker or E2B as its execution backend—no need for complex security setups!
+🔹It then refines the output step by step, making it more coherent.
 
-6️⃣ Perfect for Autonomous AI Agents 🤖
+This is similar to how diffusion models generate images—starting with pure noise and gradually refining it into something recognizable.
 
-If your AI agents generate and execute code dynamically, this is a must-have to avoid security pitfalls while enabling advanced automation.
+Because the model sees the entire output at once, it can self-correct and refine mistakes, leading to better reasoning and fewer hallucinations.
 
-⚡ Get started now: https://github.com/huggingface/smolagents
+We’ve talked about coding AI for a while, but this one might be a real game-changer. 
+
+There are already some testing videos on YouTube showing impressive results—Mercury Coder can generate complete working programs in just seconds, with decent quality.
+
+So, can we try it?
+
+Right now, full access is limited to enterprises, but you can test the model in its Playground and see how it works. I’ll drop the link in the comments.
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
