@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-10
+date: 2025-03-12
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,31 +25,28 @@ images:
   </div>
 </div>
 
-<h1> 10th March 2025 </h1>
+<h1> 12th March 2025 </h1>
 
-<h1> New dataset from researchers at Meta </h1>
+<h1> Create and deploy LLM agents just using natural language!🔥 </h1>
 
-New dataset from researchers at Meta — uCO3D, or UnCommon Objects in 3D, is the largest publicly-available object-centric dataset for 3D deep learning and 3D generative AI.
+AutoAgent is the Fully-Automated & Zero-CodeLLM Agent Framework that let's you create and deploy LLM agents using just natural language.
 
-More on this project ➡️ https://go.fb.me/8u86hq
+Key Features:
 
-Documentation and download ➡️ https://go.fb.me/izrajn
+📚 Agentic-RAG – Built-in self-managing vector database, outperforming LangChain.
 
-Highlights
+✨ Zero-Code Agent & Workflow Creation – Just use natural language, no coding needed.
 
-• 170,000 videos depicting diverse objects from all directions.
+🌐 Universal LLM Support – Works with OpenAI, Anthropic, Deepseek, vLLM, Huggingface & more.
 
-• 19.3TB of data.
+🔀 Flexible Interaction – Supports both function-calling & ReAct modes.
 
-• Objects come from the LVIS taxonomy of ~1000 categories, grouped into 50 super-categories.
+The best part?
 
-• Full original videos instead of frames — each annotated with object segmentation, camera poses and point clouds.
+It's 100% Open Source
 
-• 3D Gaussian Splat reconstruction for each video.
 
-• Long and short caption obtained for each scene with a large video-language model.
-
-• Significantly improved annotation quality and size compared to previous datasets of its kind.
+Github Repo: https://github.com/HKUDS/AutoAgent
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -64,17 +61,21 @@ Highlights
 </div>
 
 
-<h1> 🚨 Meta Unveils the Compute Puck – The Key to AR Glasses </h1>
+<h1> Announcement from Takween AI </h1>
 
-Meta’s Orion AR glasses wouldn’t be possible without a small but powerful innovation: the Compute Puck. This pocket-sized device offloads processing, enabling lighter, high-performance AR experiences.
+We’re excited to announce a strategic partnership between Takween AI and Groq to accelerate AI adoption in Saudi Arabia! 🇸🇦✨
 
-👓Powers Orion’s AI and machine perception
+By combining Groq’s ultra-fast AI inferencing infrastructure with Takween AI’s cutting-edge solutions, we’re bringing seamless, high-performance AI capabilities to businesses across the Kingdom. This partnership will:
 
-👓Reduces heat, boosts battery life, and enhances wireless performance
+🔹 Expand AI accessibility and innovation across industries
 
-👓Designed for seamless integration with AR glasses and EMG wristbands
+🔹 Empower businesses with cutting-edge AI-driven solutions
 
-The Compute Puck shows how AR is evolving beyond phones and wearables.
+🔹 Support Saudi Vision 2030’s digital transformation goals
+
+🤝 This agreement was signed by Fahad AlTurief VP & MENA MD of Groq and Ahmed Sulaiman Sulaiman, Founder & CEO of Takween, marking a significant milestone in AI innovation.
+
+Together, we’re shaping the future of AI in Saudi Arabia, driving innovation, and unlocking new opportunities for growth! 🚀📍
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -90,44 +91,17 @@ The Compute Puck shows how AR is evolving beyond phones and wearables.
 </div>
 
 
-<h1>Microsoft & OpenAI, the AI Power Couple, are breaking up 😳</h1>
+<h1>🔥AI Auctions? How Token Bidding Could Reshape LLM Collaboration</h1>
 
-Microsoft invested billions in OpenAI. But something just changed.
+New research introduces token auctions, a mechanism where multiple LLMs collaborate by bidding on each word to generate a joint output. 
 
-Despite revolutionizing the AI landscape, Microsoft is now:
+This method ensures fairer, more optimized AI-generated content in scenarios where multiple stakeholders have competing interests.
 
-- Quietly stepping away from OpenAI.
+✅How it works – Each LLM submits bids for the next token, and an auction mechanism selects the final output based on preferences and strategic bidding.
 
-- Testing new partners: Elon Musk’s xAI, Meta, and DeepSeek.
+✅Why it matters – This approach balances competing AI inputs, making it ideal for applications like co-authored reports, ad generation, or content aggregation.
 
-- Building its own AI models to rival ChatGPT.
-
-Why the sudden shift?
-
-↳ Cost Control: OpenAI tech is solid but expensive.
-
-Microsoft seeks cheaper, equally powerful solutions.
-
-↳ Independence: Reducing dependency means more flexibility.
-
-Microsoft wants full control over its AI future.
-
-↳ Competition: Microsoft's own AI research is catching up fast.
-
-It no longer needs OpenAI as its sole powerhouse.
-
-On top of that, there's some talking around:
-
-- Rumors of canceled projects (like OpenAI's Stargate).
-
-- Speculation about layoffs and data center closures.
-
-- Questions raised about OpenAI’s leadership status.
-
-Of course, Microsoft isn’t cutting ties completely yet.
-But the relationship just went from exclusive to complicated.
-
-AI's biggest alliance is evolving fast 🍿
+✅Proven results – Tested with LLM-generated ad creatives, the model successfully merged competing advertiser inputs into a unified message.
 
 
 
@@ -145,23 +119,23 @@ AI's biggest alliance is evolving fast 🍿
 </div>
 
 
-<h1> Gemini models for Embeddings! </h1>
+<h1> MANUS AI: HYPE VS. REALITY 🔍 </h1>
 
-Gemini models for Embeddings! Yes, Google DeepMind just released a new experimental embedding model ranking #1 on MMTEB with 8k context. 👀
+Manus AI has been making waves on social media with impressive demos, but it is not "China's next DeepSeek moment”. The co-founder confirmed details on X:
 
-- 🧪 Experimental version, free to try in AI Studio and via API
+✅ Built on Anthropic Claude Sonnet, not their own foundation model
 
-- 🥇 Top MMTEB leaderboard with a score of 68.32 (+5.81 lead)
+✅ Has access to 29 tools and uses @browser_use open-source for browser control
 
-- 💡 Build for finance, science, legal, search, code
+✅ User communicates with executor agent and not planner or other agents.
 
-- 📏 8K input token context
+✅ Each user gets isolated sandbox environment
 
-- 🪆Matryoshka Representation Learning (MRL) for flexible dimensionality
+✅ Outperforms OpenAI Deep Research on GAIA benchmark
 
-- 🌐 Multilingual in +100 languages
+Tools and Prompts: https://gist.github.com/jlia0/db0a9695b3ca7609c9b1a08dcbf872c9
 
-Blog: https://developers.googleblog.com/en/gemini-embedding-text-model-now-available-gemini-api/
+Building AI products doesn't require training your own foundation models. We're probably just scratching the surface of what existing models can do with the right tooling and integration!
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -175,31 +149,21 @@ Blog: https://developers.googleblog.com/en/gemini-embedding-text-model-now-avail
   </div>
 </div>
 
-<h1> China's DeepSeek moment 2.0 is here, and it's called Manus AI 😳 </h1>
+<h1> 🚀 Claude 3.5 & GPT-4o Get a Web Crawling Boost </h1>
 
-Already viral in China, this AI agent is about to go global.
+A new tool, Firecrawl, is making it easier to convert entire websites into LLM-ready markdown or structured data.
 
-Think Perplexity or xAI Deep Research meets OpenaAI Operator and Claude Computer - rolled into ONE unstoppable AI agent.
+1️⃣Works with Claude 3.5 and GPT-4o to scrape, crawl, and extract data with just a few lines of code.
 
-It reportedly can handle up to 50 complex tasks simultaneously:
+2️⃣Captures all accessible subpages—no sitemap needed.
 
-- Managing financial transactions
+3️⃣ Outputs clean, structured data optimized for LLM-based workflows.
 
-- Deep-dive research
+This approach streamlines data collection for AI applications, making web content more accessible for large-scale models.
 
-- Planning your dream vacation
+How do you see this impacting AI-driven data extraction? 🤔 
 
-- Even launching websites - completely autonomously.
-
-Reports already suggest it's outperforming DeepSeek and OpenAI models in real-world benchmarks.
-
-But here comes the crazy part.
-
-Just this week, reports came that OpenAI aims to launch $20k/month AI agents.
-
-Well, Manus just flipped the table as their AI agent is reportedly partially open-source, affordable, and powerful enough to disrupt entire industries.
-
-China is no longer catching up - it's leading in AI globally.
+Source: Eric Vyacheslav
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -213,15 +177,25 @@ China is no longer catching up - it's leading in AI globally.
   </div>
 </div>
 
-<h1> Real-time Dense SLAM with 3D Reconstruction from MASt3R-SLAM 🔥🔥 </h1>
+<h1> EuroBERT is released </h1>
 
-Dense reconstruction and camera localization have always been a big problem in the computer vision space and especially in real-time. This is even from an uncalibrated single RGB camera. No depth, no stereo, no calibration and it runs in real-time. This is a real breakthrough and will create videos around it on my YouTube channel. Even how we can get it up on running on an edge device which can be portable. 
+A multilingual encoder model family (210M to 2.1B parameters) trained on 5T tokens across 15 languages, with support for sequences up to 8,192 tokens. It’s open-source and designed to power multilingual retrieval, classification, and embeddings.
 
+🔹 Why EuroBERT?
 
-A real-time monocular dense SLAM system designed bottom-up from MASt3R, a two-view 3D reconstruction and matching prior. Equipped with this strong prior, the system is robust on in-the-wild video sequences despite making no assumption on a fixed or parametric camera model beyond a unique camera centre. They introduce efficient methods for pointmap matching, camera tracking and local fusion, graph construction and loop closure, and second-order global optimisation. With known calibration, a simple modification to the system achieves state-of-the-art performance across various benchmarks. Altogether. It's a plug-and-play monocular SLAM system capable of producing globally-consistent poses and dense geometry while operating at 15 FPS.
+✅ State-of-the-art performance across multilingual retrieval, classification, and regression
 
+✅ Long-context support (8,192 tokens) for document-level understanding
 
-👉 Check out the project page here and code: https://edexheim.github.io/mast3r-slam/
+✅ Mathematics & Code training for improved reasoning
+
+✅ Outperforms XLM-RoBERTa, mGTE, and other leading models
+
+EuroBERT builds upon our team’s experience training EuroLLM & CroissantLLM, but encoders are NOT decoders and require specific design decisions! We ran extensive ablations on masking ratios, language and data distributions, annealing, and data quality to ensure optimal performance.
+
+📢 Beyond the results we report, nothing beats people fine-tuning the model for their usecases and sharing real-world feedback, so feel free to do so, everything is on the HuggingFace page !
+
+More details and links in the blog: https://huggingface.co/blog/EuroBERT/release
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -235,45 +209,19 @@ A real-time monocular dense SLAM system designed bottom-up from MASt3R, a two-vi
   </div>
 </div>
 
-<h1> The world's first diffusion LLM is here - faster, cheaper, and what else? </h1>
+<h1> New Agent Leaderboard! </h1>
 
-Diffusion models - used in text-to-image AI like Stable Diffusion.
-LLMs - you already know!
+Hugging Face created a Leaderboard for smolagents. It evaluates open and closed model on a mini-subset of GAIA, MATH, SimpleQA. 👀
 
-This new type of LLM - Diffusion Large Language Models (DLMMs) - combines both.
+🧠 GAIA evaluates General AI Assistants on real-world tasks that are easy for humans but challenging for AI.
 
-The model was developed by Inception Labs, called Mercury Coder, specifically for code generation.
+🧮 MATH evaluates the mathematical reasoning capabilities from high school math competitions, covering topics like algebra, geometry, probability, and calculus.
 
-It is the first working large-scale diffusion-based LLM.
+🔍 SimpleQA evaluates the ability to accurately answer short, fact-seeking questions.
 
-As an end user, two points stood out to me as the most attractive: 
+Leaderboard: https://huggingface.co/spaces/smolagents/smolagents-leaderboard
 
-1- It’s up to 10x faster & 10x cheaper than traditional LLMs.
-
-2- It runs on standard Nvidia H100 GPUs—no specialized hardware needed.
-
-Traditional LLMs (like GPT-4, Claude, etc.) generate text one token at a time, waiting for the previous token before predicting the next. This process is inherently sequential and slow.
-
-(Btw, it’s crazy how fast GenAI is evolving—now we have “traditional LLMs,” even though LLMs have only been around for a few years!)
-
-Back to this new DLMM, it works differently:
-
-🔹It generates the entire output at once—but in a rough, noisy state.
-
-🔹It then refines the output step by step, making it more coherent.
-
-This is similar to how diffusion models generate images—starting with pure noise and gradually refining it into something recognizable.
-
-Because the model sees the entire output at once, it can self-correct and refine mistakes, leading to better reasoning and fewer hallucinations.
-
-We’ve talked about coding AI for a while, but this one might be a real game-changer. 
-
-There are already some testing videos on YouTube showing impressive results—Mercury Coder can generate complete working programs in just seconds, with decent quality.
-
-So, can we try it?
-
-Right now, full access is limited to enterprises, but you can test the model in its Playground and see how it works. I’ll drop the link in the comments.
-
+Code: https://github.com/huggingface/smolagents/tree/main/examples/smolagents_benchmark
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
