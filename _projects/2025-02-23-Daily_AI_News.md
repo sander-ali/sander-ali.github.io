@@ -54,10 +54,7 @@ What AI applications would benefit most from real-time web integration?
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="640" height="480"
-src="https://www.youtube.com/watch?v=uZVPevhff6E">
-</iframe>
-
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uZVPevhff6E?si=CKHkn6mtA95goxoB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
