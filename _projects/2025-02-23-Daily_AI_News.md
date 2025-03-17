@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-16
+date: 2025-03-17
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,67 +25,114 @@ images:
   </div>
 </div>
 
-<h1> 16th March 2025 </h1>
+<h1> 17th March 2025 </h1>
 
-<h1> 🔍 Perplexity API Now Supports MCP Server for Real-Time AI Research </h1>
+<h1> AI-first FinTech giant Klarna just filed for US IPO 😳 </h1>
 
-The Perplexity API has integrated Model Context Protocol (MCP) Server, allowing AI assistants to access live web data seamlessly. 
+Here's why it's a game-changer for FinTech:
 
-This means AI agents can retrieve up-to-date information instead of relying solely on pre-trained models.
+Klarna leads the Buy Now, Pay Later (BNPL) revolution.
 
-Key updates:
+↳ Trusted by nearly 100 million users worldwide.
 
-1️⃣AI assistants like Claude can now use Perplexity for real-time research.
+↳ Partners include Sephora, Nike, and Airbnb.
 
-2️⃣Enables AI chatbots and agents to fetch fresh, relevant data on demand.
+Why should you care?
 
-3️⃣Reduces reliance on static datasets, making AI responses more dynamic and accurate.
+↳ Klarna’s IPO will measure investor confidence in FinTech.
 
-4️⃣Useful for customer support, research assistants, and real-time decision-making.
+↳ It's a key test in an industry facing rising competition (think Amazon & Walmart).
 
-❓Why this matters: 
+IPO Quick Facts:
 
-AI models have traditionally struggled with outdated knowledge. Live web research bridges the gap, making AI more reliable in fast-changing domains like news, finance, and scientific research.
+- $2.8B revenue in 2024
 
-What AI applications would benefit most from real-time web integration?
+- $21M net income = profitable
 
+- Growing 24% Year-over-Year
+
+- 93M customers globally.
+
+- Raising $1B at a $15B valuation
+
+- Ticker: KLAR (NYSE)
+
+- When: Q2 2025
+
+We can remember that Klarna experienced a massive valuation rollercoaster:
+
+2020: $5.5B ➡️ 2021: $46.5B ➡️ 2021 crash: $6.5B
+
+Now targeting $15B+ for its IPO. Big stakes, big drama 😮‍💨
+
+But today, Klarna's secret sauce is AI 🤖
+
+AI currently Handles 2/3 of customer service, cutting response times dramatically (11 mins ➡️ under 2 mins). The whole organization is now AI-first.
+
+It will be very interesting to see how public markets with evaluate this.
+
+So this IPO isn't just Klarna's moment - it's FinTech's tipping point.
+
+FinTech is back 🚀
 
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/uZVPevhff6E?si=CKHkn6mtA95goxoB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a href="/assets/img/news/AI news/1.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/1.jpg" 
+           alt="Nyx" 
+          />
+</a>
   </div>
 </div>
 
 <hr>
 <hr>
 
-<h1> 🤯 Are Photoshoots a Concept of the Past? </h1>
+<h1> 🚀 Introducing BeeAI </h1>
 
-Google Unveils Native Image Generation with Gemini 2.0 Flash Experimental 
+🚀 Introducing BeeAI: an IBM Open Source platform designed to make working with AI Agents simpler, more flexible, and more powerful.
 
-Google has just unlocked a new frontier in AI with the experimental release of Gemini 2.0 Flash, enabling native image generation for developers worldwide. This multimodal model combines text understanding, reasoning, and image generation seamlessly, making it a game-changer for creative and professional applications. 
+Yesterday in San Francisco, some of my favorite colleagues from the IBM Research AI Incubation team presented the project's evolution at the AI Developer Conference organized by deeplearning ai.
 
-This step by step recipe enhanced with Native Image Generation is a striking example:
+With BeeAI, whether you're building your own agents or leveraging existing ones, BeeAI helps you discover, run, and compose AI agents across any framework or language.
 
-1️⃣ Gemini 2.0 Flash can create detailed, realistic images for each step of a recipe, enhancing the cooking experience.
+A few highlights the team is especially proud of:
 
-2️⃣ Edit images iteratively through natural language dialogue, perfect for refining recipe illustrations or exploring different presentation styles.
+𝟭/ 𝗜𝘁 𝗶𝘀 𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸-𝗮𝗴𝗻𝗼𝘀𝘁𝗶𝗰: Connect AI agents seamlessly, regardless of their language or platform.
 
-3️⃣ Generate consistent visual narratives with characters and settings that evolve based on user feedback.
+𝟮/ 𝗠𝗼𝗱𝘂𝗹𝗮𝗿 𝗱𝗲𝘀𝗶𝗴𝗻: Construct sophisticated multi-agent workflows using modular components.
 
-4️⃣ Superior text integration within images, ideal for recipe titles, ingredient lists, or cooking instructions. 
+𝟯/ 𝗕𝘂𝗶𝗹𝘁-𝗶𝗻 𝗱𝗶𝘀𝗰𝗼𝘃𝗲𝗿𝘆: Explore a growing catalog of AI agents with an intuitive search.
 
-👉 What innovative use cases do you envision for multimodal AI in your industry?
+𝟰/ 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝘀𝘂𝗽𝗽𝗼𝗿𝘁: First-class tools for Python and TypeScript agent developers via the BeeAI Framework.
 
-Video: Google DeepMind and AISeeKing
+And it's open source under the Apache 2.0 license.
+
+If you're working with agents or considering it, check out this out:
+
+- Website: https://beeai.dev/
+
+- Documentation: https://docs.beeai.dev/introduction/welcome
+
+- Agent Library: https://beeai.dev/agents
+
+- Repo: https://github.com/i-am-bee/beeai
 
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/WDU_CsZ9bgc?si=VIhqtC4tY2eAARFJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a href="/assets/img/news/AI news/2.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/2.jpg" 
+           alt="Nyx" 
+          />
+</a>
 
   </div>
 </div>
@@ -93,23 +140,20 @@ Video: Google DeepMind and AISeeKing
 <hr>
 <hr>
 
-<h1>🎯🎯RexSeek: Referring to Any Object🎯🎯 </h1>
+<h1>🚫OpenAI Calls for Ban on Chinese Models  </h1>
 
-👉IDEA unveils RexSeek: referring object detection model based on a multimodal LLM, designed to precisely locate objects based on user-input natural language descriptions. Model specialization on humans. Code released under IDEA License 1.0💙
+The AI race is taking a geopolitical turn as OpenAI proposes sweeping restrictions against Chinese AI labs in its submission to the Trump Administration's "AI Action Plan."
 
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+▪️OpenAI has labeled DeepSeek as "state-subsidized" and "state-controlled" despite unclear evidence
 
-✅RexSeek: detection-oriented multimodal LLMs
+▪️The proposal specifically recommends banning "PRC-produced" models in all "Tier 1" countries
 
-✅Robust Perception Ability (ie. humans / person)
+▪️OpenAI claims Chinese models pose security risks, privacy concerns, and IP theft threats
 
-✅Strong Complex Language Comprehension
+▪️They previously accused DeepSeek of "distilling" knowledge from OpenAI's models
 
-✅HumanRef: new dataset for human targetization
+What do you think: Is OpenAI's proposal a legitimate security measure or a competitive strategy disguised as a policy recommendation?
 
-👉Paper https://arxiv.org/pdf/2503.08507 
-
-👉Code https://github.com/IDEA-Research/RexSeek
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -128,27 +172,36 @@ Video: Google DeepMind and AISeeKing
 <hr>
 <hr>
 
-<h1> Mistral just released a groundbreaking document understanding API </h1>
+<h1> Litserve is the new kid on the ML deployment block </h1>
 
-Mistral just released a groundbreaking document understanding API that processes 2000 pages for $1, outperforming every leading solution on the market.
+This is the best way to deploy your Machine Learning model.
 
-Their new Mistral OCR Document Intelligence API sets a new standard in document understanding with unprecedented capabilities:
+(I am not exaggerating)
 
-(1) state-of-the-art comprehension - handles complex documents including tables, equations, and LaTeX formatting with superior accuracy
+Litserve is the new kid on the ML deployment block.
 
-(2) Natively multilingual - processes thousands of scripts, fonts, and languages across all continents
+Based on FastAPI, 𝐥𝐢𝐭𝐬𝐞𝐫𝐯𝐞 provides a great serving engine for any model.
 
-(3) Extremely fast - processes up to 2000 pages per minute on a single node
+✅ Open-source
 
-(4) Structured output - enables document-as-prompt functionality for precise information extraction
+✅ Easy to use
 
-(5) On-premises deployment - available for organizations with sensitive data requirements
+✅ 2x faster than using FastAPI by yourself
 
-The benchmarks are impressive: Mistral OCR scored 94.89% overall accuracy, significantly outperforming Google Document AI (83.42%), Azure OCR (89.52%), and even GPT-4o (89.77%) and Gemini models.
+✅ Supports Batching and Streaming
 
-With 90% of organizational data stored as documents, this API represents a critical advancement in unlocking collective intelligence from digital information. The price point of 1000-2000 pages for just $1 makes it accessible for organizations of all sizes.
+✅ GPU Autoscaling
 
-Release post https://mistral.ai/news/mistral-ocr
+✅ Automatic Dockerization
+
+... and so much more!
+
+I am in love with it because it is so easy to use and does not make things more complicated than they already are.
+
+The team behind the project is also very active and supportive.
+
+
+🔗 Check it out: https://github.com/Lightning-AI/LitServe
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -166,35 +219,67 @@ Release post https://mistral.ai/news/mistral-ocr
 <hr>
 <hr>
 
-<h1> Sesame Labs just dropped CSM (Conversational Speech Model)  </h1>
+<h1> Opensource alternative to Manus AI Agent is blowing up on GitHub 🤯  </h1>
 
-Sesame Labs just dropped CSM (Conversational Speech Model) - Apache 2.0 licensed! 💥
+While everyone's fighting for Manus AI Agent invites.
 
-> Trained on 1 MILLION hours of data 🤯
+Meet OWL by CAMEL-AI.org, the framework that topped the opensource benchmark for general AI agents: 
 
-> Contextually aware, emotionally intelligent speech
+1. Specialized Multi-Agent Collaboration
 
-> Voice cloning & watermarking
+↳ AI user agents break down complex tasks
 
-> Ultra fast, real-time synthesis
+↳ Assistant agents create detailed execution strategies
 
-> Based on llama architecture & Mimi like decoder
+↳ Tool agents interface with external services and APIs
 
-> Apache 2.0 licensed
+2. Advanced Real-World Capabilities
 
-> Weights on the Hub
+↳ Autonomous research, coding, and web browsing
 
-So cool to see such a strong Speech backbone out in the wild! Kudos Sesame team! 🤗
+↳ Runs locally on your machine for privacy
 
-Model: https://huggingface.co/sesame/csm-1b
+↳ Automates complex workflows from research to execution
 
-Space: https://huggingface.co/spaces/sesame/csm-1b
+3. Flexible Integration Options
 
-Video Credits: Brian Buntz
+↳ Supports Claude Sonnet 3.7, GPT-4o, DeepSeek, Gemini, and Ollama
+
+↳ Fast installation via conda or uv with Docker support
+
+↳ Straightforward configuration with TOML files
+
+The best part?
+
+It ranks 1 on the GAIA Benchmark among opensource projects.
+
+With a 58.18 average score.
+
+And unlike its competitors charging $20-$200 monthly, 
+
+OWL is completely free.
+
+No restrictions.
+
+No invites.
+
+No paywalls.
+
+Just powerful autonomous AI Agents at your fingertips.
+
+I believe AI autonomy shouldn't be locked behind exclusive access.
+
+Or expensive subscriptions.
+
+Have you tried OWL or any other AI agent frameworks?
+
+What's your experience been like?
+
+Check it out at: https://www.camel-ai.org/
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jqHNoTs4Meo?si=j-IVmqeFWXUDosIZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WUSodzEgaog?si=ODQHG1F_ed9kI3Pp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
   </div>
@@ -203,30 +288,74 @@ Video Credits: Brian Buntz
 <hr>
 <hr>
 
-<h1> AI just invested $100k in a startup - completely on its own 😳
- </h1>
+<h1> Switch to LitApi! </h1>
 
-Meet No Cap: the world's first AI angel investor 🤖
+If you're still using FastAPI to deploy Hugging Face LLMs/VLMs - switch to LitApi!
 
-In just 3 minutes, No Cap:
+FastAPI is a great framework for implementing RESTful APIs. 
 
-- Signed a SAFE
+However, it wasn’t specifically designed to handle the complex requirements of serving ML models at scale. 
 
-- Wired $100,000
+The team at Lightning AI is behind LitServe and LitApi to fill in that gap.
 
-- Introduced founder to 5 top-tier investors
+🔹 𝗟𝗶𝘁𝗔𝗣𝗜 builds on top of FastAPI, adapting for ML workloads, standardizes the core steps of serving a model.
 
-- Recommended a potential key hire
+🔹 𝗟𝗶𝘁𝗦𝗲𝗿𝘃𝗲𝗿 handles the infrastructure side of serving models.
 
-All on one quick call 🤯
+🔸 Here's what you must know:
 
-No meetings. No back-and-forth emails. No wasted time.
+1. 𝗢𝗻𝗲-𝘁𝗶𝗺𝗲 𝗺𝗼𝗱𝗲𝗹 𝘀𝗲𝘁𝘂𝗽
 
-Imagine a world where fundraising doesn't suck. That's exactly what the team is building.
+In the 𝙨𝙚𝙩𝙪𝙥() method, we can load any model only once.
 
-Trained by 60+ elite Y Combinator founders, No Cap isn’t just investing - she’s connecting, advising, and doing the "dirty work" of hiring and business dev.
+2. 𝗖𝘂𝘀𝘁𝗼𝗺𝗶𝘇𝗲 𝗣𝗿𝗲𝗱𝗶𝗰𝘁
 
-The future of venture is here and it’s powered by AI.
+In the 𝙥𝙧𝙚𝙙𝙞𝙘𝙩() method, we implement the inference on inputs logic.
+
+3. 𝗖𝘂𝘀𝘁𝗼𝗺𝗶𝘇𝗲 𝗕𝗮𝘁𝗰𝗵𝗶𝗻𝗴 𝗟𝗼𝗴𝗶𝗰
+
+You can specify a MAX_BATCH_SIZE and a BATCH_TIME_WINDOW and it'll automatically handle the dynamic batching of requests as they come in concurrently.
+
+You can use ThreadPoolExecutor to parallelize the preprocessing steps in the 𝙗𝙖𝙩𝙘𝙝() method.
+
+4. 𝗖𝘂𝘀𝘁𝗼𝗺𝗶𝘇𝗲 𝗨𝗻𝗯𝗮𝘁𝗰𝗵𝗶𝗻𝗴 𝗟𝗼𝗴𝗶𝗰
+
+After inferencing on a batch, you'll handle the detach () of GPU tensors and post-process the raw logits in the 𝙪𝙣𝙗𝙖𝙩𝙘𝙝() method.
+
+5. 𝗗𝗲𝗰𝗼𝗱𝗲 𝗿𝗲𝗾𝘂𝗲𝘀𝘁 𝗮𝗻𝗱 𝗲𝗻𝗰𝗼𝗱𝗲 𝗿𝗲𝘀𝗽𝗼𝗻𝘀𝗲
+
+In the 𝙙𝙚𝙘𝙤𝙙𝙚_𝙧𝙚𝙦𝙪𝙚𝙨𝙩() - specify how the API should access the input value from the request.
+
+In the 𝙚𝙣𝙘𝙤𝙙𝙚_𝙧𝙚𝙨𝙥𝙤𝙣𝙨𝙚() - specify how the API should return responses to the client.
+
+Simple as that!
+
+To scale this up for a production workload, you'll use LitServe's scale configuration parameters:
+
+```
+LitServer(
+
+ lit_api: LitAPI,
+
+ accelerator: str = "auto",
+
+ devices: Union[str, int] = "auto",
+
+ workers_per_device: int = 1,
+
+ timeout: Union[float, bool] = 30,
+
+ max_batch_size: int = 1,
+
+ batch_timeout: float = 0.0,
+
+ stream: bool = False,
+
+)
+
+```
+
+📙 For a full tutorial, see this article: https://neuralbits.substack.com/p/a-complete-tutorial-on-litservelitapi
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -243,47 +372,41 @@ The future of venture is here and it’s powered by AI.
 <hr>
 <hr>
 
-<h1> FastRTC just made AI voice agents accessible to everyone...🤯 </h1>
+<h1> Reasoning Models 2.0, combine Reasoning with Tool Use! </h1>
 
-Without needing to be an expert in WebRTC.
+✨ START teaches LLMs to use tools, such as code interpreter to improve reasoning and problem-solving. Self-taught Reasoner with Tools (START) integrates tool usage with chain-of-thought reasoning by enabling tool calls, self-check, exploration, and self-debug while reasoning using a self-learning framework. 👀
 
-And it's 100% open source.
+Implementation
 
-Here's why this matters:
+1 Collect math problems (AIME, MATH) and coding tasks (Codeforces, LiveCodeBench)
 
-Python developers can now build voice interactions in minutes.
+2 Create context-specific hints like "Maybe using Python here is a good idea"
 
-↳ Turn any Python function into a real-time voice stream
+3 Generate tool-assisted reasoning data (insert hints after conjunctions like "Wait" and before stop tokens)
 
-↳ Built-in voice detection that knows when to respond
+4 Score trajectories, remove repetitive patterns, and create a seed dataset with successful tool-assisted reasoning examples.
 
-↳ No complex WebRTC configuration required
+5 Fine-tune model on seed dataset, then self self-Distill to generate more diverse reasoning trajectories
 
-↳ Opensource with no vendor lock-in
+6 Fine-tune the base model using rejection sampling (RFT) on the extended dataset
 
-It creates a voice agent that automatically:
+Insights
 
-• Transcribes speech in real-time
+💡 Improves math accuracy by +15% (AMC23: 95.0%) and coding by +38.6% on medium problems.
 
-• Waits for natural pauses to respond
+📈 Test-time scaling via sequential hints boosts AIME24 performance by 12%.
 
-• Handles turn-taking like a human conversation
+🐞 Code template modification reduces debug errors by 41% in training data.
 
-The best part?
+💡 Adding tools (Python interpreter) improves performance more than adding more training data.
 
-You can get a temporary phone number instantly to test your creation.
+🧠 Large models already possess latent tool-using abilities that can be activated through hints.
 
-No more complicated deployment steps or spending hours debugging audio streams.
+🛠️ Two-phase training (Hint-RFT then RFT) allows the model to learn effective tool usage.
 
-This could fundamentally change how we build voice AI applications.
+📍 Hint place selection is important. After conjunction Token and before stop token.
 
-Voice interfaces have always been the most natural way for humans to interact with technology.
-
-But the technical barriers were too high for most developers.
-
-Now anyone with basic Python skills can create experiences like talking to Claude, Gemini, or ChatGPT through voice.
-
-What voice application would you build if the technical complexity was removed?
+Paper: https://huggingface.co/papers/2503.04625
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
