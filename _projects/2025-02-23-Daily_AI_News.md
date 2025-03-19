@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-17
+date: 2025-03-19
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,55 +25,44 @@ images:
   </div>
 </div>
 
-<h1> 17th March 2025 </h1>
+<h1> 19th March 2025 </h1>
 
-<h1> AI-first FinTech giant Klarna just filed for US IPO 😳 </h1>
+<h1> AI workloads are exploding. </h1>
 
 Here's why it's a game-changer for FinTech:
 
-Klarna leads the Buy Now, Pay Later (BNPL) revolution.
+Cloud spending will hit a whopping $1.6 trillion by 2028 😳
 
-↳ Trusted by nearly 100 million users worldwide.
+Gartner warns that 32% of that spend is pure waste.
 
-↳ Partners include Sephora, Nike, and Airbnb.
+Let that sink in.
 
-Why should you care?
+Every wasted dollar isn't just lost money - it's wasted energy, needless hardware, and a direct hit to our planet.
 
-↳ Klarna’s IPO will measure investor confidence in FinTech.
+More importantly, the environmental cost of unchecked cloud spend is staggering:
 
-↳ It's a key test in an industry facing rising competition (think Amazon & Walmart).
+- Excessive power usage
 
-IPO Quick Facts:
+- Unnecessary hardware
 
-- $2.8B revenue in 2024
+- Hidden sustainability impacts
 
-- $21M net income = profitable
+But there's hope.
 
-- Growing 24% Year-over-Year
+Meet the unsung heroes: FinOps professionals.
 
-- 93M customers globally.
+They're quietly saving the environment - turning off one NVIDIA H100 GPU at a time (even though Jensen Huang might not like it!).
 
-- Raising $1B at a $15B valuation
+Today, I just came across an exciting new open-source, no-code FinOps automation platform OpenOps.
 
-- Ticker: KLAR (NYSE)
+Imagine democratized, effortless cloud efficiency - available to everyone.
 
-- When: Q2 2025
+Now you can. Thanks to OpenOps:
 
-We can remember that Klarna experienced a massive valuation rollercoaster:
+- You can now download, use & deploy their software for free
+- Access a curated list of tons of workflow templates & more!
 
-2020: $5.5B ➡️ 2021: $46.5B ➡️ 2021 crash: $6.5B
-
-Now targeting $15B+ for its IPO. Big stakes, big drama 😮‍💨
-
-But today, Klarna's secret sauce is AI 🤖
-
-AI currently Handles 2/3 of customer service, cutting response times dramatically (11 mins ➡️ under 2 mins). The whole organization is now AI-first.
-
-It will be very interesting to see how public markets with evaluate this.
-
-So this IPO isn't just Klarna's moment - it's FinTech's tipping point.
-
-FinTech is back 🚀
+The future of tech is open source.
 
 
 
@@ -92,47 +81,26 @@ FinTech is back 🚀
 <hr>
 <hr>
 
-<h1> 🚀 Introducing BeeAI </h1>
+<h1> RIP Adobe Photoshop? </h1>
 
-🚀 Introducing BeeAI: an IBM Open Source platform designed to make working with AI Agents simpler, more flexible, and more powerful.
+Google’s latest AI model Gemini Flash 2.0 Experimental with image generation and editing is absolutely insane 😳
 
-Yesterday in San Francisco, some of my favorite colleagues from the IBM Research AI Incubation team presented the project's evolution at the AI Developer Conference organized by deeplearning ai.
+Most people can’t do those actions on Photoshop but absolutely everyone can write a sentence in Google AI Studio.
 
-With BeeAI, whether you're building your own agents or leveraging existing ones, BeeAI helps you discover, run, and compose AI agents across any framework or language.
+The crazy part?
 
-A few highlights the team is especially proud of:
+Flash 2.0 did everything in 6 seconds.
 
-𝟭/ 𝗜𝘁 𝗶𝘀 𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸-𝗮𝗴𝗻𝗼𝘀𝘁𝗶𝗰: Connect AI agents seamlessly, regardless of their language or platform.
+The future of image editing is text.
 
-𝟮/ 𝗠𝗼𝗱𝘂𝗹𝗮𝗿 𝗱𝗲𝘀𝗶𝗴𝗻: Construct sophisticated multi-agent workflows using modular components.
+Incredible.
 
-𝟯/ 𝗕𝘂𝗶𝗹𝘁-𝗶𝗻 𝗱𝗶𝘀𝗰𝗼𝘃𝗲𝗿𝘆: Explore a growing catalog of AI agents with an intuitive search.
-
-𝟰/ 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝘀𝘂𝗽𝗽𝗼𝗿𝘁: First-class tools for Python and TypeScript agent developers via the BeeAI Framework.
-
-And it's open source under the Apache 2.0 license.
-
-If you're working with agents or considering it, check out this out:
-
-- Website: https://beeai.dev/
-
-- Documentation: https://docs.beeai.dev/introduction/welcome
-
-- Agent Library: https://beeai.dev/agents
-
-- Repo: https://github.com/i-am-bee/beeai
-
+Video Courtesy: AsapGuide
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/2.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/2.jpg" 
-           alt="Nyx" 
-          />
-</a>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/t3Z4FJqM390?si=2eB-VJWhvmqLL8vI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   </div>
 </div>
@@ -140,20 +108,21 @@ If you're working with agents or considering it, check out this out:
 <hr>
 <hr>
 
-<h1>🚫OpenAI Calls for Ban on Chinese Models  </h1>
+<h1>Real Time Speech Transcription with FastRTC ⚡️and Local Whisper 🤗 </h1>
 
-The AI race is taking a geopolitical turn as OpenAI proposes sweeping restrictions against Chinese AI labs in its submission to the Trump Administration's "AI Action Plan."
+Real-time Whisper transcriptions w/ FastRTC & Transformers - runs on MPS (Mac) and CUDA - open source 🔥
 
-▪️OpenAI has labeled DeepSeek as "state-subsidized" and "state-controlled" despite unclear evidence
+- Choose the ASR model you want to use: `whisper-large-v3-turbo` is my current favourite as it’s lightweight, performant and multilingual!
 
-▪️The proposal specifically recommends banning "PRC-produced" models in all "Tier 1" countries
+- Optionally enable `flash_attention_2` for faster attention computations, if your setup supports it
 
-▪️OpenAI claims Chinese models pose security risks, privacy concerns, and IP theft threats
+- Launch the app via Gradio, or as a FastAPI server with custom UI
 
-▪️They previously accused DeepSeek of "distilling" knowledge from OpenAI's models
+- Let FastRTC take care of all the real-time interactions! And explore the docs to understand what you can tweak to have more control over your Stream
 
-What do you think: Is OpenAI's proposal a legitimate security measure or a competitive strategy disguised as a policy recommendation?
+Check it out here: https://github.com/sofi444/realtime-transcription-fastrtc
 
+Stellar work by Sofia C.
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -172,36 +141,12 @@ What do you think: Is OpenAI's proposal a legitimate security measure or a compe
 <hr>
 <hr>
 
-<h1> Litserve is the new kid on the ML deployment block </h1>
+<h1> Message from AI at Meta </h1>
 
-This is the best way to deploy your Machine Learning model.
+Llama has officially crossed 1 Billion downloads!
 
-(I am not exaggerating)
-
-Litserve is the new kid on the ML deployment block.
-
-Based on FastAPI, 𝐥𝐢𝐭𝐬𝐞𝐫𝐯𝐞 provides a great serving engine for any model.
-
-✅ Open-source
-
-✅ Easy to use
-
-✅ 2x faster than using FastAPI by yourself
-
-✅ Supports Batching and Streaming
-
-✅ GPU Autoscaling
-
-✅ Automatic Dockerization
-
-... and so much more!
-
-I am in love with it because it is so easy to use and does not make things more complicated than they already are.
-
-The team behind the project is also very active and supportive.
-
-
-🔗 Check it out: https://github.com/Lightning-AI/LitServe
+To the global AI community of researchers, engineers, developers and hobbyists:
+We announced the first Llama models for the research community a little over two years ago and in that time your actions have spoken louder than words. Thank you for making it abundantly clear — a billion times over — that open source AI is how we'll create the next wave of world changing technologies, together. 🦙❤️
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -219,67 +164,27 @@ The team behind the project is also very active and supportive.
 <hr>
 <hr>
 
-<h1> Opensource alternative to Manus AI Agent is blowing up on GitHub 🤯  </h1>
+<h1> News from MetaVoice  </h1>
 
-While everyone's fighting for Manus AI Agent invites.
+We’re releasing access to Speech-1, our conversational speech model designed specifically for customer phone calls (8khz telephony) to reduce call drop rates.
 
-Meet OWL by CAMEL-AI.org, the framework that topped the opensource benchmark for general AI agents: 
+Try it: https://tts.metavoice.io
 
-1. Specialized Multi-Agent Collaboration
+Samples: https://www.metavoice.io
 
-↳ AI user agents break down complex tasks
+Voice AI calls today face >30% call drop rates with current synthetic voices. We want to make this tend to 0 by making AI speech far more human-like and engaging.
 
-↳ Assistant agents create detailed execution strategies
+Current synthetic voices are overly perfect, and don’t sound like the typical human phone agent. They have audiobook-like narration, erratic emotions (e.g. over-enthusiastic “Got it!”), and lack natural-sounding imperfections (like breaths, hmm, umm). They also can’t reliably speak numbers, spellings, emails, etc. (& often produce chipmunk like sped-up speech).
 
-↳ Tool agents interface with external services and APIs
+Speech-1 fixes these problems!
 
-2. Advanced Real-World Capabilities
+We’re also releasing a research preview of Speech-1.1. It’s trained using ProsodyAlign, a novel post-training technique to more closely capture human-like speech patterns – pauses, stress, and how the voice goes up/down in tone on different words. However, it is currently less stable than Speech-1.
 
-↳ Autonomous research, coding, and web browsing
-
-↳ Runs locally on your machine for privacy
-
-↳ Automates complex workflows from research to execution
-
-3. Flexible Integration Options
-
-↳ Supports Claude Sonnet 3.7, GPT-4o, DeepSeek, Gemini, and Ollama
-
-↳ Fast installation via conda or uv with Docker support
-
-↳ Straightforward configuration with TOML files
-
-The best part?
-
-It ranks 1 on the GAIA Benchmark among opensource projects.
-
-With a 58.18 average score.
-
-And unlike its competitors charging $20-$200 monthly, 
-
-OWL is completely free.
-
-No restrictions.
-
-No invites.
-
-No paywalls.
-
-Just powerful autonomous AI Agents at your fingertips.
-
-I believe AI autonomy shouldn't be locked behind exclusive access.
-
-Or expensive subscriptions.
-
-Have you tried OWL or any other AI agent frameworks?
-
-What's your experience been like?
-
-Check it out at: https://www.camel-ai.org/
+For more details, read our blogpost: https://www.metavoice.io/blog-posts/conversational-speech-model
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/WUSodzEgaog?si=ODQHG1F_ed9kI3Pp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7oi5H9M4gfE?si=NXcIkGvE1BKWCVjB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
   </div>
@@ -288,74 +193,23 @@ Check it out at: https://www.camel-ai.org/
 <hr>
 <hr>
 
-<h1> Switch to LitApi! </h1>
+<h1> Mistral have released Mistral Small 3.1 </h1>
 
-If you're still using FastAPI to deploy Hugging Face LLMs/VLMs - switch to LitApi!
+Mistral have released Mistral Small 3.1, adding image input and a 128k token context window to Mistral Small 3
 
-FastAPI is a great framework for implementing RESTful APIs. 
+Key results and info:
 
-However, it wasn’t specifically designed to handle the complex requirements of serving ML models at scale. 
+➤ Mistral AI Small 3.1 scores an Artificial Analysis Intelligence Index of 35, in line with Mistral 3 and other models such as GPT-4o mini and Claude 3.5 Haiku 24B parameter model, matching Mistral Small 3 but adding image input
 
-The team at Lightning AI is behind LitServe and LitApi to fill in that gap.
+➤ Expanded context window of up to 128k tokens (vs a 32k token context window for Mistral Small 3)
 
-🔹 𝗟𝗶𝘁𝗔𝗣𝗜 builds on top of FastAPI, adapting for ML workloads, standardizes the core steps of serving a model.
+➤ Released under an Apache 2.0 License
 
-🔹 𝗟𝗶𝘁𝗦𝗲𝗿𝘃𝗲𝗿 handles the infrastructure side of serving models.
+➤ Mistral’s endpoint for the Mistral 3.1 Small offers output speeds of ~147 output tokens per second
 
-🔸 Here's what you must know:
+➤ Mistral’s endpoint is priced amongst the cheapest models with pricing of $0.1/$0.3 per million input/output tokens, equivalent to Mistral Small 3.
 
-1. 𝗢𝗻𝗲-𝘁𝗶𝗺𝗲 𝗺𝗼𝗱𝗲𝗹 𝘀𝗲𝘁𝘂𝗽
-
-In the 𝙨𝙚𝙩𝙪𝙥() method, we can load any model only once.
-
-2. 𝗖𝘂𝘀𝘁𝗼𝗺𝗶𝘇𝗲 𝗣𝗿𝗲𝗱𝗶𝗰𝘁
-
-In the 𝙥𝙧𝙚𝙙𝙞𝙘𝙩() method, we implement the inference on inputs logic.
-
-3. 𝗖𝘂𝘀𝘁𝗼𝗺𝗶𝘇𝗲 𝗕𝗮𝘁𝗰𝗵𝗶𝗻𝗴 𝗟𝗼𝗴𝗶𝗰
-
-You can specify a MAX_BATCH_SIZE and a BATCH_TIME_WINDOW and it'll automatically handle the dynamic batching of requests as they come in concurrently.
-
-You can use ThreadPoolExecutor to parallelize the preprocessing steps in the 𝙗𝙖𝙩𝙘𝙝() method.
-
-4. 𝗖𝘂𝘀𝘁𝗼𝗺𝗶𝘇𝗲 𝗨𝗻𝗯𝗮𝘁𝗰𝗵𝗶𝗻𝗴 𝗟𝗼𝗴𝗶𝗰
-
-After inferencing on a batch, you'll handle the detach () of GPU tensors and post-process the raw logits in the 𝙪𝙣𝙗𝙖𝙩𝙘𝙝() method.
-
-5. 𝗗𝗲𝗰𝗼𝗱𝗲 𝗿𝗲𝗾𝘂𝗲𝘀𝘁 𝗮𝗻𝗱 𝗲𝗻𝗰𝗼𝗱𝗲 𝗿𝗲𝘀𝗽𝗼𝗻𝘀𝗲
-
-In the 𝙙𝙚𝙘𝙤𝙙𝙚_𝙧𝙚𝙦𝙪𝙚𝙨𝙩() - specify how the API should access the input value from the request.
-
-In the 𝙚𝙣𝙘𝙤𝙙𝙚_𝙧𝙚𝙨𝙥𝙤𝙣𝙨𝙚() - specify how the API should return responses to the client.
-
-Simple as that!
-
-To scale this up for a production workload, you'll use LitServe's scale configuration parameters:
-
-```
-LitServer(
-
- lit_api: LitAPI,
-
- accelerator: str = "auto",
-
- devices: Union[str, int] = "auto",
-
- workers_per_device: int = 1,
-
- timeout: Union[float, bool] = 30,
-
- max_batch_size: int = 1,
-
- batch_timeout: float = 0.0,
-
- stream: bool = False,
-
-)
-
-```
-
-📙 For a full tutorial, see this article: https://neuralbits.substack.com/p/a-complete-tutorial-on-litservelitapi
+See how Mistral 3.1 Small compares to others models: https://artificialanalysis.ai/models/mistral-small-3-1?models=gpt-4o-mini%2Co3-mini-high%2Cllama-3-3-instruct-70b%2Cllama-3-1-instruct-8b%2Cgemini-2-0-flash%2Cgemma-3-27b%2Cclaude-3-5-haiku%2Cmistral-large-2%2Cmistral-small-3-1%2Cmistral-small-3%2Cmistral-small%2Cdeepseek-r1%2Cdeepseek-v3%2Cgrok-3%2Cgrok-3-reasoning%2Cnova-pro%2Cnova-micro%2Ccommand-a%2Cqwq-32b
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -372,41 +226,58 @@ LitServer(
 <hr>
 <hr>
 
-<h1> Reasoning Models 2.0, combine Reasoning with Tool Use! </h1>
+<h1> AI isn’t killing programming jobs - it's reinventing them. </h1>
 
-✨ START teaches LLMs to use tools, such as code interpreter to improve reasoning and problem-solving. Self-taught Reasoner with Tools (START) integrates tool usage with chain-of-thought reasoning by enabling tool calls, self-check, exploration, and self-debug while reasoning using a self-learning framework. 👀
+Rumors that AI will erase computer programmers are greatly exaggerated.
 
-Implementation
+The truth is far more interesting.
 
-1 Collect math problems (AIME, MATH) and coding tasks (Codeforces, LiveCodeBench)
+Programmers aren't disappearing - they're transforming.
 
-2 Create context-specific hints like "Maybe using Python here is a good idea"
+The chart below brilliantly proves it:
 
-3 Generate tool-assisted reasoning data (insert hints after conjunctions like "Wait" and before stop tokens)
+↳ Computer programmers: Declining since the '90s 📉
 
-4 Score trajectories, remove repetitive patterns, and create a seed dataset with successful tool-assisted reasoning examples.
+↳ Software developers: Explosive growth since the 2000s 🚀
 
-5 Fine-tune model on seed dataset, then self self-Distill to generate more diverse reasoning trajectories
+Here's why:
 
-6 Fine-tune the base model using rejection sampling (RFT) on the extended dataset
+AI and automation are taking over the repetitive grind.
 
-Insights
+- Routine coding
 
-💡 Improves math accuracy by +15% (AMC23: 95.0%) and coding by +38.6% on medium problems.
+- Basic debugging
 
-📈 Test-time scaling via sequential hints boosts AIME24 performance by 12%.
+- Tedious testing
 
-🐞 Code template modification reduces debug errors by 41% in training data.
+What remains - and expands - is more valuable:
 
-💡 Adding tools (Python interpreter) improves performance more than adding more training data.
+- Strategic thinking
 
-🧠 Large models already possess latent tool-using abilities that can be activated through hints.
+- System design
 
-🛠️ Two-phase training (Hint-RFT then RFT) allows the model to learn effective tool usage.
+- Innovative solutions
 
-📍 Hint place selection is important. After conjunction Token and before stop token.
+The job market agrees:
 
-Paper: https://huggingface.co/papers/2503.04625
+Software developer roles are projected to surge by 17% by 2033.
+
+But there's a catch:
+
+Routine programming tasks might face up to 80% automation by 2032.
+All thanks to AI.
+
+Your next move is, therefore:
+
+↳ Developers: Master AI. Keep upgrading your skills. Your role isn't disappearing - it's upgrading.
+
+↳ Businesses: Integrate AI, but invest heavily in human talent. Balance tech with creativity.
+
+↳ Educators: Focus on teaching AI, critical thinking, and ethical tech use. Prepare students to lead, not just code.
+
+AI isn't replacing programmers - it's redefining their potential.
+
+Master AI and you will thrive in this new era.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
