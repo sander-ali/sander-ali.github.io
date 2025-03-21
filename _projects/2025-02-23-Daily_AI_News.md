@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-19
+date: 2025-03-21
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,45 +25,19 @@ images:
   </div>
 </div>
 
-<h1> 19th March 2025 </h1>
+<h1> 21st March 2025 </h1>
 
-<h1> AI workloads are exploding. </h1>
+<h1> Every 0.2 seconds on Earth, someone downloads a small language model </h1>
 
-Here's why it's a game-changer for FinTech:
+15M times small language models were downloaded from Hugging Face in the last month. How different are these models from each other?
 
-Cloud spending will hit a whopping $1.6 trillion by 2028 😳
+The recent addition to SLM is Gemma-3 (1B to 27B). The new generation of models has a bigger context of 128K tokens. An increased context window size requires more computing and memory. It was solved by Grouped-Query Attention mechanisms and an optimized KV-cache - the model uses 5 local attention layers for 1 global. Gemma-3 is trained on 14T tokens, including text and images. For text data, the model uses the same tokenizer as Gemini 2.0 with a 256K vocabulary size. The SigLIP encoder encodes images. The encoder segments images into non-overlapping crops and uses the P&S method for different aspect ratios. An interesting solution is to keep the image encoder frozen during training; it saves some resources on pre-training of the model, as we can pre-compute embeddings of images. The authors produced different quantized models focusing on open-source inference engines such as llama.cpp.
 
-Gartner warns that 32% of that spend is pure waste.
+The Qwen2.5 (0.5B to 72B) model is trained on 18T tokens. It uses GQ attention as Gemma. Vocabulary size is 151K tokens and uses Qwen's tokenizer. Control tokens were expanded from 3 to 22 to support tool-calling functionality and structure output. The model developers use the scaling law to predict future model performance and determine its optimal parameters, such as model size for a given compute budget. In the Qwen paper, it's used for Hyper-parameters, such as batch size and learning rate.
 
-Let that sink in.
+In Dec 2024, the new version of Phi model was released Phi-4 (14B). Phi models are built focusing on quality synthetic data. Every new generation improves the data creation pipeline. The pipeline includes multi-agent prompting, self-revision workflows, and instruction reversal. Additional efforts were spent on preventing data contamination(leaking of benchmarks into training data). The paper describes a hybrid n-gram algorithm that uses 13- and 7-gram features to detect data from benchmarks. The total size of pre-trained data is 10T tokens. The context length of the model is 16K tokens, which is achieved via extending the default context 4K during midtraining. An interesting aspect of the model post-training is the Pivotal Token Search. The idea is based on probabilities that LLM produce during response generation. We can calculate the difference between before and after one token generation. Tokens which impact the overall probability the most are pivotal or crucial decision-making points. So when we do post-training, we should target such pivotal tokens to train the model to make better decisions.
 
-Every wasted dollar isn't just lost money - it's wasted energy, needless hardware, and a direct hit to our planet.
-
-More importantly, the environmental cost of unchecked cloud spend is staggering:
-
-- Excessive power usage
-
-- Unnecessary hardware
-
-- Hidden sustainability impacts
-
-But there's hope.
-
-Meet the unsung heroes: FinOps professionals.
-
-They're quietly saving the environment - turning off one NVIDIA H100 GPU at a time (even though Jensen Huang might not like it!).
-
-Today, I just came across an exciting new open-source, no-code FinOps automation platform OpenOps.
-
-Imagine democratized, effortless cloud efficiency - available to everyone.
-
-Now you can. Thanks to OpenOps:
-
-- You can now download, use & deploy their software for free
-- Access a curated list of tons of workflow templates & more!
-
-The future of tech is open source.
-
+There are more than 70 open-source small language models on the market, and the upper bound of model size is slightly growing. By today's standards, GPT-2 is SLM. However, a few things stay the same: focus on quality data and inference efficiency.
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -81,26 +55,48 @@ The future of tech is open source.
 <hr>
 <hr>
 
-<h1> RIP Adobe Photoshop? </h1>
+<h1> QuantumBlack, AI by McKinsey has released an interesting State of AI in 2025 </h1>
 
-Google’s latest AI model Gemini Flash 2.0 Experimental with image generation and editing is absolutely insane 😳
+Report packed with interesting statistics. I totally agree with their frame "The value of AI comes from rewiring how companies run." That's the imperative for this year and beyond.
 
-Most people can’t do those actions on Photoshop but absolutely everyone can write a sentence in Google AI Studio.
+Some of the particularly interesting statistics:
 
-The crazy part?
+💰 Over half of respondents using generative AI report cost reductions in the business units where it’s deployed.
 
-Flash 2.0 did everything in 6 seconds.
+ 📉 More than 80% do not yet see a material enterprise-wide EBIT effect from generative AI, despite functional gains.
 
-The future of image editing is text.
+ ⚙️ 21% of organizations that have adopted generative AI have fundamentally redesigned some workflows.
 
-Incredible.
+ ✅ 71% regularly use generative AI in at least one function, a jump from 65% in early 2024.
 
-Video Courtesy: AsapGuide
+ 🔎 78% overall use AI in at least one function, up from 55% a year earlier.
 
+ ☑️ 27% review all AI outputs; a similar share checks 20% or less, highlighting wide variation in quality control.
 
+ 👤 28% say their CEO oversees AI governance, while 17% name their board of directors.
+
+ ⚠️ Many report mitigating inaccuracy, cybersecurity, and IP risks—cited most often as having caused negative impacts.
+
+ ✍️ 63% of those using generative AI create text, over one-third generate images, and more than one-quarter produce code.
+
+ 🔒 13% have hired AI compliance specialists, and 6% have hired AI ethics specialists in the past 12 months.
+
+ 🧑‍💻 Fewer respondents call AI hiring “very difficult” compared with previous years, but data scientists remain in high demand.
+
+ 🔄 Most organizations have reskilled employees in the past year due to AI; more reskilling is planned over the next three years.
+
+ 👥 38% expect little net workforce change from generative AI; service operations and supply chain see the largest reduction risk, while IT and product development may expand.
+
+Full report can be accessed at: https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai#/
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/t3Z4FJqM390?si=2eB-VJWhvmqLL8vI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a href="/assets/img/news/AI news/2.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/2.jpg" 
+           alt="Nyx" 
+          />
+</a>
 
   </div>
 </div>
@@ -108,22 +104,26 @@ Video Courtesy: AsapGuide
 <hr>
 <hr>
 
-<h1>Real Time Speech Transcription with FastRTC ⚡️and Local Whisper 🤗 </h1>
+<h1>🖲️🖲️Visual Geometry Grounded Transformer🖲️🖲️ </h1>
 
-Real-time Whisper transcriptions w/ FastRTC & Transformers - runs on MPS (Mac) and CUDA - open source 🔥
+👉VGGT by VGG & META (CVPR2025) is a feed-forward neural net. that directly infers all key 3D attributes of a scene, including extrinsic/intrinsic cam-params, point maps, depth maps, and 3D point tracks, from one, a few, or hundreds of its views, within seconds. Code released under NC 4.0💙
 
-- Choose the ASR model you want to use: `whisper-large-v3-turbo` is my current favourite as it’s lightweight, performant and multilingual!
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
 
-- Optionally enable `flash_attention_2` for faster attention computations, if your setup supports it
+✅VGGT: Visual Geometry Grounded Transformer
 
-- Launch the app via Gradio, or as a FastAPI server with custom UI
+✅Large feed-fwd transformer for 3D attributes
 
-- Let FastRTC take care of all the real-time interactions! And explore the docs to understand what you can tweak to have more control over your Stream
+✅Intr/extrinsics, points, depth & 3D point tracks
 
-Check it out here: https://github.com/sofi444/realtime-transcription-fastrtc
+✅SOTA, better than methods w/ post-processing
 
-Stellar work by Sofia C.
 
+👉Paper https://arxiv.org/pdf/2503.11651
+
+👉Project https://vgg-t.github.io/
+
+👉Code https://github.com/facebookresearch/vggt
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -141,12 +141,35 @@ Stellar work by Sofia C.
 <hr>
 <hr>
 
-<h1> Message from AI at Meta </h1>
+<h1> 🚀 **Mistral Small 3.1: A Game-Changing Open-Source LLM** 🚀 </h1>
 
-Llama has officially crossed 1 Billion downloads!
+Wow! Mistral just dropped a 24B SOTA Multilingual, Multimodal LLM with 128K context AND Apache 2.0 license 🔥
 
-To the global AI community of researchers, engineers, developers and hobbyists:
-We announced the first Llama models for the research community a little over two years ago and in that time your actions have spoken louder than words. Thank you for making it abundantly clear — a billion times over — that open source AI is how we'll create the next wave of world changing technologies, together. 🦙❤️
+In the fast-paced world of AI, Mistral has released **Mistral Small 3.1**, a powerful open-source model that outperforms many industry leaders. At 24B parameters, it runs efficiently on an RTX 4090 or a Mac with 32GB RAM, making it a lightweight yet robust solution for developers and enthusiasts.
+
+💡 **Key Features:**
+
+✅ **Multimodal & Multilingual:** Seamlessly handles text, images, and 21+ languages.
+
+✅ **Fast & Efficient:** Processes 150 tokens per second with a 128K context window.
+
+✅ **Apache 2.0 License:** Fully open-source for use, fine-tuning, and integration.
+
+📊 **Performance:**
+
+Mistral Small 3.1 excels in:
+
+- **Math & Logical Reasoning**
+
+- **Programming & Code Generation**
+
+- **Multimodal Image Understanding**
+
+- **Long-Context Retention**
+
+Ideal for AI applications, multimodal projects, or local AI setups, this model stands out in the open-source AI landscape.
+
+HF Access: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -164,23 +187,29 @@ We announced the first Llama models for the research community a little over two
 <hr>
 <hr>
 
-<h1> News from MetaVoice  </h1>
+<h1> Hugging Face just dropped SmolDocling </h1>
 
-We’re releasing access to Speech-1, our conversational speech model designed specifically for customer phone calls (8khz telephony) to reduce call drop rates.
+🚀 We just dropped 𝗦𝗺𝗼𝗹𝗗𝗼𝗰𝗹𝗶𝗻𝗴: a 𝟮𝟱𝟲𝗠 𝗼𝗽𝗲𝗻-𝘀𝗼𝘂𝗿𝗰𝗲 𝘃𝗶𝘀𝗶𝗼𝗻 𝗟𝗠 for complete document OCR! ✨
 
-Try it: https://tts.metavoice.io
+📄 𝗘𝗻𝗱-𝘁𝗼-𝗲𝗻𝗱 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁 𝗰𝗼𝗻𝘃𝗲𝗿𝘀𝗶𝗼𝗻—no more complex pipelines, just one tiny model
 
-Samples: https://www.metavoice.io
+⚡ 𝗙𝗮𝘀𝘁 & 𝗹𝗶𝗴𝗵𝘁𝘄𝗲𝗶𝗴𝗵𝘁—processes a page in 0.35 sec on a consumer GPU with <500MB VRAM
 
-Voice AI calls today face >30% call drop rates with current synthetic voices. We want to make this tend to 0 by making AI speech far more human-like and engaging.
+🏆 𝗦𝗢𝗧𝗔 𝗮𝗰𝗰𝘂𝗿𝗮𝗰𝘆—outperforms models 27× larger in full-page transcription, layout detection, and code recognition
 
-Current synthetic voices are overly perfect, and don’t sound like the typical human phone agent. They have audiobook-like narration, erratic emotions (e.g. over-enthusiastic “Got it!”), and lack natural-sounding imperfections (like breaths, hmm, umm). They also can’t reliably speak numbers, spellings, emails, etc. (& often produce chipmunk like sped-up speech).
+💾 Efficient large-batch processing—cheap and easy to run in-house
 
-Speech-1 fixes these problems!
+📊 Handles all document elements—tables, charts, code, equations, lists, and more
 
-We’re also releasing a research preview of Speech-1.1. It’s trained using ProsodyAlign, a novel post-training technique to more closely capture human-like speech patterns – pauses, stress, and how the voice goes up/down in tone on different words. However, it is currently less stable than Speech-1.
+🔍 Full tech report available with release
 
-For more details, read our blogpost: https://www.metavoice.io/blog-posts/conversational-speech-model
+This is another example that small, optimized models can compete with much larger systems—making AI more sustainable.
+
+Model: https://huggingface.co/ds4sd/SmolDocling-256M-preview
+
+Paper: https://arxiv.org/abs/2503.11576
+
+Code: https://github.com/docling-project/docling
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -193,23 +222,37 @@ For more details, read our blogpost: https://www.metavoice.io/blog-posts/convers
 <hr>
 <hr>
 
-<h1> Mistral have released Mistral Small 3.1 </h1>
+<h1> New RL Method thats better than GRPO!  </h1>
 
-Mistral have released Mistral Small 3.1, adding image input and a 128k token context window to Mistral Small 3
+New RL Method thats better than GRPO! 🤯 ByteDance released a new open source RL method that outperforms GRPO 👀 DAPO or Decoupled Clip and Dynamic sAmpling Policy Optimization (DAPO) achieves 50 points on the AIME 2024 with 50% fewer training steps.
 
-Key results and info:
+TL;DR: 
 
-➤ Mistral AI Small 3.1 scores an Artificial Analysis Intelligence Index of 35, in line with Mistral 3 and other models such as GPT-4o mini and Claude 3.5 Haiku 24B parameter model, matching Mistral Small 3 but adding image input
+🏆 50% AIME 2024 accuracy (Qwen2.5-32B), surpassing DeepSeek-R1 with 50% fewer steps.
 
-➤ Expanded context window of up to 128k tokens (vs a 32k token context window for Mistral Small 3)
+🤗 Fully open-source: code (based on verl), training dataset (DAPO-Math-17k), and model weights (soon)
 
-➤ Released under an Apache 2.0 License
+💡 Clip-Higher: Asymmetric clipping bounds with higher upper bound to prevent entropy collapse
 
-➤ Mistral’s endpoint for the Mistral 3.1 Small offers output speeds of ~147 output tokens per second
+🔄 Dynamic Sampling: Filters out prompts with 0% or 100% accuracy
 
-➤ Mistral’s endpoint is priced amongst the cheapest models with pricing of $0.1/$0.3 per million input/output tokens, equivalent to Mistral Small 3.
+🔍 Token-level Policy Gradient Loss: Prevents excessive response lengths and maintains reasoning quality
 
-See how Mistral 3.1 Small compares to others models: https://artificialanalysis.ai/models/mistral-small-3-1?models=gpt-4o-mini%2Co3-mini-high%2Cllama-3-3-instruct-70b%2Cllama-3-1-instruct-8b%2Cgemini-2-0-flash%2Cgemma-3-27b%2Cclaude-3-5-haiku%2Cmistral-large-2%2Cmistral-small-3-1%2Cmistral-small-3%2Cmistral-small%2Cdeepseek-r1%2Cdeepseek-v3%2Cgrok-3%2Cgrok-3-reasoning%2Cnova-pro%2Cnova-micro%2Ccommand-a%2Cqwq-32b
+📏 Length-aware penalty: Reduce reward noise for truncated, but potentially valid, long responses.
+
+✅ Uses simple, robust rule-based verifier based on string normalization and matching
+
+🛠️ Compared to GRPO: No KL divergence penalty, token-level loss (vs sample-level), asymmetric clip ranges and filtering.
+
+🥇Qwen2.5-32B DAPO achieves 50 points on AIME vs. GRPO's 30 points
+
+⚠️ Release excludes Dynamic Sampling in scripts (44% AIME)
+
+project page: https://dapo-sia.github.io/
+
+code: https://github.com/BytedTsinghua-SIA/DAPO
+
+paper: https://huggingface.co/papers/2503.14476
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -226,67 +269,35 @@ See how Mistral 3.1 Small compares to others models: https://artificialanalysis.
 <hr>
 <hr>
 
-<h1> AI isn’t killing programming jobs - it's reinventing them. </h1>
+<h1> Robots finally got real! </h1>
 
-Rumors that AI will erase computer programmers are greatly exaggerated.
+Jensen Huang just introduced Blue (Star Wars droid) and NVIDIA's partnership with DeepMind and Disney 👏🥹
 
-The truth is far more interesting.
+At Nvidia's GTC 2025, CEO Jensen Huang introduced a droid straight out of your Star Wars dreams 🤖
 
-Programmers aren't disappearing - they're transforming.
+Blue isn't just a prop - it's an interactive droid designed to:
 
-The chart below brilliantly proves it:
+- Walk and move fluidly.
 
-↳ Computer programmers: Declining since the '90s 📉
+- Engage naturally with humans.
 
-↳ Software developers: Explosive growth since the 2000s 🚀
+- Bring Star Wars to life, right before your eyes.
 
-Here's why:
+To achieve that, three giants joined forces:
 
-AI and automation are taking over the repetitive grind.
+↳ NVIDIA’s expertise in AI and computing.
 
-- Routine coding
+↳ Google DeepMind’s advancements in machine learning.
 
-- Basic debugging
+↳ Disney’s creative storytelling.
 
-- Tedious testing
+They're also launching Newton, an open-source physics engine. It's a digital playground where robots learn real-world skills through lifelike simulations.
 
-What remains - and expands - is more valuable:
-
-- Strategic thinking
-
-- System design
-
-- Innovative solutions
-
-The job market agrees:
-
-Software developer roles are projected to surge by 17% by 2033.
-
-But there's a catch:
-
-Routine programming tasks might face up to 80% automation by 2032.
-All thanks to AI.
-
-Your next move is, therefore:
-
-↳ Developers: Master AI. Keep upgrading your skills. Your role isn't disappearing - it's upgrading.
-
-↳ Businesses: Integrate AI, but invest heavily in human talent. Balance tech with creativity.
-
-↳ Educators: Focus on teaching AI, critical thinking, and ethical tech use. Prepare students to lead, not just code.
-
-AI isn't replacing programmers - it's redefining their potential.
-
-Master AI and you will thrive in this new era.
+The future is here, and it's amazing.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/7.jpg"
-      target="_blank">
-      <img src="/assets/img/news/AI news/7.jpg" 
-           alt="Selene" 
-           />
-</a>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/YxH4Mx6zh6c?si=CwG8J81JEBNGxOae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   </div>
 </div>
