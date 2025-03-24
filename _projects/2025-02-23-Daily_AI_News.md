@@ -255,10 +255,10 @@ https://github.com/LearningCircuit/local-deep-research
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/3.jpg"
+    <a href="/assets/img/news/AI news/5.jpg"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/3.jpg" 
+      <img src="/assets/img/news/AI news/5.jpg" 
            alt="Nyx" 
           />
 </a>
