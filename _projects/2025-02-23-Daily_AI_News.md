@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-21
+date: 2025-03-24
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,27 +25,105 @@ images:
   </div>
 </div>
 
-<h1> 21st March 2025 </h1>
+<h1> 24th March 2025 </h1>
 
-<h1> Every 0.2 seconds on Earth, someone downloads a small language model </h1>
+<h1> ImageRAG: Transforming Satellite Imagery, Medical Imaging, and Climate Monitoring with AI 🌍🔬🌦️ </h1>
 
-15M times small language models were downloaded from Hugging Face in the last month. How different are these models from each other?
+Ultra-High-Resolution (UHR) images used in satellite imagery often exceeding 100,000 × 100,000 pixels, overwhelm existing AI tools due to computational and memory limits.
 
-The recent addition to SLM is Gemma-3 (1B to 27B). The new generation of models has a bigger context of 128K tokens. An increased context window size requires more computing and memory. It was solved by Grouped-Query Attention mechanisms and an optimized KV-cache - the model uses 5 local attention layers for 1 global. Gemma-3 is trained on 14T tokens, including text and images. For text data, the model uses the same tokenizer as Gemini 2.0 with a 256K vocabulary size. The SigLIP encoder encodes images. The encoder segments images into non-overlapping crops and uses the P&S method for different aspect ratios. An interesting solution is to keep the image encoder frozen during training; it saves some resources on pre-training of the model, as we can pre-compute embeddings of images. The authors produced different quantized models focusing on open-source inference engines such as llama.cpp.
+But we need detail in these images for tasks like:
 
-The Qwen2.5 (0.5B to 72B) model is trained on 18T tokens. It uses GQ attention as Gemma. Vocabulary size is 151K tokens and uses Qwen's tokenizer. Control tokens were expanded from 3 to 22 to support tool-calling functionality and structure output. The model developers use the scaling law to predict future model performance and determine its optimal parameters, such as model size for a given compute budget. In the Qwen paper, it's used for Hyper-parameters, such as batch size and learning rate.
+❊ Semantic Segmentation: Identifying detailed regions.
 
-In Dec 2024, the new version of Phi model was released Phi-4 (14B). Phi models are built focusing on quality synthetic data. Every new generation improves the data creation pipeline. The pipeline includes multi-agent prompting, self-revision workflows, and instruction reversal. Additional efforts were spent on preventing data contamination(leaking of benchmarks into training data). The paper describes a hybrid n-gram algorithm that uses 13- and 7-gram features to detect data from benchmarks. The total size of pre-trained data is 10T tokens. The context length of the model is 16K tokens, which is achieved via extending the default context 4K during midtraining. An interesting aspect of the model post-training is the Pivotal Token Search. The idea is based on probabilities that LLM produce during response generation. We can calculate the difference between before and after one token generation. Tokens which impact the overall probability the most are pivotal or crucial decision-making points. So when we do post-training, we should target such pivotal tokens to train the model to make better decisions.
+❊ Object Detection: Pinpointing structures, vehicles, or natural features.
 
-There are more than 70 open-source small language models on the market, and the upper bound of model size is slightly growing. By today's standards, GPT-2 is SLM. However, a few things stay the same: focus on quality data and inference efficiency.
+❊ Change Detection: Monitoring landscape evolution.
+
+ImageRAG solves these callenges.
+
+﹋﹋﹋﹋﹋
+
+》 𝗧𝗵𝗲 𝗚𝗮𝗺𝗲-𝗖𝗵𝗮𝗻𝗴𝗲𝗿: 𝗜𝗺𝗮𝗴𝗲𝗥𝗔𝗚 
+
+❊ What is ImageRAG?
+
+- A training-free framework designed to tackle UHR image analysis.
+
+- Integrates Retrieval-Augmented Generation (RAG) to selectively process and analyze crucial image portions.
+
+❊ Why it’s revolutionary:
+
+- Efficiently handles vast image data without sacrificing detail.
+
+- Focuses on small but critical details, boosting accuracy.
+
+- Avoids costly model retraining.
+
+﹋﹋﹋﹋﹋
+》 𝗖𝗼𝗿𝗲 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 𝗼𝗳 𝗜𝗺𝗮𝗴𝗲𝗥𝗔𝗚
+
+❊ Two-Path Retrieval System:
+
+✣ Fast Path: Quickly retrieves relevant image patches for straightforward queries.
+
+✣ Slow Path: Digs deeper into labeled databases when the fast path fails.
+
+❊ Training-Free:
+
+- No need for additional annotations or retraining.
+
+- Ready-to-use for diverse applications.
+
+❊ Adaptable and Modular:
+
+✣ Integrates with existing AI models and workflows.
+
+﹋﹋﹋﹋﹋
+》 𝗛𝗼𝘄 𝗗𝗼𝗲𝘀 𝗜𝗺𝗮𝗴𝗲𝗥𝗔𝗚 𝗪𝗼𝗿𝗸? 
+
+❊ Image Patch Division:
+
+- Splits large images into smaller, manageable patches.
+
+- Retains context for seamless analysis.
+
+❊ Instruction Analyzing Module:
+
+- Extracts key phrases from user queries.
+
+- Matches text with visual elements.
+
+❊ Text-Image and Image-Image Retrieval:
+
+- Finds the most relevant visual data for any given query.
+
+- Combines satellite imagery with textual inputs for precise results.
+
+﹋﹋﹋﹋﹋
+》 𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻𝘀: 𝗕𝗲𝘆𝗼𝗻𝗱 𝗦𝗮𝘁𝗲𝗹𝗹𝗶𝘁𝗲 𝗜𝗺𝗮𝗴𝗲𝗿𝘆
+
+ImageRAG works for:
+
+❊ Medical Imaging:
+
+✣ Focusing on anomalies in high-resolution scans.
+
+❊ Retail and Supply Chain:
+
+✣ Monitoring large-scale operations via aerial imagery.
+
+❊ Climate Monitoring:
+
+✣ Analyzing environmental changes with precision.
+
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/1.jpg"
+    <a href="/assets/img/news/AI news/1.gif"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/1.jpg" 
+      <img src="/assets/img/news/AI news/1.gif" 
            alt="Nyx" 
           />
 </a>
@@ -55,39 +133,34 @@ There are more than 70 open-source small language models on the market, and the 
 <hr>
 <hr>
 
-<h1> QuantumBlack, AI by McKinsey has released an interesting State of AI in 2025 </h1>
+<h1> 𝗔𝗟𝗟𝗮𝗠-𝗧𝗵𝗶𝗻𝗸𝗶𝗻𝗴 - 𝗮𝗻 𝗔𝗿𝗮𝗯𝗶𝗰 𝗹𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗺𝗼𝗱𝗲𝗹 𝗼𝗽𝘁𝗶𝗺𝗶𝘇𝗲𝗱 𝗳𝗼𝗿 𝗿𝗲𝗮𝘀𝗼𝗻𝗶𝗻𝗴 𝗮𝗻𝗱 𝗺𝗮𝘁𝗵𝗲𝗺𝗮𝘁𝗶𝗰𝗮𝗹 𝗽𝗿𝗼𝗯𝗹𝗲𝗺-𝘀𝗼𝗹𝘃𝗶𝗻𝗴! </h1>
 
-Report packed with interesting statistics. I totally agree with their frame "The value of AI comes from rewiring how companies run." That's the imperative for this year and beyond.
+ALLaM-Thinking, a specialized Arabic Large Language Model that excels at step-by-step reasoning. The model is now available on both Ollama and Hugging Face platforms!
 
-Some of the particularly interesting statistics:
+🧠 𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:
 
-💰 Over half of respondents using generative AI report cost reductions in the business units where it’s deployed.
+• Arabic-first design built specifically for high-quality Arabic text generation
 
- 📉 More than 80% do not yet see a material enterprise-wide EBIT effect from generative AI, despite functional gains.
+• Enhanced reasoning capabilities, particularly for mathematical problems
 
- ⚙️ 21% of organizations that have adopted generative AI have fundamentally redesigned some workflows.
+• Step-by-step problem-solving methodology with clear explanations
 
- ✅ 71% regularly use generative AI in at least one function, a jump from 65% in early 2024.
+📊 𝗔𝗟𝗟𝗮𝗠-𝗧𝗵𝗶𝗻𝗸𝗶𝗻𝗴 𝗯𝗿𝗲𝗮𝗸𝘀 𝗱𝗼𝘄𝗻 𝗰𝗼𝗺𝗽𝗹𝗲𝘅 𝗽𝗿𝗼𝗯𝗹𝗲𝗺𝘀 𝗺𝗲𝘁𝗵𝗼𝗱𝗶𝗰𝗮𝗹𝗹𝘆, 𝗱𝗲𝗺𝗼𝗻𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝘀𝘁𝗿𝗼𝗻𝗴 𝗰𝗮𝗽𝗮𝗯𝗶𝗹𝗶𝘁𝗶𝗲𝘀 𝗶𝗻:
 
- 🔎 78% overall use AI in at least one function, up from 55% a year earlier.
+• Mathematical reasoning with detailed explanations
 
- ☑️ 27% review all AI outputs; a similar share checks 20% or less, highlighting wide variation in quality control.
+• Logical analysis and deduction
 
- 👤 28% say their CEO oversees AI governance, while 17% name their board of directors.
+• Maintaining coherence in complex technical responses
 
- ⚠️ Many report mitigating inaccuracy, cybersecurity, and IP risks—cited most often as having caused negative impacts.
+This model is built upon ALLaM-AI/ALLaM-7B-Instruct-preview and implements Group Relative Policy Optimization (GRPO) for improved alignment.
 
- ✍️ 63% of those using generative AI create text, over one-third generate images, and more than one-quarter produce code.
+✅ 𝗧𝗿𝘆 𝗶𝘁 𝘆𝗼𝘂𝗿𝘀𝗲𝗹𝗳:
 
- 🔒 13% have hired AI compliance specialists, and 6% have hired AI ethics specialists in the past 12 months.
+• On Ollama: `ollama pull almaghrabima/ALLaM-Thinking` or visit https://ollama.com/almaghrabima/ALLaM-Thinking
 
- 🧑‍💻 Fewer respondents call AI hiring “very difficult” compared with previous years, but data scientists remain in high demand.
+• On Hugging Face: https://huggingface.co/almaghrabima/ALLaM-Thinking
 
- 🔄 Most organizations have reskilled employees in the past year due to AI; more reskilling is planned over the next three years.
-
- 👥 38% expect little net workforce change from generative AI; service operations and supply chain see the largest reduction risk, while IT and product development may expand.
-
-Full report can be accessed at: https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai#/
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/2.jpg"
@@ -104,26 +177,33 @@ Full report can be accessed at: https://www.mckinsey.com/capabilities/quantumbla
 <hr>
 <hr>
 
-<h1>🖲️🖲️Visual Geometry Grounded Transformer🖲️🖲️ </h1>
+<h1>AI just changed startups forever </h1>
 
-👉VGGT by VGG & META (CVPR2025) is a feed-forward neural net. that directly infers all key 3D attributes of a scene, including extrinsic/intrinsic cam-params, point maps, depth maps, and 3D point tracks, from one, a few, or hundreds of its views, within seconds. Code released under NC 4.0💙
+Y Combinator’s newest batch of startups is breaking every record.
 
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+Here's what’s happening:
 
-✅VGGT: Visual Geometry Grounded Transformer
+→ 25% of startups wrote 95% of their code using AI.
 
-✅Large feed-fwd transformer for 3D attributes
+→ Teams of fewer than 10 people are hitting $10M+ revenue.
 
-✅Intr/extrinsics, points, depth & 3D point tracks
+→ They’re growing at 10% per week. Not just one or two - the entire batch.
 
-✅SOTA, better than methods w/ post-processing
+The era of needing 100 engineers and huge funding rounds? Gone.
 
+AI-powered "vibe coding" means smaller teams, less capital, faster growth.
 
-👉Paper https://arxiv.org/pdf/2503.11651
+Silicon Valley’s "growth at all costs" mindset is officially dead.
 
-👉Project https://vgg-t.github.io/
+Profitability and lean teams are the new standard.
 
-👉Code https://github.com/facebookresearch/vggt
+Forget landing that job at Google, Amazon, Apple or Meta.
+You might find it easier & more enjoyable to build the next $100M AI startup instead.
+
+Because the playing field just leveled.
+
+All thanks to AI.
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -141,80 +221,48 @@ Full report can be accessed at: https://www.mckinsey.com/capabilities/quantumbla
 <hr>
 <hr>
 
-<h1> 🚀 **Mistral Small 3.1: A Game-Changing Open-Source LLM** 🚀 </h1>
+<h1>  Kyutai just released MoshiVis - an end-to-end low-latency Vision Speech Model, CC-BY license 🔥 </h1>
 
-Wow! Mistral just dropped a 24B SOTA Multilingual, Multimodal LLM with 128K context AND Apache 2.0 license 🔥
+> Only adds 206M parameters via lightweight cross-attention (CA) modules to integrate visual inputs from a frozen PaliGemma2-3B-448 vision encoder
 
-In the fast-paced world of AI, Mistral has released **Mistral Small 3.1**, a powerful open-source model that outperforms many industry leaders. At 24B parameters, it runs efficiently on an RTX 4090 or a Mac with 32GB RAM, making it a lightweight yet robust solution for developers and enthusiasts.
+> Uses a learnable gating mechanism in the CA modules allows MoshiVis to "turn off" visual input streams when unnecessary, preserving Moshi's conversational abilities
 
-💡 **Key Features:**
+> Adds only ~7ms per inference step on a MacMini with M4 Pro Chip, maintaining real-time performance
 
-✅ **Multimodal & Multilingual:** Seamlessly handles text, images, and 21+ languages.
+> Best part: it keeps the tone, emotion and the prosody of the original Moshi model
 
-✅ **Fast & Efficient:** Processes 150 tokens per second with a 128K context window.
+> CC-BY-4.0 licensed weights on the hub, allows commercial use 
 
-✅ **Apache 2.0 License:** Fully open-source for use, fine-tuning, and integration.
-
-📊 **Performance:**
-
-Mistral Small 3.1 excels in:
-
-- **Math & Logical Reasoning**
-
-- **Programming & Code Generation**
-
-- **Multimodal Image Understanding**
-
-- **Long-Context Retention**
-
-Ideal for AI applications, multimodal projects, or local AI setups, this model stands out in the open-source AI landscape.
-
-HF Access: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503
+> Works with MLX, Candle and PyTorch from day-0
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/4.jpg"
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/coroLWOS7II?si=bUbzE0COHvJOlX0H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> Langchain announces 🔍📚 Local Deep Research </h1>
+
+An AI research assistant that runs locally, leveraging multiple LLMs for deep analysis across academic and web sources. Built with LangChain, it features RAG-powered search and flexible model support.
+
+Explore this powerful research tool on GitHub 🚀
+https://github.com/LearningCircuit/local-deep-research
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <a href="/assets/img/news/AI news/3.jpg"
+
       target="_blank">
-      <img src="/assets/img/news/AI news/4.jpg" 
-           alt="ClaudeCode" 
-           />
+      <img src="/assets/img/news/AI news/3.jpg" 
+           alt="Nyx" 
+          />
 </a>
 
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> Hugging Face just dropped SmolDocling </h1>
-
-🚀 We just dropped 𝗦𝗺𝗼𝗹𝗗𝗼𝗰𝗹𝗶𝗻𝗴: a 𝟮𝟱𝟲𝗠 𝗼𝗽𝗲𝗻-𝘀𝗼𝘂𝗿𝗰𝗲 𝘃𝗶𝘀𝗶𝗼𝗻 𝗟𝗠 for complete document OCR! ✨
-
-📄 𝗘𝗻𝗱-𝘁𝗼-𝗲𝗻𝗱 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁 𝗰𝗼𝗻𝘃𝗲𝗿𝘀𝗶𝗼𝗻—no more complex pipelines, just one tiny model
-
-⚡ 𝗙𝗮𝘀𝘁 & 𝗹𝗶𝗴𝗵𝘁𝘄𝗲𝗶𝗴𝗵𝘁—processes a page in 0.35 sec on a consumer GPU with <500MB VRAM
-
-🏆 𝗦𝗢𝗧𝗔 𝗮𝗰𝗰𝘂𝗿𝗮𝗰𝘆—outperforms models 27× larger in full-page transcription, layout detection, and code recognition
-
-💾 Efficient large-batch processing—cheap and easy to run in-house
-
-📊 Handles all document elements—tables, charts, code, equations, lists, and more
-
-🔍 Full tech report available with release
-
-This is another example that small, optimized models can compete with much larger systems—making AI more sustainable.
-
-Model: https://huggingface.co/ds4sd/SmolDocling-256M-preview
-
-Paper: https://arxiv.org/abs/2503.11576
-
-Code: https://github.com/docling-project/docling
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/7oi5H9M4gfE?si=NXcIkGvE1BKWCVjB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
   </div>
 </div>
@@ -222,46 +270,29 @@ Code: https://github.com/docling-project/docling
 <hr>
 <hr>
 
-<h1> New RL Method thats better than GRPO!  </h1>
+<h1> 🚀 OpenAI Releases Next-Gen Audio Models </h1>
 
-New RL Method thats better than GRPO! 🤯 ByteDance released a new open source RL method that outperforms GRPO 👀 DAPO or Decoupled Clip and Dynamic sAmpling Policy Optimization (DAPO) achieves 50 points on the AIME 2024 with 50% fewer training steps.
+OpenAI has just announced the launch of new speech-to-text and text-to-speech models, marking a significant update in voice AI capabilities. 
 
-TL;DR: 
+Key Highlights:
 
-🏆 50% AIME 2024 accuracy (Qwen2.5-32B), surpassing DeepSeek-R1 with 50% fewer steps.
+1️⃣Enhanced Accuracy: New speech-to-text models outperform existing solutions, especially in challenging scenarios.
 
-🤗 Fully open-source: code (based on verl), training dataset (DAPO-Math-17k), and model weights (soon)
+2️⃣Customizable Voices: Developers can now instruct text-to-speech models on how to speak, enabling tailored experiences.
 
-💡 Clip-Higher: Asymmetric clipping bounds with higher upper bound to prevent entropy collapse
+3️⃣Multilingual Support: Strong performance across over 100 languages ensures global reach.
 
-🔄 Dynamic Sampling: Filters out prompts with 0% or 100% accuracy
+4️⃣Technical Innovations: Advanced distillation techniques and pretraining on authentic audio datasets drive these advancements.
 
-🔍 Token-level Policy Gradient Loss: Prevents excessive response lengths and maintains reasoning quality
+These updates empower developers to build more accurate and expressive voice agents, enhancing user experiences.
 
-📏 Length-aware penalty: Reduce reward noise for truncated, but potentially valid, long responses.
+What practical applications do you see for these enhanced audio models in your industry?
 
-✅ Uses simple, robust rule-based verifier based on string normalization and matching
-
-🛠️ Compared to GRPO: No KL divergence penalty, token-level loss (vs sample-level), asymmetric clip ranges and filtering.
-
-🥇Qwen2.5-32B DAPO achieves 50 points on AIME vs. GRPO's 30 points
-
-⚠️ Release excludes Dynamic Sampling in scripts (44% AIME)
-
-project page: https://dapo-sia.github.io/
-
-code: https://github.com/BytedTsinghua-SIA/DAPO
-
-paper: https://huggingface.co/papers/2503.14476
+Video: OpenAI Developers (via 1 Zero)
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/6.jpg"
-      target="_blank">
-      <img src="/assets/img/news/AI news/6.jpg" 
-           alt="BirdSQL" 
-           />
-</a>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sCrM4TBWLig?si=yOSVr7aIM3q8c1Mn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   </div>
 </div>
@@ -269,35 +300,30 @@ paper: https://huggingface.co/papers/2503.14476
 <hr>
 <hr>
 
-<h1> Robots finally got real! </h1>
+<h1> 🥎🥎 3D LLM Spatial Understanding 🥎🥎 </h1>
 
-Jensen Huang just introduced Blue (Star Wars droid) and NVIDIA's partnership with DeepMind and Disney 👏🥹
+👉Manycore unveils SpatialLM: novel LLM designed to process 3D point cloud data and generate structured 3D scene understanding outputs. Paper announced, code, model & test data released💙
 
-At Nvidia's GTC 2025, CEO Jensen Huang introduced a droid straight out of your Star Wars dreams 🤖
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
 
-Blue isn't just a prop - it's an interactive droid designed to:
+✅Reasoning capabilities in complex scene
 
-- Walk and move fluidly.
+✅Elements like walls, doors, windows
 
-- Engage naturally with humans.
+✅Object BBoxes w/ semantic categories
 
-- Bring Star Wars to life, right before your eyes.
+✅Point clouds from many diverse sources
 
-To achieve that, three giants joined forces:
 
-↳ NVIDIA’s expertise in AI and computing.
+👉Project https://manycore-research.github.io/SpatialLM/
 
-↳ Google DeepMind’s advancements in machine learning.
+👉Code https://github.com/manycore-research/SpatialLM
 
-↳ Disney’s creative storytelling.
-
-They're also launching Newton, an open-source physics engine. It's a digital playground where robots learn real-world skills through lifelike simulations.
-
-The future is here, and it's amazing.
+🤗Models https://huggingface.co/manycore-research
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/YxH4Mx6zh6c?si=CwG8J81JEBNGxOae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://manycore-research-azure.kujiale.com/manycore-research/SpatialLM/teaser.mp4"></iframe>
 
   </div>
 </div>
