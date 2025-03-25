@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-24
+date: 2025-03-25
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,141 +25,38 @@ images:
   </div>
 </div>
 
-<h1> 24th March 2025 </h1>
+<h1> 25th March 2025 </h1>
 
-<h1> ImageRAG: Transforming Satellite Imagery, Medical Imaging, and Climate Monitoring with AI 🌍🔬🌦️ </h1>
+<h1> 🦾 JUST IN: Unitree's G1 Robot Nails First-Ever Standing Side Flip </h1>
 
-Ultra-High-Resolution (UHR) images used in satellite imagery often exceeding 100,000 × 100,000 pixels, overwhelm existing AI tools due to computational and memory limits.
+Humanoid robotics just reached a milestone that seemed impossible just months ago. 
 
-But we need detail in these images for tasks like:
+↘️Comes just one year after Unitree's H1 (1.8m) pioneered the first standing backflip by an electric humanoid.
 
-❊ Semantic Segmentation: Identifying detailed regions.
+↘️Demonstrates flawless execution of a more technically challenging maneuver than the backflip.
 
-❊ Object Detection: Pinpointing structures, vehicles, or natural features.
+↘️Zero hardware malfunctions or damage occurred throughout programming and filming.
 
-❊ Change Detection: Monitoring landscape evolution.
+The precision control systems that enable these flips are the same technologies that will allow humanoids to navigate complex real-world environments, respond to unexpected obstacles, and perform intricate tasks alongside humans.
 
-ImageRAG solves these callenges.
-
-﹋﹋﹋﹋﹋
-
-》 𝗧𝗵𝗲 𝗚𝗮𝗺𝗲-𝗖𝗵𝗮𝗻𝗴𝗲𝗿: 𝗜𝗺𝗮𝗴𝗲𝗥𝗔𝗚 
-
-❊ What is ImageRAG?
-
-- A training-free framework designed to tackle UHR image analysis.
-
-- Integrates Retrieval-Augmented Generation (RAG) to selectively process and analyze crucial image portions.
-
-❊ Why it’s revolutionary:
-
-- Efficiently handles vast image data without sacrificing detail.
-
-- Focuses on small but critical details, boosting accuracy.
-
-- Avoids costly model retraining.
-
-﹋﹋﹋﹋﹋
-》 𝗖𝗼𝗿𝗲 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 𝗼𝗳 𝗜𝗺𝗮𝗴𝗲𝗥𝗔𝗚
-
-❊ Two-Path Retrieval System:
-
-✣ Fast Path: Quickly retrieves relevant image patches for straightforward queries.
-
-✣ Slow Path: Digs deeper into labeled databases when the fast path fails.
-
-❊ Training-Free:
-
-- No need for additional annotations or retraining.
-
-- Ready-to-use for diverse applications.
-
-❊ Adaptable and Modular:
-
-✣ Integrates with existing AI models and workflows.
-
-﹋﹋﹋﹋﹋
-》 𝗛𝗼𝘄 𝗗𝗼𝗲𝘀 𝗜𝗺𝗮𝗴𝗲𝗥𝗔𝗚 𝗪𝗼𝗿𝗸? 
-
-❊ Image Patch Division:
-
-- Splits large images into smaller, manageable patches.
-
-- Retains context for seamless analysis.
-
-❊ Instruction Analyzing Module:
-
-- Extracts key phrases from user queries.
-
-- Matches text with visual elements.
-
-❊ Text-Image and Image-Image Retrieval:
-
-- Finds the most relevant visual data for any given query.
-
-- Combines satellite imagery with textual inputs for precise results.
-
-﹋﹋﹋﹋﹋
-》 𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻𝘀: 𝗕𝗲𝘆𝗼𝗻𝗱 𝗦𝗮𝘁𝗲𝗹𝗹𝗶𝘁𝗲 𝗜𝗺𝗮𝗴𝗲𝗿𝘆
-
-ImageRAG works for:
-
-❊ Medical Imaging:
-
-✣ Focusing on anomalies in high-resolution scans.
-
-❊ Retail and Supply Chain:
-
-✣ Monitoring large-scale operations via aerial imagery.
-
-❊ Climate Monitoring:
-
-✣ Analyzing environmental changes with precision.
-
+What everyday applications do you see for humanoid robots with this level of physical dexterity and dynamic control?
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/1.gif"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/1.gif" 
-           alt="Nyx" 
-          />
-</a>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/29xLWhqME2Q?si=jd4rBvX4774GRODg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
 <hr>
 <hr>
 
-<h1> 𝗔𝗟𝗟𝗮𝗠-𝗧𝗵𝗶𝗻𝗸𝗶𝗻𝗴 - 𝗮𝗻 𝗔𝗿𝗮𝗯𝗶𝗰 𝗹𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗺𝗼𝗱𝗲𝗹 𝗼𝗽𝘁𝗶𝗺𝗶𝘇𝗲𝗱 𝗳𝗼𝗿 𝗿𝗲𝗮𝘀𝗼𝗻𝗶𝗻𝗴 𝗮𝗻𝗱 𝗺𝗮𝘁𝗵𝗲𝗺𝗮𝘁𝗶𝗰𝗮𝗹 𝗽𝗿𝗼𝗯𝗹𝗲𝗺-𝘀𝗼𝗹𝘃𝗶𝗻𝗴! </h1>
+<h1> 🎙️ Oliva: Voice RAG Assistant </h1>
 
-ALLaM-Thinking, a specialized Arabic Large Language Model that excels at step-by-step reasoning. The model is now available on both Ollama and Hugging Face platforms!
+A powerful open-source assistant that enables natural voice search of vector databases. Built with LangChain's workflow engine and cutting-edge voice tech, Oliva delivers seamless agentic RAG capabilities.
 
-🧠 𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:
-
-• Arabic-first design built specifically for high-quality Arabic text generation
-
-• Enhanced reasoning capabilities, particularly for mathematical problems
-
-• Step-by-step problem-solving methodology with clear explanations
-
-📊 𝗔𝗟𝗟𝗮𝗠-𝗧𝗵𝗶𝗻𝗸𝗶𝗻𝗴 𝗯𝗿𝗲𝗮𝗸𝘀 𝗱𝗼𝘄𝗻 𝗰𝗼𝗺𝗽𝗹𝗲𝘅 𝗽𝗿𝗼𝗯𝗹𝗲𝗺𝘀 𝗺𝗲𝘁𝗵𝗼𝗱𝗶𝗰𝗮𝗹𝗹𝘆, 𝗱𝗲𝗺𝗼𝗻𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝘀𝘁𝗿𝗼𝗻𝗴 𝗰𝗮𝗽𝗮𝗯𝗶𝗹𝗶𝘁𝗶𝗲𝘀 𝗶𝗻:
-
-• Mathematical reasoning with detailed explanations
-
-• Logical analysis and deduction
-
-• Maintaining coherence in complex technical responses
-
-This model is built upon ALLaM-AI/ALLaM-7B-Instruct-preview and implements Group Relative Policy Optimization (GRPO) for improved alignment.
-
-✅ 𝗧𝗿𝘆 𝗶𝘁 𝘆𝗼𝘂𝗿𝘀𝗲𝗹𝗳:
-
-• On Ollama: `ollama pull almaghrabima/ALLaM-Thinking` or visit https://ollama.com/almaghrabima/ALLaM-Thinking
-
-• On Hugging Face: https://huggingface.co/almaghrabima/ALLaM-Thinking
+Check it out 🚀
+https://github.com/Deluxer/oliva
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
@@ -177,32 +74,26 @@ This model is built upon ALLaM-AI/ALLaM-7B-Instruct-preview and implements Group
 <hr>
 <hr>
 
-<h1>AI just changed startups forever </h1>
+<h1> LlamaExtract is now in public beta 🔥 </h1>
 
-Y Combinator’s newest batch of startups is breaking every record.
+The leading, genAI-native agent for structured document extraction.
 
-Here's what’s happening:
+We adapt the latest models and tune them so that you can structure even the most complex documents (financial reports, invoices, resumes, and more) in a highly accurate, reliable way. 
 
-→ 25% of startups wrote 95% of their code using AI.
+No more worrying about 
 
-→ Teams of fewer than 10 people are hitting $10M+ revenue.
+1) overflowing the context window, 
 
-→ They’re growing at 10% per week. Not just one or two - the entire batch.
+2) getting misformatted json, 
 
-The era of needing 100 engineers and huge funding rounds? Gone.
+3) figuring out how to version your agent.
 
-AI-powered "vibe coding" means smaller teams, less capital, faster growth.
+It’s built on the same foundation as LlamaParse, our parsing service, which allows understanding of even the most complex documents.
 
-Silicon Valley’s "growth at all costs" mindset is officially dead.
+Big shoutout to Neeraj Pradhan for driving this forward. 
 
-Profitability and lean teams are the new standard.
-
-Forget landing that job at Google, Amazon, Apple or Meta.
-You might find it easier & more enjoyable to build the next $100M AI startup instead.
-
-Because the playing field just leveled.
-
-All thanks to AI.
+Check it out: https://cloud.llamaindex.ai/login
+Sample Notebook: https://github.com/run-llama/llama_cloud_services/blob/main/examples/extract/resume_screening.ipynb
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -221,24 +112,47 @@ All thanks to AI.
 <hr>
 <hr>
 
-<h1>  Kyutai just released MoshiVis - an end-to-end low-latency Vision Speech Model, CC-BY license 🔥 </h1>
+<h1>  Forget RAG, welcome Agentic RAG  </h1>
 
-> Only adds 206M parameters via lightweight cross-attention (CA) modules to integrate visual inputs from a frozen PaliGemma2-3B-448 vision encoder
+𝗡𝗮𝘁𝗶𝘃𝗲 𝗥𝗔𝗚 
 
-> Uses a learnable gating mechanism in the CA modules allows MoshiVis to "turn off" visual input streams when unnecessary, preserving Moshi's conversational abilities
+In Native RAG, the most common implementation nowadays, the user query is processed through a pipeline that includes retrieval, reranking, synthesis, and generation of a response. 
+ 
+This process leverages retrieval and generation-based methods to provide accurate and contextually relevant answers. 
+ 
+𝗔𝗴𝗲𝗻𝘁𝗶𝗰 𝗥𝗔𝗚 
 
-> Adds only ~7ms per inference step on a MacMini with M4 Pro Chip, maintaining real-time performance
+Agentic RAG is an advanced, agent-based approach to question answering over multiple documents in a coordinated manner. It involves comparing different documents, summarizing specific documents, or comparing various summaries. 
+ 
+Agentic RAG is a flexible framework that supports complex tasks requiring planning, multi-step reasoning, tool use, and learning over time. 
+ 
+𝗞𝗲𝘆 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁𝘀 𝗮𝗻𝗱 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 
 
-> Best part: it keeps the tone, emotion and the prosody of the original Moshi model
+- Document Agents: Each document is assigned a dedicated agent capable of answering questions and summarizing within its own document. 
+ 
+- Meta-Agent: A top-level agent manages all the document agents, orchestrating their interactions and integrating their outputs to generate a coherent and comprehensive response. 
+ 
+𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 𝗮𝗻𝗱 𝗕𝗲𝗻𝗲𝗳𝗶𝘁𝘀 
 
-> CC-BY-4.0 licensed weights on the hub, allows commercial use 
-
-> Works with MLX, Candle and PyTorch from day-0
+- Autonomy: Agents act independently to retrieve, process, and generate information. 
+ 
+- Adaptability: The system can adjust strategies based on new data and changing contexts. 
+ 
+- Proactivity: Agents can anticipate needs and take preemptive actions to achieve goals. 
+Applications 
+ 
+Agentic RAG is particularly useful in scenarios requiring thorough and nuanced information processing and decision-making. 
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/coroLWOS7II?si=bUbzE0COHvJOlX0H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a href="/assets/img/news/AI news/4.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/4.jpg" 
+           alt="Nyx" 
+          />
+</a>
 
   </div>
 </div>
@@ -246,12 +160,76 @@ All thanks to AI.
 <hr>
 <hr>
 
-<h1> Langchain announces 🔍📚 Local Deep Research </h1>
+<h1> 🤖BREAKING: NVIDIA Drops First-Ever Open Foundation Model for Humanoid Robots  </h1>
 
-An AI research assistant that runs locally, leveraging multiple LLMs for deep analysis across academic and web sources. Built with LangChain, it features RAG-powered search and flexible model support.
+The race to develop general-purpose humanoid robots just accelerated dramatically!
 
-Explore this powerful research tool on GitHub 🚀
-https://github.com/LearningCircuit/local-deep-research
+Key information:
+
+🔸GR00T N1 features a dual-system cognitive architecture with a Vision-Language Model for reasoning and a Diffusion Transformer for generating precise movements
+
+🔸The model achieves 76.8% success rate on real-world tasks - dramatically outperforming baseline methods, especially with limited training data
+
+🔸NVIDIA's synthetic data strategy generated 750K trajectories in just 11 hours (equivalent to 9 months of human demonstrations)
+
+🔸The 2B parameter model is now available on Hugging Face with sample datasets and PyTorch scripts for customization
+
+How do you think general-purpose humanoid robots will transform manufacturing and logistics in the coming years?
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BslFNYJjjb4?si=6Z2UtdVkBAG8ODnj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> Improving small model abilities with DeepSeek AI R1 few shots.  </h1>
+
+A new experiment powered by Hugging Face Inference Providers and Data Studio!
+
+Last week, I shared the LIMO (Less is more for reasoning) dataset categorized with Llama 70B. I aimed to understand the topic distribution of this small but powerful dataset.
+
+This time, I wanted to experiment with a new idea: what if we could use few-shot examples (demonstrations) from R1 to improve Llama's ability to extract topics?
+
+Here's what I did:
+
+1. Run R1 over a few rows. 
+
+2. Inspect and validate the results.
+
+3. Use 5 validated R1 responses as part of the prompt to Llama.
+
+4. Categorize the entire dataset.
+
+5. Use Data Studio to extract the distribution of topics and compare it to my previous dataset.
+
+It all took under 30 minutes. It's amazing how quickly you can turn ideas into results using the Hub!
+
+Dataset:
+
+https://huggingface.co/datasets/dvilasuero/LIMO-topics-r1-fewshots
+
+Topics with Llama 70B:
+
+https://huggingface.co/datasets/dvilasuero/GAIR_LIMO_topics/sql-console/eNIH1nJ
+
+Topics with Llama + R1 few shots:
+
+https://huggingface.co/datasets/dvilasuero/LIMO-topics-r1-fewshots/sql-console/rDsKKX9
+
+Prompt for R1 (needed to add explicit instruction not to solve the problem 🤣 )
+
+Classify the math topics of the question. You MUST NO SOLVE the question, just analyze and give me a list of very precise topics that are needed to solve the question: 
+
+{{question}} 
+
+Pipeline:
+
+https://huggingface.co/datasets/dvilasuero/LIMO-topics-r1-fewshots/blob/main/config.yml
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -263,67 +241,53 @@ https://github.com/LearningCircuit/local-deep-research
           />
 </a>
 
-
   </div>
 </div>
 
 <hr>
 <hr>
 
-<h1> 🚀 OpenAI Releases Next-Gen Audio Models </h1>
+<h1> Qwen just DROPPED a 32B VLM - beats Qwen 2.5 72B and GPT 4o Mini - Apache 2.0 licensed 🔥 </h1>
 
-OpenAI has just announced the launch of new speech-to-text and text-to-speech models, marking a significant update in voice AI capabilities. 
+Vision Tasks (vs. Qwen2-VL-72B):
 
-Key Highlights:
+> MMMU: 70.0 (vs. 64.5)
 
-1️⃣Enhanced Accuracy: New speech-to-text models outperform existing solutions, especially in challenging scenarios.
+> MathVista: 74.7 (vs. 70.5)
 
-2️⃣Customizable Voices: Developers can now instruct text-to-speech models on how to speak, enabling tailored experiences.
+> OCRBenchV2: 57.2/59.1 (vs. 47.8/46.1)
 
-3️⃣Multilingual Support: Strong performance across over 100 languages ensures global reach.
+> Android Control: 69.6/93.3 (vs. 66.4/84.4)
 
-4️⃣Technical Innovations: Advanced distillation techniques and pretraining on authentic audio datasets drive these advancements.
+Text Tasks (vs. Competing Models):
 
-These updates empower developers to build more accurate and expressive voice agents, enhancing user experiences.
+> MMLU: 78.4 (vs. Mistral-24B: 80.6, GPT-4o-Mini: 82.0)
 
-What practical applications do you see for these enhanced audio models in your industry?
+> MATH: 82.2 (vs. Gemma3-27B: 89.0, GPT-4o-Mini: 70.2)
 
-Video: OpenAI Developers (via 1 Zero)
+> HumanEval: 91.5 (vs. Claude-3.5-Haiku: 88.1)
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/sCrM4TBWLig?si=yOSVr7aIM3q8c1Mn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Multimodal Capabilities:
 
-  </div>
-</div>
+> Recognizes objects, analyzes text/charts/graphics, and supports structured outputs (e.g., invoices, tables)
 
-<hr>
-<hr>
+> Acts as a visual agent, dynamically using tools for computer/phone interactions
 
-<h1> 🥎🥎 3D LLM Spatial Understanding 🥎🥎 </h1>
+> Understands 1+ hour videos and pinpoints relevant segments (temporal localization)
 
-👉Manycore unveils SpatialLM: novel LLM designed to process 3D point cloud data and generate structured 3D scene understanding outputs. Paper announced, code, model & test data released💙
+> Generates bounding boxes/points with stable JSON outputs
 
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
-
-✅Reasoning capabilities in complex scene
-
-✅Elements like walls, doors, windows
-
-✅Object BBoxes w/ semantic categories
-
-✅Point clouds from many diverse sources
-
-
-👉Project https://manycore-research.github.io/SpatialLM/
-
-👉Code https://github.com/manycore-research/SpatialLM
-
-🤗Models https://huggingface.co/manycore-research
+Very cool to see Qwen ship such a competitive multimodal model! 🤗
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <iframe width="560" height="315" src="https://manycore-research-azure.kujiale.com/manycore-research/SpatialLM/teaser.mp4"></iframe>
+   <a href="/assets/img/news/AI news/7.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/7.jpg" 
+           alt="Nyx" 
+          />
+</a>
 
   </div>
 </div>
