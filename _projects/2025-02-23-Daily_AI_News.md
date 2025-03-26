@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-25
+date: 2025-03-26
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,48 +25,98 @@ images:
   </div>
 </div>
 
-<h1> 25th March 2025 </h1>
+<h1> 26th March 2025 </h1>
 
-<h1> 🦾 JUST IN: Unitree's G1 Robot Nails First-Ever Standing Side Flip </h1>
+<h1> ☄️ GRPO now scales to 70B+ models </h1>
 
-Humanoid robotics just reached a milestone that seemed impossible just months ago. 
+☄️ GRPO now scales to 70B+ models with multi-node training and super-fast performance. Train up to 60 times faster with all the freshest features and optimizations that we've added. More details in the thread below 🧵👇
 
-↘️Comes just one year after Unitree's H1 (1.8m) pioneered the first standing backflip by an electric humanoid.
+Install the latest v0.16 version of TRL.
 
-↘️Demonstrates flawless execution of a more technically challenging maneuver than the backflip.
+🐦‍🔥 GRPO is now 6x faster with multi-step optimization
 
-↘️Zero hardware malfunctions or damage occurred throughout programming and filming.
+This new feature allows for the reuse of generated data across multiple optimization steps, cutting down training time significantly.
 
-The precision control systems that enable these flips are the same technologies that will allow humanoids to navigate complex real-world environments, respond to unexpected obstacles, and perform intricate tasks alongside humans.
+TRL added importance sampling and clipping logic to make this possible. Set num_iterations to 4 or more for the full effect!
 
-What everyday applications do you see for humanoid robots with this level of physical dexterity and dynamic control?
+🩺 Dr GRPO
+
+TRL integrated two major insights from Dr GRPO:
+
+1️⃣ Global normalization to avoid response-level length bias (no more per-sequence normalization).
+
+2️⃣ The option to disable reward scaling to eliminate question-level difficulty bias!
+
+🤸‍♀️ Domain-specific rewards
+
+When optimizing across multiple domains, not all rewards apply to every sample. For example, math rewards shouldn’t be given to biology samples (and vice versa).
+
+Now, you can return None for irrelevant rewards based on the sample's domain!
+
+
+🍃 Save time and memory with beta=0.0
+
+By setting beta to 0, the reference model is not loaded, and KL divergence is not computed, leading to big savings in memory and compute while still achieving great results!
+
+🕊️ Padding-free batching for SFT
+
+This method reduces memory usage by flattening batches into a single sequence, keeping sequences intact without padding—avoiding cross-contamination seen in packing.
+
+Enable it by setting padding_free=True in SFTConfig.
+
+
+Increasing the upper bound epsilon, as shown in the DAPO paper, leads to higher entropy during generation, promoting better exploration.
+
+Now, you can easily adjust the upper bound epsilon in GRPO with `epsilon_high` for more diverse outcomes.
+
+More here:
+
+📜 Release notes: https://github.com/huggingface/trl/releases/tag/v0.16.0 
+
+💼 PyPI: https://pypi.org/project/trl/
+
+🐋 OpenR1: https://github.com/huggingface/open-r1
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/29xLWhqME2Q?si=jd4rBvX4774GRODg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> 🎙️ Oliva: Voice RAG Assistant </h1>
-
-A powerful open-source assistant that enables natural voice search of vector databases. Built with LangChain's workflow engine and cutting-edge voice tech, Oliva delivers seamless agentic RAG capabilities.
-
-Check it out 🚀
-https://github.com/Deluxer/oliva
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/2.jpg"
+     <a href="/assets/img/news/AI news/1.jpg"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/2.jpg" 
+      <img src="/assets/img/news/AI news/1.jpg" 
            alt="Nyx" 
           />
 </a>
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> 🔥🔥 Dereflecting Any Image 🔥🔥 </h1>
+
+👉SJTU & Huawei unveils Dereflection Any Image (DAI), novel diffusion-based framework able to recover from a wide range of reflection types. One-step diffusion with deterministic outputs and fast inference. Inference code, pretrained models & training released💙
+
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+
+✅Proposing a novel/efficient pipeline for data collection
+
+✅DRR: HQ dataset w/ diverse reflections w/ varying angles
+
+✅New diffusion-based framework with progressive training
+
+✅SOTA performance also on challenging mobile captures
+
+👉Paper https://arxiv.org/pdf/2503.17347
+
+👉Project https://abuuu122.github.io/DAI.github.io/
+
+👉Repo https://github.com/Abuuu122/Dereflection-Any-Image
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://abuuu122.github.io/DAI.github.io/static/videos/demo.mp4"></iframe>
+
 
   </div>
 </div>
@@ -74,26 +124,15 @@ https://github.com/Deluxer/oliva
 <hr>
 <hr>
 
-<h1> LlamaExtract is now in public beta 🔥 </h1>
+<h1> Netflix has built a unified recommendation foundation model </h1>
 
-The leading, genAI-native agent for structured document extraction.
+Netflix has built a unified recommendation foundation model to replace its many specialized systems across their large-scale personalization and recommenders systems internally which drive 80% of the content discovery in their platform. 
 
-We adapt the latest models and tune them so that you can structure even the most complex documents (financial reports, invoices, resumes, and more) in a highly accurate, reliable way. 
+Netflix has been able to leverage large-scale high-quality user interaction data together with advanced tokenization techniques (with inspiration from LLMs) to train a foundation model that captures long-term user behavior over extensive interaction histories. 
 
-No more worrying about 
+In their overview they also dive into their cold-start problem, and how they tackle with with a hybrid embedding strategy which combines learnable ID and metadata-based embeddings via an attention mechanism to better handle newly launched titles. 
 
-1) overflowing the context window, 
-
-2) getting misformatted json, 
-
-3) figuring out how to version your agent.
-
-It’s built on the same foundation as LlamaParse, our parsing service, which allows understanding of even the most complex documents.
-
-Big shoutout to Neeraj Pradhan for driving this forward. 
-
-Check it out: https://cloud.llamaindex.ai/login
-Sample Notebook: https://github.com/run-llama/llama_cloud_services/blob/main/examples/extract/resume_screening.ipynb
+It is interesting to see that foundation models are now seeing practical applications in growing number of industry applications. 
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -112,36 +151,29 @@ Sample Notebook: https://github.com/run-llama/llama_cloud_services/blob/main/exa
 <hr>
 <hr>
 
-<h1>  Forget RAG, welcome Agentic RAG  </h1>
+<h1>  MIT Media Lab researchers just introduced a neuroadaptive AI tutor  </h1>
 
-𝗡𝗮𝘁𝗶𝘃𝗲 𝗥𝗔𝗚 
+MIT Media Lab researchers just introduced a neuroadaptive AI tutor that personalizes learning in real time using brainwaves!
 
-In Native RAG, the most common implementation nowadays, the user query is processed through a pipeline that includes retrieval, reranking, synthesis, and generation of a response. 
- 
-This process leverages retrieval and generation-based methods to provide accurate and contextually relevant answers. 
- 
-𝗔𝗴𝗲𝗻𝘁𝗶𝗰 𝗥𝗔𝗚 
+Traditional AI tutors rely on static responses, failing to adapt to a learner’s mental state.
 
-Agentic RAG is an advanced, agent-based approach to question answering over multiple documents in a coordinated manner. It involves comparing different documents, summarizing specific documents, or comparing various summaries. 
- 
-Agentic RAG is a flexible framework that supports complex tasks requiring planning, multi-step reasoning, tool use, and learning over time. 
- 
-𝗞𝗲𝘆 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁𝘀 𝗮𝗻𝗱 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 
+𝗡𝗲𝘂𝗿𝗼𝗖𝗵𝗮𝘁 𝗰𝗼𝗺𝗯𝗶𝗻𝗲𝘀 𝗲𝗹𝗲𝗰𝘁𝗿𝗼𝗲𝗻𝗰𝗲𝗽𝗵𝗮𝗹𝗼𝗴𝗿𝗮𝗽𝗵𝘆 (𝗘𝗘𝗚) 𝘄𝗶𝘁𝗵 𝗚𝗣𝗧-𝟰, 𝗺𝗼𝗻𝗶𝘁𝗼𝗿𝗶𝗻𝗴 𝗲𝗻𝗴𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝗮𝗻𝗱 𝗮𝗱𝗷𝘂𝘀𝘁𝗶𝗻𝗴 𝗰𝗼𝗻𝘁𝗲𝗻𝘁 𝗱𝘆𝗻𝗮𝗺𝗶𝗰𝗮𝗹𝗹𝘆.
 
-- Document Agents: Each document is assigned a dedicated agent capable of answering questions and summarizing within its own document. 
- 
-- Meta-Agent: A top-level agent manages all the document agents, orchestrating their interactions and integrating their outputs to generate a coherent and comprehensive response. 
- 
-𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 𝗮𝗻𝗱 𝗕𝗲𝗻𝗲𝗳𝗶𝘁𝘀 
+1. Tracked real-time brain activity with a wearable EEG headband, measuring cognitive engagement.
 
-- Autonomy: Agents act independently to retrieve, process, and generate information. 
- 
-- Adaptability: The system can adjust strategies based on new data and changing contexts. 
- 
-- Proactivity: Agents can anticipate needs and take preemptive actions to achieve goals. 
-Applications 
- 
-Agentic RAG is particularly useful in scenarios requiring thorough and nuanced information processing and decision-making. 
+2. Modified chatbot responses such as simplifying, elaborating, or changing pacing based on engagement levels.
+
+3. Increased cognitive engagement significantly in a study of 24 participants, outperforming standard AI tutors.
+
+4. Showed no immediate impact on learning outcomes, highlighting the challenge of converting engagement into retention.
+
+Honestly as a student, I could see myself using this haha. Really neat
+
+I see a lot of personalized, AI-driven tutoring applications out there. 
+
+NeuroChat is cool to me because it advances the field by dynamically adjusting content based on real-time physiological data.
+
+Here's the awesome work: https://arxiv.org/abs/2503.07599
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -160,76 +192,33 @@ Agentic RAG is particularly useful in scenarios requiring thorough and nuanced i
 <hr>
 <hr>
 
-<h1> 🤖BREAKING: NVIDIA Drops First-Ever Open Foundation Model for Humanoid Robots  </h1>
+<h1> Real-time communication Library to build Voice AI Agents in Python!🔥 </h1>
 
-The race to develop general-purpose humanoid robots just accelerated dramatically!
+Turn any python function into a real-time audio and video stream over WebRTC or WebSockets.
 
-Key information:
+Here is how it works:
 
-🔸GR00T N1 features a dual-system cognitive architecture with a Vision-Language Model for reasoning and a Diffusion Transformer for generating precise movements
+Simply write a Python function that takes in audio or video data, processes it however you want, and returns the output. FastRTC handles all the complex real-time streaming, including WebRTC and WebSocket connections, so you can focus purely on your logic.
 
-🔸The model achieves 76.8% success rate on real-world tasks - dramatically outperforming baseline methods, especially with limited training data
+Key Features:
 
-🔸NVIDIA's synthetic data strategy generated 750K trajectories in just 11 hours (equivalent to 9 months of human demonstrations)
+• 🗣 Automatic Voice Detection & Turn-Taking — Focus only on your response logic.
 
-🔸The 2B parameter model is now available on Hugging Face with sample datasets and PyTorch scripts for customization
+• 💻 Built-in Gradio UI — Instantly launch a WebRTC-enabled interface with .ui.launch().
 
-How do you think general-purpose humanoid robots will transform manufacturing and logistics in the coming years?
+• 🔌 WebRTC Support — Mount on a FastAPI app with .mount(app) and get a WebRTC endpoint for custom frontends.
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/BslFNYJjjb4?si=6Z2UtdVkBAG8ODnj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+• ⚡ WebSocket Support — Expose a websocket endpoint just as easily with .mount(app).
 
+• 📞 Phone Call Support — Spin up a temporary phone number with .fastphone() and handle calls directly.
 
-  </div>
-</div>
+• 🤖 Customizable Backend — Integrates seamlessly with FastAPI for production-ready applications.
 
-<hr>
-<hr>
+The best part?
 
-<h1> Improving small model abilities with DeepSeek AI R1 few shots.  </h1>
+It's 100% Open Source
 
-A new experiment powered by Hugging Face Inference Providers and Data Studio!
-
-Last week, I shared the LIMO (Less is more for reasoning) dataset categorized with Llama 70B. I aimed to understand the topic distribution of this small but powerful dataset.
-
-This time, I wanted to experiment with a new idea: what if we could use few-shot examples (demonstrations) from R1 to improve Llama's ability to extract topics?
-
-Here's what I did:
-
-1. Run R1 over a few rows. 
-
-2. Inspect and validate the results.
-
-3. Use 5 validated R1 responses as part of the prompt to Llama.
-
-4. Categorize the entire dataset.
-
-5. Use Data Studio to extract the distribution of topics and compare it to my previous dataset.
-
-It all took under 30 minutes. It's amazing how quickly you can turn ideas into results using the Hub!
-
-Dataset:
-
-https://huggingface.co/datasets/dvilasuero/LIMO-topics-r1-fewshots
-
-Topics with Llama 70B:
-
-https://huggingface.co/datasets/dvilasuero/GAIR_LIMO_topics/sql-console/eNIH1nJ
-
-Topics with Llama + R1 few shots:
-
-https://huggingface.co/datasets/dvilasuero/LIMO-topics-r1-fewshots/sql-console/rDsKKX9
-
-Prompt for R1 (needed to add explicit instruction not to solve the problem 🤣 )
-
-Classify the math topics of the question. You MUST NO SOLVE the question, just analyze and give me a list of very precise topics that are needed to solve the question: 
-
-{{question}} 
-
-Pipeline:
-
-https://huggingface.co/datasets/dvilasuero/LIMO-topics-r1-fewshots/blob/main/config.yml
+Github Repo: https://github.com/freddyaboulton/fastrtc
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -241,43 +230,84 @@ https://huggingface.co/datasets/dvilasuero/LIMO-topics-r1-fewshots/blob/main/con
           />
 </a>
 
+
   </div>
 </div>
 
 <hr>
 <hr>
 
-<h1> Qwen just DROPPED a 32B VLM - beats Qwen 2.5 72B and GPT 4o Mini - Apache 2.0 licensed 🔥 </h1>
+<h1> A billion-parameter voice AI is now open source 😳 </h1>
 
-Vision Tasks (vs. Qwen2-VL-72B):
+Sesame AI dropped CSM-1B - the billion-parameter engine powering the viral assistant Maya.
 
-> MMMU: 70.0 (vs. 64.5)
+This isn't your typical tech release:
 
-> MathVista: 74.7 (vs. 70.5)
+- 1 billion parameters
 
-> OCRBenchV2: 57.2/59.1 (vs. 47.8/46.1)
+- Hollywood-level realism
 
-> Android Control: 69.6/93.3 (vs. 66.4/84.4)
+- Instant use - zero fine-tuning
 
-Text Tasks (vs. Competing Models):
+- Completely FREE for commercial use
 
-> MMLU: 78.4 (vs. Mistral-24B: 80.6, GPT-4o-Mini: 82.0)
+No paywalls. No permissions. Apache 2.0 license.
 
-> MATH: 82.2 (vs. Gemma3-27B: 89.0, GPT-4o-Mini: 70.2)
+In simple terms:
 
-> HumanEval: 91.5 (vs. Claude-3.5-Haiku: 88.1)
+Every startup just got handed the keys to Google's and Meta’s top-secret voice tech. 
 
-Multimodal Capabilities:
+Just think about it:
 
-> Recognizes objects, analyzes text/charts/graphics, and supports structured outputs (e.g., invoices, tables)
+→ AI phone reps indistinguishable from humans.
 
-> Acts as a visual agent, dynamically using tools for computer/phone interactions
+→ Personalized assistants for every creator.
 
-> Understands 1+ hour videos and pinpoints relevant segments (temporal localization)
+→ Indie devs going head-to-head with ElevenLabs - with zero budget.
 
-> Generates bounding boxes/points with stable JSON outputs
+Sesame just said:
 
-Very cool to see Qwen ship such a competitive multimodal model! 🤗
+“Here’s the model. Build whatever you want.”
+
+No APIs. No subscription traps. No corporate gatekeepers.
+
+Voice is the next frontier - and now it's FREE for all.
+
+Fascinating times.
+
+Github Repo: https://github.com/SesameAILabs/csm
+
+Model: https://huggingface.co/sesame/csm-1b
+
+Video credit: Brian Buntz
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jqHNoTs4Meo?si=M6_GvMtK8CtSvm2B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> DeepSeek AI dropped another 700GB file on Hugging Face with an MIT license. Incredible. </h1>
+
+It casually beats all closed-source players!
+
+They released a new version of their DeepSeek-V3 model, simply called "DeepSeek-V3-0324". It beats all other non-reasoning models, which are models that directly spit out an answer without taking time to ‘think’, making them useful in latency-sensitive use cases. 
+
+They do this at a fraction of the price - the model is priced at $0.27 per 1M input tokens and $1.10 per 1M output tokens, compared to $3 and $15 respectively for Anthropic's API for example.
+
+On the same day, Alibaba's Qwen lab released a 32B VLM which is the best openly available vision-language model out there. It has an Apache 2.0 license which allows for self-hosting.
+
+It is showing once again that Chinese labs choose a different way of releasing things - in an open way, with (upcoming) tech reports. 
+
+Artificial Analysis's thread on this: https://x.com/ArtificialAnlys/status/1904467255083348244
+
+Model: https://huggingface.co/deepseek-ai/DeepSeek-V3-0324
+
+Qwen's 32B VLM: https://huggingface.co/Qwen/Qwen2.5-VL-32B-Instruct
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
