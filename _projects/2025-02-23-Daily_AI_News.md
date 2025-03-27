@@ -43,7 +43,7 @@ What do you think will be the most impactful use of Gemini 2.5 in the coming yea
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-      <iframe width="560" height="315" src="https://x.com/i/status/1904579419496386736"></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/bbkcQp5X3h0?si=SoG1aL8l00zxQ0Xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -113,7 +113,7 @@ What features do you think will be the next big leap for AI-powered search platf
     <a href="/assets/img/news/AI news/3.jpg"
 
       target="_blank">
-      <video width="320" height="240" autoplay>
+      <video width="640" height="480" autoplay>
   <source src="/assets/img/news/AI news/perplexity.mp4" type="video/mp4"> </video>
 </a>
 
