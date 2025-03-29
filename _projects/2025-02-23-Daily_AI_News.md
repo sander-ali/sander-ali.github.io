@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-27
+date: 2025-03-29
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,62 +25,47 @@ images:
   </div>
 </div>
 
-<h1> 27th March 2025 </h1>
+<h1> 29th March 2025 </h1>
 
-<h1> Breaking: Google DeepMind Drops Gemini 2.5 🔥  </h1>
+<h1> Qwen lab at Alibaba just dropped Qwen 2.5 7B Omni 🔥   </h1>
 
-Google DeepMind has just launched Gemini 2.5, its most advanced AI model yet, marking a significant leap in AI reasoning and coding capabilities. 
+Qwen lab at Alibaba just dropped Qwen 2.5 7B Omni 🔥 
+is this AGI? 👀 
 
-Key highlights of Gemini 2.5:
+> image, video, audio, text input, audio and text output 🥹 Apache 2.0 licensed!
 
-1️⃣Enhanced Reasoning: Gemini 2.5 Pro leads in benchmarks like math and science, showcasing strong logical analysis and decision-making.
+> outperforms Gemini 1.5 Pro in OmniBench ✨
 
-2️⃣Advanced Coding: It excels in creating visually compelling web apps and agentic code applications, with notable improvements over previous models.
+> available in Hugging Face transformers from get-go 🤗
 
-3️⃣Multimodal Capabilities: Gemini 2.5 supports a vast context window, handling complex data from various sources including text, audio, and video.
-
-What do you think will be the most impactful use of Gemini 2.5 in the coming years?
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/bbkcQp5X3h0?si=SoG1aL8l00zxQ0Xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> Distil-whisper-large-v3.5 is released </h1>
-
-Distil-whisper-large-v3.5 is released and now available on the Hub and featured on the Open ASR Leaderboard! This latest iteration represents a significant advancement in our speech recognition capabilities.​
-
-
-Key Enhancements:
-
-- Expanded Training Data: Leveraging over 98,000 hours of diverse audio, we've quadrupled our dataset to enhance model robustness and accuracy.​
-
-- Advanced Training Techniques: Implemented a patient-teacher distillation approach with sophisticated data augmentation, leading to more reliable transcriptions.
-​
-- Improved Accuracy: Achieved a Word Error Rate (WER) of 7.21%, a notable improvement from the previous 7.52% in distil-large-v3.​
-
-- Maintained Efficiency: Despite these enhancements, the model retains its high inference speed, ensuring swift and efficient performance.​
-
-🔗 Links:
-
-Open ASR Leaderboard: https://huggingface.co/spaces/hf-audio/open_asr_leaderboard
-
-Model: https://huggingface.co/collections/distil-whisper/distil-large-v35-67e18241fb266177bed51674
-
+Model: https://huggingface.co/collections/Qwen/qwen25-omni-67de1e5f0f9464dc6314b36e 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/2.jpg"
+      <a href="/assets/img/news/AI news/1.jpg"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/2.jpg" 
+      <img src="/assets/img/news/AI news/1.jpg" 
            alt="Nyx" 
           />
 </a>
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> Grok Released PlayAI </h1>
+
+Groq and PlayAI announced a partnership today to bring Dialog, an advanced text-to-speech model, to market through Groq’s high-speed inference platform.
+
+The partnership combines PlayAI’s expertise in voice AI with Groq’s specialized processing infrastructure, creating what the companies claim is one of the most natural-sounding and responsive text-to-speech systems available.
+
+“Groq provides a complete, low latency system for automatic speech recognition (ASR), GenAI, and text-to-speech, all in one place,” said Ian Andrews, Chief Revenue Officer at Groq, in an exclusive interview with VentureBeat. “With Dialog now running on GroqCloud, this means customers won’t have to use multiple providers for a single use case — Groq is a one stop solution.”
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jSWhgD5l8gk?si=Fsdx594YV_dOg8wI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
   </div>
@@ -89,23 +74,27 @@ Model: https://huggingface.co/collections/distil-whisper/distil-large-v35-67e182
 <hr>
 <hr>
 
-<h1> 🔥Breaking: Perplexity Introduces Answer Modes </h1>
+<h1> 🦎🦎Scaling Vision Pre-Training to 4K🦎🦎 </h1>
 
-Perplexity is transforming the search experience with innovative answer modes tailored for travel, shopping, and more!
+👉PS3 by Nvidia (+UC Berkeley) to scale-up CLIP-style vision pre-training to 4K w/ *near-constant* cost. Encoding LR global image and selectively processes only informative HR regions. PS3->SOTA MLLM, and a new 4K benchmark. Impressive work. Code/weights & 🤗 announced💙
 
-Key Highlights:
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
 
-🔸Enhanced Verticals: Answer modes now available for travel, shopping, places, images, videos, and jobs.
+✅PS3 to scale CLIP-style vision pre-training to 4K
 
-🔸Native Hotel Bookings: Partnering with TripAdvisor and Selfbook to offer seamless hotel bookings directly on Perplexity.
+✅Scaling to 4K resolution with near-constant cost
 
-🔸Precision Search: Moving towards a tab-free experience for super precise results.
+✅Local hi-res regions based on saliency/relevance
 
-🔸Mobile Expansion: Mobile version launching soon.
+✅VILA-HD -> extension to MLLM visual perception
 
-This shift isn't just about answering questions; it's about creating a seamless, intuitive experience that changes the game.
+✅Outperforming MLLMs such as NVILA/Qwen2-VL
 
-What features do you think will be the next big leap for AI-powered search platforms?
+Paper: https://arxiv.org/pdf/2503.19903
+
+Project: https://nvlabs.github.io/PS3/
+
+Repo: https://github.com/NVLabs/PS3/
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -113,8 +102,9 @@ What features do you think will be the next big leap for AI-powered search platf
     <a href="/assets/img/news/AI news/3.jpg"
 
       target="_blank">
-      <video width="640" height="480" autoplay>
-  <source src="/assets/img/news/AI news/perplexity.mp4" type="video/mp4"> </video>
+      <img src="/assets/img/news/AI news/3.jpg" 
+           alt="Nyx" 
+          />
 </a>
 
   </div>
@@ -123,39 +113,21 @@ What features do you think will be the next big leap for AI-powered search platf
 <hr>
 <hr>
 
-<h1>  𝗗𝗼 𝘆𝗼𝘂 𝗸𝗻𝗼𝘄 𝗵𝗼𝘄 𝗺𝘂𝗰𝗵 𝗶𝘁 𝗰𝗼𝘀𝘁𝘀 𝘁𝗼 𝘁𝗿𝗮𝗶𝗻 𝗹𝗮𝗿𝗴𝗲 𝗹𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗺𝗼𝗱𝗲𝗹𝘀 (𝗟𝗟𝗠𝘀)? ⬇️  </h1>
+<h1>  Open AI Supports MCP </h1>
 
-AI training costs are exploding lately. The Stanford AI Index Report has just released some training numbers and they are 𝗖𝗥𝗔𝗭𝗬:
+🚀OpenAI: You can now connect your Model Context Protocol servers to Agents
 
-→ Original Transformer Model: $930 
+Key highlights:
 
-→ GPT-3: $4.3M 
+1️⃣Universal Compatibility: MCP enables AI models to connect with diverse tools and data sources, amplifying their potential.
 
-→ GPT-4: $78.4M
- 
-→ Gemini Ultra: $191.4M
+2️⃣Flexible Deployment: Choose between local (stdio) and remote (HTTP over SSE) servers for maximum flexibility.
 
-Training LLMs from scratch costs millions and these numbers are expected to climb even higher with the development of new models. This is why primarily Big Tech companies and well-funded startups can afford to undertake such projects. But why is this the case? 
+3️⃣Efficient Performance: Automatic caching reduces latency, ensuring smoother operations.
 
-Here’s the explanation:
+4️⃣Transparent Insights: Comprehensive tracing provides deep insights into AI interactions. 
 
-1️⃣ Data:
-
-→ Curating TBs of data and extensive pre-processing are needed. This involves collecting, cleaning, and organizing data to ensure the model trains on high-quality information. This task is resource-intensive, requiring significant time and manpower.
-
-2️⃣ AI Talent and Skills:
-
-→ Developing LLMs requires top researchers, with compensation at companies like OpenAI rumored up to $10M. A team of machine learning, data science, and linguistic experts is essential. They design neural networks, manage training processes, and assess performance. The significant cost of hiring and retaining this skilled workforce is crucial.
-
-3️⃣ AI Computing Power:
-
-→ Training and developing LLMs is incredibly expensive due to the vast computational resources required, with models like GPT-4 needing thousands of GPUs running for months (!). This extensive use of GPUs, combined with the need for continuous fine-tuning and experimentation, significantly drives up both the hardware and operational costs.
-
-What does this mean for business?
-
-→ Take existing LLM models and enhance them with your enterprise data using techniques like RAG or fine-tuning. 
-
-And yes IBM Granite could be a good starting point for that: https://www.ibm.com/granite
+What innovative applications of MCP do you foresee transforming industries in the years to come?
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -173,29 +145,46 @@ And yes IBM Granite could be a good starting point for that: https://www.ibm.com
 <hr>
 <hr>
 
-<h1> Langfuse are happy to announce our native integration with atla </h1>
+<h1> 🚀Breaking: Google DeepMind Revolutionizes Therapeutic Development with TxGemma </h1>
 
-Langfuse are happy to announce our native integration with atla, which brings their evaluation model Selene 1 to Langfuse (YC W23)!
+Google DeepMind has just unveiled TxGemma, a groundbreaking collection of open models designed to accelerate therapeutic development by leveraging large language models. 
 
-Users can now run model-based evaluations (LLM-as-a-judge) with Selene, a model trained specifically to evaluate AI responses. 
+Key highlights of TxGemma:
 
-𝗪𝗵𝗮𝘁 𝗮𝗿𝗲 𝗟𝗟𝗠-𝗮𝘀-𝗮-𝗝𝘂𝗱𝗴𝗲 𝗲𝘃𝗮𝗹𝘂𝗮𝘁𝗶𝗼𝗻𝘀?
+1️⃣Versatile Models: TxGemma offers models in three sizes (2B, 9B, and 27B) for tasks like classification, regression, and generation, enhancing predictive capabilities in therapeutic research.
 
-Automated LLM-as-a-Judge evaluations involve using one LLM to assess and score the outputs of another model. This approach is often used in eval workflows, enabling scoring of large numbers of LLM traces. Using specialized evaluation models for this can be an advantage as they often outperform state-of-the-art models on these tasks. 
+2️⃣Conversational Insights: The 'chat' versions of TxGemma enable researchers to engage in multi-turn discussions, providing explanations for predictions and fostering deeper insights.
 
-Check out the Atla blog to learn how to set up the Evaluations in Langfuse.
+3️⃣Customization: Developers can fine-tune TxGemma using their proprietary data, allowing for tailored models that improve prediction accuracy in clinical trials.
 
-🔗 Link to Atla blog: https://www.atla-ai.com/post/langfuse-native-integration 
-
-🔗 Link to Langfuse Eval docs: https://langfuse.com/docs/scores/overview
+What potential applications of TxGemma do you think could have the most profound impact on healthcare?
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/5.jpg"
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXIFgWIJ6s?si=B_S-yRB7UYN5MHM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> Deploying Gemma3 </h1>
+
+You can deploy Google DeepMind Gemma 3 with just 3 lines of code to Google Cloud Vertex AI! The new Model Garden SDK abstracts away the underlying infrastructure setup, making open model deployment incredibly simple. 👀
+
+Notebook: https://github.com/GoogleCloudPlatform/generative-ai/blob/main/open-models/get_started_with_model_garden_sdk.ipynb 
+
+See the Image below:
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <a href="/assets/img/news/AI news/6.jpg"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/5.jpg" 
+      <img src="/assets/img/news/AI news/6.jpg" 
            alt="Nyx" 
           />
 </a>
@@ -207,49 +196,27 @@ Check out the Atla blog to learn how to set up the Evaluations in Langfuse.
 <hr>
 <hr>
 
-<h1> OpenAI Unveils Revolutionary Image Capabilities in ChatGPT </h1>
+<h1> 📢 Microsoft 365 Copilot Introduces Researcher Agent ✨ </h1>
 
-🚀Breaking News: OpenAI Unveils Revolutionary Image Capabilities in ChatGPT
+Researcher combines advanced reasoning models with Copilot Chat’s web- and work-grounding capabilities to perform high-value cognitive work.
 
-Key updates:
+Unlock new use cases like:
 
-1️⃣Incredible Technology: The quality of these AI-generated images is astounding, pushing the boundaries of what was thought possible with AI. 
+✅ Producing market analysis and strategy documents
 
-2️⃣Creative Freedom: This feature empowers users with unprecedented creative control, allowing them to explore new ideas while ensuring responsible use. 
+✅ Creating detailed risk assessments
 
-3️⃣Responsible Innovation: OpenAI is committed to balancing intellectual freedom with societal norms, ensuring that their tools align with the values of users and the broader community. 
+✅ Onboarding to a new company
 
-What do you think will be the most impactful application of AI-generated images in your field?
+📽️ Check out the demo 👇 
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/hTNAYbopAaA?si=aIXuvgsXouxHkxSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> How good is Gemini 2.5 Pro long context really? </h1>
-
-How good is Gemini 2.5 Pro long context really? Fiction.LiveBench, designed for deep story comprehension, shows it's the clear sota leader (25% lead)!
-
-Fiction.LiveBench evaluates true narrative understanding, including tracking evolving relationships, interpreting subtext, and predicting outcomes based on subtle hints – rather than just information retrieval.
-
-The author says “This is the first time a LLM is potentially usable for long context writing. I'm interested in testing larger token sizes with this now.”
-
-👉 https://fiction.live/stories/Fiction-liveBench-Mar-25-2025/oQdzQvKHw8JyXbN87
+🛣️ Researcher is coming soon
+ 
+ 🔗 Learn more about Researcher here: https://www.microsoft.com/en-us/microsoft-365/blog/2025/03/25/introducing-researcher-and-analyst-in-microsoft-365-copilot/
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <a href="/assets/img/news/AI news/7.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/7.jpg" 
-           alt="Nyx" 
-          />
-</a>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/lfruwkpqvk4?si=LhGR8BSelIYIradv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   </div>
 </div>
