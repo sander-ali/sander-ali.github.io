@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-29
+date: 2025-03-30
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,47 +25,81 @@ images:
   </div>
 </div>
 
-<h1> 29th March 2025 </h1>
+<h1> 30th March 2025 </h1>
 
-<h1> Qwen lab at Alibaba just dropped Qwen 2.5 7B Omni 🔥   </h1>
+<h1> Robinhood is going all in on AI to change the future of investing 😳   </h1>
 
-Qwen lab at Alibaba just dropped Qwen 2.5 7B Omni 🔥 
-is this AGI? 👀 
+FinTech giant just dropped Cortex, its new AI-powered investing tool.
 
-> image, video, audio, text input, audio and text output 🥹 Apache 2.0 licensed!
+Think of Cortex as your personal Wall Street AI analyst - but in your pocket, 24/7.
 
-> outperforms Gemini 1.5 Pro in OmniBench ✨
+Here's why Cortex is set to disrupt investing:
 
-> available in Hugging Face transformers from get-go 🤗
+💡 Real-Time AI Insights:
 
-Model: https://huggingface.co/collections/Qwen/qwen25-omni-67de1e5f0f9464dc6314b36e 
+↳ Get instant clarity on why stocks move - no noise, just data-driven insights.
+
+📈 Personalized AI Strategies:
+
+↳Cortex doesn't just give generic advice. It tailors recommendations to YOUR goals, YOUR risk appetite, and YOUR trading habits.
+
+💸 AI-Powered Trade Builder:
+
+↳ Turn predictions into precision with AI-crafted trade recommendations, especially impactful for options trading.
+
+🤖 Built on Pluto Capital's Cutting-Edge AI:
+
+↳ Robinhood partnered with AI investment experts Pluto Capital to ensure Cortex offers truly institutional-grade insights.
+
+But here’s the twist:
+
+✅ What Cortex Does:
+
+- Empowers you with pro-level insights, usually reserved for institutional investors.
+
+❌ What Cortex Doesn’t Do:
+
+- It WON’T execute trades automatically - keeping YOU in control.
+
+AI investing is the future, and Robinhood just took a massive leap forward.
+
+Paradigm shift.
+
+Video Credit: Stockology Insider 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-      <a href="/assets/img/news/AI news/1.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/1.jpg" 
-           alt="Nyx" 
-          />
-</a>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DQsa0P4KhQ8?si=WZw4OJ556w9UxsUx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
 <hr>
 <hr>
 
-<h1> Grok Released PlayAI </h1>
+<h1> Alibaba's Wan2.1 just released </h1>
 
-Groq and PlayAI announced a partnership today to bring Dialog, an advanced text-to-speech model, to market through Groq’s high-speed inference platform.
+Alibaba's Wan2.1 just released the much anticipated Control model 🤘 
 
-The partnership combines PlayAI’s expertise in voice AI with Groq’s specialized processing infrastructure, creating what the companies claim is one of the most natural-sounding and responsive text-to-speech systems available.
+Inc.: start and end -frame, trajectory, pose control, depth, motion structure.
 
-“Groq provides a complete, low latency system for automatic speech recognition (ASR), GenAI, and text-to-speech, all in one place,” said Ian Andrews, Chief Revenue Officer at Groq, in an exclusive interview with VentureBeat. “With Dialog now running on GroqCloud, this means customers won’t have to use multiple providers for a single use case — Groq is a one stop solution.”
+The open-source community has already been using motion LoRAs, but this release will take control features even further.
+
+Released for both the 1.3B and 14B models. 
+
+Supports multi-resolution (512, 768, 1024) video prediction at 81 frames, trained at 16 frames per second, with multilingual prediction support.
+
+Apache license 2.0
+
+Hugging Face: https://huggingface.co/alibaba-pai/Wan2.1-Fun-1.3B-Control
+
+Github: https://github.com/Wan-Video/Wan2.1/
+
+Technical Report: https://files.alicdn.com/tpsservice/5c9de1c74de03972b7aa657e5a54756b.pdf
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jSWhgD5l8gk?si=Fsdx594YV_dOg8wI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://private-user-images.githubusercontent.com/199940953/416736460-4aca6063-60bf-4953-bfb7-e265053f49ef.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDMyOTM1MTUsIm5iZiI6MTc0MzI5MzIxNSwicGF0aCI6Ii8xOTk5NDA5NTMvNDE2NzM2NDYwLTRhY2E2MDYzLTYwYmYtNDk1My1iZmI3LWUyNjUwNTNmNDllZi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMzMFQwMDA2NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00NWFmNzdhMTM5MjUwOTc1NWQ1YWNhODlmMDc2ODAyOTQ0MzEwYTEyZTRhNTE3OWYwNDUyNWRjMjU0MzUzNTFhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.FVtihCX7Uf4WNQM-zMJ-Iwm0Fc45CPtg1BG9crnfMn0"></iframe>
 
 
   </div>
@@ -74,28 +108,48 @@ The partnership combines PlayAI’s expertise in voice AI with Groq’s speciali
 <hr>
 <hr>
 
-<h1> 🦎🦎Scaling Vision Pre-Training to 4K🦎🦎 </h1>
+<h1>  Presenting The Office x Studio Ghibli. </h1>
 
-👉PS3 by Nvidia (+UC Berkeley) to scale-up CLIP-style vision pre-training to 4K w/ *near-constant* cost. Encoding LR global image and selectively processes only informative HR regions. PS3->SOTA MLLM, and a new 4K benchmark. Impressive work. Code/weights & 🤗 announced💙
+This is awesome! Presenting The Office x Studio Ghibli. 100% made with AI 😳
 
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+Here's how you can make this yourself in just 3 easy steps:
 
-✅PS3 to scale CLIP-style vision pre-training to 4K
+Step 1: Take a screengrab frame from a video and ask OpenAI's ChatGPT 4o to Ghibli-fy it.
 
-✅Scaling to 4K resolution with near-constant cost
+Step 2: Download the audio of the person talking using Cobalt.
 
-✅Local hi-res regions based on saliency/relevance
+Step 3: Upload the Ghibli photo and the audio to Hedra, which does the lip sync and animation.
 
-✅VILA-HD -> extension to MLLM visual perception
+The crazy part?
 
-✅Outperforming MLLMs such as NVILA/Qwen2-VL
+Just 2 years ago, this required several dreambooth finetunes, filming the performance, doing style transfers frame by frame, and using some nifty post-processing to remove flickering.
 
-Paper: https://arxiv.org/pdf/2503.19903
+Now, you can do it in minutes using just a few tools.
 
-Project: https://nvlabs.github.io/PS3/
+AI will change creativity forever.
 
-Repo: https://github.com/NVLabs/PS3/
+Video Credit: Julian Goldie SEO
 
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kswstkwH4_8?si=NEIcTeGua6xvgV8q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1>  Gemini 2.5 Pro is crazy for Audio and Video understanding </h1>
+
+The new 64k output context allows it to transcribe ~2 hours of podcast in a single request. The improved long context capabilities improves significant video understanding and can process ~1h long video with a single request.
+
+Even better AI Studio and the API support native Youtube integration. Just provide the link to your video and let the magic happen. 🔮
+
+Code ⬇️
+
+https://gist.github.com/philschmid/57c8c50daa343725f12f0f13cf70aead
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -113,57 +167,63 @@ Repo: https://github.com/NVLabs/PS3/
 <hr>
 <hr>
 
-<h1>  Open AI Supports MCP </h1>
+<h1> JPMorgan just changed quantum computing 😳 </h1>
 
-🚀OpenAI: You can now connect your Model Context Protocol servers to Agents
+Quantum computers can now create certified TRUE randomness.
 
-Key highlights:
+Let's break this down:
 
-1️⃣Universal Compatibility: MCP enables AI models to connect with diverse tools and data sources, amplifying their potential.
+True randomness = unbreakable security 🔒
 
-2️⃣Flexible Deployment: Choose between local (stdio) and remote (HTTP over SSE) servers for maximum flexibility.
+Traditional encryption relies on numbers that can eventually be predicted.
 
-3️⃣Efficient Performance: Automatic caching reduces latency, ensuring smoother operations.
+Quantum-certified randomness means:
 
-4️⃣Transparent Insights: Comprehensive tracing provides deep insights into AI interactions. 
+- Unhackable crypto transactions
 
-What innovative applications of MCP do you foresee transforming industries in the years to come?
+- Tamper-proof elections
+
+- Truly fair online games
+
+- Bulletproof financial security
+
+And JPMorgan just achieved that.
+
+Of course, they didn’t do it alone. JPM teamed up with Quantinuum, Argonne & Oak Ridge Labs, and UT Austin.
+
+Using a 56-qubit quantum machine, they produced and certified randomness - something impossible before.
+
+And this is BIGGER than finance.
+
+In the digital & AI age, it's all about trust.
+
+Now imagine:
+
+↳ Banks you can actually trust
+
+↳ Lotteries proven fair
+
+↳ Crypto that can't be hacked
+
+Welcome to the future of security. Thanks to quantum tech, which is no longer just a cool theory.
+
+I expect a quantum arms race among banks soon.
+
+And JPMorgan just set the new standard.
+
+News Credit: Linas Beliunas
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/4.jpg"
+    <a href="/assets/img/news/AI news/5.jpg"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/4.jpg" 
+      <img src="/assets/img/news/AI news/5.jpg" 
            alt="Nyx" 
           />
 </a>
 
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> 🚀Breaking: Google DeepMind Revolutionizes Therapeutic Development with TxGemma </h1>
-
-Google DeepMind has just unveiled TxGemma, a groundbreaking collection of open models designed to accelerate therapeutic development by leveraging large language models. 
-
-Key highlights of TxGemma:
-
-1️⃣Versatile Models: TxGemma offers models in three sizes (2B, 9B, and 27B) for tasks like classification, regression, and generation, enhancing predictive capabilities in therapeutic research.
-
-2️⃣Conversational Insights: The 'chat' versions of TxGemma enable researchers to engage in multi-turn discussions, providing explanations for predictions and fostering deeper insights.
-
-3️⃣Customization: Developers can fine-tune TxGemma using their proprietary data, allowing for tailored models that improve prediction accuracy in clinical trials.
-
-What potential applications of TxGemma do you think could have the most profound impact on healthcare?
-
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXIFgWIJ6s?si=B_S-yRB7UYN5MHM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
   </div>
 </div>
@@ -171,14 +231,23 @@ What potential applications of TxGemma do you think could have the most profound
 <hr>
 <hr>
 
-<h1> Deploying Gemma3 </h1>
+<h1> ⚛️Generative AI Meets Molecular Biology: A Game-Changer for Education </h1>
 
-You can deploy Google DeepMind Gemma 3 with just 3 lines of code to Google Cloud Vertex AI! The new Model Garden SDK abstracts away the underlying infrastructure setup, making open model deployment incredibly simple. 👀
+Imagine generating a fully functional 3D model of a key biological enzyme—ATP synthase—using just natural language prompts. This is no longer science fiction; it’s happening now with tools like ManusAI.
 
-Notebook: https://github.com/GoogleCloudPlatform/generative-ai/blob/main/open-models/get_started_with_model_garden_sdk.ipynb 
+Key Points:
 
-See the Image below:
+1️⃣Natural Language Processing: Describing ATP synthase in layman's terms yields an accurate 3D representation, making complex biology accessible
 
+2️⃣Real-Time Animation Capabilities: With its seamless integration with Blender, Manus AI generates real-time animations that illustrate dynamic processes
+
+3️⃣Cross-Disciplinary Applications: Beyond biology, Manus AI can be applied in physics (visualizing forces), engineering (modeling structures), and even mathematics (illustrating complex equations)
+
+Generative AI is not just advancing technology; it’s transforming education by making the invisible visible and the complex comprehensible. ]
+
+What other complex and abstract concepts can be better taught using AI-enhanced visualizations?
+
+Check out the video at: https://x.com/i/status/1904506775044510034 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/6.jpg"
@@ -196,27 +265,55 @@ See the Image below:
 <hr>
 <hr>
 
-<h1> 📢 Microsoft 365 Copilot Introduces Researcher Agent ✨ </h1>
+<h1> Elon Musk just made his boldest move yet 😳</h1>
 
-Researcher combines advanced reasoning models with Copilot Chat’s web- and work-grounding capabilities to perform high-value cognitive work.
+xAI has officially acquired X (formerly Twitter) for $33 billion.
 
-Unlock new use cases like:
+The combination values his AI startup xAI at $80B and X at $33B ($45B less $12B debt). 
 
-✅ Producing market analysis and strategy documents
+Here’s why this matters - and what could happen next:
 
-✅ Creating detailed risk assessments
+💸 Data is Power
 
-✅ Onboarding to a new company
+↳ xAI now controls X’s massive real-time data stream. Expect next-level AI advancements from Grok and beyond (Tesla?).
 
-📽️ Check out the demo 👇 
+💸 Strategically, it's Genius
 
-🛣️ Researcher is coming soon
- 
- 🔗 Learn more about Researcher here: https://www.microsoft.com/en-us/microsoft-365/blog/2025/03/25/introducing-researcher-and-analyst-in-microsoft-365-copilot/
+↳ Both companies were already tightly integrated. This merger breaks down barriers and turbocharges innovation, especially in all things social + AI.
+
+💸 Financial Comeback
+
+↳ X’s valuation at $33B is a comeback signal. This indicates that advertisers and investors are probably jumping back onboard.
+
+💸 Privacy Concerns
+
+↳ Privacy concerns are more important than ever before. Will users trust Musk’s AI with their data? Transparency will make or break this deal.
+
+💸 A Wake-Up Call for Competitors
+
+↳ OpenAI, Google DeepMind, Anthropic, and DeepSeek should be watching this very closely. Apart from Meta, nobody else can offer seamless AI & social media integration. Maybe we'll see a wave of AI-social media mergers?
+
+What's next?
+
+- Smarter AI-driven features on X (think hyper-targeted ads and personalized feeds).
+
+- Regulatory battles ahead - antitrust and privacy scrutiny incoming. Especially in Europe.
+
+This merger isn’t just business - it’s Musk reshaping tech, society, AI, and how we interact online.
+
+Again.
+
+News credit: Linar Beliunas
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/lfruwkpqvk4?si=LhGR8BSelIYIradv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <a href="/assets/img/news/AI news/7.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/7.jpg" 
+           alt="Nyx" 
+          />
+</a>
 
   </div>
 </div>
