@@ -96,10 +96,11 @@ Github: https://github.com/Wan-Video/Wan2.1/
 
 Technical Report: https://files.alicdn.com/tpsservice/5c9de1c74de03972b7aa657e5a54756b.pdf
 
+Video Credit: The Art-Official Trainer
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://private-user-images.githubusercontent.com/199940953/416736460-4aca6063-60bf-4953-bfb7-e265053f49ef.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDMyOTM1MTUsIm5iZiI6MTc0MzI5MzIxNSwicGF0aCI6Ii8xOTk5NDA5NTMvNDE2NzM2NDYwLTRhY2E2MDYzLTYwYmYtNDk1My1iZmI3LWUyNjUwNTNmNDllZi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMzMFQwMDA2NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00NWFmNzdhMTM5MjUwOTc1NWQ1YWNhODlmMDc2ODAyOTQ0MzEwYTEyZTRhNTE3OWYwNDUyNWRjMjU0MzUzNTFhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.FVtihCX7Uf4WNQM-zMJ-Iwm0Fc45CPtg1BG9crnfMn0"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hod6VGCLufg?si=_IPWOVzB1ahxiTch" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
   </div>
