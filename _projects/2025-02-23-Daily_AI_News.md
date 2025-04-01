@@ -43,6 +43,13 @@ Let's use this opportunity to dive into some core techniques and applications th
 
 How do you think the integration of AI in animation will impact the future of storytelling?
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/r86GcnZutCw?si=RJS-FdcCR8oF3-Ie" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+</div>
+
 <hr>
 <hr>
 
@@ -60,6 +67,13 @@ Key Features:
 🔹Batch Generation: Teams can customize graphics at scale in seconds, saving time and costs for entrepreneurs and small businesses alike.
 
 How will you leverage Ideogram 3.0 to enhance your creative endeavors? 
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://coscatter.github.io/LookCloser/static/videos/2.mp4"></iframe>
+
+  </div>
+</div>
 
 
 <hr>
