@@ -1,239 +1,86 @@
 ---
 layout: page
-title: Daily AI news
-date: 2025-04-02
-description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
-img: assets/img/news/logo_SAK_15.PNG
+title: Best Researcher Nomination Certificate
+date: 2024-11-04 01:59:00
+description: Nomination Certificate for Early Career Researcher Award at Technological University (TU) Dublin, Ireland.
+img: assets/img/news/Nomination_cert_2024.jpeg
 
 images:
   lightbox2: false
-  photoswipe: false
+  photoswipe: true
   spotlight: false
   venobox: false
 ---
 
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/logo_SAK_15.PNG"
-      target="_blank">
-      <img src="/assets/img/news/logo_SAK_15.PNG" 
-           alt="Comapny Logo" 
-           />
-</a>
-
-  </div>
-</div>
-
-<h1> 2nd April 2025 </h1>
-
-<h1> 🚀Ghibli Meets Interstellar With ChatGPT's New Model  </h1>
-
-Witness the fusion of Studio Ghibli's enchanting style with the cosmic grandeur of "Interstellar," all brought to life by the power of Generative AI!
-
-Let's use this opportunity to dive into some core techniques and applications that make this level of art possible:
-
-1️⃣Automated Inbetweening: AI tools can generate intermediate frames between key poses, ensuring smooth transitions and reducing manual labor. This process, known as inbetweening, is crucial for achieving fluid animations.
-
-2️⃣Deep Learning for Realism: Deep learning algorithms analyze vast datasets to generate realistic character movements and environments. Techniques like Generative Adversarial Networks (GANs) can create lifelike textures and backgrounds.
-
-3️⃣Procedural Animation: AI can simulate realistic physics and crowd behavior, allowing for dynamic and immersive animations. This method automates the creation of complex scenes based on predefined rules. 
-
-How do you think the integration of AI in animation will impact the future of storytelling?
-
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/r86GcnZutCw?si=RJS-FdcCR8oF3-Ie" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> 🚀Ideogram 3.0 Launches With Redefining Features 
- </h1>
-
-Key Features:
-
-🔹Consistent Styles: Users can upload up to 3 reference images to lock in their preferred aesthetic or explore 4.3 billion unique presets for fresh inspiration.
-
-🔹Creative Designs: The platform enables the generation of professional-quality logos, posters, and layouts with precise text rendering—ideal for businesses and marketers.
-
-🔹Stunning Realism: Creators can achieve lifelike detail with intricate spatial compositions, nuanced lighting, and photorealistic environments.
-
-🔹Batch Generation: Teams can customize graphics at scale in seconds, saving time and costs for entrepreneurs and small businesses alike.
-
-How will you leverage Ideogram 3.0 to enhance your creative endeavors? 
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/USSpwbe3Rxk?si=X-0uZSBE2g_pOvtR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1>  🔥🔥LookCloser: Frequency-aware NeRF🔥🔥 </h1>
-
-👉SenseTime at hashtag#CVPR2025 unveils FA-NeRF, a novel frequency-aware framework for view synthesis that simultaneously captures the overall scene structure and high-definition details within a single NeRF. Impressive results. Code announced under MIT, Dataset released💙
-
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
-
-✅Overall structure & tiny details w/ a single model
-
-✅Immersive roaming experience w/ large-freq. spans
-
-✅Novel patch-based 3D frequency quantification
-
-✅FA-NeRF significantly outperforms the prev. SOTAs
-
-👉Paper: https://arxiv.org/pdf/2503.18513
-
-👉Project: https://coscatter.github.io/LookCloser/
-
-👉Repo: https://github.com/Coscatter/FrequencyAwareNeRF
-
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://coscatter.github.io/LookCloser/static/videos/2.mp4"></iframe>
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1>  🔍 Awesome LangGraph Projects </h1>
-
-A curated list of enterprise-ready LangGraph projects, templates, and agents. This GitHub repository showcases production-tested implementations integrated with the LangChain 🔗 ecosystem.
-
-⭐️ Featured projects from LinkedIn, Uber, and GitLab
-
-🛠 Ready-to-use agent templates
-
-🔌 LangChain-compatible tools & extensions
-
-Browse the collection: 
-
-https://github.com/von-development/awesome-LangGraph
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/4.jpg"
-
+    <a href="/assets/img/news/Nomination_cert_2024.jpeg"
+      data-pswp-width="1200"
+      data-pswp-height="800"
       target="_blank">
-      <img src="/assets/img/news/AI news/4.jpg" 
-           alt="Nyx" 
-          />
-</a>
-
+      <img src="/assets/img/news/Nomination_cert_2024.jpeg" 
+           alt="Best Researcher Nomination" 
+           style="width: 250px; height: 180px; object-fit: cover; border-radius: 8px;" />
+    </a>
+    
   </div>
 </div>
 
-<hr>
-<hr>
+Research Activity:
 
-<h1> 🚀The Gemini 2.5 Team Explores Its Multimodal Reasoning Abilities </h1>
+The nominee has published over 80+ articles in top-tier publication venues, which include IEEE Transactions, Elsevier, and Springer. The nominee has also published articles in flagship conferences including IEEE WCNC, IEEE ICC, and IEEE Globecom.
 
-In a recent podcast discussion, Sr. Product Manager Logan K and Gemini Product Lead Tulsee Doshi dive into the cutting-edge features of Gemini 2.5 Pro, highlighting its exceptional multimodal understanding and advanced reasoning capabilities.
+Key Contributions:
+ 
+- The nominee proposed the study “Contextual Healthcare Internet of Things Services, and People” which has been fundamental in developing IoT systems for ubiquitous healthcare services, and Internet of Everything.
+ 
+- The nominee proposed the study “Hybrid and hierarchical fusion networks: a deep cross-modal learning architecture for action recognition” which was the first time a cross modal learning architecture to develop six stream networks was proposed. 
 
-Key takeaways:
+- The nominee proposed the study “VIRFIM: an AI and Internet of Medical Things-driven framework for healthcare using smart sensors” that proposed a generalized framework that uses wearable sensors and devices in order to follow good practices to cope with the global pandemics such as COVID. 
 
-1️⃣Multimodal mastery: Processes text, images, audio, and video seamlessly, enabling tasks like video analysis and timestamp reasoning.
+- The nominee proposed the study “Toward industrial private AI: A two-tier framework for data and model security” that highlighted the issue of model privacy attacks for the first time in the context of communication networks. Since then, the authors’ collaborative network has published more than 10 articles for the defense against model privacy attacks. 
 
-2️⃣Extended context window: Handles up to 1 million tokens, ideal for analyzing lengthy datasets or multi-hour content like cricket matches.
+- The nominee proposed the study “Chatgpt needs spade (sustainability, privacy, digital divide, and ethics) evaluation: A review”, which has gained a lot of attention from the research community as it highlights sustainable and ethical concerns in LLMs. 
 
-3️⃣Enhanced reasoning: Excels at logical analysis and decision-making, setting new benchmarks in math, science, and coding.
+- The nominee has also been working collaboratively with researchers in academics and industries from various parts of the world including UK, Spain, Pakistan, India, South Korea, USA, Italy, and More. 
 
-4️⃣Agentic coding abilities: Creates functional applications from single prompts, showcasing unmatched programming precision.
+- The nominee has won CVPR UG2+ competition as a first and second runner-up in 2022 and 2023. IEEE CVPR is the most prestigious venue for computer science researchers. 
 
-This insightful conversation reveals the potential of Gemini 2.5 Pro to revolutionize AI applications. What innovative projects do you think this technology could empower?
+- The nominee has been included in the top 10 teams for various competitions in CVPR from 2022 – 2024. 
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VOKXGY3sPBs?si=ttP__lcb5JKdC5Cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- The nominee has supervised (ing) more than 12 master’s students and graduated 1 Ph.D. student from universities in Ireland, Pakistan, and Malaysia.
 
+- The nominee was a founding chairman/incharge of the Department of Telecommunication Engineering at University of Sindh, Pakistan.
+ 
+- The nominee has collaborated with nearby computing for research collaboration.
 
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> 🚀Google’s Quantum Leap: Willow Chip Unleashes AI Potential </h1>
-
-Google has just unveiled its Willow chip, a significant advancement in quantum computing that promises to supercharge artificial intelligence capabilities.
-
-1️⃣Exponential Error Reduction: Willow achieves "below threshold" error correction, enabling larger and more complex AI models.
-
-2️⃣Unfathomable Speed: Solved a benchmark computation in under 5 minutes that would take today’s fastest supercomputers 10 septillion years—opening new doors for AI research.
-
-3️⃣Real-Time Correction: Demonstrates real-time error correction on a superconducting quantum system, crucial for training robust AI algorithms.
-
-4️⃣Quality over Quantity: Focuses on high-quality qubits with ~5x improvement, enhancing the performance of AI applications.
-
-With Willow, we stand at the brink of a new era where quantum computing can tackle challenges in AI that were once deemed insurmountable
-
-How do you envision quantum computing transforming the landscape of artificial intelligence in the coming years?
-
-Check out the video at: https://x.com/i/status/1904506775044510034 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/W7ppd_RY-UE?si=leB3l73TF3Yi71_7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- The nominee is an academic editor in PLOS ONE journal and has served as guest editors in various top-tier journals. 
 
 
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> Love to see what the community is building with Gemini 2.5 Pro! </h1>
-
-Love to see what the community is building with Gemini 2.5 Pro! Gemini playing Pokemon on twitchTV. The stream showcases an early prototype of an Agent that plays Pokemon created by someone from community! 🤗
-
-The Game Loop: 
-
-1. Capture a screenshot and retrieve game status data
-
-2. Process the image with a grid overlay to help with spatial reasoning
-
-3. Send the screenshot and game information to the AI model
-
-4. Parse the AI's response to determine which button to press
-
-5. Execute the button press and wait for the game to update
-
-6. Repeat the process for the next frame
-
-Tools
-
-1. Game Interface: The code connects to an mGBA emulator running Pokémon Blue via a socket connection, allowing it to:
-
-2. Take screenshots of the current game state
-
-3. Send button press commands (A, B, Up, Down, etc.)
-
-4. Retrieve game status data like player position, Pokémon party info, and map details
-
-5. AI Vision & Decision Making: The system processes game screenshots with a grid overlay and sends them to Google's Gemini 2.5 Pro (via OpenRouter), which analyzes the visual information and decides which button to press next
-
-Stream: https://www.twitch.tv/gemini_plays_pokemon
+Research Outputs:
 
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <a href="/assets/img/news/AI news/7.jpg"
+As mentioned, the nominee has published over 80+ articles. Amongst them, the nominee has published article in International Journal of Computer Vision (IJCV), which is considered to be a premiere venue for the researchers in the field of Computer Vision. The study proposed semantic image networks for human action recognition from videos where authors proposed a novel segmentation method along with a novel network architecture for achieving state-of-the-art results for human action recognition from videos.
+ 
+The nominee has published various articles in IEEE Transactions including IEEE Transactions on Fuzzy Systems, IEEE Transactions on Industrial Informatics, IEEE Internet of Things Journal, IEEE Transactions on Intelligent Transportation Systems, and more, which are considered to be the top-most venues and publication Journals. 
 
-      target="_blank">
-      <img src="/assets/img/news/AI news/7.jpg" 
-           alt="Nyx" 
-          />
-</a>
+The author published the work “Toward industrial private AI: A two-tier framework for data and model security”, which has significantly contributed to the body of science in terms of Model inversion and poisoning attacks. As of present, we (as a collaborative team) are one of the leading research groups that consistently work on the design and defense for model inversion, model poisoning and membership inference attacks for vehicular and communication systems. So far, our works on this topic has been published in IEEE Wireless Communications, IEEE Transactions on Network Science and Engineering, IEEE International Conference on Communications, IEEE Wireless Communications and Networking Conference, IEEE Global Communications, and IEEE Journal of Biomedical and Health Informatics. As an author, the nominee has also won two best paper awards, amongst them one was on the model privacy topic at IEEE WCNC conference. 
 
-  </div>
-</div>
+Every year, the nominee participates in IEEE Computer Vision and Pattern Recognition (CVPR) associated conference challenges such as NTIRE, PBVS, UG2+, that are centered around image restoration methods, which are faced with real-world challenges. From 2022 – 2024, the nominee has been included in Top 10 teams for various competitions and has been included in five of their challenge reports, which are considered to be benchmark for the respective application domains. 
+
+The nominee is also very active in developing web-based applications using emerging technologies, which are available on his hugging face spaces, which include the design of image captioning, image denoising, image inpainting, image generation, and chatbot systems for health disease prevention applications. The vision-based applications mentioned above heavily leverage the large language models, and best performing vision models, accordingly.
+
+Impact and Recognition
+
+Following are the examples:
+
+- Best Paper award at IEEE WCNC 2024. 
+
+- Inclusion in Top 10 teams for the challenge NTIRE Blind Compressed Image Enhancement Challenge at CVPR 2024. Also included in their challenge report, which is published in CVPR workshops.
+
+- Invited as a guest at Eye Off Data Summit for Privacy Preservation Machine Learning.
+
+- First and Second Runner Up positions in UG2+ Atmospheric Turbulence and Mitigation Challenge for 2022 – 2023. 
+
+- So far, the nominee has published Five journal articles in 2024 in top-tier publication venues. One of them is published in IEEE Communication Surveys and Tutorials, which is the top-most publication venue in the field having an impact factor of 34.6
+
