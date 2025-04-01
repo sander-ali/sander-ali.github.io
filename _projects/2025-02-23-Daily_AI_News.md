@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-03-30
+date: 2025-04-02
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -25,82 +25,49 @@ images:
   </div>
 </div>
 
-<h1> 30th March 2025 </h1>
+<h1> 2nd April 2025 </h1>
 
-<h1> Robinhood is going all in on AI to change the future of investing 😳   </h1>
+<h1> 🚀Ghibli Meets Interstellar With ChatGPT's New Model  </h1>
 
-FinTech giant just dropped Cortex, its new AI-powered investing tool.
+Witness the fusion of Studio Ghibli's enchanting style with the cosmic grandeur of "Interstellar," all brought to life by the power of Generative AI!
 
-Think of Cortex as your personal Wall Street AI analyst - but in your pocket, 24/7.
+Let's use this opportunity to dive into some core techniques and applications that make this level of art possible:
 
-Here's why Cortex is set to disrupt investing:
+1️⃣Automated Inbetweening: AI tools can generate intermediate frames between key poses, ensuring smooth transitions and reducing manual labor. This process, known as inbetweening, is crucial for achieving fluid animations.
 
-💡 Real-Time AI Insights:
+2️⃣Deep Learning for Realism: Deep learning algorithms analyze vast datasets to generate realistic character movements and environments. Techniques like Generative Adversarial Networks (GANs) can create lifelike textures and backgrounds.
 
-↳ Get instant clarity on why stocks move - no noise, just data-driven insights.
+3️⃣Procedural Animation: AI can simulate realistic physics and crowd behavior, allowing for dynamic and immersive animations. This method automates the creation of complex scenes based on predefined rules. 
 
-📈 Personalized AI Strategies:
-
-↳Cortex doesn't just give generic advice. It tailors recommendations to YOUR goals, YOUR risk appetite, and YOUR trading habits.
-
-💸 AI-Powered Trade Builder:
-
-↳ Turn predictions into precision with AI-crafted trade recommendations, especially impactful for options trading.
-
-🤖 Built on Pluto Capital's Cutting-Edge AI:
-
-↳ Robinhood partnered with AI investment experts Pluto Capital to ensure Cortex offers truly institutional-grade insights.
-
-But here’s the twist:
-
-✅ What Cortex Does:
-
-- Empowers you with pro-level insights, usually reserved for institutional investors.
-
-❌ What Cortex Doesn’t Do:
-
-- It WON’T execute trades automatically - keeping YOU in control.
-
-AI investing is the future, and Robinhood just took a massive leap forward.
-
-Paradigm shift.
-
-Video Credit: Stockology Insider 
+How do you think the integration of AI in animation will impact the future of storytelling?
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/DQsa0P4KhQ8?si=WZw4OJ556w9UxsUx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/r86GcnZutCw?si=RJS-FdcCR8oF3-Ie" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
 <hr>
 <hr>
 
-<h1> Alibaba's Wan2.1 just released </h1>
+<h1> 🚀Ideogram 3.0 Launches With Redefining Features 
+ </h1>
 
-Alibaba's Wan2.1 just released the much anticipated Control model 🤘 
+Key Features:
 
-Inc.: start and end -frame, trajectory, pose control, depth, motion structure.
+🔹Consistent Styles: Users can upload up to 3 reference images to lock in their preferred aesthetic or explore 4.3 billion unique presets for fresh inspiration.
 
-The open-source community has already been using motion LoRAs, but this release will take control features even further.
+🔹Creative Designs: The platform enables the generation of professional-quality logos, posters, and layouts with precise text rendering—ideal for businesses and marketers.
 
-Released for both the 1.3B and 14B models. 
+🔹Stunning Realism: Creators can achieve lifelike detail with intricate spatial compositions, nuanced lighting, and photorealistic environments.
 
-Supports multi-resolution (512, 768, 1024) video prediction at 81 frames, trained at 16 frames per second, with multilingual prediction support.
+🔹Batch Generation: Teams can customize graphics at scale in seconds, saving time and costs for entrepreneurs and small businesses alike.
 
-Apache license 2.0
-
-Hugging Face: https://huggingface.co/alibaba-pai/Wan2.1-Fun-1.3B-Control
-
-Github: https://github.com/Wan-Video/Wan2.1/
-
-Technical Report: https://files.alicdn.com/tpsservice/5c9de1c74de03972b7aa657e5a54756b.pdf
-
-Video Credit: The Art-Official Trainer
+How will you leverage Ideogram 3.0 to enhance your creative endeavors? 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/hod6VGCLufg?si=_IPWOVzB1ahxiTch" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/USSpwbe3Rxk?si=X-0uZSBE2g_pOvtR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
   </div>
@@ -109,32 +76,30 @@ Video Credit: The Art-Official Trainer
 <hr>
 <hr>
 
-<h1>  Presenting The Office x Studio Ghibli. </h1>
+<h1>  🔥🔥LookCloser: Frequency-aware NeRF🔥🔥 </h1>
 
-This is awesome! Presenting The Office x Studio Ghibli. 100% made with AI 😳
+👉SenseTime at hashtag#CVPR2025 unveils FA-NeRF, a novel frequency-aware framework for view synthesis that simultaneously captures the overall scene structure and high-definition details within a single NeRF. Impressive results. Code announced under MIT, Dataset released💙
 
-Here's how you can make this yourself in just 3 easy steps:
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
 
-Step 1: Take a screengrab frame from a video and ask OpenAI's ChatGPT 4o to Ghibli-fy it.
+✅Overall structure & tiny details w/ a single model
 
-Step 2: Download the audio of the person talking using Cobalt.
+✅Immersive roaming experience w/ large-freq. spans
 
-Step 3: Upload the Ghibli photo and the audio to Hedra, which does the lip sync and animation.
+✅Novel patch-based 3D frequency quantification
 
-The crazy part?
+✅FA-NeRF significantly outperforms the prev. SOTAs
 
-Just 2 years ago, this required several dreambooth finetunes, filming the performance, doing style transfers frame by frame, and using some nifty post-processing to remove flickering.
+👉Paper: https://arxiv.org/pdf/2503.18513
 
-Now, you can do it in minutes using just a few tools.
+👉Project: https://coscatter.github.io/LookCloser/
 
-AI will change creativity forever.
-
-Video Credit: Julian Goldie SEO
+👉Repo: https://github.com/Coscatter/FrequencyAwareNeRF
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/kswstkwH4_8?si=NEIcTeGua6xvgV8q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://coscatter.github.io/LookCloser/static/videos/2.mp4"></iframe>
 
   </div>
 </div>
@@ -142,22 +107,26 @@ Video Credit: Julian Goldie SEO
 <hr>
 <hr>
 
-<h1>  Gemini 2.5 Pro is crazy for Audio and Video understanding </h1>
+<h1>  🔍 Awesome LangGraph Projects </h1>
 
-The new 64k output context allows it to transcribe ~2 hours of podcast in a single request. The improved long context capabilities improves significant video understanding and can process ~1h long video with a single request.
+A curated list of enterprise-ready LangGraph projects, templates, and agents. This GitHub repository showcases production-tested implementations integrated with the LangChain 🔗 ecosystem.
 
-Even better AI Studio and the API support native Youtube integration. Just provide the link to your video and let the magic happen. 🔮
+⭐️ Featured projects from LinkedIn, Uber, and GitLab
 
-Code ⬇️
+🛠 Ready-to-use agent templates
 
-https://gist.github.com/philschmid/57c8c50daa343725f12f0f13cf70aead
+🔌 LangChain-compatible tools & extensions
+
+Browse the collection: 
+
+https://github.com/von-development/awesome-LangGraph
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/3.jpg"
+    <a href="/assets/img/news/AI news/4.jpg"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/3.jpg" 
+      <img src="/assets/img/news/AI news/4.jpg" 
            alt="Nyx" 
           />
 </a>
@@ -168,62 +137,29 @@ https://gist.github.com/philschmid/57c8c50daa343725f12f0f13cf70aead
 <hr>
 <hr>
 
-<h1> JPMorgan just changed quantum computing 😳 </h1>
+<h1> 🚀The Gemini 2.5 Team Explores Its Multimodal Reasoning Abilities </h1>
 
-Quantum computers can now create certified TRUE randomness.
+In a recent podcast discussion, Sr. Product Manager Logan K and Gemini Product Lead Tulsee Doshi dive into the cutting-edge features of Gemini 2.5 Pro, highlighting its exceptional multimodal understanding and advanced reasoning capabilities.
 
-Let's break this down:
+Key takeaways:
 
-True randomness = unbreakable security 🔒
+1️⃣Multimodal mastery: Processes text, images, audio, and video seamlessly, enabling tasks like video analysis and timestamp reasoning.
 
-Traditional encryption relies on numbers that can eventually be predicted.
+2️⃣Extended context window: Handles up to 1 million tokens, ideal for analyzing lengthy datasets or multi-hour content like cricket matches.
 
-Quantum-certified randomness means:
+3️⃣Enhanced reasoning: Excels at logical analysis and decision-making, setting new benchmarks in math, science, and coding.
 
-- Unhackable crypto transactions
+4️⃣Agentic coding abilities: Creates functional applications from single prompts, showcasing unmatched programming precision.
 
-- Tamper-proof elections
+This insightful conversation reveals the potential of Gemini 2.5 Pro to revolutionize AI applications. What innovative projects do you think this technology could empower?
 
-- Truly fair online games
 
-- Bulletproof financial security
 
-And JPMorgan just achieved that.
-
-Of course, they didn’t do it alone. JPM teamed up with Quantinuum, Argonne & Oak Ridge Labs, and UT Austin.
-
-Using a 56-qubit quantum machine, they produced and certified randomness - something impossible before.
-
-And this is BIGGER than finance.
-
-In the digital & AI age, it's all about trust.
-
-Now imagine:
-
-↳ Banks you can actually trust
-
-↳ Lotteries proven fair
-
-↳ Crypto that can't be hacked
-
-Welcome to the future of security. Thanks to quantum tech, which is no longer just a cool theory.
-
-I expect a quantum arms race among banks soon.
-
-And JPMorgan just set the new standard.
-
-News Credit: Linas Beliunas
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/5.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/5.jpg" 
-           alt="Nyx" 
-          />
-</a>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VOKXGY3sPBs?si=ttP__lcb5JKdC5Cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
   </div>
@@ -232,32 +168,26 @@ News Credit: Linas Beliunas
 <hr>
 <hr>
 
-<h1> ⚛️Generative AI Meets Molecular Biology: A Game-Changer for Education </h1>
+<h1> 🚀Google’s Quantum Leap: Willow Chip Unleashes AI Potential </h1>
 
-Imagine generating a fully functional 3D model of a key biological enzyme—ATP synthase—using just natural language prompts. This is no longer science fiction; it’s happening now with tools like ManusAI.
+Google has just unveiled its Willow chip, a significant advancement in quantum computing that promises to supercharge artificial intelligence capabilities.
 
-Key Points:
+1️⃣Exponential Error Reduction: Willow achieves "below threshold" error correction, enabling larger and more complex AI models.
 
-1️⃣Natural Language Processing: Describing ATP synthase in layman's terms yields an accurate 3D representation, making complex biology accessible
+2️⃣Unfathomable Speed: Solved a benchmark computation in under 5 minutes that would take today’s fastest supercomputers 10 septillion years—opening new doors for AI research.
 
-2️⃣Real-Time Animation Capabilities: With its seamless integration with Blender, Manus AI generates real-time animations that illustrate dynamic processes
+3️⃣Real-Time Correction: Demonstrates real-time error correction on a superconducting quantum system, crucial for training robust AI algorithms.
 
-3️⃣Cross-Disciplinary Applications: Beyond biology, Manus AI can be applied in physics (visualizing forces), engineering (modeling structures), and even mathematics (illustrating complex equations)
+4️⃣Quality over Quantity: Focuses on high-quality qubits with ~5x improvement, enhancing the performance of AI applications.
 
-Generative AI is not just advancing technology; it’s transforming education by making the invisible visible and the complex comprehensible. ]
+With Willow, we stand at the brink of a new era where quantum computing can tackle challenges in AI that were once deemed insurmountable
 
-What other complex and abstract concepts can be better taught using AI-enhanced visualizations?
+How do you envision quantum computing transforming the landscape of artificial intelligence in the coming years?
 
 Check out the video at: https://x.com/i/status/1904506775044510034 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/6.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/6.jpg" 
-           alt="Nyx" 
-          />
-</a>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/W7ppd_RY-UE?si=leB3l73TF3Yi71_7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
   </div>
@@ -266,45 +196,38 @@ Check out the video at: https://x.com/i/status/1904506775044510034
 <hr>
 <hr>
 
-<h1> Elon Musk just made his boldest move yet 😳</h1>
+<h1> Love to see what the community is building with Gemini 2.5 Pro! </h1>
 
-xAI has officially acquired X (formerly Twitter) for $33 billion.
+Love to see what the community is building with Gemini 2.5 Pro! Gemini playing Pokemon on twitchTV. The stream showcases an early prototype of an Agent that plays Pokemon created by someone from community! 🤗
 
-The combination values his AI startup xAI at $80B and X at $33B ($45B less $12B debt). 
+The Game Loop: 
 
-Here’s why this matters - and what could happen next:
+1. Capture a screenshot and retrieve game status data
 
-💸 Data is Power
+2. Process the image with a grid overlay to help with spatial reasoning
 
-↳ xAI now controls X’s massive real-time data stream. Expect next-level AI advancements from Grok and beyond (Tesla?).
+3. Send the screenshot and game information to the AI model
 
-💸 Strategically, it's Genius
+4. Parse the AI's response to determine which button to press
 
-↳ Both companies were already tightly integrated. This merger breaks down barriers and turbocharges innovation, especially in all things social + AI.
+5. Execute the button press and wait for the game to update
 
-💸 Financial Comeback
+6. Repeat the process for the next frame
 
-↳ X’s valuation at $33B is a comeback signal. This indicates that advertisers and investors are probably jumping back onboard.
+Tools
 
-💸 Privacy Concerns
+1. Game Interface: The code connects to an mGBA emulator running Pokémon Blue via a socket connection, allowing it to:
 
-↳ Privacy concerns are more important than ever before. Will users trust Musk’s AI with their data? Transparency will make or break this deal.
+2. Take screenshots of the current game state
 
-💸 A Wake-Up Call for Competitors
+3. Send button press commands (A, B, Up, Down, etc.)
 
-↳ OpenAI, Google DeepMind, Anthropic, and DeepSeek should be watching this very closely. Apart from Meta, nobody else can offer seamless AI & social media integration. Maybe we'll see a wave of AI-social media mergers?
+4. Retrieve game status data like player position, Pokémon party info, and map details
 
-What's next?
+5. AI Vision & Decision Making: The system processes game screenshots with a grid overlay and sends them to Google's Gemini 2.5 Pro (via OpenRouter), which analyzes the visual information and decides which button to press next
 
-- Smarter AI-driven features on X (think hyper-targeted ads and personalized feeds).
+Stream: https://www.twitch.tv/gemini_plays_pokemon
 
-- Regulatory battles ahead - antitrust and privacy scrutiny incoming. Especially in Europe.
-
-This merger isn’t just business - it’s Musk reshaping tech, society, AI, and how we interact online.
-
-Again.
-
-News credit: Linar Beliunas
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
