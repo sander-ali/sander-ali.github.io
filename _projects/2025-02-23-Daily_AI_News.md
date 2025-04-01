@@ -153,10 +153,6 @@ Key takeaways:
 
 This insightful conversation reveals the potential of Gemini 2.5 Pro to revolutionize AI applications. What innovative projects do you think this technology could empower?
 
-
-
-
-
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/VOKXGY3sPBs?si=ttP__lcb5JKdC5Cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
