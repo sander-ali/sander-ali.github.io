@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-04-02
+date: 2025-04-03
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -24,85 +24,33 @@ images:
   </div>
 </div>
 
-<h1> 2nd April 2025 </h1>
+<h1> 3rd April 2025 </h1>
 
 <hr>
 <hr>
 
-<h1> 🚀Ghibli Meets Interstellar With ChatGPT's New Model  </h1>
+<h1> 🌳🌳MVSAnywhere: Zero-Shot Multi-View🌳🌳  </h1>
 
-Witness the fusion of Studio Ghibli's enchanting style with the cosmic grandeur of "Interstellar," all brought to life by the power of Generative AI!
-
-Let's use this opportunity to dive into some core techniques and applications that make this level of art possible:
-
-1️⃣Automated Inbetweening: AI tools can generate intermediate frames between key poses, ensuring smooth transitions and reducing manual labor. This process, known as inbetweening, is crucial for achieving fluid animations.
-
-2️⃣Deep Learning for Realism: Deep learning algorithms analyze vast datasets to generate realistic character movements and environments. Techniques like Generative Adversarial Networks (GANs) can create lifelike textures and backgrounds.
-
-3️⃣Procedural Animation: AI can simulate realistic physics and crowd behavior, allowing for dynamic and immersive animations. This method automates the creation of complex scenes based on predefined rules. 
-
-How do you think the integration of AI in animation will impact the future of storytelling?
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/r86GcnZutCw?si=RJS-FdcCR8oF3-Ie" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> 🚀Ideogram 3.0 Launches With Redefining Features 
- </h1>
-
-Key Features:
-
-🔹Consistent Styles: Users can upload up to 3 reference images to lock in their preferred aesthetic or explore 4.3 billion unique presets for fresh inspiration.
-
-🔹Creative Designs: The platform enables the generation of professional-quality logos, posters, and layouts with precise text rendering—ideal for businesses and marketers.
-
-🔹Stunning Realism: Creators can achieve lifelike detail with intricate spatial compositions, nuanced lighting, and photorealistic environments.
-
-🔹Batch Generation: Teams can customize graphics at scale in seconds, saving time and costs for entrepreneurs and small businesses alike.
-
-How will you leverage Ideogram 3.0 to enhance your creative endeavors? 
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://coscatter.github.io/LookCloser/static/videos/2.mp4"></iframe>
-
-  </div>
-</div>
-
-
-<hr>
-<hr>
-
-<h1>  🔥🔥LookCloser: Frequency-aware NeRF🔥🔥 </h1>
-
-👉SenseTime at hashtag#CVPR2025 unveils FA-NeRF, a novel frequency-aware framework for view synthesis that simultaneously captures the overall scene structure and high-definition details within a single NeRF. Impressive results. Code announced under MIT, Dataset released💙
+👉Niantic unveils MVSA, novel Multi-View Stereo Architecture to work anywhere by generalizing across diverse domains & depth ranges. Combining monocular & multi-view cues with an adaptive cost volume to deal with scale-related issues. Highly accurate & 3D-consistent depths. Code & models to be released💙
 
 𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
 
-✅Overall structure & tiny details w/ a single model
+✅A novel transformer-based architecture
 
-✅Immersive roaming experience w/ large-freq. spans
+✅General-purpose multi-view depth estimation
 
-✅Novel patch-based 3D frequency quantification
+✅View-count-agnostic & scale-agnostic
 
-✅FA-NeRF significantly outperforms the prev. SOTAs
+✅SOTA: Robust Multi-View Depth Benchmark
 
-👉Paper: https://arxiv.org/pdf/2503.18513
+👉Paper https://arxiv.org/pdf/2503.22430
 
-👉Project: https://coscatter.github.io/LookCloser/
-
-👉Repo: https://github.com/Coscatter/FrequencyAwareNeRF
+👉Project https://nianticlabs.github.io/mvsanywhere/
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://coscatter.github.io/LookCloser/static/videos/2.mp4"></iframe>
+    <iframe width="560" height="315" src="https://nianticlabs.github.io/mvsanywhere/resources/videos/dron_mtb_both.mp4"></iframe>
 
   </div>
 </div>
@@ -110,29 +58,90 @@ How will you leverage Ideogram 3.0 to enhance your creative endeavors?
 <hr>
 <hr>
 
-<h1>  🔍 Awesome LangGraph Projects </h1>
+<h1> China recently dropped DeepSeek V3-0324 😳 </h1>
 
-A curated list of enterprise-ready LangGraph projects, templates, and agents. This GitHub repository showcases production-tested implementations integrated with the LangChain 🔗 ecosystem.
+In case you missed it, China recently dropped DeepSeek V3-0324 😳
 
-⭐️ Featured projects from LinkedIn, Uber, and GitLab
+It's only 700GB & 100% open-source AI model.
 
-🛠 Ready-to-use agent templates
+DeepSeek V3-0324 is a massive 685B-parameter AI model that outperforms Claude 3.5 Sonnet in coding and math.
 
-🔌 LangChain-compatible tools & extensions
+More importantly, it is: Open Source. Lightning-fast. Affordable.
 
-Browse the collection: 
+Here’s everything you need to know 👇
 
-https://github.com/von-development/awesome-LangGraph
+Runs on Your Desk:
+
+- Operates smoothly (20 tokens/sec) on a Mac Studio (consumer hardware).
+
+- You no longer need enterprise-level budgets or massive data centers.
+
+Coding Powerhouse:
+
+- Effortlessly generates interactive websites and clean, production-ready code.
+
+- Excels at debugging and solving complex coding challenges step-by-step.
+
+Costs Pennies, Not Millions:
+
+- Trained for just $5.58M vs. $100M+ for GPT-4o.
+- API price: Only $0.14 per million tokens (OpenAI, watch out).
+
+Fully Open-Source:
+
+- Released under the MIT license.
+
+- Anyone, anywhere, can modify and use it freely.
+
+- This means huge potential to democratize advanced AI, enabling startups and small businesses globally.
+
+DeepSeek is once again shaking up AI dominance, challenging giants like OpenAI and Anthropic to rethink pricing.
+
+Global shift toward accessible, sustainable, and open-source AI tech is closer than we think.
+
+Paradigm is shifting.
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/4.jpg"
+    <a href="/assets/img/news/AI news/2.jpg"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/4.jpg" 
+      <img src="/assets/img/news/AI news/2.jpg" 
            alt="Nyx" 
           />
 </a>
+  </div>
+</div>
+
+
+<hr>
+<hr>
+
+<h1>  🐟🐟Segment Any Motion in Video🐟🐟 </h1>
+
+👉UC Berkeley & Peking University unveil a novel approach for moving object segmentation that combines DINO-based semantic features and SAM2. Code under MIT license💙
+
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+
+✅Novel long-range tracks with SAM2
+
+✅Efficient mask densification and tracking
+
+✅Motion-Semantic Decoupled Embedding
+
+✅SOTA w/ fine-grained moving segmentation
+
+👉Paper arxiv.org/pdf/2503.22268
+
+👉Project motion-seg.github.io/
+
+👉Repo https://github.com/nnanhuang/SegAnyMo
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://motion-seg.github.io/data/ablation-v2.mp4"></iframe>
 
   </div>
 </div>
@@ -140,25 +149,91 @@ https://github.com/von-development/awesome-LangGraph
 <hr>
 <hr>
 
-<h1> 🚀The Gemini 2.5 Team Explores Its Multimodal Reasoning Abilities </h1>
+<h1>  🚀Breaking: Runway Unveils Gen-4 </h1>
 
-In a recent podcast discussion, Sr. Product Manager Logan K and Gemini Product Lead Tulsee Doshi dive into the cutting-edge features of Gemini 2.5 Pro, highlighting its exceptional multimodal understanding and advanced reasoning capabilities.
+🚀Breaking: Runway Unveils Gen-4, The Future of AI-Powered Media Creation
 
-Key takeaways:
+Runway has just launched Gen-4, its next-generation AI model, and its consistency, control, and realism are creating waves! 🔥 
 
-1️⃣Multimodal mastery: Processes text, images, audio, and video seamlessly, enabling tasks like video analysis and timestamp reasoning.
+Key points:
 
-2️⃣Extended context window: Handles up to 1 million tokens, ideal for analyzing lengthy datasets or multi-hour content like cricket matches.
+🔹Consistent Characters Across Scenes: Maintains character uniformity across lighting, locations, and styles with just one reference image.
 
-3️⃣Enhanced reasoning: Excels at logical analysis and decision-making, setting new benchmarks in math, science, and coding.
+🔹Seamless Object Placement: Effortlessly generates objects in any environment while preserving visual coherence.
 
-4️⃣Agentic coding abilities: Creates functional applications from single prompts, showcasing unmatched programming precision.
+🔹Dynamic Scene Coverage: Captures every angle of your shot using reference images and detailed prompts.
 
-This insightful conversation reveals the potential of Gemini 2.5 Pro to revolutionize AI applications. What innovative projects do you think this technology could empower?
+🔹Production-Ready Video Quality: Realistic motion, superior prompt adherence, and unparalleled world understanding for professional-grade results.
+
+What possibilities do you see opening up with AI tools like Runway Gen-4 in the creative industry?
+
+Video Credit: MattVidPro AI
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VOKXGY3sPBs?si=ttP__lcb5JKdC5Cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/doRgNxIWpvY?si=0WDw8a9n8f7_0CkG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> ComfyUI-Copilot </h1>
+
+It's huge! ComfyUI-Copilot: Your Intelligent Assistant for Comfy-UI!
+
+Key Features 🔥 :
+
+ 🔷 Interactive Q&A: Ask about models, nodes, and parameters with ease
+
+ 🔷 Smart Node Search: Find the right nodes using natural language
+
+ 🔷 Node Explorer: View explanations, usage tips, and best practices
+
+ 🔷 Workflow Builder: Get AI-powered recommendations for building workflows faster
+
+ 🔷 Model Finder: Quickly locate base models and LoRAs by prompt
+
+Coming Soon:
+
+ 🔷 Auto Parameter Tuning: ML-powered optimization for better results
+
+ 🔷 Error Fix Assistant: Instant error detection with suggested solutions
+
+Github code:
+
+👉 https://github.com/AIDC-AI/ComfyUI-Copilot
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/5RggXbZwHCs?si=P3fH60gR-o4RWEWT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> 🚀Breaking: NVIDIA + UC Berkeley = Real-Time Brain-to-Voice AI Breakthrough  </h1>
+
+UC Berkeley and UCSF, powered by NVIDIA’s GPUs, just unveiled a neuroprosthesis that turns brain signals into real-time speech and here are the key highlights:
+
+1️⃣NVIDIA’s GPUs at the core: The system relies on NVIDIA’s Tesla GPUs to process complex neural data, enabling accurate and near-instantaneous speech synthesis.
+
+2️⃣Real-time speech streaming: The neuroprosthesis delivers fluent voice output within one second of attempted speech, overcoming latency challenges.
+
+3️⃣AI-powered adaptability: The technology decodes neural signals with precision, even for unseen words, showcasing its robust learning capabilities.
+
+4️⃣Empowering embodiment: By replicating the user’s voice in real time, the system restores a sense of self and natural communication.
+
+5️⃣Broad applicability: Compatible with invasive and non-invasive brain-sensing devices, this innovation could soon benefit millions globally. 
+
+What other medical applications do you think NVIDIA’s AI technology could revolutionize next?
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/AKkoziKzinA?si=0bViB2QRHhrfbRgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
   </div>
@@ -167,76 +242,27 @@ This insightful conversation reveals the potential of Gemini 2.5 Pro to revoluti
 <hr>
 <hr>
 
-<h1> 🚀Google’s Quantum Leap: Willow Chip Unleashes AI Potential </h1>
+<h1> 📽️ Automated filmmaking/digital human is the future </h1>
 
-Google has just unveiled its Willow chip, a significant advancement in quantum computing that promises to supercharge artificial intelligence capabilities.
+Thrilled to introduce **☕MoCha: Towards Movie-Grade Talking Character Synthesis**
 
-1️⃣Exponential Error Reduction: Willow achieves "below threshold" error correction, enabling larger and more complex AI models.
+- ⭐ We define a new task—Talking Characters—that generates lifelike character animations directly from natural language + speech input.
 
-2️⃣Unfathomable Speed: Solved a benchmark computation in under 5 minutes that would take today’s fastest supercomputers 10 septillion years—opening new doors for AI research.
+- ⭐ Our proposed model, ☕MoCha, is the first DiT-based system capable of producing cinema-quality talking characters.
 
-3️⃣Real-Time Correction: Demonstrates real-time error correction on a superconducting quantum system, crucial for training robust AI algorithms.
+- ⭐ For the first time, ☕MoCha enables **multi-character conversations with turn-based dialogue** and expressive motion, pushing the frontier of automated, AI-powered storytelling.
 
-4️⃣Quality over Quantity: Focuses on high-quality qubits with ~5x improvement, enhancing the performance of AI applications.
+Project Page: https://congwei1230.github.io/MoCha/
 
-With Willow, we stand at the brink of a new era where quantum computing can tackle challenges in AI that were once deemed insurmountable
-
-How do you envision quantum computing transforming the landscape of artificial intelligence in the coming years?
-
-Check out the video at: https://x.com/i/status/1904506775044510034 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/W7ppd_RY-UE?si=leB3l73TF3Yi71_7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> Love to see what the community is building with Gemini 2.5 Pro! </h1>
-
-Love to see what the community is building with Gemini 2.5 Pro! Gemini playing Pokemon on twitchTV. The stream showcases an early prototype of an Agent that plays Pokemon created by someone from community! 🤗
-
-The Game Loop: 
-
-1. Capture a screenshot and retrieve game status data
-
-2. Process the image with a grid overlay to help with spatial reasoning
-
-3. Send the screenshot and game information to the AI model
-
-4. Parse the AI's response to determine which button to press
-
-5. Execute the button press and wait for the game to update
-
-6. Repeat the process for the next frame
-
-Tools
-
-1. Game Interface: The code connects to an mGBA emulator running Pokémon Blue via a socket connection, allowing it to:
-
-2. Take screenshots of the current game state
-
-3. Send button press commands (A, B, Up, Down, etc.)
-
-4. Retrieve game status data like player position, Pokémon party info, and map details
-
-5. AI Vision & Decision Making: The system processes game screenshots with a grid overlay and sends them to Google's Gemini 2.5 Pro (via OpenRouter), which analyzes the visual information and decides which button to press next
-
-Stream: https://www.twitch.tv/gemini_plays_pokemon
+Paper: https://arxiv.org/pdf/2503.23307
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <a href="/assets/img/news/AI news/7.jpg"
 
-      target="_blank">
-      <img src="/assets/img/news/AI news/7.jpg" 
-           alt="Nyx" 
-          />
-</a>
+	<video width="480" height="400" controls>
+  	<source src="/assets/img/news/AI news/7.mp4" type="video/mp4">
+	</video>
 
   </div>
 </div>
