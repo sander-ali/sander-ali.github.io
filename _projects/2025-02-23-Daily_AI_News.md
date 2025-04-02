@@ -147,7 +147,13 @@ Paradigm is shifting.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://motion-seg.github.io/data/ablation-v2.mp4"></iframe>
+    <a href="/assets/img/news/AI news/3.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/3.jpg" 
+           alt="Nyx" 
+          />
+</a>
 
   </div>
 </div>
