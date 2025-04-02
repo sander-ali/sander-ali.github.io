@@ -272,9 +272,12 @@ Paper: https://arxiv.org/pdf/2503.23307
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
 
-	<video width="480" height="400" controls>
-  	<source src="/assets/img/news/AI news/7.mp4" type="video/mp4">
-	</video>
+	<a href="/assets/img/news/AI news/7.jpg"
 
+      target="_blank">
+      <img src="/assets/img/news/AI news/7.jpg" 
+           alt="Nyx" 
+          />
+</a>
   </div>
 </div>
