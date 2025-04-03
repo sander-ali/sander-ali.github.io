@@ -179,11 +179,17 @@ Key points:
 
 What possibilities do you see opening up with AI tools like Runway Gen-4 in the creative industry?
 
-Video Credit: MattVidPro AI
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/doRgNxIWpvY?si=0WDw8a9n8f7_0CkG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a href="/assets/img/news/AI news/4.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/4.jpg" 
+           alt="Nyx" 
+          />
+</a>
+
 
   </div>
 </div>
@@ -219,7 +225,13 @@ Github code:
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/5RggXbZwHCs?si=P3fH60gR-o4RWEWT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <a href="/assets/img/news/AI news/5.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/5.jpg" 
+           alt="Nyx" 
+          />
+</a>
 
   </div>
 </div>
@@ -245,7 +257,13 @@ What other medical applications do you think NVIDIA’s AI technology could revo
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/AKkoziKzinA?si=0bViB2QRHhrfbRgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a href="/assets/img/news/AI news/6.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/6.jpg" 
+           alt="Nyx" 
+          />
+</a>
 
 
   </div>
