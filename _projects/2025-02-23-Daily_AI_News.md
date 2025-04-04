@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-04-03
+date: 2025-04-04
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -24,28 +24,20 @@ images:
   </div>
 </div>
 
-<h1> 3rd April 2025 </h1>
+<h1> 4th April 2025 </h1>
 
 <hr>
 <hr>
 
-<h1> 🌳🌳MVSAnywhere: Zero-Shot Multi-View🌳🌳  </h1>
+<h1> MCP x Gemini x LangGraph  </h1>
 
-👉Niantic unveils MVSA, novel Multi-View Stereo Architecture to work anywhere by generalizing across diverse domains & depth ranges. Combining monocular & multi-view cues with an adaptive cost volume to deal with scale-related issues. Highly accurate & 3D-consistent depths. Code & models to be released💙
+MCP x Gemini x LangGraph! Here is a 60 line Python Google DeepMind Gemini 2.5 Pro multi-MCP Server (remote/stdio) Agent with LangChain LangGraph ReAct. Time to build!
 
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+Code: https://github.com/philschmid/gemini-samples/blob/main/scripts/gemini-mcp-agent.py
 
-✅A novel transformer-based architecture
+Working on a detail guide on how you can build your own MCP Server too! 🫡
 
-✅General-purpose multi-view depth estimation
-
-✅View-count-agnostic & scale-agnostic
-
-✅SOTA: Robust Multi-View Depth Benchmark
-
-👉Paper https://arxiv.org/pdf/2503.22430
-
-👉Project https://nianticlabs.github.io/mvsanywhere/
+Post and code credit: Philipp Schmid
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -57,214 +49,6 @@ images:
            alt="Nyx" 
           />
 </a>
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> China recently dropped DeepSeek V3-0324 😳 </h1>
-
-In case you missed it, China recently dropped DeepSeek V3-0324 😳
-
-It's only 700GB & 100% open-source AI model.
-
-DeepSeek V3-0324 is a massive 685B-parameter AI model that outperforms Claude 3.5 Sonnet in coding and math.
-
-More importantly, it is: Open Source. Lightning-fast. Affordable.
-
-Here’s everything you need to know 👇
-
-Runs on Your Desk:
-
-- Operates smoothly (20 tokens/sec) on a Mac Studio (consumer hardware).
-
-- You no longer need enterprise-level budgets or massive data centers.
-
-Coding Powerhouse:
-
-- Effortlessly generates interactive websites and clean, production-ready code.
-
-- Excels at debugging and solving complex coding challenges step-by-step.
-
-Costs Pennies, Not Millions:
-
-- Trained for just $5.58M vs. $100M+ for GPT-4o.
-- API price: Only $0.14 per million tokens (OpenAI, watch out).
-
-Fully Open-Source:
-
-- Released under the MIT license.
-
-- Anyone, anywhere, can modify and use it freely.
-
-- This means huge potential to democratize advanced AI, enabling startups and small businesses globally.
-
-DeepSeek is once again shaking up AI dominance, challenging giants like OpenAI and Anthropic to rethink pricing.
-
-Global shift toward accessible, sustainable, and open-source AI tech is closer than we think.
-
-Paradigm is shifting.
-
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/2.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/2.jpg" 
-           alt="Nyx" 
-          />
-</a>
-  </div>
-</div>
-
-
-<hr>
-<hr>
-
-<h1>  🐟🐟Segment Any Motion in Video🐟🐟 </h1>
-
-👉UC Berkeley & Peking University unveil a novel approach for moving object segmentation that combines DINO-based semantic features and SAM2. Code under MIT license💙
-
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
-
-✅Novel long-range tracks with SAM2
-
-✅Efficient mask densification and tracking
-
-✅Motion-Semantic Decoupled Embedding
-
-✅SOTA w/ fine-grained moving segmentation
-
-👉Paper arxiv.org/pdf/2503.22268
-
-👉Project motion-seg.github.io/
-
-👉Repo https://github.com/nnanhuang/SegAnyMo
-
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/3.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/3.jpg" 
-           alt="Nyx" 
-          />
-</a>
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1>  🚀Breaking: Runway Unveils Gen-4 </h1>
-
-🚀Breaking: Runway Unveils Gen-4, The Future of AI-Powered Media Creation
-
-Runway has just launched Gen-4, its next-generation AI model, and its consistency, control, and realism are creating waves! 🔥 
-
-Key points:
-
-🔹Consistent Characters Across Scenes: Maintains character uniformity across lighting, locations, and styles with just one reference image.
-
-🔹Seamless Object Placement: Effortlessly generates objects in any environment while preserving visual coherence.
-
-🔹Dynamic Scene Coverage: Captures every angle of your shot using reference images and detailed prompts.
-
-🔹Production-Ready Video Quality: Realistic motion, superior prompt adherence, and unparalleled world understanding for professional-grade results.
-
-What possibilities do you see opening up with AI tools like Runway Gen-4 in the creative industry?
-
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/4.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/4.jpg" 
-           alt="Nyx" 
-          />
-</a>
-
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> ComfyUI-Copilot </h1>
-
-It's huge! ComfyUI-Copilot: Your Intelligent Assistant for Comfy-UI!
-
-Key Features 🔥 :
-
- 🔷 Interactive Q&A: Ask about models, nodes, and parameters with ease
-
- 🔷 Smart Node Search: Find the right nodes using natural language
-
- 🔷 Node Explorer: View explanations, usage tips, and best practices
-
- 🔷 Workflow Builder: Get AI-powered recommendations for building workflows faster
-
- 🔷 Model Finder: Quickly locate base models and LoRAs by prompt
-
-Coming Soon:
-
- 🔷 Auto Parameter Tuning: ML-powered optimization for better results
-
- 🔷 Error Fix Assistant: Instant error detection with suggested solutions
-
-Github code:
-
-👉 https://github.com/AIDC-AI/ComfyUI-Copilot
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <a href="/assets/img/news/AI news/5.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/5.jpg" 
-           alt="Nyx" 
-          />
-</a>
-
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<h1> 🚀Breaking: NVIDIA + UC Berkeley = Real-Time Brain-to-Voice AI Breakthrough  </h1>
-
-UC Berkeley and UCSF, powered by NVIDIA’s GPUs, just unveiled a neuroprosthesis that turns brain signals into real-time speech and here are the key highlights:
-
-1️⃣NVIDIA’s GPUs at the core: The system relies on NVIDIA’s Tesla GPUs to process complex neural data, enabling accurate and near-instantaneous speech synthesis.
-
-2️⃣Real-time speech streaming: The neuroprosthesis delivers fluent voice output within one second of attempted speech, overcoming latency challenges.
-
-3️⃣AI-powered adaptability: The technology decodes neural signals with precision, even for unseen words, showcasing its robust learning capabilities.
-
-4️⃣Empowering embodiment: By replicating the user’s voice in real time, the system restores a sense of self and natural communication.
-
-5️⃣Broad applicability: Compatible with invasive and non-invasive brain-sensing devices, this innovation could soon benefit millions globally. 
-
-What other medical applications do you think NVIDIA’s AI technology could revolutionize next?
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/6.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/6.jpg" 
-           alt="Nyx" 
-          />
-</a>
-
 
   </div>
 </div>
@@ -286,16 +70,215 @@ Project Page: https://congwei1230.github.io/MoCha/
 
 Paper: https://arxiv.org/pdf/2503.23307
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <a href="/assets/img/news/AI news/2.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/2.jpg" 
+           alt="Nyx" 
+          />
+</a>
+  </div>
+</div>
+
+
+<hr>
+<hr>
+
+<h1>  OpenAI’s GPT-4o Image Generation is here </h1>
+
+OpenAI’s GPT-4o Image Generation debuts with an ELO score in equal first-place in the Artificial Analysis Image Arena, outperforming Recraft V3, FLUX 1.1 [pro] and Gemini 2.0 Flash
+
+OpenAI last week launched GPT-4o Image Generation, upgrading ChatGPT’s built-in image generation from the previous system that used OpenAI’s DALL-E dedicated image generator.
+
+GPT-4o Image Generation supports both text and image prompt input, allowing image editing with instruction prompting. In our category breakdowns, the model excels particularly at Text & Typography, People: Portraits, Anime and SciFi whereby it holds the top ranking.
+
+OpenAI has disclosed that 4o Image Generation is an “autoregressive model natively embedded” within the GPT-4o model used by ChatGPT. However, in their launch ‘demo’ images, OpenAI hints at a hybrid architecture. This could look like an autoregressive transformer generating latent space representations, which are then converted into pixels using diffusion techniques.
+
+OpenAI first demonstrated GPT-4o’s ability to output images in May 2024 when GPT-4o was first launched. Google beat OpenAI to a public release of native image generation capability in a modern language model with their Gemini 2.0 Flash native image generation in early March. However, Gemini 2.0 Flash is ranked 27th to GPT-4o’s 2nd in Image Arena. 
+
+Beyond image generation, we have anecdotally found Gemini 2.0 Flash to be better than GPT-4o for certain image editing tasks where keeping an input image consistent is critical.
+
+Leaderboard:
+https://artificialanalysis.ai/text-to-image/arena?tab=Leaderboard
+
+Link to participate in the arena:
+https://artificialanalysis.ai/text-to-image/arena?tab=Arena
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <a href="/assets/img/news/AI news/3.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/3.jpg" 
+           alt="Nyx" 
+          />
+</a>
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1>  🚨 BOOM! The UAE is not joking around! </h1>
+
+The city of Abu Dhabi has just allocated 3.3 billion USD to become the world's first fully AI-native city by 2027.
+
+The government have established a Digital Strategy 2025-2027 that is putting AED 13 billion behind this mission. Key highlights:
+
+- 100% automation of government processes
+
+- 2,000+ digital services running on AI
+
+- 200+ AI solutions deployed across all sectors
+
+- AED 24 billion added to GDP
+
+- 5,000+ new jobs created by 2027
+
+- 80% faster service delivery with predictive AI
+
+But this isn’t just about efficiency. This is a blueprint for the future.
+
+Abu Dhabi is rewriting the playbook on how economies grow, how societies evolve, and how governments serve. 
+
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <a href="/assets/img/news/AI news/4.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/4.jpg" 
+           alt="Nyx" 
+          />
+</a>
+
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1>  Orai: AI Speech Coach </h1>
+
+🚀 Exciting news: Danish Dhamani is pivoting Orai: AI Speech Coach into an AI-powered dating coach!
+
+After years of working in AI, Danish Dhamani has realized where the real demand is—not enterprise solutions, not public speaking, but helping people decode text messages and avoid getting ghosted.
+
+Introducing OraiRomance™—the first AI-powered dating optimization tool.
+
+🔹 Are they “haha-ing” your texts too much? We’ll analyze if you’re in the dreaded "Just a Friend" zone.
+
+ 🔹 He took 3 hours to respond—what does it mean? Our neural network detects if he’s “busy” or just… busy with someone else.
+
+ 🔹 Should you send a double text? Our AI simulates 500 parallel timelines to predict the outcome (spoiler: don’t).
+
+Forget ChatGPT for work. This is the AI that actually matters.
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+   <a href="/assets/img/news/AI news/5.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/5.jpg" 
+           alt="Nyx" 
+          />
+</a>
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1> TAU-bench evaluates Agents in real-world environments  </h1>
+
+TAU-bench evaluates Agents in real-world environments and showed poor reliability. It tests if an agent can reliably engage in a dynamic, multi-turn conversation with a user to figure out what needs to be done. 
+
+T-bench:
+
+1️⃣ Agent interacts with an simulated user to understand needs & gather info over multiple turns.
+
+2️⃣ Agent utilizes domain-specific API tools (e.g., book flight, return item)
+
+3️⃣ Agent must adhere to a provided policy document containing domain-specific rules and restrictions.
+
+4️⃣ Success is measured by comparing the final database state
+
+5️⃣ Uses the pass^k metric to evaluate reliability on the same task over multiple (k) trials.
+
+Insights
+
+- 📉 At release agents succeeding less than 50% of the time.
+
+- 🧮 Includes 10-15 tools across 50-115 different tasks for a retail and airline domain.
+
+- 🤷 Agents are inconsistent, failing on tasks they previously succeeded on, low pass^k scores (pass^8 < 25%).
+
+- 📊 Tasks requiring 4+ database writes have only ~20% success rate vs. ~75% for single-action tasks.
+
+- 🚧 Failures stem from poor reasoning about database states, misunderstanding or ignoring rules (policy adherence), or mishandling complex multi-step requests.
+
+- 📝 Removing domain guidelines drops performance by 22% in complex domains.
+
+- 🛠️ Function calling outperforms text-based ReAct and Act-only methods.
+- 📊 Evaluation is automated and compared to a final database state.
+
+Paper: https://huggingface.co/papers/2406.12045
+
+Github: https://github.com/sierra-research/tau-bench
+
+Note: This benchmark was released in June 2024, but feels more important than ever. Not only it describes the limitation we currently face it also demonstrates how to setup a good evaluation pipeline for your own agents!
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <a href="/assets/img/news/AI news/6.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/6.jpg" 
+           alt="Nyx" 
+          />
+</a>
+
+
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h1>💃💃 Video Motion Graphs 💃💃 </h1>
+
+👉Adobe unveils a novel system designed to generate realistic human motion videos. Using a reference video & conditional signals such as music or motion tags, the system synthesizes amazing new videos. Code & Models to be released💙
+
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+
+✅Gen-system for general human motion videos
+
+✅Real-time video generation and keyframe editing
+
+✅SOTA performance in generating high-quality clip
+
+✅HMInterp: HQ motion-aware video interpolation
+
+👉Paper: https://arxiv.org/pdf/2503.20218
+
+👉Project: https://h-liu1997.github.io/Video-Motion-Graphs/
+
+👉Repo: TBA
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
 
-	<a href="/assets/img/news/AI news/7.jpg"
-
-      target="_blank">
-      <img src="/assets/img/news/AI news/7.jpg" 
-           alt="Nyx" 
-          />
-</a>
+	<video width="320" height="240" controls>
+  <source src="https://h-liu1997.github.io/Video-Motion-Graphs/comp_with_pika_luma.mp4" type="video/mp4">
+</video>
   </div>
 </div>
