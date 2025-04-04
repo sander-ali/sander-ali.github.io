@@ -298,8 +298,12 @@ Video: Mustafa Suleyman (via X) https://x.com/i/status/1907471993504673835
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
 
-	<video width="320" height="240" controls>
-  <source src="https://h-liu1997.github.io/Video-Motion-Graphs/comp_with_pika_luma.mp4" type="video/mp4">
-</video>
+	<a href="/assets/img/news/AI news/7.jpg"
+
+      target="_blank">
+      <img src="/assets/img/news/AI news/7.jpg" 
+           alt="Nyx" 
+          />
+</a>
   </div>
 </div>
