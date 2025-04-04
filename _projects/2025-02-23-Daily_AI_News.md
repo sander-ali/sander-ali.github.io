@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-04-04
+date: 2025-04-05
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -24,20 +24,32 @@ images:
   </div>
 </div>
 
-<h1> 4th April 2025 </h1>
+<h1> 5th April 2025 </h1>
 
 <hr>
 <hr>
 
-<h1> MCP x Gemini x LangGraph  </h1>
+<h1> Quick demo to build and deploy a powerful Research Agent in the cloud  </h1>
 
-MCP x Gemini x LangGraph! Here is a 60 line Python Google DeepMind Gemini 2.5 Pro multi-MCP Server (remote/stdio) Agent with LangChain LangGraph ReAct. Time to build!
+In the video by Armand Ruiz, he walks through the steps using the CLI - no complex setup required.
 
-Code: https://github.com/philschmid/gemini-samples/blob/main/scripts/gemini-mcp-agent.py
+1/ Start from a ready-made template (like CrewAI or LangGraph)
 
-Working on a detail guide on how you can build your own MCP Server too! 🫡
+2/ Customize with your watsonx inference credentials
 
-Post and code credit: Philipp Schmid
+3/ Deploy to the cloud with one command
+
+4/ Instantly interact with your agent via a web-based chat UI
+
+5/ Use it to retrieve and summarize content like research papers from arXiv in real time
+
+Whether you're exploring internal automation or building intelligent assistants, this shows just how fast you can go from idea to working agent.
+
+🔗 Try it yourself: install the CLI with pip install, grab a template, and launch your agent today. Linkn to documentation and step-by-step instructions:
+
+https://www.ibm.com/watsonx/developer/agents/quickstart/
+
+Github: https://github.com/IBM/watsonx-developer-hub/tree/main/agents
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -56,19 +68,42 @@ Post and code credit: Philipp Schmid
 <hr>
 <hr>
 
-<h1> 📽️ Automated filmmaking/digital human is the future </h1>
+<h1> Google made the most powerful model free 🔥 </h1>
 
-Thrilled to introduce **☕MoCha: Towards Movie-Grade Talking Character Synthesis**
+You can now build anything (e.g. a CRM):
 
-- ⭐ We define a new task—Talking Characters—that generates lifelike character animations directly from natural language + speech input.
 
-- ⭐ Our proposed model, ☕MoCha, is the first DiT-based system capable of producing cinema-quality talking characters.
+You can literally use the world's best AI model and one-shot web apps.
 
-- ⭐ For the first time, ☕MoCha enables **multi-character conversations with turn-based dialogue** and expressive motion, pushing the frontier of automated, AI-powered storytelling.
+All you need is a free Google account:
 
-Project Page: https://congwei1230.github.io/MoCha/
 
-Paper: https://arxiv.org/pdf/2503.23307
+1️⃣ Select 2.5 Pro (experimental) from the list
+
+In the Gemini App (or web interface), select the 2.5 Pro model on the top.
+
+
+2️⃣ Activate the Canvas option at the bottom (advanced)
+
+Below the text field, you can turn on "Canvas".
+
+It allows Gemini to preview the code so you don't have to set up your own dev environnement.
+
+
+3️⃣ Send your prompt and enjoy
+
+Example prompt you can reuse:
+
+"Develop a fully functional customer relationship management (CRM) web application tailored for a mid-sized healthcare provider. The application should streamline patient communication, appointment scheduling, record management, and billing processes.
+
+As a team of experienced full-stack web developers specializing in healthcare technology solutions, you will design and build this application. The application should feature a user-friendly interface with distinct dashboards for administrators, doctors, and staff.
+
+Include functionalities such as patient profiles with medical history, a messaging system, insurance verification, and report generation on key performance indicators like patient acquisition and appointment adherence. 
+
+The front-end should be built using React. Maintain a professional, solution-oriented, and technically precise tone throughout the development process."
+
+
+Of course, feel free to modify the prompt to suit your own needs.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -86,25 +121,15 @@ Paper: https://arxiv.org/pdf/2503.23307
 <hr>
 <hr>
 
-<h1>  OpenAI’s GPT-4o Image Generation is here </h1>
+<h1>  Announcement from You.com </h1>
 
-OpenAI’s GPT-4o Image Generation debuts with an ELO score in equal first-place in the Artificial Analysis Image Arena, outperforming Recraft V3, FLUX 1.1 [pro] and Gemini 2.0 Flash
+✨ We don’t waste any time: Gemini 2.5 Pro is now available at You.com.
 
-OpenAI last week launched GPT-4o Image Generation, upgrading ChatGPT’s built-in image generation from the previous system that used OpenAI’s DALL-E dedicated image generator.
+Google’s most intelligent model has stirred up serious buzz. With enhanced reasoning capabilities and major coding improvements, Gemini 2.5 Pro can solve even your most complex problems at breakneck speeds. 
 
-GPT-4o Image Generation supports both text and image prompt input, allowing image editing with instruction prompting. In our category breakdowns, the model excels particularly at Text & Typography, People: Portraits, Anime and SciFi whereby it holds the top ranking.
+🚀 Speaking of upgrades – you'll now notice your threads feature smart, automatic summaries in the sidebar. We made it easier than ever to search, favorite, and revisit all your important threads.
 
-OpenAI has disclosed that 4o Image Generation is an “autoregressive model natively embedded” within the GPT-4o model used by ChatGPT. However, in their launch ‘demo’ images, OpenAI hints at a hybrid architecture. This could look like an autoregressive transformer generating latent space representations, which are then converted into pixels using diffusion techniques.
-
-OpenAI first demonstrated GPT-4o’s ability to output images in May 2024 when GPT-4o was first launched. Google beat OpenAI to a public release of native image generation capability in a modern language model with their Gemini 2.0 Flash native image generation in early March. However, Gemini 2.0 Flash is ranked 27th to GPT-4o’s 2nd in Image Arena. 
-
-Beyond image generation, we have anecdotally found Gemini 2.0 Flash to be better than GPT-4o for certain image editing tasks where keeping an input image consistent is critical.
-
-Leaderboard:
-https://artificialanalysis.ai/text-to-image/arena?tab=Leaderboard
-
-Link to participate in the arena:
-https://artificialanalysis.ai/text-to-image/arena?tab=Arena
+Does Gemini 2.5 Pro vault Google into the lead of the AI race? Test it against other top models like GPT-4.5, Claude 3.7 Sonnet, DeepSeek, o1, and many more – all while enjoying more organized conversations with our new summarized thread titles.
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -123,29 +148,53 @@ https://artificialanalysis.ai/text-to-image/arena?tab=Arena
 <hr>
 <hr>
 
-<h1>  🚨 BOOM! The UAE is not joking around! </h1>
+<h1>  Voice AI just got scary good 😳 </h1>
 
-The city of Abu Dhabi has just allocated 3.3 billion USD to become the world's first fully AI-native city by 2027.
+Imagine this:
 
-The government have established a Digital Strategy 2025-2027 that is putting AED 13 billion behind this mission. Key highlights:
+You tell an AI to order dinner.
 
-- 100% automation of government processes
+It calls your favorite restaurant.
 
-- 2,000+ digital services running on AI
+Places the order.
 
-- 200+ AI solutions deployed across all sectors
+Confirms pickup.
 
-- AED 24 billion added to GDP
+All on its own.
 
-- 5,000+ new jobs created by 2027
+No humans needed.
 
-- 80% faster service delivery with predictive AI
+That's exactly what people are building today using Llama 3 + Vapi.
 
-But this isn’t just about efficiency. This is a blueprint for the future.
+Generative voice AI is here, and it’s wild.
 
-Abu Dhabi is rewriting the playbook on how economies grow, how societies evolve, and how governments serve. 
+120,000+ developers already building real-time, human-like voice agents.
 
+✅ No awkward pauses.
 
+✅ No robotic scripts.
+
+✅ Conversations that feel natural.
+
+And it’s only getting better.
+
+Why is Vapi leading the charge?
+
+↳ Integrates with ANY model, ANY API, ANY system.
+
+↳ Handles MILLIONS of calls with sub-500ms latency.
+
+↳ Trusted by startups and Fortune 500 companies alike.
+
+Fun Fact: VAPI stands for Voice API. Simple name, powerful impact 👏
+
+Voice AI is now at a tipping point.
+
+The question isn't IF you'll use it, but HOW.
+
+Post Credit: Linas Beliunas
+
+Access VAPI at: https://vapi.ai/?aff=tryitnow&gad_source=1
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -164,21 +213,23 @@ Abu Dhabi is rewriting the playbook on how economies grow, how societies evolve,
 <hr>
 <hr>
 
-<h1>  Orai: AI Speech Coach </h1>
+<h1>  Introducing Ace: The First Realtime Computer Autopilot </h1>
 
-🚀 Exciting news: Danish Dhamani is pivoting Orai: AI Speech Coach into an AI-powered dating coach!
+Ace is not a chatbot. It performs tasks for you. On your computer. Using your mouse and keyboard. At superhuman speeds!
 
-After years of working in AI, Danish Dhamani has realized where the real demand is—not enterprise solutions, not public speaking, but helping people decode text messages and avoid getting ghosted.
+It can use all the tools on your computer. Ace accelerates your work, and helps you confidently use tools you're still learning. Just ask what you need, it gets it done.
 
-Introducing OraiRomance™—the first AI-powered dating optimization tool.
+You can use it for your work or your personal life. Ace can optionally use frontier reasoning models for more complex tasks.
 
-🔹 Are they “haha-ing” your texts too much? We’ll analyze if you’re in the dreaded "Just a Friend" zone.
+It outperforms other models on our evaluation suite of computer tasks. Ace is blazing fast! It's 20x faster than competing agents, making it more practical for everyday use.
 
- 🔹 He took 3 hours to respond—what does it mean? Our neural network detects if he’s “busy” or just… busy with someone else.
+We're just getting started. Ace uses a new behavioral training paradigm. As we scale up training resources, it will grow more intelligent and capable.
 
- 🔹 Should you send a double text? Our AI simulates 500 parallel timelines to predict the outcome (spoiler: don’t).
+We're rolling out Ace as a research preview. To learn more and sign up, please visit https://lnkd.in/gi7_s6Kz.
 
-Forget ChatGPT for work. This is the AI that actually matters.
+The team behind Ace is comprised of machine learning researchers, engineers, and software specialists. Their mission is to liberate humanity from digital labor. You can learn more about them at https://generalagents.com/ace/. If their mission excites you, they'd love to hear from you.
+
+You can signup for the research preview at: https://generalagents.com/about/
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -197,44 +248,21 @@ Forget ChatGPT for work. This is the AI that actually matters.
 <hr>
 <hr>
 
-<h1> TAU-bench evaluates Agents in real-world environments  </h1>
+<h1> 🚀Breaking: Anthropic Unveils Claude For Education for Higher Learning  </h1>
 
-TAU-bench evaluates Agents in real-world environments and showed poor reliability. It tests if an agent can reliably engage in a dynamic, multi-turn conversation with a user to figure out what needs to be done. 
+Highlights:
 
-T-bench:
+1️⃣Learning mode: Encourages critical thinking by guiding students through reasoning processes rather than providing direct answers.
 
-1️⃣ Agent interacts with an simulated user to understand needs & gather info over multiple turns.
+2️⃣Campus-wide access: Collaborations with Northeastern University, LSE, and Champlain College ensure equitable AI access for thousands of students globally.
 
-2️⃣ Agent utilizes domain-specific API tools (e.g., book flight, return item)
+3️⃣Academic partnerships: Integration with Internet2 and Canvas LMS to embed AI into teaching, learning, and administration.
 
-3️⃣ Agent must adhere to a provided policy document containing domain-specific rules and restrictions.
+4️⃣Student programs: Launch of Claude Campus Ambassadors and funding opportunities for student-led AI projects using API credits.
 
-4️⃣ Success is measured by comparing the final database state
+Video: Anthropic (https://www.instagram.com/ai.certs/reel/DH_iuTyNZtO/)
 
-5️⃣ Uses the pass^k metric to evaluate reliability on the same task over multiple (k) trials.
-
-Insights
-
-- 📉 At release agents succeeding less than 50% of the time.
-
-- 🧮 Includes 10-15 tools across 50-115 different tasks for a retail and airline domain.
-
-- 🤷 Agents are inconsistent, failing on tasks they previously succeeded on, low pass^k scores (pass^8 < 25%).
-
-- 📊 Tasks requiring 4+ database writes have only ~20% success rate vs. ~75% for single-action tasks.
-
-- 🚧 Failures stem from poor reasoning about database states, misunderstanding or ignoring rules (policy adherence), or mishandling complex multi-step requests.
-
-- 📝 Removing domain guidelines drops performance by 22% in complex domains.
-
-- 🛠️ Function calling outperforms text-based ReAct and Act-only methods.
-- 📊 Evaluation is automated and compared to a final database state.
-
-Paper: https://huggingface.co/papers/2406.12045
-
-Github: https://github.com/sierra-research/tau-bench
-
-Note: This benchmark was released in June 2024, but feels more important than ever. Not only it describes the limitation we currently face it also demonstrates how to setup a good evaluation pipeline for your own agents!
+How do you envision AI transforming education in the next decade? 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -253,26 +281,19 @@ Note: This benchmark was released in June 2024, but feels more important than ev
 <hr>
 <hr>
 
-<h1>💃💃 Video Motion Graphs 💃💃 </h1>
+<h1> 🚨Breaking: Microsoft Copilot Expands Unlimited Voice Mode With Rain And Birch </h1>
 
-👉Adobe unveils a novel system designed to generate realistic human motion videos. Using a reference video & conditional signals such as music or motion tags, the system synthesizes amazing new videos. Code & Models to be released💙
+Here's everything you need to know⬇️ 
 
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+🔹Unlimited Voice Access: Users can now choose from multiple voice options, including Birch and Rain, for more natural and engaging conversations.
 
-✅Gen-system for general human motion videos
+🔹Hands-Free Efficiency: The voice feature allows seamless multitasking with natural language commands, making it easier to manage tasks or brainstorm ideas on the go.
 
-✅Real-time video generation and keyframe editing
+🔹Free for All: Unlike competitors, Copilot's voice functionality is available for free, regardless of subscription status.
 
-✅SOTA performance in generating high-quality clip
+What’s your take on these updates? How do you see AI voices transforming daily interactions? Let’s discuss!
 
-✅HMInterp: HQ motion-aware video interpolation
-
-👉Paper: https://arxiv.org/pdf/2503.20218
-
-👉Project: https://h-liu1997.github.io/Video-Motion-Graphs/
-
-👉Repo: TBA
-
+Video: Mustafa Suleyman (via X) https://x.com/i/status/1907471993504673835
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
