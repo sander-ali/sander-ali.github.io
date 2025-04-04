@@ -260,8 +260,6 @@ Highlights:
 
 4️⃣Student programs: Launch of Claude Campus Ambassadors and funding opportunities for student-led AI projects using API credits.
 
-Video: Anthropic (https://www.instagram.com/ai.certs/reel/DH_iuTyNZtO/)
-
 How do you envision AI transforming education in the next decade? 
 
 <div style="display: flex; justify-content: center; align-items: center;">
