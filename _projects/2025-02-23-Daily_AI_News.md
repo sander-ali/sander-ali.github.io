@@ -194,8 +194,6 @@ The question isn't IF you'll use it, but HOW.
 
 Post Credit: Linas Beliunas
 
-Access VAPI at: https://vapi.ai/?aff=tryitnow&gad_source=1
-
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/4.jpg"
