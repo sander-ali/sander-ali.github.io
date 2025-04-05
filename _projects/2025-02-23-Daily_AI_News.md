@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-04-05
+date: 2025-04-06
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -24,32 +24,22 @@ images:
   </div>
 </div>
 
-<h1> 5th April 2025 </h1>
+<h1> 6th April 2025 </h1>
 
 <hr>
 <hr>
 
-<h1> Quick demo to build and deploy a powerful Research Agent in the cloud  </h1>
+<h1> 🎉 After months of hard work and collaboration, CAMEL-AI.org just release its new project Loong🐉.  </h1>
 
-In the video by Armand Ruiz, he walks through the steps using the CLI - no complex setup required.
+The core concept of Loong is based on a simple assumption: an LLM equipped with a code interpreter and human-built libraries or tools can solve problems with significantly higher reliability compared to models that rely solely on natural language chain-of-thought reasoning. The performance gap between the two can be leveraged to generate synthetic data and for reinforcement learning. This is intuitive as well—many non-computer science fields (such as physics, economics, and computational biology) rely on code to solve practical problems in their daily research.
 
-1/ Start from a ready-made template (like CrewAI or LangGraph)
+It is believed that the verifiability of RL rewards is one of the most important trends in RL for agents!
 
-2/ Customize with your watsonx inference credentials
+Project Loong🐉 is officially released! Everyone is welcome to help build environments for agents!
 
-3/ Deploy to the cloud with one command
+Here is the project link—please give them a star: https://github.com/camel-ai/loong
 
-4/ Instantly interact with your agent via a web-based chat UI
-
-5/ Use it to retrieve and summarize content like research papers from arXiv in real time
-
-Whether you're exploring internal automation or building intelligent assistants, this shows just how fast you can go from idea to working agent.
-
-🔗 Try it yourself: install the CLI with pip install, grab a template, and launch your agent today. Linkn to documentation and step-by-step instructions:
-
-https://www.ibm.com/watsonx/developer/agents/quickstart/
-
-Github: https://github.com/IBM/watsonx-developer-hub/tree/main/agents
+Friends interested in co-building can join their initiative: https://www.camel-ai.org/launchweek-environments
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -68,42 +58,19 @@ Github: https://github.com/IBM/watsonx-developer-hub/tree/main/agents
 <hr>
 <hr>
 
-<h1> Google made the most powerful model free 🔥 </h1>
+<h1> ☄️Breaking News: Dartmouth’s AI Therabot Reduces Depression Symptoms by 51% </h1>
 
-You can now build anything (e.g. a CRM):
+First-ever clinical trial of Therabot, Dartmouth's AI-powered therapy chatbot, delivers remarkable outcomes.
 
+Key highlights:
 
-You can literally use the world's best AI model and one-shot web apps.
+1️⃣Depression symptoms reduced by 51%, anxiety by 31%, and eating disorder concerns by 19%—on par with traditional therapy.
 
-All you need is a free Google account:
+2️⃣Participants reported forming "therapeutic alliances" with Therabot, describing it as comparable to working with a human therapist.
 
+3️⃣Therabot offers 24/7 real-time support, filling critical gaps for those without access to mental health professionals.
 
-1️⃣ Select 2.5 Pro (experimental) from the list
-
-In the Gemini App (or web interface), select the 2.5 Pro model on the top.
-
-
-2️⃣ Activate the Canvas option at the bottom (advanced)
-
-Below the text field, you can turn on "Canvas".
-
-It allows Gemini to preview the code so you don't have to set up your own dev environnement.
-
-
-3️⃣ Send your prompt and enjoy
-
-Example prompt you can reuse:
-
-"Develop a fully functional customer relationship management (CRM) web application tailored for a mid-sized healthcare provider. The application should streamline patient communication, appointment scheduling, record management, and billing processes.
-
-As a team of experienced full-stack web developers specializing in healthcare technology solutions, you will design and build this application. The application should feature a user-friendly interface with distinct dashboards for administrators, doctors, and staff.
-
-Include functionalities such as patient profiles with medical history, a messaging system, insurance verification, and report generation on key performance indicators like patient acquisition and appointment adherence. 
-
-The front-end should be built using React. Maintain a professional, solution-oriented, and technically precise tone throughout the development process."
-
-
-Of course, feel free to modify the prompt to suit your own needs.
+Could AI therapy redefine the future of mental health care?
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -121,15 +88,21 @@ Of course, feel free to modify the prompt to suit your own needs.
 <hr>
 <hr>
 
-<h1>  Announcement from You.com </h1>
+<h1>  Gemma 3 Updates! </h1>
 
-✨ We don’t waste any time: Gemini 2.5 Pro is now available at You.com.
+New QAT Google DeepMind Gemma 3 checkpoints with similar performance while using 3x less memory! 🤯 
 
-Google’s most intelligent model has stirred up serious buzz. With enhanced reasoning capabilities and major coding improvements, Gemini 2.5 Pro can solve even your most complex problems at breakneck speeds. 
+Quantization-Aware Training (QAT) simulates low-precision operations during training to allow loss-less quantization afterwards for smaller, faster models while maintaining accuracy. We applied QAT on ~5,000 steps using probabilities from the non-quantized checkpoint as targets. 🎯 
 
-🚀 Speaking of upgrades – you'll now notice your threads feature smart, automatic summaries in the sidebar. We made it easier than ever to search, favorite, and revisit all your important threads.
+Official QAT checkpoints for all Gemma 3 sizes are now available on Hugging Face, Kaggle and directly runnable with Ollama or llama.cpp: 🤗 
+https://huggingface.co/collections/google/gemma-3-qat-67ee61ccacbf2be4195c265b
 
-Does Gemini 2.5 Pro vault Google into the lead of the AI race? Test it against other top models like GPT-4.5, Claude 3.7 Sonnet, DeepSeek, o1, and many more – all while enjoying more organized conversations with our new summarized thread titles.
+Ollama command, remove the ():
+``` 
+ollama run hf(.)co/google/gemma-3-4b-it-qat-q4_0-gguf
+```
+
+One last thing, All Gemma 3 sizes (1B, 4B, 12B, 27B) now available AI Studio and via API to test.
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -148,51 +121,33 @@ Does Gemini 2.5 Pro vault Google into the lead of the AI race? Test it against o
 <hr>
 <hr>
 
-<h1>  Voice AI just got scary good 😳 </h1>
+<h1>  Announcement from Fireworks AI </h1>
 
-Imagine this:
+We just built something fun with Hugging Face’s new tool— An AI crossword puzzle 🧩 
 
-You tell an AI to order dinner.
+This puzzle was created using DeepSite—an open-source, AI coding platform powered by DeepSeek AI V3.1 and hosted on Hugging Face Spaces.
 
-It calls your favorite restaurant.
+With just a few instructions, it can generate:
 
-Places the order.
+→ Single-file HTML apps
 
-Confirms pickup.
+→ Interactive tools
 
-All on its own.
+→ Even 3D games
 
-No humans needed.
+No frameworks. No fancy prompt engineering!
 
-That's exactly what people are building today using Llama 3 + Vapi.
+And here’s the best part:
 
-Generative voice AI is here, and it’s wild.
+→ It’s completely free and open-source.
 
-120,000+ developers already building real-time, human-like voice agents.
+→ You can run it locally or deploy it in Docker.
 
-✅ No awkward pauses.
+Plus, Fireworks AI is one of the inference providers, making everything run smoothly.
 
-✅ No robotic scripts.
+Now, it's your turn to build something cool on DeepSite 
 
-✅ Conversations that feel natural.
-
-And it’s only getting better.
-
-Why is Vapi leading the charge?
-
-↳ Integrates with ANY model, ANY API, ANY system.
-
-↳ Handles MILLIONS of calls with sub-500ms latency.
-
-↳ Trusted by startups and Fortune 500 companies alike.
-
-Fun Fact: VAPI stands for Voice API. Simple name, powerful impact 👏
-
-Voice AI is now at a tipping point.
-
-The question isn't IF you'll use it, but HOW.
-
-Post Credit: Linas Beliunas
+🧩 Start building here: https://huggingface.co/spaces/enzostvs/deepsite
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -211,23 +166,41 @@ Post Credit: Linas Beliunas
 <hr>
 <hr>
 
-<h1>  Introducing Ace: The First Realtime Computer Autopilot </h1>
+<h1>  China did it again! ByteDance just dropped an AI bombshell 😳 </h1>
 
-Ace is not a chatbot. It performs tasks for you. On your computer. Using your mouse and keyboard. At superhuman speeds!
+Meet DreamActor-M1, a next-gen AI model that brings full-body, expressive human animation to a whole new level.
 
-It can use all the tools on your computer. Ace accelerates your work, and helps you confidently use tools you're still learning. Just ask what you need, it gets it done.
+Picture this:
 
-You can use it for your work or your personal life. Ace can optionally use frontier reasoning models for more complex tasks.
+- Snap ONE still photo of anyone.
 
-It outperforms other models on our evaluation suite of computer tasks. Ace is blazing fast! It's 20x faster than competing agents, making it more practical for everyday use.
+- Pair it with ANY short video.
 
-We're just getting started. Ace uses a new behavioral training paradigm. As we scale up training resources, it will grow more intelligent and capable.
+- Instantly transform it into a hyper-realistic, fully expressive animation.
 
-We're rolling out Ace as a research preview. To learn more and sign up, please visit https://lnkd.in/gi7_s6Kz.
+Yes, the future arrived early.
 
-The team behind Ace is comprised of machine learning researchers, engineers, and software specialists. Their mission is to liberate humanity from digital labor. You can learn more about them at https://generalagents.com/ace/. If their mission excites you, they'd love to hear from you.
+Why DreamActor-M1 is huge:
 
-You can signup for the research preview at: https://generalagents.com/about/
+→ Unmatched realism. Subtle smiles, tiny frowns - all are now captured perfectly with AI.
+
+→ Creative Revolution. Filmmakers, creators, gamers - this means incredible animations for everyone without million-dollar budgets.
+
+→ Social Media Magic. Turn selfies into videos in seconds. TikTok & Instagram are about to get even wilder.
+
+But here’s the scary truth: with great power comes great risk.
+
+↳ Fake political speeches.
+
+↳ Misleading viral content.
+
+↳ Identity theft at scale.
+
+This means we need an urgent ethics debate, and we need guidelines, fast.
+
+DreamActor-M1 isn't just tech - it’s a wake-up call.
+
+Post Credit: Linas Beliunas
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -246,19 +219,29 @@ You can signup for the research preview at: https://generalagents.com/about/
 <hr>
 <hr>
 
-<h1> 🚀Breaking: Anthropic Unveils Claude For Education for Higher Learning  </h1>
+<h1> 🌳🌳 Compose Anything is out 🌳🌳  </h1>
 
-Highlights:
+👉Skywork AI unveils SkyReels-A2, a controllable video generation framework capable of assembling arbitrary visual elements (e.g., characters, objects, backgrounds) into synthesized videos based on textual prompts. Code, models, & evaluation benchmark released💙
 
-1️⃣Learning mode: Encourages critical thinking by guiding students through reasoning processes rather than providing direct answers.
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
 
-2️⃣Campus-wide access: Collaborations with Northeastern University, LSE, and Champlain College ensure equitable AI access for thousands of students globally.
+✅SkyReels-A2: novel elements-to-video (E2V)
 
-3️⃣Academic partnerships: Integration with Internet2 and Canvas LMS to embed AI into teaching, learning, and administration.
+✅Multiple inputs: characters, objects & background 
 
-4️⃣Student programs: Launch of Claude Campus Ambassadors and funding opportunities for student-led AI projects using API credits.
+✅Meticulously curated text-reference-video triplets
 
-How do you envision AI transforming education in the next decade? 
+✅HQ, editable & temporally consistent multi-visual-elements videos
+
+👉Paper: https://arxiv.org/pdf/2504.02436
+
+👉Project:  https://skyworkai.github.io/skyreels-a2.github.io/
+
+👉Repo:  https://github.com/SkyworkAI/SkyReels-A2
+
+🤗Models:  https://huggingface.co/Skywork/SkyReels-A2
+
+ 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -277,17 +260,19 @@ How do you envision AI transforming education in the next decade?
 <hr>
 <hr>
 
-<h1> 🚨Breaking: Microsoft Copilot Expands Unlimited Voice Mode With Rain And Birch </h1>
+<h1> New announcement from You.com </h1>
 
-Here's everything you need to know⬇️ 
+Your research, your rules.
 
-🔹Unlimited Voice Access: Users can now choose from multiple voice options, including Birch and Rain, for more natural and engaging conversations.
+ARI, our deep research AI agent, now lets you:
 
-🔹Hands-Free Efficiency: The voice feature allows seamless multitasking with natural language commands, making it easier to manage tasks or brainstorm ideas on the go.
+🌐 Customize your web sources – include only the sites you trust and block the noise
 
-🔹Free for All: Unlike competitors, Copilot's voice functionality is available for free, regardless of subscription status.
+📂 Add files – get hyper-personalized insights by blending your knowledge with the web
 
-What’s your take on these updates? How do you see AI voices transforming daily interactions? Let’s discuss!
+Make ARI yours. No more generic answers. No more irrelevant sources.
+
+Try it now on the Team plan: you.com/team
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
