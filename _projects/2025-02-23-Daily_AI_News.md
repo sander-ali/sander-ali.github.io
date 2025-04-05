@@ -37,9 +37,13 @@ It is believed that the verifiability of RL rewards is one of the most important
 
 Project Loong🐉 is officially released! Everyone is welcome to help build environments for agents!
 
-Here is the project link—please give them a star: https://github.com/camel-ai/loong
+Here is the project link—please give them a star 
 
-Friends interested in co-building can join their initiative: https://www.camel-ai.org/launchweek-environments
+https://github.com/camel-ai/loong
+
+Friends interested in co-building can join their initiative
+
+https://www.camel-ai.org/launchweek-environments
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -94,7 +98,8 @@ New QAT Google DeepMind Gemma 3 checkpoints with similar performance while using
 
 Quantization-Aware Training (QAT) simulates low-precision operations during training to allow loss-less quantization afterwards for smaller, faster models while maintaining accuracy. We applied QAT on ~5,000 steps using probabilities from the non-quantized checkpoint as targets. 🎯 
 
-Official QAT checkpoints for all Gemma 3 sizes are now available on Hugging Face, Kaggle and directly runnable with Ollama or llama.cpp: 🤗 
+Official QAT checkpoints for all Gemma 3 sizes are now available on Hugging Face, Kaggle and directly runnable with Ollama or llama.cpp 🤗 
+
 https://huggingface.co/collections/google/gemma-3-qat-67ee61ccacbf2be4195c265b
 
 Ollama command, remove the ():
@@ -147,7 +152,9 @@ Plus, Fireworks AI is one of the inference providers, making everything run smoo
 
 Now, it's your turn to build something cool on DeepSite 
 
-🧩 Start building here: https://huggingface.co/spaces/enzostvs/deepsite
+🧩 Start building here
+
+https://huggingface.co/spaces/enzostvs/deepsite
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -233,13 +240,21 @@ Post Credit: Linas Beliunas
 
 ✅HQ, editable & temporally consistent multi-visual-elements videos
 
-👉Paper: https://arxiv.org/pdf/2504.02436
+👉Paper 
 
-👉Project:  https://skyworkai.github.io/skyreels-a2.github.io/
+https://arxiv.org/pdf/2504.02436
 
-👉Repo:  https://github.com/SkyworkAI/SkyReels-A2
+👉Project  
 
-🤗Models:  https://huggingface.co/Skywork/SkyReels-A2
+https://skyworkai.github.io/skyreels-a2.github.io/
+
+👉Repo  
+
+https://github.com/SkyworkAI/SkyReels-A2
+
+🤗Models  
+
+https://huggingface.co/Skywork/SkyReels-A2
 
  
 
@@ -272,7 +287,9 @@ ARI, our deep research AI agent, now lets you:
 
 Make ARI yours. No more generic answers. No more irrelevant sources.
 
-Try it now on the Team plan: you.com/team
+Try it now on the Team plan 
+
+https://you.com/
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
