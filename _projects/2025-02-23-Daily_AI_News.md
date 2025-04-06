@@ -43,11 +43,11 @@ Unlike AR models, which generate text sequentially (left-to-right), Dream 7B ena
 
 • Real-World Applications: Excels in general, mathematical, and coding tasks, with a special focus on solving problems with multiple constraints.
 
-<a href="https://huggingface.co/Dream-org/Dream-v0-Base-7B">Base model: Dream-org/Dream-v0-Base-7B</a>
+You can access the Base model <a href="https://huggingface.co/Dream-org/Dream-v0-Base-7B">here</a>
 
-<a href="https://huggingface.co/Dream-org/Dream-v0-Instruct-7B">SFT model: Dream-org/Dream-v0-Instruct-7B</a>
+You can access the SFT model <a href="https://huggingface.co/Dream-org/Dream-v0-Instruct-7B">here</a>
 
-<a href="https://github.com/HKUNLP/Dream">Codebase: GitHub </a>
+The Github repository can be accessed <a href="https://github.com/HKUNLP/Dream">here</a>
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -91,9 +91,8 @@ The system identifies the chunks with the highest similarity to the query, meani
 
 The retrieved chunks are then used by the language model to generate a comprehensive response to the query, drawing from the most relevant information across the selected chunks. 
 
-Know more about <a href="https://towardsdatascience.com/rag-101-chunking-strategies-fdc6f6c2aaec/">chunking strategies</a>
+Know more about <a href="https://towardsdatascience.com/rag-101-chunking-strategies-fdc6f6c2aaec/">chunking</a> strategies
 
-See how to <a href="https://www.youtube.com/watch?v=zHJ3TZmKEeY">chunk and Vectorize text </a> in 5 minutes
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -166,7 +165,7 @@ It goes deep into advanced techniques.
 
 Special topics like AI safety & ethics are included. 
 
-Here's how to access it: <a href="https://academy.openai.com/public/content"> Link </a>
+Click on the <a href="https://academy.openai.com/public/content"> Link </a> to access it
 
 Credits to The AI Radar for sharing it.
 
@@ -203,7 +202,7 @@ Why this is very exciting:
 
 Langflow is all about making it effortless to build and ship AI agents.
 
-👉 <a href="https://www.langflow.org/desktop">Try it out here </a> 
+👉 <a href="https://www.langflow.org/desktop">Try </a> it our here
 
 Thanks for Armand Ruiz for sharing it.
 
@@ -239,7 +238,7 @@ Key features:
 
 What excites you most about V7’s capabilities?
 
-<a href="https://updates.midjourney.com/content/media/2025/04/Draft-Mode-V1.6---Subtitles.mp4"> Check out the video </a>
+Read more about it on their <a href="https://updates.midjourney.com/v7-alpha/"> Information </a> Page
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
