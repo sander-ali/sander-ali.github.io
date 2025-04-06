@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Daily AI news
-date: 2025-04-06
+date: 2025-04-07
 description: This page is dedicated to your daily AI news especially related to Agents, LLMs, and Agentic AI
 img: assets/img/news/logo_SAK_15.PNG
 
@@ -24,31 +24,37 @@ images:
   </div>
 </div>
 
-<h1> 6th April 2025 </h1>
+<h1> 7th April 2025 </h1>
 
 <hr>
 <hr>
 
-<h1> 🎉 After months of hard work and collaboration, CAMEL-AI.org just release its new project Loong🐉.  </h1>
+<h1> Dream 7B is a powerhouse Diffusion reasoning model, streaming its responses like a pro 👇  </h1>
 
-The core concept of Loong is based on a simple assumption: an LLM equipped with a code interpreter and human-built libraries or tools can solve problems with significantly higher reliability compared to models that rely solely on natural language chain-of-thought reasoning. The performance gap between the two can be leveraged to generate synthetic data and for reinforcement learning. This is intuitive as well—many non-computer science fields (such as physics, economics, and computational biology) rely on code to solve practical problems in their daily research.
+Unlike AR models, which generate text sequentially (left-to-right), Dream 7B enables any-order generation, unlocking new possibilities for solving complex reasoning tasks, long-term planning, and maintaining coherence across extended contexts. Its innovative context-adaptive token-level noise rescheduling mechanism ensures precise learning at the token level, setting a new benchmark in LLM training.
 
-It is believed that the verifiability of RL rewards is one of the most important trends in RL for agents!
+✨ Key Highlights of Dream 7B:
 
-Project Loong🐉 is officially released! Everyone is welcome to help build environments for agents!
+• Advanced Reasoning Capabilities: Outperforms similar-sized AR models in tasks like Sudoku and Countdown, even rivaling larger models like DeepSeek V3.
 
-Here is the <a href="https://github.com/camel-ai/loong"> project link </a> — please give them a star 
+• Flexible Inference: Supports diverse user queries by dynamically adjusting decoding behavior and generation order.
 
+• Efficiency at Scale: Reduces computational requirements during pretraining while offering a tunable trade-off between speed and quality during inference.
 
-Friends interested in co-building can join their <a href="https://www.camel-ai.org/launchweek-environments"> initiative </a>
+• Real-World Applications: Excels in general, mathematical, and coding tasks, with a special focus on solving problems with multiple constraints.
 
+<a href="https://huggingface.co/Dream-org/Dream-v0-Base-7B">Base model: Dream-org/Dream-v0-Base-7B</a>
+
+<a href="https://huggingface.co/Dream-org/Dream-v0-Instruct-7B">SFT model: Dream-org/Dream-v0-Instruct-7B</a>
+
+<a href="https://github.com/HKUNLP/Dream">Codebase: GitHub </a>
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/1.jpg"
+    <a href="/assets/img/news/AI news/1.gif"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/1.jpg" 
+      <img src="/assets/img/news/AI news/1.gif" 
            alt="Nyx" 
           />
 </a>
@@ -59,19 +65,35 @@ Friends interested in co-building can join their <a href="https://www.camel-ai.o
 <hr>
 <hr>
 
-<h1> ☄️Breaking News: Dartmouth’s AI Therabot Reduces Depression Symptoms by 51% </h1>
+<h1> Chunking in RAG </h1>
 
-First-ever clinical trial of Therabot, Dartmouth's AI-powered therapy chatbot, delivers remarkable outcomes.
+In RAG, "chunking" refers to the process of dividing large documents into smaller, manageable segments called "chunks," which allows the AI model to more efficiently search and retrieve relevant information by focusing on smaller, contextually cohesive pieces of text instead of processing the entire document at once; essentially, it breaks down complex information into easily digestible units for better understanding and response generation. 
 
-Key highlights:
+How chunking works in RAG:
 
-1️⃣Depression symptoms reduced by 51%, anxiety by 31%, and eating disorder concerns by 19%—on par with traditional therapy.
+- Dividing text:
 
-2️⃣Participants reported forming "therapeutic alliances" with Therabot, describing it as comparable to working with a human therapist.
+Documents are split into chunks based on various strategies, including splitting at paragraph breaks, sentence boundaries, or even using semantic analysis to identify logical topic shifts within the text. 
 
-3️⃣Therabot offers 24/7 real-time support, filling critical gaps for those without access to mental health professionals.
+- Embedding creation:
 
-Could AI therapy redefine the future of mental health care?
+Each chunk is then converted into a vector embedding, which represents the semantic meaning of the text within that chunk. 
+
+- Query comparison:
+
+When a user asks a question, the query is also transformed into a vector embedding and compared to the embeddings of all the chunks in the document database. 
+
+- Relevance ranking:
+
+The system identifies the chunks with the highest similarity to the query, meaning they are most likely to contain the relevant information. 
+
+- Response generation:
+
+The retrieved chunks are then used by the language model to generate a comprehensive response to the query, drawing from the most relevant information across the selected chunks. 
+
+Know more about <a href="https://towardsdatascience.com/rag-101-chunking-strategies-fdc6f6c2aaec/">chunking strategies</a>
+
+See how to <a href="https://www.youtube.com/watch?v=zHJ3TZmKEeY">chunk and Vectorize text </a> in 5 minutes
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -89,22 +111,23 @@ Could AI therapy redefine the future of mental health care?
 <hr>
 <hr>
 
-<h1>  Gemma 3 Updates! </h1>
+<h1>  DeepSeek strikes again!  </h1>
 
-New QAT Google DeepMind Gemma 3 checkpoints with similar performance while using 3x less memory! 🤯 
+A new DeepSeek AI paper reveals how smaller models can surprisingly outperform giants through clever inference techniques rather than parameter scaling. 
 
-Quantization-Aware Training (QAT) simulates low-precision operations during training to allow loss-less quantization afterwards for smaller, faster models while maintaining accuracy. We applied QAT on ~5,000 steps using probabilities from the non-quantized checkpoint as targets. 🎯 
+Reward models are the unsung heroes behind AI alignment, providing critical feedback signals that guide LLMs toward producing high-quality, human-aligned responses. 
 
-Official QAT checkpoints for all Gemma 3 sizes are now available on Hugging Face, Kaggle and directly runnable with Ollama or llama.cpp 🤗 
+As these systems grow increasingly complex, the traditional approach of simply scaling up model size to improve performance has become prohibitively expensive and inefficient. 
 
-<a href="https://huggingface.co/collections/google/gemma-3-qat-67ee61ccacbf2be4195c265b"> HF checkpoint </a>
+Self-Principled Critique Tuning (SPCT) is a new method that enables generative reward models to adaptively formulate principles and critiques based on input queries. 
 
-Ollama command, remove the ():
-``` 
-ollama run hf(.)co/google/gemma-3-4b-it-qat-q4_0-gguf
-```
+Rather than investing in larger models, they focus on inference-time scaling through parallel sampling and meta-reward modeling. 
 
-One last thing, All Gemma 3 sizes (1B, 4B, 12B, 27B) now available AI Studio and via API to test.
+With success: their 27B parameter model outperforms alternatives up to 671B parameters on standard benchmarks. 
+
+They demonstrate that thoughtful sampling strategies can effectively substitute for raw parameter count, challenging the conventional wisdom that bigger always means better in AI development. 
+
+Information Courtesy: LLM Watch and Pascal Biese
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -123,34 +146,29 @@ One last thing, All Gemma 3 sizes (1B, 4B, 12B, 27B) now available AI Studio and
 <hr>
 <hr>
 
-<h1>  Announcement from Fireworks AI </h1>
+<h1> OpenAI just launched their Academy.  </h1>
 
 We just built something fun with Hugging Face’s new tool— An AI crossword puzzle 🧩 
 
-This puzzle was created using DeepSite—an open-source, AI coding platform powered by DeepSeek AI V3.1 and hosted on Hugging Face Spaces.
+Free AI courses are here: 
 
-With just a few instructions, it can generate:
+You can access hours of content today.
 
-→ Single-file HTML apps
+This includes video, workshops, and live sessions. 
 
-→ Interactive tools
+Anyone with an email and LinkedIn can join. 
 
-→ Even 3D games
+The curriculum covers all skill levels. 
 
-No frameworks. No fancy prompt engineering!
+It starts with basic AI concepts. 
 
-And here’s the best part:
+It goes deep into advanced techniques. 
 
-→ It’s completely free and open-source.
+Special topics like AI safety & ethics are included. 
 
-→ You can run it locally or deploy it in Docker.
+Here's how to access it: <a href="https://academy.openai.com/public/content"> Link </a>
 
-Plus, Fireworks AI is one of the inference providers, making everything run smoothly.
-
-Now, it's your turn to build something cool on <a href="https://huggingface.co/spaces/enzostvs/deepsite"> DeepSite </a>
-
-🧩 Start building here
-
+Credits to The AI Radar for sharing it.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -169,41 +187,26 @@ Now, it's your turn to build something cool on <a href="https://huggingface.co/s
 <hr>
 <hr>
 
-<h1>  China did it again! ByteDance just dropped an AI bombshell 😳 </h1>
+<h1>  🚨 Big news: Langflow Desktop is HERE! 🚀 </h1>
 
-Meet DreamActor-M1, a next-gen AI model that brings full-body, expressive human animation to a whole new level.
+No browser. No setup. No distractions. Just pure, local GenAI building power.
 
-Picture this:
+💻 Langflow Desktop (Alpha) is now available for MacOS
 
-- Snap ONE still photo of anyone.
+Why this is very exciting:
 
-- Pair it with ANY short video.
+1/ Instant setup – No Python installs or environment configs.
 
-- Instantly transform it into a hyper-realistic, fully expressive animation.
+2/ Runs locally – Full control, zero friction.
 
-Yes, the future arrived early.
+3/ Built for builders – Test and iterate faster than ever.
 
-Why DreamActor-M1 is huge:
+Langflow is all about making it effortless to build and ship AI agents.
 
-→ Unmatched realism. Subtle smiles, tiny frowns - all are now captured perfectly with AI.
+👉 <a href="https://www.langflow.org/desktop">Try it out here </a> 
 
-→ Creative Revolution. Filmmakers, creators, gamers - this means incredible animations for everyone without million-dollar budgets.
+Thanks for Armand Ruiz for sharing it.
 
-→ Social Media Magic. Turn selfies into videos in seconds. TikTok & Instagram are about to get even wilder.
-
-But here’s the scary truth: with great power comes great risk.
-
-↳ Fake political speeches.
-
-↳ Misleading viral content.
-
-↳ Identity theft at scale.
-
-This means we need an urgent ethics debate, and we need guidelines, fast.
-
-DreamActor-M1 isn't just tech - it’s a wake-up call.
-
-Post Credit: Linas Beliunas
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -222,29 +225,22 @@ Post Credit: Linas Beliunas
 <hr>
 <hr>
 
-<h1> 🌳🌳 Compose Anything is out 🌳🌳  </h1>
+<h1> Midjourney Surprise Launches V7 Alpha 🚀  </h1>
 
-👉Skywork AI unveils SkyReels-A2, a controllable video generation framework capable of assembling arbitrary visual elements (e.g., characters, objects, backgrounds) into synthesized videos based on textual prompts. Code, models, & evaluation benchmark released💙
+Key features:
 
-𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬:
+🔹Enhanced Image Quality: V7 boasts improved textures, coherence in details, and superior handling of text and image prompts.
 
-✅SkyReels-A2: novel elements-to-video (E2V)
+🔹Personalization by Default: Users can create a tailored profile in just 5 minutes, enabling outputs that align with their unique preferences.
 
-✅Multiple inputs: characters, objects & background 
+🔹Draft Mode for Speed: Generate images 10x faster at half the cost, perfect for rapid ideation and real-time adjustments.
 
-✅Meticulously curated text-reference-video triplets
+🔹Two Modes Available: Turbo mode for speed enthusiasts and Relax mode for optimized workflows.
 
-✅HQ, editable & temporally consistent multi-visual-elements videos
+What excites you most about V7’s capabilities?
 
-👉 <a href="https://arxiv.org/pdf/2504.02436"> Paper </a> 
+<a href="https://updates.midjourney.com/content/media/2025/04/Draft-Mode-V1.6---Subtitles.mp4"> Check out the video </a>
 
-👉 <a href="https://skyworkai.github.io/skyreels-a2.github.io/"> Project </a>  
-
-👉 <a href="https://github.com/SkyworkAI/SkyReels-A2"> Repo </a>  
-
-🤗 <a href="https://huggingface.co/Skywork/SkyReels-A2"> Models </a>  
-
- 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/6.jpg"
@@ -262,22 +258,47 @@ Post Credit: Linas Beliunas
 <hr>
 <hr>
 
-<h1> New announcement from You.com </h1>
+<h1> 🔬 OpenAI's PaperBench: Testing AI's Ability to Replicate Research Papers </h1>
 
-Your research, your rules.
+Ever wondered if AI could replicate its own research? OpenAI just dropped PaperBench, and it's giving us a glimpse into our AI future.
 
-ARI, our deep research AI agent, now lets you:
+Imagine dropping an AI into a virtual machine with nothing but a research paper and telling it: "Build this from scratch." That's PaperBench in a nutshell.
 
-🌐 Customize your web sources – include only the sites you trust and block the noise
+🧠 What caught my attention:
 
-📂 Add files – get hyper-personalized insights by blending your knowledge with the web
+These AI agents must:
 
-Make ARI yours. No more generic answers. No more irrelevant sources.
+- Decode complex research papers 📝
 
-Try it now on the Team plan 
+- Write code without any templates 💻
 
-<a href="https://you.com/"> Link </a>
+- Debug their own work 🔍
 
+- Reproduce exact results 📊
+
+All while locked in a VM with a GPU and zero human hand-holding!
+
+🏆 Current standings:
+
+Claude 3.5 Sonnet leads with 21% overall (impressive!)
+
+OpenAI's o1 follows at 13-24%
+
+Human ML PhDs still dominate at 41.4%
+
+But here's what's fascinating - the latest powerhouses haven't even entered the arena yet: O3 pro high, Claude 3.7 Sonnet, Gemini 2.5 Pro, and Grok 3 remain untested.
+
+🚀 Why this keeps me up at night:
+
+If models master this benchmark, we're looking at potential recursive self-improvement loops. AI that can understand, replicate, and potentially improve upon AI research without humans in the loop. That can even lead to the Sci-fi esque Artificial Super intelligence.
+
+The implications? Mind-blowing acceleration of progress. AI becoming its own researcher, developer, and innovator.
+
+We're not there yet - current models excel at writing code but stumble when executing it or verifying results. But make no mistake, the race is on.
+
+What do you think? Are we witnessing the early days of AI taking the reins of its own evolution? The age of ASI is surely within my lifetime. I can feel it.
+
+Post Credit: Kishore Kumar
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
