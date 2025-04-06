@@ -43,7 +43,6 @@ Unlike AR models, which generate text sequentially (left-to-right), Dream 7B ena
 
 • Real-World Applications: Excels in general, mathematical, and coding tasks, with a special focus on solving problems with multiple constraints.
 
-The Github repository can be accessed <a href="https://github.com/HKUNLP/Dream">here</a>
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
