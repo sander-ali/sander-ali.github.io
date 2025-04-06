@@ -43,18 +43,14 @@ Unlike AR models, which generate text sequentially (left-to-right), Dream 7B ena
 
 • Real-World Applications: Excels in general, mathematical, and coding tasks, with a special focus on solving problems with multiple constraints.
 
-You can access the Base model <a href="https://huggingface.co/Dream-org/Dream-v0-Base-7B">here</a>
-
-You can access the SFT model <a href="https://huggingface.co/Dream-org/Dream-v0-Instruct-7B">here</a>
-
 The Github repository can be accessed <a href="https://github.com/HKUNLP/Dream">here</a>
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/1.gif"
+    <a href="/assets/img/news/AI news/1.jpg"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/1.gif" 
+      <img src="/assets/img/news/AI news/1.jpg" 
            alt="Nyx" 
           />
 </a>
@@ -165,8 +161,6 @@ It goes deep into advanced techniques.
 
 Special topics like AI safety & ethics are included. 
 
-Click on the <a href="https://academy.openai.com/public/content"> Link </a> to access it
-
 Credits to The AI Radar for sharing it.
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -202,10 +196,7 @@ Why this is very exciting:
 
 Langflow is all about making it effortless to build and ship AI agents.
 
-👉 <a href="https://www.langflow.org/desktop">Try </a> it our here
-
 Thanks for Armand Ruiz for sharing it.
-
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
