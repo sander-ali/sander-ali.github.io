@@ -229,10 +229,10 @@ What excites you most about V7’s capabilities?
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <a href="/assets/img/news/AI news/6.jpg"
+    <a href="/assets/img/news/AI news/6.JPG"
 
       target="_blank">
-      <img src="/assets/img/news/AI news/6.jpg" 
+      <img src="/assets/img/news/AI news/6.JPG" 
            alt="Nyx" 
           />
 </a>
