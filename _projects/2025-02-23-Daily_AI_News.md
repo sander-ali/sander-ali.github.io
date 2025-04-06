@@ -37,13 +37,10 @@ It is believed that the verifiability of RL rewards is one of the most important
 
 Project Loong🐉 is officially released! Everyone is welcome to help build environments for agents!
 
-Here is the project link—please give them a star 
+Here is the <a href="https://github.com/camel-ai/loong"> project link </a> — please give them a star 
 
-https://github.com/camel-ai/loong
 
-Friends interested in co-building can join their initiative
-
-https://www.camel-ai.org/launchweek-environments
+Friends interested in co-building can join their <a href="https://www.camel-ai.org/launchweek-environments"> initiative </a>
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -100,7 +97,7 @@ Quantization-Aware Training (QAT) simulates low-precision operations during trai
 
 Official QAT checkpoints for all Gemma 3 sizes are now available on Hugging Face, Kaggle and directly runnable with Ollama or llama.cpp 🤗 
 
-https://huggingface.co/collections/google/gemma-3-qat-67ee61ccacbf2be4195c265b
+<a href="https://huggingface.co/collections/google/gemma-3-qat-67ee61ccacbf2be4195c265b"> HF checkpoint </a>
 
 Ollama command, remove the ():
 ``` 
@@ -150,11 +147,10 @@ And here’s the best part:
 
 Plus, Fireworks AI is one of the inference providers, making everything run smoothly.
 
-Now, it's your turn to build something cool on DeepSite 
+Now, it's your turn to build something cool on <a href="https://huggingface.co/spaces/enzostvs/deepsite"> DeepSite </a>
 
 🧩 Start building here
 
-https://huggingface.co/spaces/enzostvs/deepsite
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -240,24 +236,15 @@ Post Credit: Linas Beliunas
 
 ✅HQ, editable & temporally consistent multi-visual-elements videos
 
-👉Paper 
+👉 <a href="https://arxiv.org/pdf/2504.02436"> Paper </a> 
 
-https://arxiv.org/pdf/2504.02436
+👉 <a href="https://skyworkai.github.io/skyreels-a2.github.io/"> Project </a>  
 
-👉Project  
+👉 <a href="https://github.com/SkyworkAI/SkyReels-A2"> Repo </a>  
 
-https://skyworkai.github.io/skyreels-a2.github.io/
-
-👉Repo  
-
-https://github.com/SkyworkAI/SkyReels-A2
-
-🤗Models  
-
-https://huggingface.co/Skywork/SkyReels-A2
+🤗 <a href="https://huggingface.co/Skywork/SkyReels-A2"> Models </a>  
 
  
-
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="/assets/img/news/AI news/6.jpg"
@@ -289,7 +276,7 @@ Make ARI yours. No more generic answers. No more irrelevant sources.
 
 Try it now on the Team plan 
 
-https://you.com/
+<a href="https://you.com/"> Link </a>
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
