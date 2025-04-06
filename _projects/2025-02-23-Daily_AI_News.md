@@ -87,8 +87,6 @@ The system identifies the chunks with the highest similarity to the query, meani
 
 The retrieved chunks are then used by the language model to generate a comprehensive response to the query, drawing from the most relevant information across the selected chunks. 
 
-Know more about <a href="https://towardsdatascience.com/rag-101-chunking-strategies-fdc6f6c2aaec/">chunking</a> strategies
-
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -229,7 +227,6 @@ Key features:
 
 What excites you most about V7’s capabilities?
 
-Read more about it on their <a href="https://updates.midjourney.com/v7-alpha/"> Information </a> Page
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div class="pswp-gallery pswp-gallery--single-column" id="gallery--news" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
