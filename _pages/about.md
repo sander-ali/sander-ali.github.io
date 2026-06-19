@@ -27,6 +27,12 @@ I bring a rich blend of academic and industrial experience to the computer visio
 
 I am currently associated with Dublin City University as an Assistant Professor. Formerly, I worked with Technological University Dublin (TU Dublin) as an Assistant Lecturer from Dec 2023 to Dec 2024. I have previously served as an Associate Professor, Assistant Professor, and Lecturer (from 2011 - 2023) at University of Sindh, Pakistan. I have the experience of working with multinational companies as a Network and RF Engineer from 2008 to 2011. I have published more than 70 research articles in national, international journals, and conference proceedings. I am the runner-up recipient for UG2+ Competition (Atmospheric Turbulence Mitigation) at CVPR2022 and second runner-up for UG2+ Competition (Target Coded Restoration Challenge) at CVPR 2023. Furthermore, I have achieved Top ten positions in several of the CVPR challenges from 2022 to 2024. I am currently serving as an Associate Editor for PLoS ONE and Consumer Electronics Letters. In addition, I am serving(ed) as a Guest Editor for special issues in IEEE Transactions on Vehicular Technology, IEEE Transactions on Green Communications and Networks, IEEE Open Journal of the Communication Society, IEEE Transactions on Consumer Electronics, Computers and Electrical Engineering, Human-centric Computing and Information Sciences, Journal of King Saud University: Computer and Information Sciences, and Sustainable Energy Technology and Assessments. I have also served as a TPC member for main tracks and workshops in A* Conferences, such as ECAI, Globecom, Mobicom, and ICDCS. I am a Regular Reviewer of notable journals, including IEEE Transactions, IEEE Journals, Elsevier Journals, and Springer Journals.
 
+<div style="text-align:center; margin:40px 0;">
+  <a href="/games/" style="display:inline-block; background:#ffcc00; color:#1a1f5e; padding:18px 50px; border-radius:60px; font-weight:700; font-size:1.6rem; text-decoration:none; box-shadow:0 8px 30px rgba(255,204,0,0.3);">
+    🚀 Play Dyslexia Quest
+  </a>
+</div>
+
 
 
 💡 I am open to new opportunities and exploring exciting roles in my field of expertise. Please feel free to contact me to discuss potential collaborations.
