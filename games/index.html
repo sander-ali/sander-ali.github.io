@@ -629,6 +629,7 @@
 
     function shuffle(arr) { for(let i=arr.length-1; i>0; i--) { const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 
+    // ----- Shared word pools and helpers -----
     const WORD_POOL = {
       3: ['CAT','DOG','SUN','HAT','CUP','BAG','LOG','BUG','FAN','MAP','BED','CAR','BUS','PEN','GUM','FOX','HEN','COW','FLY','ANT'],
       4: ['FISH','BIRD','TREE','STAR','MOON','BOOK','CAKE','FIRE','LAMP','BALL','FROG','NEST','HAND','LION','BEAR','DUCK','WOLF','DEER','SEAL','OWL'],
@@ -666,6 +667,7 @@
       }
     }
 
+    // ----- Background decoration helpers -----
     function getBgDecorations(gameId) {
       const sets = [
         ['✨','🌟','⭐','💫','🌸','🌈'],
@@ -722,10 +724,8 @@
     }
 
     // ================================================================
-    //  GAME RENDERERS
+    //  GAME 1: WORD MATCH (unchanged)
     // ================================================================
-
-    // ----- Game 1: Word Match -----
     gameRenderers[1] = function(gameId, level) {
       const state = gameStates[gameId];
       const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
@@ -794,7 +794,9 @@
       restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[1](gameId, state.level); });
     };
 
-    // ----- Game 2: Definition Spelling -----
+    // ================================================================
+    //  GAME 2: DEFINITION SPELLING (unchanged)
+    // ================================================================
     const DEFINITIONS = {
       'CAT':'A small furry pet that meows','DOG':'Loyal animal that barks','SUN':'The star in our sky','HAT':'Worn on the head','CUP':'Used for drinking','BAG':'Container for carrying','LOG':'Piece of wood','BUG':'Small insect','FAN':'Makes air move','MAP':'Shows places','BED':'You sleep on it','CAR':'Four‑wheel vehicle','BUS':'Large vehicle for many','PEN':'Used for writing','GUM':'Chewy stuff','FOX':'Clever wild animal','HEN':'Female chicken','COW':'Gives milk','FLY':'Small insect with wings','ANT':'Tiny insect that works in colonies',
       'FISH':'Lives in water','BIRD':'Has wings and feathers','TREE':'Tall plant with leaves','STAR':'Bright dot at night','MOON':'Orbits Earth','BOOK':'You read it','CAKE':'Sweet baked treat','FIRE':'Burns and gives heat','LAMP':'Gives light','BALL':'Round toy','FROG':'Jumps and croaks','NEST':'Bird home','HAND':'Body part','LION':'Big cat, king of beasts','BEAR':'Large furry mammal','DUCK':'Swims in ponds','WOLF':'Howls at moon','DEER':'Has antlers','SEAL':'Lives in ocean','OWL':'Hunts at night',
@@ -862,152 +864,182 @@
       restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[2](gameId, state.level); });
     };
 
-    // ----- Game 3: Memory Cards (REAL memory game) -----
-    const MEMORY_THEMES = [
-      ['🐱', '🐶', '🐰', '🦊', '🐻', '🐼', '🐨', '🦁'],
-      ['🍎', '🍌', '🍇', '🍉', '🍓', '🍑', '🍒', '🍋'],
-      ['🌞', '🌙', '⭐', '🌍', '🌈', '🌸', '🌺', '🌻'],
-      ['🎈', '🎉', '🎁', '🎀', '🧸', '🎪', '🎨', '🎵']
-    ];
+    // ================================================================
+    // ----- Game 3: Memory Cards (FIXED – proper level progression) -----
+const MEMORY_THEMES = [
+  ['🐱', '🐶', '🐰', '🦊', '🐻', '🐼', '🐨', '🦁'],
+  ['🍎', '🍌', '🍇', '🍉', '🍓', '🍑', '🍒', '🍋'],
+  ['🌞', '🌙', '⭐', '🌍', '🌈', '🌸', '🌺', '🌻'],
+  ['🎈', '🎉', '🎁', '🎀', '🧸', '🎪', '🎨', '🎵']
+];
 
-    gameRenderers[3] = function(gameId, level) {
-      const state = gameStates[gameId];
-      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
-      if (!container) return;
+gameRenderers[3] = function(gameId, level) {
+  const state = gameStates[gameId];
+  const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+  if (!container) return;
 
-      // Determine theme and pair count
-      let themeIndex = level<=5 ? 0 : level<=10 ? 1 : level<=15 ? 2 : 3;
-      const pairCount = Math.min(4 + Math.floor((level-1)/3), 8);
-      const themeIcons = MEMORY_THEMES[themeIndex];
-      const shuffledIcons = shuffle([...themeIcons]);
-      const selectedIcons = shuffledIcons.slice(0, pairCount);
+  // Ensure state has level and score (score is pairs matched in current level)
+  if (!state.level) state.level = level || 1;
+  if (state.score === undefined) state.score = 0;
 
-      // Build deck
-      let deck = [];
-      selectedIcons.forEach(icon => {
-        deck.push({ id: icon, icon: icon });
-        deck.push({ id: icon, icon: icon });
-      });
-      shuffle(deck);
+  const currentLevel = state.level;
 
-      let flipped = [];
-      let matched = new Set();
-      let lock = false;
-      let gameOver = false;
+  // Determine theme and pair count based on current level
+  let themeIndex = currentLevel <= 5 ? 0 : currentLevel <= 10 ? 1 : currentLevel <= 15 ? 2 : 3;
+  const pairCount = Math.min(4 + Math.floor((currentLevel - 1) / 3), 8);
+  const themeIcons = MEMORY_THEMES[themeIndex];
+  const shuffledIcons = shuffle([...themeIcons]);
+  const selectedIcons = shuffledIcons.slice(0, pairCount);
 
-      container.innerHTML = `
-        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} pairs matched</span></div>
-        <div class="card-grid" id="mem-grid"></div>
-        <div class="feedback-box" id="mem-feedback">Flip two cards to find a match!</div>
-        <div class="flex-center">
-          <button class="btn btn-next" id="mem-next">➜ Next Level</button>
-          <button class="btn btn-restart" id="mem-restart">⟳ Restart</button>
-        </div>
-      `;
-      const grid = document.getElementById('mem-grid');
-      const fb = document.getElementById('mem-feedback');
-      const nextBtn = document.getElementById('mem-next');
-      const restartBtn = document.getElementById('mem-restart');
+  // Build deck (two of each icon)
+  let deck = [];
+  selectedIcons.forEach(icon => {
+    deck.push({ id: icon, icon: icon });
+    deck.push({ id: icon, icon: icon });
+  });
+  shuffle(deck);
 
-      function renderCards() {
-        grid.innerHTML = '';
-        deck.forEach((card, idx) => {
-          const div = document.createElement('div');
-          div.className = 'card';
-          if (matched.has(card.id)) {
-            div.classList.add('matched');
-          } else if (flipped.includes(idx)) {
-            div.classList.add('flipped');
-          }
-          const front = document.createElement('div');
-          front.className = 'card-front';
-          front.textContent = '?';
-          const back = document.createElement('div');
-          back.className = 'card-back';
-          back.textContent = card.icon;
-          div.appendChild(front);
-          div.appendChild(back);
-          if (!matched.has(card.id)) {
-            div.addEventListener('click', () => handleClick(idx));
-          }
-          grid.appendChild(div);
-        });
+  // Game variables (fresh for this level)
+  let flipped = [];
+  let matched = new Set();
+  let lock = false;
+  let gameOver = false;
+
+  container.innerHTML = `
+    <div class="level-header">
+      <span class="level-badge">Level ${currentLevel}/20</span>
+      <span class="progress">${state.score} pairs matched</span>
+    </div>
+    <div class="card-grid" id="mem-grid"></div>
+    <div class="feedback-box" id="mem-feedback">Flip two cards to find a match!</div>
+    <div class="flex-center">
+      <button class="btn btn-next" id="mem-next">➜ Next Level</button>
+      <button class="btn btn-restart" id="mem-restart">⟳ Restart</button>
+    </div>
+  `;
+  const grid = document.getElementById('mem-grid');
+  const fb = document.getElementById('mem-feedback');
+  const nextBtn = document.getElementById('mem-next');
+  const restartBtn = document.getElementById('mem-restart');
+
+  function renderCards() {
+    grid.innerHTML = '';
+    deck.forEach((card, idx) => {
+      const div = document.createElement('div');
+      div.className = 'card';
+      if (matched.has(card.id)) {
+        div.classList.add('matched');
+      } else if (flipped.includes(idx)) {
+        div.classList.add('flipped');
       }
+      const front = document.createElement('div');
+      front.className = 'card-front';
+      front.textContent = '?';
+      const back = document.createElement('div');
+      back.className = 'card-back';
+      back.textContent = card.icon;
+      div.appendChild(front);
+      div.appendChild(back);
+      if (!matched.has(card.id)) {
+        div.addEventListener('click', () => handleClick(idx));
+      }
+      grid.appendChild(div);
+    });
+  }
 
-      function handleClick(idx) {
-        if (lock) return;
-        if (matched.has(deck[idx].id)) return;
-        if (flipped.includes(idx)) return;
-        if (gameOver) return;
+  function handleClick(idx) {
+    if (lock) return;
+    if (matched.has(deck[idx].id)) return;
+    if (flipped.includes(idx)) return;
+    if (gameOver) return;
 
-        flipped.push(idx);
+    flipped.push(idx);
+    renderCards();
+
+    if (flipped.length === 2) {
+      lock = true;
+      const idx1 = flipped[0];
+      const idx2 = flipped[1];
+      const c1 = deck[idx1];
+      const c2 = deck[idx2];
+      if (c1.id === c2.id && idx1 !== idx2) {
+        matched.add(c1.id);
+        state.score++;
+        fb.textContent = '✅ Match found! 🎉';
+        fb.className = 'feedback-box correct';
+        fireConfetti(30);
+        flipped = [];
+        lock = false;
         renderCards();
+        document.querySelector('.progress').textContent = `${state.score} pairs matched`;
 
-        if (flipped.length === 2) {
-          lock = true;
-          const idx1 = flipped[0];
-          const idx2 = flipped[1];
-          const c1 = deck[idx1];
-          const c2 = deck[idx2];
-          if (c1.id === c2.id && idx1 !== idx2) {
-            matched.add(c1.id);
-            state.score++;
-            fb.textContent = '✅ Match found! 🎉';
-            fb.className = 'feedback-box correct';
-            fireConfetti(30);
-            flipped = [];
-            lock = false;
-            renderCards();
-            if (matched.size === selectedIcons.length) {
-              gameOver = true;
-              fb.textContent = '🎉 All pairs matched! Amazing!';
-              fb.className = 'feedback-box correct';
-              if (state.score >= 20) nextBtn.textContent = '🎉 Mastered! Play Again';
-              nextBtn.classList.add('show');
-              fireConfetti(60);
-            }
-          } else {
-            fb.textContent = '❌ Not a match. Try again!';
-            fb.className = 'feedback-box wrong';
-            setTimeout(() => {
-              flipped = [];
-              lock = false;
-              renderCards();
-              fb.textContent = 'Keep going! You can do it!';
-              fb.className = 'feedback-box';
-            }, 800);
-          }
-        } else {
-          fb.textContent = 'Pick another card...';
-          fb.className = 'feedback-box';
+        if (matched.size === selectedIcons.length) {
+          gameOver = true;
+          fb.textContent = '🎉 All pairs matched! Amazing!';
+          fb.className = 'feedback-box correct';
+          if (state.score >= 20) nextBtn.textContent = '🎉 Mastered! Play Again';
+          nextBtn.classList.add('show');
+          fireConfetti(60);
         }
+      } else {
+        fb.textContent = '❌ Not a match. Try again!';
+        fb.className = 'feedback-box wrong';
+        setTimeout(() => {
+          flipped = [];
+          lock = false;
+          renderCards();
+          fb.textContent = 'Keep going! You can do it!';
+          fb.className = 'feedback-box';
+        }, 800);
       }
+    } else {
+      fb.textContent = 'Pick another card...';
+      fb.className = 'feedback-box';
+    }
+  }
 
-      renderCards();
-
-      function nextLevel() {
-        if (state.score >= 20) { state.score = 0; state.level = 0; }
-        if (state.level < 20) { state.level++; gameRenderers[3](gameId, state.level); }
-        else { state.level = 1; state.score = 0; gameRenderers[3](gameId, state.level); }
+  // ----- Next Level (fixed) -----
+  function nextLevel() {
+    // Only advance if all pairs are matched
+    if (matched.size === selectedIcons.length) {
+      // Increment level (loop back to 1 after 20)
+      if (state.level >= 20) {
+        state.level = 1;
+      } else {
+        state.level++;
       }
-      nextBtn.addEventListener('click', nextLevel);
-      restartBtn.addEventListener('click', function() { state.level = 1; state.score = 0; gameRenderers[3](gameId, state.level); });
-    };
+      state.score = 0; // reset pairs for new level
+      // Re-render the game with the new level
+      gameRenderers[3](gameId, state.level);
+    }
+  }
 
-    // ----- Game 4: Word Search (FIXED – proper interactive word search) -----
+  // ----- Restart -----
+  function restartGame() {
+    state.level = 1;
+    state.score = 0;
+    gameRenderers[3](gameId, state.level);
+  }
+
+  nextBtn.addEventListener('click', nextLevel);
+  restartBtn.addEventListener('click', restartGame);
+
+  renderCards();
+};
+    // ================================================================
+    //  GAME 4: WORD SEARCH (unchanged)
+    // ================================================================
     gameRenderers[4] = function(gameId, level) {
       const state = gameStates[gameId];
       const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
       if (!container) return;
 
-      // Determine grid size and word length based on level
       let gridSize, wordLen;
       if (level <= 5) { gridSize = 5; wordLen = 3; }
       else if (level <= 10) { gridSize = 6; wordLen = 4; }
       else if (level <= 15) { gridSize = 7; wordLen = 5; }
       else { gridSize = 8; wordLen = 6; }
 
-      // Get word pool
       if (!usedTracker[gameId]) usedTracker[gameId] = [];
       let pool = getWords(wordLen);
       let available = pool.filter(w => !usedTracker[gameId].includes(w));
@@ -1016,7 +1048,6 @@
       usedTracker[gameId].push(target);
       if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
 
-      // Build grid with random letters
       const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       let grid = [];
       for (let i = 0; i < gridSize; i++) {
@@ -1027,17 +1058,14 @@
         grid.push(row);
       }
 
-      // Place target horizontally in a random row
       const rowIdx = Math.floor(Math.random() * gridSize);
       const startCol = Math.floor(Math.random() * (gridSize - target.length + 1));
       for (let k = 0; k < target.length; k++) {
         grid[rowIdx][startCol + k] = target[k];
       }
 
-      // Game state
       let expectedIndex = 0;
       let gameFinished = false;
-      let wrongCells = []; // to reset after wrong click
 
       container.innerHTML = `
         <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} found</span></div>
@@ -1057,11 +1085,9 @@
       const restartBtn = document.getElementById('ws-restart');
       const cells = document.querySelectorAll('#ws-grid .cell');
 
-      // Reset any previous state on restart
       function resetGame() {
         expectedIndex = 0;
         gameFinished = false;
-        wrongCells = [];
         cells.forEach(cell => {
           cell.classList.remove('correct', 'wrong', 'found');
         });
@@ -1070,44 +1096,35 @@
         nextBtn.classList.remove('show');
       }
 
-      // Handle cell click
       cells.forEach(cell => {
         cell.addEventListener('click', function() {
           if (gameFinished) return;
-          // If this cell is already correctly clicked or wrong, skip
           if (this.classList.contains('correct') || this.classList.contains('found')) return;
 
           const letter = this.textContent;
           const expectedLetter = target[expectedIndex];
 
           if (letter === expectedLetter) {
-            // Correct!
             this.classList.add('correct');
             expectedIndex++;
             fb.textContent = `✅ ${expectedIndex}/${target.length}`;
             fb.className = 'feedback-box correct';
 
             if (expectedIndex === target.length) {
-              // Word complete!
               gameFinished = true;
               fb.textContent = '🎉 You found the word! Amazing!';
               fb.className = 'feedback-box correct';
               state.score++;
               fireConfetti(40);
-              // Mark all cells of the word as found (optional)
-              // We can just show next button
               if (state.score >= 20) nextBtn.textContent = '🎉 Mastered! Play Again';
               nextBtn.classList.add('show');
             }
           } else {
-            // Wrong letter
             this.classList.add('wrong');
             fb.textContent = `❌ Expected "${expectedLetter}", got "${letter}". Try again.`;
             fb.className = 'feedback-box wrong';
-            // Reset all correct clicks (remove correct class) so player starts over
             cells.forEach(c => c.classList.remove('correct'));
             expectedIndex = 0;
-            // Remove wrong class after a moment
             setTimeout(() => {
               this.classList.remove('wrong');
               fb.textContent = 'Click the letters in order again.';
@@ -1117,7 +1134,6 @@
         });
       });
 
-      // Next level
       function nextLevel() {
         if (state.score >= 20) { state.score = 0; state.level = 0; usedTracker[gameId] = []; }
         if (state.level < 20) { state.level++; gameRenderers[4](gameId, state.level); }
@@ -1132,75 +1148,1271 @@
       });
     };
 
-    // ----- Games 5–20 (placeholders with simple gameplay) -----
-    // For brevity, we'll use a generic "Guess the number" game, but you can replace each with your own.
-    for (let g=5; g<=20; g++) {
-      gameRenderers[g] = function(gameId, level) {
-        const state = gameStates[gameId];
-        const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
-        if (!container) return;
-        if (!usedTracker[gameId]) usedTracker[gameId] = [];
-        let pool = [3,4,5,6,7,8];
-        let available = pool.filter(n => !usedTracker[gameId].includes(n));
-        if (available.length === 0) { usedTracker[gameId]=[]; available=pool; }
-        const target = available[Math.floor(Math.random()*available.length)];
-        usedTracker[gameId].push(target);
-        if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
+    // ================================================================
+    //  GAME 5: ANAGRAM SOLVER
+    // ================================================================
+    gameRenderers[5] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedTracker[gameId]) usedTracker[gameId] = [];
+      let wordLen = level<=5 ? 3 : level<=10 ? 4 : level<=15 ? 5 : 6;
+      let pool = getWords(wordLen);
+      let available = pool.filter(w => !usedTracker[gameId].includes(w));
+      if (available.length === 0) { usedTracker[gameId]=[]; available=pool; }
+      const target = available[Math.floor(Math.random()*available.length)];
+      usedTracker[gameId].push(target);
+      if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
 
-        const options = [3,4,5,6,7,8];
-        shuffle(options);
-        const opt = options.slice(0,4);
-        if (!opt.includes(target)) opt[0] = target;
-        shuffle(opt);
+      let scrambled = target;
+      while (scrambled === target) {
+        scrambled = target.split('').sort(() => Math.random()-0.5).join('');
+      }
+      let attempts = 0;
+      const maxAttempts = 3;
 
-        container.innerHTML = `
-          <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
-          <p style="font-size:1.2rem;">Game ${gameId}: Guess the number!</p>
-          <p>Pick the number <strong>${target}</strong> from the options:</p>
-          <div class="grid-words" id="gn-options">${opt.map(n => `<span data-num="${n}">${n}</span>`).join('')}</div>
-          <div class="feedback-box" id="gn-feedback">Tap the correct number</div>
-          <div class="flex-center">
-            <button class="btn btn-next" id="gn-next">➜ Next Level</button>
-            <button class="btn btn-restart" id="gn-restart">⟳ Restart</button>
-          </div>
-        `;
-        const fb = document.getElementById('gn-feedback');
-        const nextBtn = document.getElementById('gn-next');
-        const restartBtn = document.getElementById('gn-restart');
-        const spans = container.querySelectorAll('#gn-options span');
-        let answered = false;
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} solved</span></div>
+        <p>Unscramble the letters:</p>
+        <div class="word-big">${scrambled}</div>
+        <div class="flex-center"><input type="text" class="input-field" id="ana-input" placeholder="Your answer..." /><button class="btn" id="ana-check">Check</button></div>
+        <div class="feedback-box" id="ana-feedback">Type the unscrambled word</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="ana-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="ana-restart">⟳ Restart</button>
+        </div>
+      `;
+      const input = document.getElementById('ana-input');
+      const checkBtn = document.getElementById('ana-check');
+      const fb = document.getElementById('ana-feedback');
+      const nextBtn = document.getElementById('ana-next');
+      const restartBtn = document.getElementById('ana-restart');
 
-        spans.forEach(span => {
-          span.addEventListener('click', function() {
-            if (answered) return;
-            const chosen = parseInt(this.dataset.num);
-            if (chosen === target) {
-              fb.textContent = '✅ Correct!';
-              fb.className = 'feedback-box correct';
-              this.classList.add('selected-correct');
+      function checkAna() {
+        const guess = input.value.trim().toUpperCase();
+        if (guess === target) {
+          fb.textContent = '✅ Correct!';
+          fb.className = 'feedback-box correct';
+          state.score++;
+          fireConfetti();
+          if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+          nextBtn.classList.add('show');
+          input.disabled = true;
+        } else {
+          attempts++;
+          if (attempts >= maxAttempts) {
+            fb.textContent = `❌ Out of attempts. The word is "${target}".`;
+            fb.className = 'feedback-box wrong';
+            input.disabled = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else {
+            fb.textContent = `❌ Not "${guess}". Attempts left: ${maxAttempts-attempts}`;
+            fb.className = 'feedback-box wrong';
+          }
+        }
+      }
+      checkBtn.addEventListener('click', checkAna);
+      input.addEventListener('keydown', (e) => { if (e.key==='Enter') checkAna(); });
+      setTimeout(() => input.focus(), 100);
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedTracker[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[5](gameId, state.level); }
+        else { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[5](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[5](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 6: RHYME TIME
+    // ================================================================
+    const RHYME_SETS = [
+      { word:'CAT', rhymes:['BAT','HAT','RAT','MAT','SAT'] },
+      { word:'DOG', rhymes:['FOG','LOG','HOG','JOG','BOG'] },
+      { word:'SUN', rhymes:['FUN','RUN','BUN','GUN','NUN'] },
+      { word:'FISH', rhymes:['DISH','WISH','SWISH','LISH'] },
+      { word:'TREE', rhymes:['FREE','BEE','SEE','KNEE','TEA'] },
+      { word:'STAR', rhymes:['CAR','FAR','JAR','BAR','TAR'] },
+      { word:'MOON', rhymes:['SOON','SPOON','NOON','LOON'] },
+      { word:'BIRD', rhymes:['WORD','HERD','CURD','NURD'] },
+      { word:'BOOK', rhymes:['LOOK','COOK','HOOK','TOOK'] },
+      { word:'CAKE', rhymes:['BAKE','LAKE','MAKE','TAKE','RAKE'] },
+      { word:'FIRE', rhymes:['TIRE','WIRE','LYRE','HIRE'] },
+      { word:'BALL', rhymes:['CALL','FALL','WALL','TALL','HALL'] },
+      { word:'HAPPY', rhymes:['SAPPY','NAPPY','CAPPY','YAPPY'] },
+      { word:'SILLY', rhymes:['BILLY','WILLY','CHILLY','HILLY'] },
+      { word:'PUPPY', rhymes:['GUPPY','YUPPY','DUPPY'] },
+      { word:'BUNNY', rhymes:['FUNNY','SUNNY','RUNNY','GUNNY'] },
+      { word:'TIGER', rhymes:['EAGER','MEAGER','LEAGER'] },
+      { word:'HOUSE', rhymes:['MOUSE','LOUSE','SPROUSE','DOUSE'] },
+      { word:'CLOUD', rhymes:['PROUD','LOUD','SHROUD','CLOUD'] },
+      { word:'BRAIN', rhymes:['TRAIN','RAIN','STRAIN','PAIN'] }
+    ];
+    let usedRhymeIndices = {};
+    gameRenderers[6] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedRhymeIndices[gameId]) usedRhymeIndices[gameId] = [];
+      let available = RHYME_SETS.map((_,i)=>i).filter(i => !usedRhymeIndices[gameId].includes(i));
+      if (available.length === 0) { usedRhymeIndices[gameId]=[]; available=RHYME_SETS.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedRhymeIndices[gameId].push(idx);
+      if (usedRhymeIndices[gameId].length > 12) usedRhymeIndices[gameId].shift();
+
+      const pick = RHYME_SETS[idx];
+      const target = pick.word;
+      let options = pick.rhymes.slice();
+      const allWords = Object.values(WORD_POOL).flat();
+      const nonRhymes = allWords.filter(w => w!==target && !pick.rhymes.includes(w));
+      shuffle(nonRhymes);
+      const numDist = Math.min(level, 3);
+      for (let i=0; i<numDist && i<nonRhymes.length; i++) options.push(nonRhymes[i]);
+      shuffle(options);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>Which word rhymes with <strong>${target}</strong> ?</p>
+        <div class="grid-words" id="rhyme-options">${options.map(w => `<span data-word="${w}">${w}</span>`).join('')}</div>
+        <div class="feedback-box" id="rhyme-feedback">Tap the rhyming word</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="rhyme-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="rhyme-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('rhyme-feedback');
+      const nextBtn = document.getElementById('rhyme-next');
+      const restartBtn = document.getElementById('rhyme-restart');
+      const spans = container.querySelectorAll('#rhyme-options span');
+      let answered = false;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (answered) return;
+          const chosen = this.dataset.word;
+          if (pick.rhymes.includes(chosen)) {
+            fb.textContent = `✅ Yes! "${chosen}" rhymes.`;
+            fb.className = 'feedback-box correct';
+            this.classList.add('selected-correct');
+            state.score++;
+            fireConfetti();
+            answered = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else {
+            fb.textContent = `❌ "${chosen}" does not rhyme. Try again!`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedRhymeIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[6](gameId, state.level); }
+        else { state.level=1; state.score=0; usedRhymeIndices[gameId]=[]; gameRenderers[6](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedRhymeIndices[gameId]=[]; gameRenderers[6](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 7: SYLLABLE COUNTER
+    // ================================================================
+    const SYLLABLE_WORDS = [
+      { word:'CAT', syllables:1 }, { word:'DOG', syllables:1 }, { word:'SUN', syllables:1 },
+      { word:'FISH', syllables:1 }, { word:'BIRD', syllables:1 }, { word:'TREE', syllables:1 },
+      { word:'STAR', syllables:1 }, { word:'MOON', syllables:1 }, { word:'HORSE', syllables:1 },
+      { word:'HOUSE', syllables:1 }, { word:'CLOUD', syllables:1 }, { word:'BRAIN', syllables:1 },
+      { word:'SNAKE', syllables:1 }, { word:'PLANE', syllables:1 }, { word:'TRAIN', syllables:1 },
+      { word:'GLOBE', syllables:1 }, { word:'HAPPY', syllables:2 }, { word:'SILLY', syllables:2 },
+      { word:'PUPPY', syllables:2 }, { word:'BUNNY', syllables:2 }, { word:'TIGER', syllables:2 },
+      { word:'MONKEY', syllables:2 }, { word:'PENCIL', syllables:2 }, { word:'BUTTER', syllables:2 },
+      { word:'CANDLE', syllables:2 }, { word:'JUNGLE', syllables:2 }, { word:'CASTLE', syllables:2 },
+      { word:'ELEPHANT', syllables:3 }, { word:'BANANA', syllables:3 }, { word:'TOMATO', syllables:3 },
+      { word:'COMPUTER', syllables:3 }, { word:'KANGAROO', syllables:3 }, { word:'CROCODILE', syllables:3 }
+    ];
+    let usedSyllableIndices = {};
+    gameRenderers[7] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedSyllableIndices[gameId]) usedSyllableIndices[gameId] = [];
+      const pool = level<=10 ? SYLLABLE_WORDS.filter(w => w.syllables<=2) : SYLLABLE_WORDS;
+      let available = pool.map((_,i)=>i).filter(i => !usedSyllableIndices[gameId].includes(i));
+      if (available.length === 0) { usedSyllableIndices[gameId]=[]; available=pool.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedSyllableIndices[gameId].push(idx);
+      if (usedSyllableIndices[gameId].length > 20) usedSyllableIndices[gameId].shift();
+      const pick = pool[idx];
+      const options = [1,2,3,4];
+      shuffle(options);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>How many syllables in <strong>${pick.word}</strong> ?</p>
+        <div class="grid-words" id="syl-options">${options.map(n => `<span data-num="${n}">${n}</span>`).join('')}</div>
+        <div class="feedback-box" id="syl-feedback">Tap the correct number</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="syl-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="syl-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('syl-feedback');
+      const nextBtn = document.getElementById('syl-next');
+      const restartBtn = document.getElementById('syl-restart');
+      const spans = container.querySelectorAll('#syl-options span');
+      let answered = false;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (answered) return;
+          const guess = parseInt(this.dataset.num);
+          if (guess === pick.syllables) {
+            fb.textContent = `✅ Yes! "${pick.word}" has ${pick.syllables} syllable${pick.syllables>1?'s':''}.`;
+            fb.className = 'feedback-box correct';
+            this.classList.add('selected-correct');
+            state.score++;
+            fireConfetti();
+            answered = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else {
+            fb.textContent = `❌ Not ${guess}. Try again!`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedSyllableIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[7](gameId, state.level); }
+        else { state.level=1; state.score=0; usedSyllableIndices[gameId]=[]; gameRenderers[7](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedSyllableIndices[gameId]=[]; gameRenderers[7](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 8: MISSING LETTER
+    // ================================================================
+    gameRenderers[8] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedTracker[gameId]) usedTracker[gameId] = [];
+      let wordLen = level<=5 ? 3 : level<=10 ? 4 : level<=15 ? 5 : 6;
+      let pool = getWords(wordLen);
+      let available = pool.filter(w => !usedTracker[gameId].includes(w));
+      if (available.length === 0) { usedTracker[gameId]=[]; available=pool; }
+      const target = available[Math.floor(Math.random()*available.length)];
+      usedTracker[gameId].push(target);
+      if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
+
+      const missingPos = Math.floor(Math.random()*target.length);
+      const display = target.split('').map((c,i) => i===missingPos ? '_' : c).join(' ');
+      const options = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+      shuffle(options);
+      const optLetters = options.slice(0, 4);
+      if (!optLetters.includes(target[missingPos])) optLetters[0] = target[missingPos];
+      shuffle(optLetters);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>Choose the missing letter:</p>
+        <div class="word-big" style="letter-spacing:8px;">${display}</div>
+        <div class="grid-words" id="ml-options">${optLetters.map(l => `<span data-letter="${l}">${l}</span>`).join('')}</div>
+        <div class="feedback-box" id="ml-feedback">Tap the missing letter</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="ml-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="ml-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('ml-feedback');
+      const nextBtn = document.getElementById('ml-next');
+      const restartBtn = document.getElementById('ml-restart');
+      const spans = container.querySelectorAll('#ml-options span');
+      let answered = false;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (answered) return;
+          const chosen = this.dataset.letter;
+          if (chosen === target[missingPos]) {
+            fb.textContent = `✅ Correct! The word is "${target}".`;
+            fb.className = 'feedback-box correct';
+            this.classList.add('selected-correct');
+            state.score++;
+            fireConfetti();
+            answered = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else {
+            fb.textContent = `❌ Not "${chosen}". Try again.`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedTracker[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[8](gameId, state.level); }
+        else { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[8](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[8](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 9: SPOT THE DIFF (odd one out)
+    // ================================================================
+    const ODD_SETS = [
+      { items:['CAT','DOG','FISH','BIRD'], odd:'FISH' },
+      { items:['RED','BLUE','GREEN','HAPPY'], odd:'HAPPY' },
+      { items:['APPLE','BANANA','CARROT','ORANGE'], odd:'CARROT' },
+      { items:['ONE','TWO','THREE','FOUR','TREE'], odd:'TREE' },
+      { items:['SUN','MOON','STAR','CLOUD'], odd:'CLOUD' },
+      { items:['HAPPY','SAD','ANGRY','BANANA'], odd:'BANANA' },
+      { items:['FISH','BIRD','DOG','CAT','TREE'], odd:'TREE' },
+      { items:['APPLE','BANANA','ORANGE','CANDLE'], odd:'CANDLE' },
+      { items:['CAR','BUS','TRAIN','BOAT','HOUSE'], odd:'HOUSE' },
+      { items:['HAT','SHOE','SCARF','GLOVE','TABLE'], odd:'TABLE' },
+      { items:['PENCIL','PEN','BOOK','RULER','BANANA'], odd:'BANANA' },
+      { items:['MILK','JUICE','WATER','SOFA'], odd:'SOFA' },
+      { items:['CIRCLE','SQUARE','TRIANGLE','APPLE'], odd:'APPLE' },
+      { items:['DOG','CAT','HORSE','MOON'], odd:'MOON' },
+      { items:['CHAIR','TABLE','BED','BANANA'], odd:'BANANA' }
+    ];
+    let usedOddIndices = {};
+    gameRenderers[9] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedOddIndices[gameId]) usedOddIndices[gameId] = [];
+      let available = ODD_SETS.map((_,i)=>i).filter(i => !usedOddIndices[gameId].includes(i));
+      if (available.length === 0) { usedOddIndices[gameId]=[]; available=ODD_SETS.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedOddIndices[gameId].push(idx);
+      if (usedOddIndices[gameId].length > 12) usedOddIndices[gameId].shift();
+      const pick = ODD_SETS[idx];
+      const shuffled = shuffle([...pick.items]);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>Which is the odd one out?</p>
+        <div class="grid-words" id="odd-options">${shuffled.map(w => `<span data-word="${w}">${w}</span>`).join('')}</div>
+        <div class="feedback-box" id="odd-feedback">Tap the odd one</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="odd-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="odd-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('odd-feedback');
+      const nextBtn = document.getElementById('odd-next');
+      const restartBtn = document.getElementById('odd-restart');
+      const spans = container.querySelectorAll('#odd-options span');
+      let answered = false;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (answered) return;
+          const chosen = this.dataset.word;
+          if (chosen === pick.odd) {
+            fb.textContent = `✅ Yes! "${chosen}" is the odd one.`;
+            fb.className = 'feedback-box correct';
+            this.classList.add('selected-correct');
+            state.score++;
+            fireConfetti();
+            answered = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else {
+            fb.textContent = `❌ "${chosen}" is not odd. Try again!`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedOddIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[9](gameId, state.level); }
+        else { state.level=1; state.score=0; usedOddIndices[gameId]=[]; gameRenderers[9](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedOddIndices[gameId]=[]; gameRenderers[9](gameId, state.level); });
+    };
+
+    // ================================================================
+   // ----- Game 10: Pattern Path (dynamically generated patterns) -----
+gameRenderers[10] = function(gameId, level) {
+  const state = gameStates[gameId];
+  const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+  if (!container) return;
+
+  // Generate a random pattern dynamically
+  function generatePattern() {
+    // Choose pattern type: 0=ABAB, 1=ABCABC, 2=AABBAABB, 3=ABBAABBA
+    const type = Math.floor(Math.random() * 4);
+    const symbols = ['🐱', '🐶', '⭐', '🌙', 'A', 'B', '1', '2'];
+    let seq = [];
+    let answer = '';
+    const len = level <= 5 ? 4 : level <= 10 ? 6 : level <= 15 ? 8 : 10;
+
+    switch(type) {
+      case 0: // ABAB...
+        const a = symbols[Math.floor(Math.random() * symbols.length)];
+        let b = symbols[Math.floor(Math.random() * symbols.length)];
+        while (b === a) b = symbols[Math.floor(Math.random() * symbols.length)];
+        for (let i = 0; i < len; i++) seq.push(i % 2 === 0 ? a : b);
+        answer = seq[seq.length - 1] === a ? b : a;
+        break;
+      case 1: // ABCABC...
+        const a1 = symbols[Math.floor(Math.random() * symbols.length)];
+        let b1 = symbols[Math.floor(Math.random() * symbols.length)];
+        while (b1 === a1) b1 = symbols[Math.floor(Math.random() * symbols.length)];
+        let c1 = symbols[Math.floor(Math.random() * symbols.length)];
+        while (c1 === a1 || c1 === b1) c1 = symbols[Math.floor(Math.random() * symbols.length)];
+        for (let i = 0; i < len; i++) {
+          const idx = i % 3;
+          seq.push(idx === 0 ? a1 : idx === 1 ? b1 : c1);
+        }
+        answer = seq[seq.length - 1] === a1 ? b1 : seq[seq.length - 1] === b1 ? c1 : a1;
+        break;
+      case 2: // AABBAABB...
+        const a2 = symbols[Math.floor(Math.random() * symbols.length)];
+        let b2 = symbols[Math.floor(Math.random() * symbols.length)];
+        while (b2 === a2) b2 = symbols[Math.floor(Math.random() * symbols.length)];
+        for (let i = 0; i < len; i++) {
+          const group = Math.floor(i / 2) % 2;
+          seq.push(group === 0 ? a2 : b2);
+        }
+        answer = seq[seq.length - 1] === a2 ? b2 : a2;
+        break;
+      case 3: // ABBAABBA...
+        const a3 = symbols[Math.floor(Math.random() * symbols.length)];
+        let b3 = symbols[Math.floor(Math.random() * symbols.length)];
+        while (b3 === a3) b3 = symbols[Math.floor(Math.random() * symbols.length)];
+        for (let i = 0; i < len; i++) {
+          const pos = i % 4;
+          seq.push(pos === 0 || pos === 3 ? a3 : b3);
+        }
+        answer = seq[seq.length - 1] === a3 ? b3 : a3;
+        break;
+    }
+    // Replace the last element with '?' to indicate missing
+    seq[seq.length - 1] = '?';
+    return { seq, answer };
+  }
+
+  const pattern = generatePattern();
+
+  // Build options (4 random symbols including the correct answer)
+  const allSymbols = ['🐱','🐶','⭐','🌙','A','B','1','2'];
+  let options = [pattern.answer];
+  const others = allSymbols.filter(s => s !== pattern.answer);
+  shuffle(others);
+  for (let i = 0; i < 3 && i < others.length; i++) options.push(others[i]);
+  shuffle(options);
+
+  container.innerHTML = `
+    <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+    <p>Complete the pattern:</p>
+    <div style="display:flex; gap:14px; justify-content:center; font-size:2.8rem; margin:16px 0; flex-wrap:wrap;">
+      ${pattern.seq.map(s => `<span style="background:rgba(255,255,255,0.06); padding:8px 16px; border-radius:20px;">${s}</span>`).join('')}
+    </div>
+    <div class="grid-words" id="pat-options">${options.map(s => `<span data-sym="${s}">${s}</span>`).join('')}</div>
+    <div class="feedback-box" id="pat-feedback">Tap the missing symbol</div>
+    <div class="flex-center">
+      <button class="btn btn-next" id="pat-next">➜ Next Level</button>
+      <button class="btn btn-restart" id="pat-restart">⟳ Restart</button>
+    </div>
+  `;
+  const fb = document.getElementById('pat-feedback');
+  const nextBtn = document.getElementById('pat-next');
+  const restartBtn = document.getElementById('pat-restart');
+  const spans = container.querySelectorAll('#pat-options span');
+  let answered = false;
+
+  spans.forEach(span => {
+    span.addEventListener('click', function() {
+      if (answered) return;
+      const chosen = this.dataset.sym;
+      if (chosen === pattern.answer) {
+        fb.textContent = '✅ Pattern complete!';
+        fb.className = 'feedback-box correct';
+        this.classList.add('selected-correct');
+        state.score++;
+        fireConfetti();
+        answered = true;
+        if (state.score >= 20) nextBtn.textContent = '🎉 Mastered! Play Again';
+        nextBtn.classList.add('show');
+      } else {
+        fb.textContent = `❌ Not "${chosen}". Try again!`;
+        fb.className = 'feedback-box wrong';
+        this.classList.add('selected-wrong');
+        setTimeout(() => this.classList.remove('selected-wrong'), 500);
+      }
+    });
+  });
+
+  function nextLevel() {
+    if (state.score >= 20) { state.score = 0; state.level = 0; }
+    if (state.level < 20) { state.level++; gameRenderers[10](gameId, state.level); }
+    else { state.level = 1; state.score = 0; gameRenderers[10](gameId, state.level); }
+  }
+  nextBtn.addEventListener('click', nextLevel);
+  restartBtn.addEventListener('click', function() { state.level = 1; state.score = 0; gameRenderers[10](gameId, state.level); });
+};
+
+    // ================================================================
+    //  GAME 11: COMPOUND WORDS
+    // ================================================================
+    const COMPOUNDS = [
+      { a:'BATH', b:'ROOM', compound:'BATHROOM' },
+      { a:'BED', b:'ROOM', compound:'BEDROOM' },
+      { a:'FIRE', b:'MAN', compound:'FIREMAN' },
+      { a:'FOOT', b:'BALL', compound:'FOOTBALL' },
+      { a:'RAIN', b:'BOW', compound:'RAINBOW' },
+      { a:'SUN', b:'GLASSES', compound:'SUNGLASSES' },
+      { a:'TOOTH', b:'BRUSH', compound:'TOOTHBRUSH' },
+      { a:'BUTTER', b:'FLY', compound:'BUTTERFLY' },
+      { a:'CUP', b:'CAKE', compound:'CUPCAKE' },
+      { a:'HONEY', b:'MOON', compound:'HONEYMOON' }
+    ];
+    let usedCompoundIndices = {};
+    gameRenderers[11] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedCompoundIndices[gameId]) usedCompoundIndices[gameId] = [];
+      let available = COMPOUNDS.map((_,i)=>i).filter(i => !usedCompoundIndices[gameId].includes(i));
+      if (available.length === 0) { usedCompoundIndices[gameId]=[]; available=COMPOUNDS.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedCompoundIndices[gameId].push(idx);
+      if (usedCompoundIndices[gameId].length > 10) usedCompoundIndices[gameId].shift();
+      const pick = COMPOUNDS[idx];
+      const allCompounds = COMPOUNDS.map(c => c.compound);
+      const distractors = allCompounds.filter(c => c!==pick.compound);
+      shuffle(distractors);
+      const options = [pick.compound, ...distractors.slice(0,3)];
+      shuffle(options);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>${pick.a} + ${pick.b} = ?</p>
+        <div class="grid-words" id="comp-options">${options.map(w => `<span data-word="${w}">${w}</span>`).join('')}</div>
+        <div class="feedback-box" id="comp-feedback">Tap the correct compound word</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="comp-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="comp-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('comp-feedback');
+      const nextBtn = document.getElementById('comp-next');
+      const restartBtn = document.getElementById('comp-restart');
+      const spans = container.querySelectorAll('#comp-options span');
+      let answered = false;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (answered) return;
+          const chosen = this.dataset.word;
+          if (chosen === pick.compound) {
+            fb.textContent = `✅ Correct! "${pick.a}${pick.b}" = ${pick.compound}`;
+            fb.className = 'feedback-box correct';
+            this.classList.add('selected-correct');
+            state.score++;
+            fireConfetti();
+            answered = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else {
+            fb.textContent = `❌ "${chosen}" is not correct. Try again!`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedCompoundIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[11](gameId, state.level); }
+        else { state.level=1; state.score=0; usedCompoundIndices[gameId]=[]; gameRenderers[11](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedCompoundIndices[gameId]=[]; gameRenderers[11](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 12: CROSSWORD JR.
+    // ================================================================
+    const CROSSWORD_CLUES = [
+      { clue:'A flying animal', answer:'BIRD' },
+      { clue:'Loyal pet', answer:'DOG' },
+      { clue:'Shines in the sky', answer:'STAR' },
+      { clue:'Swims in water', answer:'FISH' },
+      { clue:'A big cat', answer:'LION' },
+      { clue:'A place to live', answer:'HOUSE' },
+      { clue:'A yellow fruit', answer:'BANANA' },
+      { clue:'A sweet treat', answer:'CAKE' },
+      { clue:'A mode of transport', answer:'TRAIN' },
+      { clue:'A ball of fire', answer:'SUN' }
+    ];
+    let usedCrosswordIndices = {};
+    gameRenderers[12] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedCrosswordIndices[gameId]) usedCrosswordIndices[gameId] = [];
+      let available = CROSSWORD_CLUES.map((_,i)=>i).filter(i => !usedCrosswordIndices[gameId].includes(i));
+      if (available.length === 0) { usedCrosswordIndices[gameId]=[]; available=CROSSWORD_CLUES.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedCrosswordIndices[gameId].push(idx);
+      if (usedCrosswordIndices[gameId].length > 10) usedCrosswordIndices[gameId].shift();
+      const pick = CROSSWORD_CLUES[idx];
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p><strong>Clue:</strong> ${pick.clue}</p>
+        <p>Answer (${pick.answer.length} letters):</p>
+        <div class="flex-center"><input type="text" class="input-field" id="cross-input" maxlength="${pick.answer.length}" placeholder="????" style="text-align:center; letter-spacing:6px; width:200px;" /><button class="btn" id="cross-check">Check</button></div>
+        <div class="feedback-box" id="cross-feedback">Type your answer</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="cross-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="cross-restart">⟳ Restart</button>
+        </div>
+      `;
+      const input = document.getElementById('cross-input');
+      const checkBtn = document.getElementById('cross-check');
+      const fb = document.getElementById('cross-feedback');
+      const nextBtn = document.getElementById('cross-next');
+      const restartBtn = document.getElementById('cross-restart');
+
+      function checkCross() {
+        const guess = input.value.trim().toUpperCase();
+        if (guess === pick.answer) {
+          fb.textContent = '✅ Correct!';
+          fb.className = 'feedback-box correct';
+          state.score++;
+          fireConfetti();
+          if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+          nextBtn.classList.add('show');
+          input.disabled = true;
+        } else if (guess.length===0) {
+          fb.textContent = 'Type an answer!';
+          fb.className = 'feedback-box';
+        } else {
+          fb.textContent = `❌ Not "${guess}". Try again.`;
+          fb.className = 'feedback-box wrong';
+        }
+      }
+      checkBtn.addEventListener('click', checkCross);
+      input.addEventListener('keydown', (e) => { if (e.key==='Enter') checkCross(); });
+      setTimeout(() => input.focus(), 100);
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedCrosswordIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[12](gameId, state.level); }
+        else { state.level=1; state.score=0; usedCrosswordIndices[gameId]=[]; gameRenderers[12](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedCrosswordIndices[gameId]=[]; gameRenderers[12](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 13: TYPE & LEARN
+    // ================================================================
+    gameRenderers[13] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedTracker[gameId]) usedTracker[gameId] = [];
+      let wordLen = level<=5 ? 3 : level<=10 ? 4 : level<=15 ? 5 : 6;
+      let pool = getWords(wordLen);
+      let available = pool.filter(w => !usedTracker[gameId].includes(w));
+      if (available.length === 0) { usedTracker[gameId]=[]; available=pool; }
+      const target = available[Math.floor(Math.random()*available.length)];
+      usedTracker[gameId].push(target);
+      if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} typed</span></div>
+        <p>Type the word you see:</p>
+        <div class="word-big">${target}</div>
+        <div class="flex-center"><input type="text" class="input-field" id="type-input" placeholder="Type here..." autocomplete="off" /><button class="btn" id="type-check">Check</button></div>
+        <div class="feedback-box" id="type-feedback">Type the word above</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="type-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="type-restart">⟳ Restart</button>
+        </div>
+      `;
+      const input = document.getElementById('type-input');
+      const checkBtn = document.getElementById('type-check');
+      const fb = document.getElementById('type-feedback');
+      const nextBtn = document.getElementById('type-next');
+      const restartBtn = document.getElementById('type-restart');
+
+      function checkType() {
+        const guess = input.value.trim().toUpperCase();
+        if (guess === target) {
+          fb.textContent = '✅ Perfect!';
+          fb.className = 'feedback-box correct';
+          state.score++;
+          fireConfetti();
+          if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+          nextBtn.classList.add('show');
+          input.disabled = true;
+        } else if (guess.length===0) {
+          fb.textContent = 'Please type something!';
+          fb.className = 'feedback-box';
+        } else {
+          fb.textContent = `❌ Not "${guess}". Try again.`;
+          fb.className = 'feedback-box wrong';
+        }
+      }
+      checkBtn.addEventListener('click', checkType);
+      input.addEventListener('keydown', (e) => { if (e.key==='Enter') checkType(); });
+      setTimeout(() => input.focus(), 100);
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedTracker[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[13](gameId, state.level); }
+        else { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[13](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[13](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 14: STORY CLOZE
+    // ================================================================
+    const CLOZE_STORIES = [
+      { text:'The ___ is in the sky.', answers:['SUN','MOON','CLOUD','STAR'] },
+      { text:'The ___ is chasing the cat.', answers:['DOG'] },
+      { text:'The ___ is swimming in the water.', answers:['FISH'] },
+      { text:'The ___ is singing in the tree.', answers:['BIRD'] },
+      { text:'I like to eat a red ___.', answers:['APPLE','CHERRY','STRAWBERRY'] },
+      { text:'The ___ is shining bright.', answers:['SUN','STAR'] },
+      { text:'We live in a ___.', answers:['HOUSE','HOME'] },
+      { text:'I ride a ___ to school.', answers:['BUS','BIKE','CAR'] },
+      { text:'The ___ is very tall.', answers:['TREE','BUILDING'] },
+      { text:'She has a pet ___.', answers:['CAT','DOG','FISH','BIRD'] }
+    ];
+    let usedClozeIndices = {};
+    gameRenderers[14] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedClozeIndices[gameId]) usedClozeIndices[gameId] = [];
+      let available = CLOZE_STORIES.map((_,i)=>i).filter(i => !usedClozeIndices[gameId].includes(i));
+      if (available.length === 0) { usedClozeIndices[gameId]=[]; available=CLOZE_STORIES.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedClozeIndices[gameId].push(idx);
+      if (usedClozeIndices[gameId].length > 10) usedClozeIndices[gameId].shift();
+      const pick = CLOZE_STORIES[idx];
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>Fill in the missing word:</p>
+        <p style="font-size:1.8rem; background:rgba(255,255,255,0.06); padding:20px; border-radius:30px;">${pick.text}</p>
+        <div class="flex-center"><input type="text" class="input-field" id="cloze-input" placeholder="Your word..." /><button class="btn" id="cloze-check">Check</button></div>
+        <div class="feedback-box" id="cloze-feedback">What word fits?</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="cloze-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="cloze-restart">⟳ Restart</button>
+        </div>
+      `;
+      const input = document.getElementById('cloze-input');
+      const checkBtn = document.getElementById('cloze-check');
+      const fb = document.getElementById('cloze-feedback');
+      const nextBtn = document.getElementById('cloze-next');
+      const restartBtn = document.getElementById('cloze-restart');
+
+      function checkCloze() {
+        const guess = input.value.trim().toUpperCase();
+        if (pick.answers.includes(guess)) {
+          fb.textContent = '✅ Correct!';
+          fb.className = 'feedback-box correct';
+          state.score++;
+          fireConfetti();
+          if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+          nextBtn.classList.add('show');
+          input.disabled = true;
+        } else if (guess.length===0) {
+          fb.textContent = 'Type a word!';
+          fb.className = 'feedback-box';
+        } else {
+          fb.textContent = `❌ "${guess}" doesn't fit. Try again.`;
+          fb.className = 'feedback-box wrong';
+        }
+      }
+      checkBtn.addEventListener('click', checkCloze);
+      input.addEventListener('keydown', (e) => { if (e.key==='Enter') checkCloze(); });
+      setTimeout(() => input.focus(), 100);
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedClozeIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[14](gameId, state.level); }
+        else { state.level=1; state.score=0; usedClozeIndices[gameId]=[]; gameRenderers[14](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedClozeIndices[gameId]=[]; gameRenderers[14](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 15: INITIAL SOUND
+    // ================================================================
+    const INITIAL_SOUNDS = [
+      { emoji:'🐱', letter:'C' }, { emoji:'🐶', letter:'D' }, { emoji:'☀️', letter:'S' },
+      { emoji:'🐟', letter:'F' }, { emoji:'⭐', letter:'S' }, { emoji:'🐦', letter:'B' },
+      { emoji:'🌙', letter:'M' }, { emoji:'🍎', letter:'A' }, { emoji:'🐻', letter:'B' },
+      { emoji:'🦁', letter:'L' }, { emoji:'🚗', letter:'C' }, { emoji:'🏠', letter:'H' },
+      { emoji:'🐘', letter:'E' }, { emoji:'🐒', letter:'M' }, { emoji:'🐸', letter:'F' }
+    ];
+    let usedInitialIndices = {};
+    gameRenderers[15] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedInitialIndices[gameId]) usedInitialIndices[gameId] = [];
+      let available = INITIAL_SOUNDS.map((_,i)=>i).filter(i => !usedInitialIndices[gameId].includes(i));
+      if (available.length === 0) { usedInitialIndices[gameId]=[]; available=INITIAL_SOUNDS.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedInitialIndices[gameId].push(idx);
+      if (usedInitialIndices[gameId].length > 15) usedInitialIndices[gameId].shift();
+      const pick = INITIAL_SOUNDS[idx];
+      const options = ['A','B','C','D','F','L','M','S','H','E'];
+      shuffle(options);
+      const opt = options.slice(0,4);
+      if (!opt.includes(pick.letter)) opt[0] = pick.letter;
+      shuffle(opt);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>What is the first sound of this picture?</p>
+        <div class="word-big" style="font-size:4rem; background:transparent;">${pick.emoji}</div>
+        <div class="grid-words" id="is-options">${opt.map(l => `<span data-letter="${l}">${l}</span>`).join('')}</div>
+        <div class="feedback-box" id="is-feedback">Tap the correct starting letter</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="is-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="is-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('is-feedback');
+      const nextBtn = document.getElementById('is-next');
+      const restartBtn = document.getElementById('is-restart');
+      const spans = container.querySelectorAll('#is-options span');
+      let answered = false;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (answered) return;
+          const chosen = this.dataset.letter;
+          if (chosen === pick.letter) {
+            fb.textContent = `✅ Yes! "${pick.letter}" is the initial sound.`;
+            fb.className = 'feedback-box correct';
+            this.classList.add('selected-correct');
+            state.score++;
+            fireConfetti();
+            answered = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else {
+            fb.textContent = `❌ Not "${chosen}". Try again.`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedInitialIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[15](gameId, state.level); }
+        else { state.level=1; state.score=0; usedInitialIndices[gameId]=[]; gameRenderers[15](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedInitialIndices[gameId]=[]; gameRenderers[15](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 16: LETTER COUNT
+    // ================================================================
+    gameRenderers[16] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedTracker[gameId]) usedTracker[gameId] = [];
+      let wordLen = level<=5 ? 3 : level<=10 ? 4 : level<=15 ? 5 : 6;
+      let pool = getWords(wordLen);
+      let available = pool.filter(w => !usedTracker[gameId].includes(w));
+      if (available.length === 0) { usedTracker[gameId]=[]; available=pool; }
+      const target = available[Math.floor(Math.random()*available.length)];
+      usedTracker[gameId].push(target);
+      if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
+
+      const options = [3,4,5,6,7];
+      shuffle(options);
+      const opt = options.slice(0,4);
+      if (!opt.includes(target.length)) opt[0] = target.length;
+      shuffle(opt);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>How many letters in <strong>${target}</strong> ?</p>
+        <div class="grid-words" id="lc-options">${opt.map(n => `<span data-num="${n}">${n}</span>`).join('')}</div>
+        <div class="feedback-box" id="lc-feedback">Tap the correct number</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="lc-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="lc-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('lc-feedback');
+      const nextBtn = document.getElementById('lc-next');
+      const restartBtn = document.getElementById('lc-restart');
+      const spans = container.querySelectorAll('#lc-options span');
+      let answered = false;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (answered) return;
+          const guess = parseInt(this.dataset.num);
+          if (guess === target.length) {
+            fb.textContent = `✅ Yes! "${target}" has ${target.length} letters.`;
+            fb.className = 'feedback-box correct';
+            this.classList.add('selected-correct');
+            state.score++;
+            fireConfetti();
+            answered = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else {
+            fb.textContent = `❌ Not ${guess}. Try again!`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedTracker[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[16](gameId, state.level); }
+        else { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[16](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[16](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 17: QUICK RECALL
+    // ================================================================
+    const QUICK_OBJECTS = [
+      { emoji:'🐱', name:'CAT' }, { emoji:'🐶', name:'DOG' }, { emoji:'☀️', name:'SUN' },
+      { emoji:'🌙', name:'MOON' }, { emoji:'⭐', name:'STAR' }, { emoji:'🐟', name:'FISH' },
+      { emoji:'🐦', name:'BIRD' }, { emoji:'🍎', name:'APPLE' }, { emoji:'🚗', name:'CAR' },
+      { emoji:'🏠', name:'HOUSE' }, { emoji:'🐻', name:'BEAR' }, { emoji:'🦁', name:'LION' },
+      { emoji:'🐘', name:'ELEPHANT' }, { emoji:'🐒', name:'MONKEY' }, { emoji:'🐸', name:'FROG' }
+    ];
+    let usedQuickIndices = {};
+    gameRenderers[17] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedQuickIndices[gameId]) usedQuickIndices[gameId] = [];
+      let available = QUICK_OBJECTS.map((_,i)=>i).filter(i => !usedQuickIndices[gameId].includes(i));
+      if (available.length === 0) { usedQuickIndices[gameId]=[]; available=QUICK_OBJECTS.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedQuickIndices[gameId].push(idx);
+      if (usedQuickIndices[gameId].length > 15) usedQuickIndices[gameId].shift();
+      const pick = QUICK_OBJECTS[idx];
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>What is this object called?</p>
+        <div class="word-big" style="font-size:4rem; background:transparent;">${pick.emoji}</div>
+        <div class="flex-center"><input type="text" class="input-field" id="recall-input" placeholder="Type the name..." /><button class="btn" id="recall-check">Check</button></div>
+        <div class="feedback-box" id="recall-feedback">What is it?</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="recall-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="recall-restart">⟳ Restart</button>
+        </div>
+      `;
+      const input = document.getElementById('recall-input');
+      const checkBtn = document.getElementById('recall-check');
+      const fb = document.getElementById('recall-feedback');
+      const nextBtn = document.getElementById('recall-next');
+      const restartBtn = document.getElementById('recall-restart');
+
+      function checkRecall() {
+        const guess = input.value.trim().toUpperCase();
+        if (guess === pick.name) {
+          fb.textContent = '✅ Correct!';
+          fb.className = 'feedback-box correct';
+          state.score++;
+          fireConfetti();
+          if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+          nextBtn.classList.add('show');
+          input.disabled = true;
+        } else if (guess.length===0) {
+          fb.textContent = 'Type the name!';
+          fb.className = 'feedback-box';
+        } else {
+          fb.textContent = `❌ Not "${guess}". Try again.`;
+          fb.className = 'feedback-box wrong';
+        }
+      }
+      checkBtn.addEventListener('click', checkRecall);
+      input.addEventListener('keydown', (e) => { if (e.key==='Enter') checkRecall(); });
+      setTimeout(() => input.focus(), 100);
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedQuickIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[17](gameId, state.level); }
+        else { state.level=1; state.score=0; usedQuickIndices[gameId]=[]; gameRenderers[17](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedQuickIndices[gameId]=[]; gameRenderers[17](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 18: MEMORY TRAIL (remember sequence)
+    // ================================================================
+    gameRenderers[18] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      let seqLen = level<=5 ? 4 : level<=10 ? 5 : level<=15 ? 6 : 7;
+      const symbols = ['🐱','🐶','⭐','🌙','🐟','☀️','🍎','🚗'];
+      const sequence = [];
+      for (let i=0; i<seqLen; i++) sequence.push(symbols[Math.floor(Math.random()*symbols.length)]);
+      let step=0, gameOver=false;
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>Remember the sequence and tap it in order:</p>
+        <div style="display:flex; gap:10px; justify-content:center; font-size:2.5rem; margin:12px 0;" id="memtrail-show">
+          ${sequence.map(s => `<span style="background:rgba(255,255,255,0.06); padding:8px 16px; border-radius:16px;">${s}</span>`).join('')}
+        </div>
+        <p style="font-size:0.9rem; opacity:0.7;">(Sequence will disappear in 3 seconds)</p>
+        <div class="grid-words" id="memtrail-options">${symbols.map(s => `<span data-sym="${s}">${s}</span>`).join('')}</div>
+        <div class="feedback-box" id="memtrail-feedback">Watch, then tap in order</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="memtrail-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="memtrail-restart">⟳ Restart</button>
+        </div>
+      `;
+      const showDiv = document.getElementById('memtrail-show');
+      const fb = document.getElementById('memtrail-feedback');
+      const nextBtn = document.getElementById('memtrail-next');
+      const restartBtn = document.getElementById('memtrail-restart');
+      const optSpans = document.querySelectorAll('#memtrail-options span');
+
+      setTimeout(() => { showDiv.style.display = 'none'; fb.textContent = 'Tap the symbols in order!'; }, 3000);
+
+      optSpans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (gameOver) return;
+          const chosen = this.dataset.sym;
+          if (chosen === sequence[step]) {
+            this.classList.add('selected-correct');
+            step++;
+            fb.textContent = `✅ ${step}/${sequence.length}`;
+            fb.className = 'feedback-box correct';
+            if (step === sequence.length) {
+              fb.textContent = '🎉 You remembered!';
               state.score++;
               fireConfetti();
-              answered = true;
               if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
               nextBtn.classList.add('show');
-            } else {
-              fb.textContent = `❌ Not ${chosen}. Try again!`;
-              fb.className = 'feedback-box wrong';
-              this.classList.add('selected-wrong');
-              setTimeout(() => this.classList.remove('selected-wrong'), 500);
+              gameOver = true;
             }
-          });
+          } else {
+            fb.textContent = `❌ Wrong! The sequence was: ${sequence.join(' ')}`;
+            fb.className = 'feedback-box wrong';
+            gameOver = true;
+            showDiv.style.display = 'flex';
+          }
         });
+      });
 
-        function nextLevel() {
-          if (state.score>=20) { state.score=0; state.level=0; usedTracker[gameId]=[]; }
-          if (state.level<20) { state.level++; gameRenderers[gameId](gameId, state.level); }
-          else { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[gameId](gameId, state.level); }
-        }
-        nextBtn.addEventListener('click', nextLevel);
-        restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[gameId](gameId, state.level); });
-      };
-    }
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; }
+        if (state.level<20) { state.level++; gameRenderers[18](gameId, state.level); }
+        else { state.level=1; state.score=0; gameRenderers[18](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; gameRenderers[18](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 19: STORY SORT
+    // ================================================================
+    const SORT_STORIES = [
+      { events:['🌅 Wake up','🍳 Eat breakfast','🏫 Go to school','🛏️ Sleep'] },
+      { events:['🌱 Plant seed','💧 Water it','🌻 Flower grows','🌸 Pick flower'] },
+      { events:['📖 Open book','📝 Read page','🤔 Think about story','📕 Close book'] },
+      { events:['🚗 Start car','🛣️ Drive on road','🛑 Stop at light','🏁 Arrive home'] },
+      { events:['🍞 Buy bread','🧈 Spread butter','🍳 Fry egg','🍽️ Eat sandwich'] }
+    ];
+    let usedSortIndices = {};
+    gameRenderers[19] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedSortIndices[gameId]) usedSortIndices[gameId] = [];
+      let available = SORT_STORIES.map((_,i)=>i).filter(i => !usedSortIndices[gameId].includes(i));
+      if (available.length === 0) { usedSortIndices[gameId]=[]; available=SORT_STORIES.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedSortIndices[gameId].push(idx);
+      if (usedSortIndices[gameId].length > 5) usedSortIndices[gameId].shift();
+      const pick = SORT_STORIES[idx];
+      const shuffled = shuffle([...pick.events]);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>Tap the events in the correct order:</p>
+        <div class="grid-words" id="sort-grid">${shuffled.map((e,idx) => `<span data-idx="${idx}" data-event="${e}">${e}</span>`).join('')}</div>
+        <div class="feedback-box" id="sort-feedback">Tap the first event, then the next...</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="sort-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="sort-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('sort-feedback');
+      const nextBtn = document.getElementById('sort-next');
+      const restartBtn = document.getElementById('sort-restart');
+      const spans = container.querySelectorAll('#sort-grid span');
+      let selected = [];
+      const total = pick.events.length;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (selected.includes(this)) return;
+          const eventText = this.dataset.event;
+          const expected = pick.events[selected.length];
+          if (eventText === expected) {
+            this.classList.add('selected-correct');
+            selected.push(this);
+            fb.textContent = `✅ ${selected.length}/${total}`;
+            fb.className = 'feedback-box correct';
+            if (selected.length === total) {
+              fb.textContent = '🎉 Story sorted correctly!';
+              state.score++;
+              fireConfetti();
+              if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+              nextBtn.classList.add('show');
+            }
+          } else {
+            fb.textContent = `❌ That's not the next event. Try again!`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedSortIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[19](gameId, state.level); }
+        else { state.level=1; state.score=0; usedSortIndices[gameId]=[]; gameRenderers[19](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedSortIndices[gameId]=[]; gameRenderers[19](gameId, state.level); });
+    };
+
+    // ================================================================
+    //  GAME 20: WORD FAMILIES
+    // ================================================================
+    const WORD_FAMILIES = [
+      { family:'-at', words:['CAT','BAT','HAT','RAT','MAT','SAT'] },
+      { family:'-og', words:['DOG','FOG','LOG','HOG','JOG','BOG'] },
+      { family:'-un', words:['SUN','FUN','RUN','BUN','GUN','NUN'] },
+      { family:'-ish', words:['FISH','DISH','WISH','SWISH','LISH'] },
+      { family:'-ake', words:['CAKE','BAKE','LAKE','MAKE','TAKE','RAKE'] },
+      { family:'-all', words:['BALL','CALL','FALL','WALL','TALL','HALL'] }
+    ];
+    let usedFamilyIndices = {};
+    gameRenderers[20] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+      if (!usedFamilyIndices[gameId]) usedFamilyIndices[gameId] = [];
+      let available = WORD_FAMILIES.map((_,i)=>i).filter(i => !usedFamilyIndices[gameId].includes(i));
+      if (available.length === 0) { usedFamilyIndices[gameId]=[]; available=WORD_FAMILIES.map((_,i)=>i); }
+      const idx = available[Math.floor(Math.random()*available.length)];
+      usedFamilyIndices[gameId].push(idx);
+      if (usedFamilyIndices[gameId].length > 6) usedFamilyIndices[gameId].shift();
+      const pick = WORD_FAMILIES[idx];
+      const target = pick.words[Math.floor(Math.random()*pick.words.length)];
+      const familyWords = pick.words.filter(w => w!==target);
+      const allWords = Object.values(WORD_POOL).flat();
+      const distractors = allWords.filter(w => !pick.words.includes(w));
+      shuffle(distractors);
+      const options = [familyWords[Math.floor(Math.random()*familyWords.length)], ...distractors.slice(0,3)];
+      shuffle(options);
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
+        <p>Which word belongs to the same family as <strong>${target}</strong> ?<br><small>(Family: ${pick.family})</small></p>
+        <div class="grid-words" id="wf-options">${options.map(w => `<span data-word="${w}">${w}</span>`).join('')}</div>
+        <div class="feedback-box" id="wf-feedback">Tap a word in the same family</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="wf-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="wf-restart">⟳ Restart</button>
+        </div>
+      `;
+      const fb = document.getElementById('wf-feedback');
+      const nextBtn = document.getElementById('wf-next');
+      const restartBtn = document.getElementById('wf-restart');
+      const spans = container.querySelectorAll('#wf-options span');
+      let answered = false;
+
+      spans.forEach(span => {
+        span.addEventListener('click', function() {
+          if (answered) return;
+          const chosen = this.dataset.word;
+          if (pick.words.includes(chosen) && chosen !== target) {
+            fb.textContent = `✅ Yes! "${chosen}" is in the same family.`;
+            fb.className = 'feedback-box correct';
+            this.classList.add('selected-correct');
+            state.score++;
+            fireConfetti();
+            answered = true;
+            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
+            nextBtn.classList.add('show');
+          } else if (chosen === target) {
+            fb.textContent = `❌ That's the same word! Pick another.`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          } else {
+            fb.textContent = `❌ "${chosen}" is not in the family. Try again!`;
+            fb.className = 'feedback-box wrong';
+            this.classList.add('selected-wrong');
+            setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          }
+        });
+      });
+
+      function nextLevel() {
+        if (state.score>=20) { state.score=0; state.level=0; usedFamilyIndices[gameId]=[]; }
+        if (state.level<20) { state.level++; gameRenderers[20](gameId, state.level); }
+        else { state.level=1; state.score=0; usedFamilyIndices[gameId]=[]; gameRenderers[20](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedFamilyIndices[gameId]=[]; gameRenderers[20](gameId, state.level); });
+    };
 
     // ================================================================
     //  LOAD GAME
@@ -1241,7 +2453,7 @@
     //  INIT
     // ================================================================
     navigateTo('home');
-    console.log('🚀 Dyslexia Quest loaded with all 20 games – Word Search fixed!');
+    console.log('🚀 Dyslexia Quest loaded with ALL 20 games properly implemented!');
   </script>
 </body>
 </html>
