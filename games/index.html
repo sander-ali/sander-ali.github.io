@@ -3,42 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>🌟 Dyslexia Quest – 20 Games</title>
+  <title>🧠 Memory Cards – Dyslexia Quest</title>
   <style>
-    /* ----- RESET & GLOBAL ----- */
+    /* ----- RESET & FULLSCREEN ----- */
     * { margin:0; padding:0; box-sizing:border-box; }
     html, body {
       width: 100%;
       min-height: 100vh;
-      font-family: 'Segoe UI', 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+      font-family: 'Segoe UI', 'Comic Sans MS', cursive, sans-serif;
       background: #0b0c2e;
       overflow-x: hidden;
     }
 
-    /* ----- PAGES (full viewport) ----- */
+    /* ----- PAGE (full viewport) ----- */
     .page {
-      display: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       position: fixed;
       top: 0; left: 0;
       width: 100vw;
       height: 100vh;
       overflow-y: auto;
       padding: 20px;
-      z-index: 1;
+      background: radial-gradient(ellipse at 50% 60%, #fbc2eb, #a6c1ee 60%, #0b0c2e);
       animation: fadeIn 0.7s ease;
-    }
-    .page.active {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
     }
     @keyframes fadeIn {
       0% { opacity:0; transform:scale(0.96); }
       100% { opacity:1; transform:scale(1); }
     }
 
-    /* ----- BACKGROUND ANIMATIONS (full page) ----- */
+    /* ----- BACKGROUND ANIMATIONS (floating icons) ----- */
     .bg-animation {
       position: absolute;
       top: 0; left: 0;
@@ -61,11 +58,11 @@
       100% { transform: translateY(-10vh) rotate(720deg) scale(1.2); opacity: 0; }
     }
 
-    /* ----- GLASS CARD (game content) ----- */
+    /* ----- GLASS CARD (game container) ----- */
     .game-card {
       position: relative;
       z-index: 2;
-      background: rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.08);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-radius: 40px;
@@ -85,108 +82,25 @@
     .game-card::-webkit-scrollbar { width: 4px; }
     .game-card::-webkit-scrollbar-thumb { background: rgba(255,204,0,0.4); border-radius: 10px; }
 
-    /* ----- HOME PAGE (special) ----- */
-    #page-home {
-      background: radial-gradient(ellipse at 30% 20%, #1a1f5e, #0b0c2e 80%);
-      justify-content: center;
+    /* ----- HEADER & PROGRESS ----- */
+    .game-header {
+      display: flex;
       align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-    #page-home .hero h1 {
-      font-size: 4rem;
-      background: linear-gradient(135deg, #ffd966, #ff8800, #ffd966);
-      background-size: 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shimmer 4s linear infinite;
-      text-shadow: 0 0 60px rgba(255,204,0,0.1);
-    }
-    @keyframes shimmer {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
-    }
-    #page-home .hero p {
-      font-size: 1.5rem;
-      color: #aad0ff;
-      margin-top: 8px;
-      animation: floatText 5s ease-in-out infinite;
-    }
-    @keyframes floatText {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .home-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 16px;
-      margin-top: 30px;
-      max-width: 900px;
-      width: 100%;
-    }
-    .home-card {
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 24px;
-      padding: 16px 8px;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .home-card:hover {
-      transform: translateY(-8px) scale(1.04);
-      background: rgba(255,255,255,0.14);
-      border-color: #ffcc00;
-    }
-    .home-card .icon { font-size: 2.8rem; display: block; }
-    .home-card .name { font-weight: 700; color: #fff; font-size: 0.95rem; }
-    .home-card .badge {
-      font-size: 0.65rem;
-      background: rgba(255,204,0,0.2);
-      color: #ffd966;
-      border-radius: 30px;
-      padding: 2px 12px;
-      display: inline-block;
-      margin-top: 4px;
-    }
-
-    /* ----- FLOATING NAVIGATION (bottom) ----- */
-    .game-nav {
-      position: fixed;
-      bottom: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-      display: none;
-      gap: 8px;
-      background: rgba(0,0,0,0.5);
-      backdrop-filter: blur(12px);
-      padding: 8px 16px;
-      border-radius: 60px;
-      border: 1px solid rgba(255,255,255,0.06);
+      gap: 12px;
+      margin-bottom: 16px;
       flex-wrap: wrap;
-      justify-content: center;
     }
-    .game-nav button {
-      background: rgba(255,255,255,0.06);
-      border: none;
+    .game-header .icon-big { font-size: 2.5rem; }
+    .game-header h2 {
+      font-size: 1.8rem;
       color: #fff;
-      padding: 6px 14px;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-      font-size: 0.8rem;
-      backdrop-filter: blur(4px);
+      margin: 0;
     }
-    .game-nav button:hover { background: rgba(255,204,0,0.15); transform: scale(1.05); }
-    .game-nav .btn-home { background: #3498db; color: #fff; }
-    .game-nav .btn-home:hover { background: #5dade2; }
-    .game-nav .btn-prev, .game-nav .btn-next { background: #8e44ad; color: #fff; }
-    .game-nav .btn-prev:hover, .game-nav .btn-next:hover { background: #a569bd; }
-
-    /* ----- GAME CONTENT STYLES (inside glass card) ----- */
+    .game-header p {
+      opacity: 0.7;
+      font-size: 0.95rem;
+      margin: 0;
+    }
     .level-header {
       display: flex;
       justify-content: space-between;
@@ -203,7 +117,110 @@
       font-weight: 700;
       font-size: 1rem;
     }
-    .progress { opacity: 0.7; font-size: 0.9rem; }
+    .progress {
+      opacity: 0.7;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    /* ----- CARD GRID (the memory game) ----- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      max-width: 500px;
+      margin: 16px auto;
+    }
+    .card-grid .card {
+      aspect-ratio: 1 / 1;
+      background: rgba(255,255,255,0.12);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+      border: 2px solid rgba(255,255,255,0.06);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      user-select: none;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .card-grid .card .card-front,
+    .card-grid .card .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .card-grid .card .card-front {
+      background: linear-gradient(145deg, #2a2f7a, #1a1f5e);
+      transform: rotateY(0deg);
+      font-size: 2.8rem;
+      color: #fff;
+    }
+    .card-grid .card .card-back {
+      background: linear-gradient(145deg, #ffd966, #f0a500);
+      transform: rotateY(180deg);
+      font-size: 2.8rem;
+      color: #1a1f5e;
+    }
+    .card-grid .card.flipped .card-front {
+      transform: rotateY(180deg);
+    }
+    .card-grid .card.flipped .card-back {
+      transform: rotateY(0deg);
+    }
+    .card-grid .card.matched {
+      cursor: default;
+      pointer-events: none;
+      animation: matchPop 0.5s ease;
+    }
+    .card-grid .card.matched .card-back {
+      background: linear-gradient(145deg, #2e7d5e, #1a4a36);
+      color: #fff;
+    }
+    .card-grid .card.matched .card-back::after {
+      content: "✓";
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      font-size: 1.2rem;
+      background: #00cc66;
+      color: #fff;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @keyframes matchPop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+      100% { transform: scale(1); }
+    }
+    /* Responsive grid */
+    @media (max-width: 500px) {
+      .card-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+      .card-grid .card .card-front,
+      .card-grid .card .card-back { font-size: 2rem; }
+    }
+    @media (max-width: 400px) {
+      .card-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .card-grid .card .card-front,
+      .card-grid .card .card-back { font-size: 1.6rem; }
+    }
+
+    /* ----- FEEDBACK & BUTTONS ----- */
     .feedback-box {
       padding: 12px 18px;
       border-radius: 30px;
@@ -214,9 +231,26 @@
       align-items: center;
       gap: 10px;
       transition: 0.3s;
+      color: #fff;
     }
-    .feedback-box.correct { background: rgba(0,200,80,0.15); border-left: 5px solid #00cc66; }
-    .feedback-box.wrong { background: rgba(255,80,80,0.1); border-left: 5px solid #ff5555; }
+    .feedback-box.correct {
+      background: rgba(0,200,80,0.15);
+      border-left: 5px solid #00cc66;
+    }
+    .feedback-box.wrong {
+      background: rgba(255,80,80,0.1);
+      border-left: 5px solid #ff5555;
+    }
+    .feedback-box .emoji-burst {
+      font-size: 1.8rem;
+      animation: burst 0.5s ease;
+    }
+    @keyframes burst {
+      0% { transform: scale(0.5) rotate(-20deg); opacity: 0; }
+      50% { transform: scale(1.5) rotate(10deg); opacity: 1; }
+      100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    }
+
     .btn {
       padding: 8px 22px;
       border: none;
@@ -233,6 +267,13 @@
     .btn-next.show { display: inline-block; }
     .btn-restart { background: #e67e22; color: #fff; }
     .btn-restart:hover { background: #f39c12; }
+    .btn-home {
+      background: #3498db;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-home:hover { background: #5dade2; }
     .flex-center {
       display: flex;
       flex-wrap: wrap;
@@ -241,105 +282,6 @@
       gap: 12px;
       margin-top: 16px;
     }
-    .word-big {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      background: rgba(255,255,255,0.05);
-      padding: 12px 28px;
-      border-radius: 50px;
-      display: inline-block;
-      margin: 10px 0;
-      color: #fff;
-      text-shadow: 0 0 20px rgba(0,204,255,0.15);
-    }
-    .grid-words {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin: 14px 0;
-    }
-    .grid-words span {
-      background: rgba(255,255,255,0.06);
-      padding: 10px 20px;
-      border-radius: 40px;
-      font-size: 1.3rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-      border: 2px solid transparent;
-    }
-    .grid-words span:hover {
-      background: rgba(255,255,255,0.14);
-      border-color: rgba(255,204,0,0.3);
-      transform: scale(1.04);
-    }
-    .grid-words span.selected-correct {
-      background: rgba(0,200,80,0.25);
-      border-color: #00cc66;
-      animation: pop 0.3s;
-    }
-    .grid-words span.selected-wrong {
-      background: rgba(255,80,80,0.2);
-      border-color: #ff5555;
-      animation: shake 0.4s;
-    }
-    @keyframes pop {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.15); }
-      100% { transform: scale(1); }
-    }
-    @keyframes shake {
-      0%,100% { transform: translateX(0); }
-      25% { transform: translateX(-8px); }
-      75% { transform: translateX(8px); }
-    }
-    .input-field {
-      font-size: 1.1rem;
-      padding: 10px 18px;
-      border-radius: 40px;
-      border: none;
-      background: #fff;
-      color: #1a1f5e;
-      font-weight: 600;
-      width: 220px;
-      max-width: 90%;
-      outline: 2px solid transparent;
-      transition: 0.2s;
-    }
-    .input-field:focus { outline: 2px solid #ffcc00; }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      max-width: 420px;
-      margin: 16px auto;
-    }
-    .card-grid .card {
-      aspect-ratio: 1/1;
-      background: rgba(255,255,255,0.06);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.3s;
-      border: 2px solid rgba(255,255,255,0.04);
-    }
-    .card-grid .card.flipped {
-      background: #ffd966;
-      color: #1a1f5e;
-      transform: rotateY(180deg);
-    }
-    .card-grid .card.matched {
-      background: #2e7d5e;
-      opacity: 0.6;
-      cursor: default;
-    }
-    .card-grid .card.matched::after { content: "✓"; font-size: 2rem; }
 
     /* ----- CONFETTI ----- */
     .confetti-container {
@@ -364,516 +306,287 @@
     /* ----- RESPONSIVE ----- */
     @media (max-width: 600px) {
       .game-card { padding: 20px 14px; max-height: 90vh; }
-      .word-big { font-size: 2.2rem; padding: 8px 16px; }
-      .grid-words span { font-size: 1.1rem; padding: 8px 14px; }
-      .card-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-      .home-grid { grid-template-columns: repeat(2, 1fr); }
-      #page-home .hero h1 { font-size: 2.6rem; }
-      .game-nav { bottom: 10px; padding: 6px 12px; gap: 6px; }
-      .game-nav button { font-size: 0.7rem; padding: 4px 12px; }
-    }
-    @media (max-width: 400px) {
-      .card-grid { grid-template-columns: repeat(2, 1fr); }
-      .home-grid { grid-template-columns: 1fr 1fr; }
-      #page-home .hero p { font-size: 1.1rem; }
+      .game-header h2 { font-size: 1.4rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ================================================================ -->
-  <!-- HOME PAGE                                                       -->
-  <!-- ================================================================ -->
-  <div id="page-home" class="page active">
+  <!-- ===== PAGE ===== -->
+  <div class="page" id="gamePage">
+    <!-- Background decorations -->
     <div class="bg-animation">
-      <span class="float-item" style="left:5%; animation-duration:18s;">🌟</span>
-      <span class="float-item" style="left:20%; animation-duration:22s; font-size:3rem;">📚</span>
-      <span class="float-item" style="left:40%; animation-duration:25s;">🧠</span>
-      <span class="float-item" style="left:60%; animation-duration:20s; font-size:3.5rem;">🎯</span>
-      <span class="float-item" style="left:80%; animation-duration:28s;">🌈</span>
-      <span class="float-item" style="left:90%; animation-duration:16s;">⭐</span>
+      <span class="float-item" style="left:5%; animation-duration:18s;">🧠</span>
+      <span class="float-item" style="left:20%; animation-duration:22s; font-size:3rem;">💡</span>
+      <span class="float-item" style="left:40%; animation-duration:25s;">🔑</span>
+      <span class="float-item" style="left:60%; animation-duration:20s; font-size:3.5rem;">🧩</span>
+      <span class="float-item" style="left:80%; animation-duration:28s;">🎯</span>
+      <span class="float-item" style="left:90%; animation-duration:16s;">🔎</span>
       <span class="float-item" style="left:10%; animation-duration:30s; font-size:4rem;">✨</span>
-      <span class="float-item" style="left:50%; animation-duration:26s; font-size:2.8rem;">🚀</span>
+      <span class="float-item" style="left:50%; animation-duration:26s; font-size:2.8rem;">🌈</span>
     </div>
-    <div style="position:relative; z-index:2; text-align:center; max-width:900px; width:100%;">
-      <div class="hero">
-        <h1>🌟 Dyslexia Quest</h1>
-        <p>20 fun games to strengthen reading, spelling &amp; memory</p>
-        <div style="margin: 12px 0; display:inline-block; background:rgba(255,255,255,0.05); backdrop-filter:blur(8px); padding:6px 24px; border-radius:60px; border:1px solid rgba(255,255,255,0.05);">
-          <span style="font-size:1.2rem;">👧👦 Ages 6–12</span>
+
+    <!-- Glass card -->
+    <div class="game-card">
+      <div class="game-header">
+        <span class="icon-big">🧠</span>
+        <div>
+          <h2>Memory Cards</h2>
+          <p>Flip &amp; find matching pairs!</p>
         </div>
       </div>
-      <div class="home-grid" id="homeGameGrid"></div>
+
+      <div class="level-header">
+        <span class="level-badge" id="levelBadge">Level 1 / 20</span>
+        <span class="progress" id="progressDisplay">0 pairs matched</span>
+      </div>
+
+      <!-- The card grid -->
+      <div class="card-grid" id="cardGrid"></div>
+
+      <!-- Feedback -->
+      <div class="feedback-box" id="feedback">Flip two cards to find a match!</div>
+
+      <!-- Buttons -->
+      <div class="flex-center">
+        <button class="btn btn-next" id="nextBtn">➜ Next Level</button>
+        <button class="btn btn-restart" id="restartBtn">⟳ Restart</button>
+        <a href="https://sander-ali.github.io" class="btn btn-home">🏠 Back to Home</a>
+      </div>
     </div>
   </div>
 
-  <!-- ================================================================ -->
-  <!-- GAME PAGES (20) – each will be filled dynamically               -->
-  <!-- ================================================================ -->
-  <div id="page-game-1" class="page"></div>
-  <div id="page-game-2" class="page"></div>
-  <div id="page-game-3" class="page"></div>
-  <div id="page-game-4" class="page"></div>
-  <div id="page-game-5" class="page"></div>
-  <div id="page-game-6" class="page"></div>
-  <div id="page-game-7" class="page"></div>
-  <div id="page-game-8" class="page"></div>
-  <div id="page-game-9" class="page"></div>
-  <div id="page-game-10" class="page"></div>
-  <div id="page-game-11" class="page"></div>
-  <div id="page-game-12" class="page"></div>
-  <div id="page-game-13" class="page"></div>
-  <div id="page-game-14" class="page"></div>
-  <div id="page-game-15" class="page"></div>
-  <div id="page-game-16" class="page"></div>
-  <div id="page-game-17" class="page"></div>
-  <div id="page-game-18" class="page"></div>
-  <div id="page-game-19" class="page"></div>
-  <div id="page-game-20" class="page"></div>
-
-  <!-- ================================================================ -->
-  <!-- CONFETTI & NAV                                                  -->
-  <!-- ================================================================ -->
+  <!-- Confetti container -->
   <div class="confetti-container" id="confettiContainer"></div>
-  <div class="game-nav" id="gameNav" style="display:none;">
-    <button class="btn-home" onclick="navigateTo('home')">🏠 Home</button>
-    <button class="btn-prev" id="navPrev" onclick="navGame(-1)">◀ Prev</button>
-    <button class="btn-next" id="navNext" onclick="navGame(1)">Next ▶</button>
-  </div>
 
   <script>
     // ================================================================
-    //  GAME DATA
+    //  MEMORY CARD GAME – Full implementation
     // ================================================================
-    const GAMES = [
-      { id:1, icon:'🔤', name:'Word Match', desc:'Match word to picture' },
-      { id:2, icon:'📖', name:'Definition Spelling', desc:'Spell by definition' },
-      { id:3, icon:'🧠', name:'Memory Cards', desc:'Find matching pairs' },
-      { id:4, icon:'🔍', name:'Word Search', desc:'Find hidden word' },
-      { id:5, icon:'🔄', name:'Anagram Solver', desc:'Unscramble letters' },
-      { id:6, icon:'🎵', name:'Rhyme Time', desc:'Find rhyming word' },
-      { id:7, icon:'📊', name:'Syllable Counter', desc:'Count syllables' },
-      { id:8, icon:'❓', name:'Missing Letter', desc:'Choose the missing letter' },
-      { id:9, icon:'👀', name:'Spot the Diff', desc:'Find odd one out' },
-      { id:10, icon:'🧩', name:'Pattern Path', desc:'Complete the pattern' },
-      { id:11, icon:'🧱', name:'Compound Words', desc:'Form compound words' },
-      { id:12, icon:'🧩', name:'Crossword Jr.', desc:'Fill in the missing word' },
-      { id:13, icon:'⌨️', name:'Type & Learn', desc:'Type the word shown' },
-      { id:14, icon:'📖', name:'Story Cloze', desc:'Fill in the blank' },
-      { id:15, icon:'🔊', name:'Initial Sound', desc:'Pick the starting letter' },
-      { id:16, icon:'🔡', name:'Letter Count', desc:'Count the letters' },
-      { id:17, icon:'⚡', name:'Quick Recall', desc:'Name the object' },
-      { id:18, icon:'🐘', name:'Memory Trail', desc:'Remember the sequence' },
-      { id:19, icon:'📚', name:'Story Sort', desc:'Put events in order' },
-      { id:20, icon:'🎯', name:'Word Families', desc:'Find words in same family' }
+
+    // ----- Game state -----
+    const state = {
+      level: 1,
+      score: 0,          // pairs matched in current level
+      totalPairs: 6,     // number of pairs (increases with level)
+      cards: [],
+      flipped: [],
+      matched: new Set(),
+      lock: false,
+      gameOver: false
+    };
+
+    // ----- Themed card sets (emoji pairs) -----
+    const THEMES = [
+      // Level 1-5: Animals
+      ['🐱', '🐶', '🐰', '🦊', '🐻', '🐼', '🐨', '🦁'],
+      // Level 6-10: Food
+      ['🍎', '🍌', '🍇', '🍉', '🍓', '🍑', '🍒', '🍋'],
+      // Level 11-15: Space & Nature
+      ['🌞', '🌙', '⭐', '🌍', '🌈', '🌸', '🌺', '🌻'],
+      // Level 16-20: Mixed fun
+      ['🎈', '🎉', '🎁', '🎀', '🧸', '🎪', '🎨', '🎵']
     ];
 
-    // ================================================================
-    //  NAVIGATION
-    // ================================================================
-    let currentGameId = 0;
+    // ----- DOM refs -----
+    const grid = document.getElementById('cardGrid');
+    const feedback = document.getElementById('feedback');
+    const levelBadge = document.getElementById('levelBadge');
+    const progressDisplay = document.getElementById('progressDisplay');
+    const nextBtn = document.getElementById('nextBtn');
+    const restartBtn = document.getElementById('restartBtn');
 
-    function navigateTo(pageId) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      const target = document.getElementById('page-'+pageId);
-      if (target) {
-        target.classList.add('active');
-        if (pageId === 'home') {
-          document.getElementById('gameNav').style.display = 'none';
-          currentGameId = 0;
-        } else if (pageId.startsWith('game-')) {
-          const id = parseInt(pageId.split('-')[1]);
-          if (!isNaN(id) && id>=1 && id<=20) {
-            currentGameId = id;
-            document.getElementById('gameNav').style.display = 'flex';
-            loadGame(id);
-          }
-        }
-        window.scrollTo({ top:0, behavior:'smooth' });
-      }
-    }
-
-    function navGame(delta) {
-      let newId = currentGameId + delta;
-      if (newId < 1) newId = 20;
-      if (newId > 20) newId = 1;
-      navigateTo('game-'+newId);
-    }
-
-    // Build home grid
-    const homeGrid = document.getElementById('homeGameGrid');
-    GAMES.forEach(g => {
-      const card = document.createElement('div');
-      card.className = 'home-card';
-      card.innerHTML = `<span class="icon">${g.icon}</span><div class="name">${g.name}</div><div class="badge">${g.desc}</div>`;
-      card.addEventListener('click', () => navigateTo('game-'+g.id));
-      homeGrid.appendChild(card);
-    });
-
-    // ================================================================
-    //  GAME ENGINE
-    // ================================================================
-    const gameStates = {};
-    const gameRenderers = {};
-    const usedTracker = {};
-
-    // Helpers
-    function shuffle(arr) { for(let i=arr.length-1; i>0; i--) { const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
-
-    // Word pools (no PIG, PEARL replaced)
-    const WORD_POOL = {
-      3: ['CAT','DOG','SUN','HAT','CUP','BAG','LOG','BUG','FAN','MAP','BED','CAR','BUS','PEN','GUM','FOX','HEN','COW','FLY','ANT'],
-      4: ['FISH','BIRD','TREE','STAR','MOON','BOOK','CAKE','FIRE','LAMP','BALL','FROG','NEST','HAND','LION','BEAR','DUCK','WOLF','DEER','SEAL','OWL'],
-      5: ['APPLE','BANANA','HAPPY','SILLY','PUPPY','BUNNY','TIGER','HORSE','HOUSE','CLOUD','BRAIN','SNAKE','PLANE','TRAIN','GLOBE','GRAPE','LEMON','MANGO','PEACH','PEAR'],
-      6: ['BANANA','PUPPY','ELEPHANT','FRIEND','FLOWER','GARDEN','BASKET','ROCKET','SUNSET','MONKEY','PENCIL','BUTTER','CANDLE','JUNGLE','CASTLE','DOLPHIN','FALCON','HORNET','JAGUAR','PANTHER']
-    };
-    const EMOJI_MAP = {
-      'CAT':'🐱','DOG':'🐶','SUN':'☀️','HAT':'🎩','CUP':'🥤','BAG':'👜','LOG':'🪵','BUG':'🐞','FAN':'🌀','MAP':'🗺️','BED':'🛏️','CAR':'🚗','BUS':'🚌','PEN':'🖊️','GUM':'🫧',
-      'FOX':'🦊','HEN':'🐔','COW':'🐮','FLY':'🪰','ANT':'🐜',
-      'FISH':'🐟','BIRD':'🐦','TREE':'🌳','STAR':'⭐','MOON':'🌙','BOOK':'📕','CAKE':'🎂','FIRE':'🔥','LAMP':'💡','BALL':'⚽','FROG':'🐸','NEST':'🪹','HAND':'✋','LION':'🦁','BEAR':'🐻',
-      'DUCK':'🦆','WOLF':'🐺','DEER':'🦌','SEAL':'🦭','OWL':'🦉',
-      'APPLE':'🍎','BANANA':'🍌','HAPPY':'😊','SILLY':'😜','PUPPY':'🐕','BUNNY':'🐇','TIGER':'🐯','HORSE':'🐴','HOUSE':'🏠','CLOUD':'☁️','BRAIN':'🧠','SNAKE':'🐍','PLANE':'✈️','TRAIN':'🚂','GLOBE':'🌍',
-      'GRAPE':'🍇','LEMON':'🍋','MANGO':'🥭','PEACH':'🍑','PEAR':'🍐',
-      'ELEPHANT':'🐘','FRIEND':'🤝','FLOWER':'🌸','GARDEN':'🌻','BASKET':'🧺','ROCKET':'🚀','SUNSET':'🌅','MONKEY':'🐒','PENCIL':'✏️','BUTTER':'🧈','CANDLE':'🕯️','JUNGLE':'🌴','CASTLE':'🏰',
-      'DOLPHIN':'🐬','FALCON':'🦅','HORNET':'🐝','JAGUAR':'🐆','PANTHER':'🐾'
-    };
-    function getWords(len) { return WORD_POOL[len] || []; }
-    function getEmoji(word) { return EMOJI_MAP[word] || '❓'; }
-
-    // Confetti
-    function fireConfetti() {
+    // ----- Confetti -----
+    function fireConfetti(count = 40) {
       const container = document.getElementById('confettiContainer');
       const colors = ['#ffcc00','#ff6b6b','#4ecdc4','#ffe66d','#a8e6cf','#ff8a5c','#6c5b7b','#ff9ff3','#54a0ff'];
-      for (let i=0; i<40; i++) {
+      for (let i = 0; i < count; i++) {
         const c = document.createElement('div');
         c.className = 'confetti';
-        c.style.left = Math.random()*100+'%';
+        c.style.left = Math.random() * 100 + '%';
         c.style.top = '-10px';
-        c.style.background = colors[Math.floor(Math.random()*colors.length)];
-        c.style.width = (Math.random()*8+4)+'px';
-        c.style.height = (Math.random()*8+4)+'px';
-        c.style.animationDuration = (Math.random()*1.5+1)+'s';
-        c.style.animationDelay = (Math.random()*0.5)+'s';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.width = (Math.random() * 8 + 4) + 'px';
+        c.style.height = (Math.random() * 8 + 4) + 'px';
+        c.style.animationDuration = (Math.random() * 1.5 + 1) + 's';
+        c.style.animationDelay = (Math.random() * 0.5) + 's';
         container.appendChild(c);
         setTimeout(() => c.remove(), 3000);
       }
     }
 
-    // ----- Unique background decorations per game -----
-    function getBgDecorations(gameId) {
-      const sets = [
-        ['✨','🌟','⭐','💫','🌸','🌈'],
-        ['🔤','📖','✏️','📝','📚','🔡'],
-        ['🧠','💡','🔑','🧩','🎯','🔎'],
-        ['🔍','🔎','👀','🔦','📡','👁️'],
-        ['🌀','🔄','🔀','🔁','💫','🎲'],
-        ['🎵','🎶','🎼','🎵','🎶','🎤'],
-        ['1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','🔢'],
-        ['❓','❔','❓','❔','❓','🔤'],
-        ['👀','👁️','👀','👁️','👀','🔍'],
-        ['🔷','🔶','🔹','🔺','⬛','🔻'],
-        ['🧱','🏗️','🏠','🧱','🏗️','🏢'],
-        ['🧩','🧩','🧩','🧩','🧩','🧩'],
-        ['⌨️','🖥️','⌨️','🖥️','⌨️','💻'],
-        ['📖','📕','📗','📘','📙','📚'],
-        ['🔊','📢','🔊','📢','🔊','📣'],
-        ['🔢','🔡','🔢','🔡','🔢','🔤'],
-        ['⚡','💡','⚡','💡','⚡','🔋'],
-        ['🐾','🦶','🐾','🦶','🐾','👣'],
-        ['📚','📝','📖','✏️','📚','📓'],
-        ['🌳','🍃','🌿','🌳','🍃','🌱']
-      ];
-      const icons = sets[gameId-1] || ['✨','🌟','⭐'];
-      return icons.map((icon, i) =>
-        `<span class="float-item" style="left:${5 + i*14}%; animation-duration:${18 + i*2}s; font-size:${2 + i*0.3}rem;">${icon}</span>`
-      ).join('');
+    // ----- Shuffle -----
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
     }
 
-    // ----- Game background gradients (soft and varied) -----
-    function getBgGradient(gameId) {
-      const gradients = [
-        'radial-gradient(ellipse at 20% 30%, #ff9a9e, #fad0c4 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 70% 40%, #a18cd1, #fbc2eb 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 50% 60%, #fbc2eb, #a6c1ee 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 30% 70%, #fddb92, #d1fdff 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 60% 30%, #c2e9fb, #a1c4fd 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 40% 50%, #f6d365, #fda085 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 70% 60%, #f093fb, #f5576c 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 20% 40%, #4facfe, #00f2fe 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 50% 30%, #43e97b, #38f9d7 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 60% 70%, #fa709a, #fee140 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 30% 50%, #fccb90, #d57eeb 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 70% 40%, #e0c3fc, #8ec5fc 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 50% 60%, #f5f7fa, #c3cfe2 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 40% 30%, #ffecd2, #fcb69f 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 60% 50%, #a1c4fd, #c2e9fb 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 30% 70%, #fbc2eb, #a6c1ee 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 70% 30%, #fddb92, #d1fdff 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 50% 40%, #f6d365, #fda085 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 40% 60%, #f093fb, #f5576c 60%, #0b0c2e)',
-        'radial-gradient(ellipse at 60% 30%, #4facfe, #00f2fe 60%, #0b0c2e)'
-      ];
-      return gradients[gameId-1] || 'radial-gradient(ellipse at center, #1a1f5e, #0b0c2e)';
+    // ----- Get card icons for current level -----
+    function getCardIcons(level) {
+      let themeIndex;
+      if (level <= 5) themeIndex = 0;
+      else if (level <= 10) themeIndex = 1;
+      else if (level <= 15) themeIndex = 2;
+      else themeIndex = 3;
+      const theme = THEMES[themeIndex];
+      // Number of pairs: 4 at level 1, up to 8 at level 20
+      const pairCount = Math.min(4 + Math.floor((level - 1) / 3), 8);
+      const shuffledTheme = shuffle([...theme]);
+      return shuffledTheme.slice(0, pairCount);
     }
 
-    // ================================================================
-    //  GAME RENDERERS (all 20, simplified but fully functional)
-    // ================================================================
-
-    // ----- Game 1: Word Match -----
-    gameRenderers[1] = function(gameId, level) {
-      const state = gameStates[gameId];
-      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
-      if (!container) return;
-      if (!usedTracker[gameId]) usedTracker[gameId] = [];
-      let wordLen = level<=5 ? 3 : level<=10 ? 4 : level<=15 ? 5 : 6;
-      let pool = getWords(wordLen);
-      let available = pool.filter(w => !usedTracker[gameId].includes(w));
-      if (available.length === 0) { usedTracker[gameId]=[]; available=pool; }
-      const target = available[Math.floor(Math.random()*available.length)];
-      usedTracker[gameId].push(target);
-      if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
-
-      const emoji = getEmoji(target);
-      let options = [target];
-      const poolCopy = pool.filter(w => w!==target);
-      shuffle(poolCopy);
-      for (let i=0; i<Math.min(3, poolCopy.length); i++) options.push(poolCopy[i]);
-      shuffle(options);
-
-      container.innerHTML = `
-        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
-        <p style="font-size:1.1rem;">Match the word to this picture:</p>
-        <div class="word-big" style="font-size:4rem; background:transparent;">${emoji}</div>
-        <div class="grid-words" id="wm-options">${options.map(w => `<span data-word="${w}">${w}</span>`).join('')}</div>
-        <div class="feedback-box" id="wm-feedback">Tap the correct word!</div>
-        <div class="flex-center">
-          <button class="btn btn-next" id="wm-next">➜ Next Level</button>
-          <button class="btn btn-restart" id="wm-restart">⟳ Restart</button>
-        </div>
-      `;
-      const fb = document.getElementById('wm-feedback');
-      const nextBtn = document.getElementById('wm-next');
-      const restartBtn = document.getElementById('wm-restart');
-      const spans = container.querySelectorAll('#wm-options span');
-      let answered = false;
-
-      spans.forEach(span => {
-        span.addEventListener('click', function() {
-          if (answered) return;
-          const chosen = this.dataset.word;
-          if (chosen === target) {
-            fb.textContent = '✅ Perfect!';
-            fb.className = 'feedback-box correct';
-            this.classList.add('selected-correct');
-            state.score++;
-            fireConfetti();
-            answered = true;
-            if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
-            nextBtn.classList.add('show');
-          } else {
-            fb.textContent = `❌ Not "${chosen}". Try again!`;
-            fb.className = 'feedback-box wrong';
-            this.classList.add('selected-wrong');
-            setTimeout(() => this.classList.remove('selected-wrong'), 500);
-          }
-        });
+    // ----- Build deck -----
+    function buildDeck(icons) {
+      const deck = [];
+      icons.forEach(icon => {
+        deck.push({ id: icon, icon: icon, matched: false });
+        deck.push({ id: icon, icon: icon, matched: false });
       });
+      return shuffle(deck);
+    }
 
-      function nextLevel() {
-        if (state.score>=20) { state.score=0; state.level=0; usedTracker[gameId]=[]; }
-        if (state.level<20) { state.level++; gameRenderers[1](gameId, state.level); }
-        else { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[1](gameId, state.level); }
-      }
-      nextBtn.addEventListener('click', nextLevel);
-      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[1](gameId, state.level); });
-    };
+    // ----- Render cards -----
+    function render() {
+      grid.innerHTML = '';
+      state.cards.forEach((card, index) => {
+        const div = document.createElement('div');
+        div.className = 'card';
+        if (state.matched.has(card.id)) {
+          div.classList.add('matched');
+        } else if (state.flipped.includes(index)) {
+          div.classList.add('flipped');
+        }
+        div.dataset.index = index;
 
-    // ----- Game 2: Definition Spelling -----
-    const DEFINITIONS = {
-      'CAT':'A small furry pet that meows','DOG':'Loyal animal that barks','SUN':'The star in our sky','HAT':'Worn on the head','CUP':'Used for drinking','BAG':'Container for carrying','LOG':'Piece of wood','BUG':'Small insect','FAN':'Makes air move','MAP':'Shows places','BED':'You sleep on it','CAR':'Four‑wheel vehicle','BUS':'Large vehicle for many','PEN':'Used for writing','GUM':'Chewy stuff','FOX':'Clever wild animal','HEN':'Female chicken','COW':'Gives milk','FLY':'Small insect with wings','ANT':'Tiny insect that works in colonies',
-      'FISH':'Lives in water','BIRD':'Has wings and feathers','TREE':'Tall plant with leaves','STAR':'Bright dot at night','MOON':'Orbits Earth','BOOK':'You read it','CAKE':'Sweet baked treat','FIRE':'Burns and gives heat','LAMP':'Gives light','BALL':'Round toy','FROG':'Jumps and croaks','NEST':'Bird home','HAND':'Body part','LION':'Big cat, king of beasts','BEAR':'Large furry mammal','DUCK':'Swims in ponds','WOLF':'Howls at moon','DEER':'Has antlers','SEAL':'Lives in ocean','OWL':'Hunts at night',
-      'APPLE':'Red or green fruit','BANANA':'Yellow curved fruit','HAPPY':'Feeling good','SILLY':'Funny and not serious','PUPPY':'Young dog','BUNNY':'Small rabbit','TIGER':'Striped big cat','HORSE':'Runs fast','HOUSE':'Building for living','CLOUD':'White in sky','BRAIN':'Inside head, thinks','SNAKE':'Long legless reptile','PLANE':'Flies in air','TRAIN':'Runs on tracks','GLOBE':'Round Earth model','GRAPE':'Small purple fruit','LEMON':'Yellow sour fruit','MANGO':'Tropical sweet fruit','PEACH':'Fuzzy fruit','PEAR':'Green or yellow fruit',
-      'ELEPHANT':'Big animal with trunk','FRIEND':'Someone you like','FLOWER':'Colourful plant part','GARDEN':'Place with plants','BASKET':'Woven container','ROCKET':'Goes to space','SUNSET':'When sun goes down','MONKEY':'Climbs trees','PENCIL':'Writes and erases','BUTTER':'Spread on bread','CANDLE':'Burns with flame','JUNGLE':'Thick forest','CASTLE':'Big tower building','DOLPHIN':'Smart sea animal','FALCON':'Fast bird of prey','HORNET':'Stinging insect','JAGUAR':'Spotted big cat','PANTHER':'Black big cat'
-    };
-    gameRenderers[2] = function(gameId, level) {
-      const state = gameStates[gameId];
-      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
-      if (!container) return;
-      if (!usedTracker[gameId]) usedTracker[gameId] = [];
-      let wordLen = level<=5 ? 3 : level<=10 ? 4 : level<=15 ? 5 : 6;
-      let pool = getWords(wordLen);
-      let available = pool.filter(w => !usedTracker[gameId].includes(w));
-      if (available.length === 0) { usedTracker[gameId]=[]; available=pool; }
-      const target = available[Math.floor(Math.random()*available.length)];
-      usedTracker[gameId].push(target);
-      if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
-      const definition = DEFINITIONS[target] || 'A word';
+        // Front (back of card – shown when face down)
+        const front = document.createElement('div');
+        front.className = 'card-front';
+        front.textContent = '?';
 
-      container.innerHTML = `
-        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
-        <p><strong>Definition:</strong> ${definition}</p>
-        <div class="flex-center"><input type="text" class="input-field" id="def-input" placeholder="Spell..." autocomplete="off" /><button class="btn" id="def-check">Check</button></div>
-        <div class="feedback-box" id="def-feedback">Type the word</div>
-        <div class="flex-center">
-          <button class="btn btn-next" id="def-next">➜ Next Level</button>
-          <button class="btn btn-restart" id="def-restart">⟳ Restart</button>
-        </div>
-      `;
-      const input = document.getElementById('def-input');
-      const checkBtn = document.getElementById('def-check');
-      const fb = document.getElementById('def-feedback');
-      const nextBtn = document.getElementById('def-next');
-      const restartBtn = document.getElementById('def-restart');
+        // Back (face of card – shown when flipped)
+        const back = document.createElement('div');
+        back.className = 'card-back';
+        back.textContent = card.icon;
 
-      function checkDef() {
-        const guess = input.value.trim().toUpperCase();
-        if (guess === target) {
-          fb.textContent = '✅ Correct!';
-          fb.className = 'feedback-box correct';
+        div.appendChild(front);
+        div.appendChild(back);
+
+        if (!state.matched.has(card.id)) {
+          div.addEventListener('click', () => handleClick(index));
+        }
+        grid.appendChild(div);
+      });
+      updateProgress();
+    }
+
+    // ----- Handle card click -----
+    function handleClick(index) {
+      if (state.lock) return;
+      if (state.matched.has(state.cards[index].id)) return;
+      if (state.flipped.includes(index)) return;
+      if (state.gameOver) return;
+
+      // Flip the card
+      state.flipped.push(index);
+      render();
+
+      if (state.flipped.length === 2) {
+        state.lock = true;
+        const idx1 = state.flipped[0];
+        const idx2 = state.flipped[1];
+        const card1 = state.cards[idx1];
+        const card2 = state.cards[idx2];
+
+        if (card1.id === card2.id && idx1 !== idx2) {
+          // Match!
+          state.matched.add(card1.id);
           state.score++;
-          fireConfetti();
-          if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
-          nextBtn.classList.add('show');
-          input.disabled = true;
-        } else if (guess.length===0) {
-          fb.textContent = 'Type a word!';
-          fb.className = 'feedback-box';
-        } else {
-          fb.textContent = `❌ Not "${guess}". Try again.`;
-          fb.className = 'feedback-box wrong';
-        }
-      }
-      checkBtn.addEventListener('click', checkDef);
-      input.addEventListener('keydown', (e) => { if (e.key==='Enter') checkDef(); });
-      setTimeout(() => input.focus(), 100);
+          feedback.innerHTML = '✅ <span class="emoji-burst">🎉</span> Match found! Great job!';
+          feedback.className = 'feedback-box correct';
+          fireConfetti(30);
 
-      function nextLevel() {
-        if (state.score>=20) { state.score=0; state.level=0; usedTracker[gameId]=[]; }
-        if (state.level<20) { state.level++; gameRenderers[2](gameId, state.level); }
-        else { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[2](gameId, state.level); }
-      }
-      nextBtn.addEventListener('click', nextLevel);
-      restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[2](gameId, state.level); });
-    };
+          state.flipped = [];
+          state.lock = false;
+          render();
 
-    // ----- Games 3–20: Simplified placeholders (but they will work) -----
-    // For brevity, we'll generate them with a generic renderer that still provides a functional game.
-    // In practice, you'd implement each game uniquely. But to keep the file size manageable,
-    // we'll provide a fallback that still works with 20 levels and no repeats.
-
-    for (let g=3; g<=20; g++) {
-      gameRenderers[g] = function(gameId, level) {
-        const state = gameStates[gameId];
-        const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
-        if (!container) return;
-        // Simple game: identify a number of syllables or letters – just a placeholder to show progress.
-        // But we'll make it a functional "Guess the Number" game to keep it interactive.
-        if (!usedTracker[gameId]) usedTracker[gameId] = [];
-        let pool = [3,4,5,6,7,8];
-        let available = pool.filter(n => !usedTracker[gameId].includes(n));
-        if (available.length === 0) { usedTracker[gameId]=[]; available=pool; }
-        const target = available[Math.floor(Math.random()*available.length)];
-        usedTracker[gameId].push(target);
-        if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
-
-        const options = [3,4,5,6,7,8];
-        shuffle(options);
-        const opt = options.slice(0,4);
-        if (!opt.includes(target)) opt[0] = target;
-        shuffle(opt);
-
-        container.innerHTML = `
-          <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} correct</span></div>
-          <p style="font-size:1.2rem;">Game ${gameId}: Guess the number!</p>
-          <p>Pick the number <strong>${target}</strong> from the options:</p>
-          <div class="grid-words" id="gn-options">${opt.map(n => `<span data-num="${n}">${n}</span>`).join('')}</div>
-          <div class="feedback-box" id="gn-feedback">Tap the correct number</div>
-          <div class="flex-center">
-            <button class="btn btn-next" id="gn-next">➜ Next Level</button>
-            <button class="btn btn-restart" id="gn-restart">⟳ Restart</button>
-          </div>
-        `;
-        const fb = document.getElementById('gn-feedback');
-        const nextBtn = document.getElementById('gn-next');
-        const restartBtn = document.getElementById('gn-restart');
-        const spans = container.querySelectorAll('#gn-options span');
-        let answered = false;
-
-        spans.forEach(span => {
-          span.addEventListener('click', function() {
-            if (answered) return;
-            const chosen = parseInt(this.dataset.num);
-            if (chosen === target) {
-              fb.textContent = '✅ Correct!';
-              fb.className = 'feedback-box correct';
-              this.classList.add('selected-correct');
-              state.score++;
-              fireConfetti();
-              answered = true;
-              if (state.score>=20) nextBtn.textContent = '🎉 Mastered! Play Again';
-              nextBtn.classList.add('show');
-            } else {
-              fb.textContent = `❌ Not ${chosen}. Try again!`;
-              fb.className = 'feedback-box wrong';
-              this.classList.add('selected-wrong');
-              setTimeout(() => this.classList.remove('selected-wrong'), 500);
+          // Check if all pairs are matched
+          if (state.matched.size === state.totalPairs) {
+            state.gameOver = true;
+            feedback.innerHTML = '🎉 <span class="emoji-burst">🌟</span> You matched all pairs! Amazing!';
+            feedback.className = 'feedback-box correct';
+            if (state.score >= 20) {
+              nextBtn.textContent = '🎉 Mastered! Play Again';
             }
-          });
-        });
-
-        function nextLevel() {
-          if (state.score>=20) { state.score=0; state.level=0; usedTracker[gameId]=[]; }
-          if (state.level<20) { state.level++; gameRenderers[gameId](gameId, state.level); }
-          else { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[gameId](gameId, state.level); }
+            nextBtn.classList.add('show');
+            fireConfetti(60);
+          }
+        } else {
+          // No match
+          feedback.innerHTML = '❌ Not a match. Try again!';
+          feedback.className = 'feedback-box wrong';
+          setTimeout(() => {
+            state.flipped = [];
+            state.lock = false;
+            render();
+            feedback.innerHTML = 'Keep going! You can do it!';
+            feedback.className = 'feedback-box';
+          }, 800);
         }
-        nextBtn.addEventListener('click', nextLevel);
-        restartBtn.addEventListener('click', function() { state.level=1; state.score=0; usedTracker[gameId]=[]; gameRenderers[gameId](gameId, state.level); });
-      };
-    }
-
-    // ================================================================
-    //  LOAD GAME – sets up full‑page background and glass card
-    // ================================================================
-    function loadGame(gameId) {
-      const page = document.getElementById('page-game-'+gameId);
-      if (!page) return;
-
-      if (!page.dataset.loaded) {
-        const game = GAMES.find(g => g.id===gameId);
-        const bgGrad = getBgGradient(gameId);
-        const bgDecor = getBgDecorations(gameId);
-        page.style.background = bgGrad;
-        page.innerHTML = `
-          <div class="bg-animation">${bgDecor}</div>
-          <div class="game-card">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap;">
-              <span style="font-size:2.5rem;">${game.icon}</span>
-              <div><h2 style="font-size:1.8rem; color:#fff;">${game.name}</h2>
-              <p style="opacity:0.7; font-size:0.95rem;">${game.desc}</p></div>
-            </div>
-            <div class="game-content"></div>
-          </div>
-        `;
-        page.dataset.loaded = 'true';
-      }
-
-      if (!gameStates[gameId]) gameStates[gameId] = { level:1, score:0 };
-      const state = gameStates[gameId];
-      const renderer = gameRenderers[gameId];
-      if (renderer) {
-        renderer(gameId, state.level || 1);
       } else {
-        const content = page.querySelector('.game-content');
-        if (content) content.innerHTML = '<p>Game coming soon!</p>';
+        feedback.innerHTML = 'Pick another card...';
+        feedback.className = 'feedback-box';
       }
     }
 
-    // ================================================================
-    //  INIT – start on home
-    // ================================================================
-    navigateTo('home');
-    console.log('🚀 Dyslexia Quest – full immersive version with 20 games!');
+    // ----- Update progress display -----
+    function updateProgress() {
+      progressDisplay.textContent = `${state.score} pairs matched`;
+      levelBadge.textContent = `Level ${state.level} / 20`;
+    }
+
+    // ----- Load level -----
+    function loadLevel(level) {
+      state.level = level;
+      state.score = 0;
+      state.flipped = [];
+      state.matched = new Set();
+      state.lock = false;
+      state.gameOver = false;
+      nextBtn.classList.remove('show');
+      nextBtn.textContent = '➜ Next Level';
+
+      const icons = getCardIcons(level);
+      state.totalPairs = icons.length;
+      state.cards = buildDeck(icons);
+      render();
+      feedback.innerHTML = `Level ${level}! Flip two cards to find a match!`;
+      feedback.className = 'feedback-box';
+    }
+
+    // ----- Next level -----
+    function goToNextLevel() {
+      if (state.level < 20) {
+        loadLevel(state.level + 1);
+      } else {
+        // Loop back to level 1
+        loadLevel(1);
+      }
+    }
+
+    // ----- Restart -----
+    function restartGame() {
+      loadLevel(1);
+    }
+
+    // ----- Event listeners -----
+    nextBtn.addEventListener('click', goToNextLevel);
+    restartBtn.addEventListener('click', restartGame);
+
+    // ----- Start the game! -----
+    loadLevel(1);
   </script>
 </body>
 </html>
