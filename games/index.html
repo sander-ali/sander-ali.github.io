@@ -411,6 +411,50 @@
       .card-grid .card .card-front,
       .card-grid .card .card-back { font-size: 1.6rem; }
     }
+    /* ----- Word Search grid styles ----- */
+    .ws-grid {
+      display: grid;
+      gap: 6px;
+      max-width: 450px;
+      margin: 16px auto;
+    }
+    .ws-grid .cell {
+      background: rgba(255,255,255,0.06);
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+      border: 2px solid transparent;
+      color: #fff;
+    }
+    .ws-grid .cell:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,204,0,0.3);
+      transform: scale(1.04);
+    }
+    .ws-grid .cell.correct {
+      background: rgba(0,200,80,0.3);
+      border-color: #00cc66;
+    }
+    .ws-grid .cell.wrong {
+      background: rgba(255,80,80,0.25);
+      border-color: #ff5555;
+      animation: shake 0.4s;
+    }
+    .ws-grid .cell.found {
+      background: rgba(0,200,80,0.15);
+      border-color: #00cc66;
+      cursor: default;
+    }
+    @media (max-width: 500px) {
+      .ws-grid .cell { font-size: 1.2rem; padding: 10px; }
+    }
+    @media (max-width: 400px) {
+      .ws-grid .cell { font-size: 1rem; padding: 8px; }
+    }
     /* ----- CONFETTI ----- */
     .confetti-container {
       position: fixed;
@@ -467,7 +511,7 @@
         <h1>🌟 Dyslexia Quest</h1>
         <p>20 fun games to strengthen reading, spelling &amp; memory</p>
         <div style="margin: 12px 0; display:inline-block; background:rgba(255,255,255,0.05); backdrop-filter:blur(8px); padding:6px 24px; border-radius:60px; border:1px solid rgba(255,255,255,0.05);">
-          <span style="font-size:1.2rem;">👧👦 Ages 4–8</span>
+          <span style="font-size:1.2rem;">👧👦 Ages 6–12</span>
         </div>
       </div>
       <div class="home-grid" id="homeGameGrid"></div>
@@ -950,9 +994,147 @@
       restartBtn.addEventListener('click', function() { state.level = 1; state.score = 0; gameRenderers[3](gameId, state.level); });
     };
 
-    // ----- Games 4–20 (placeholders with simple gameplay) -----
+    // ----- Game 4: Word Search (FIXED – proper interactive word search) -----
+    gameRenderers[4] = function(gameId, level) {
+      const state = gameStates[gameId];
+      const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
+      if (!container) return;
+
+      // Determine grid size and word length based on level
+      let gridSize, wordLen;
+      if (level <= 5) { gridSize = 5; wordLen = 3; }
+      else if (level <= 10) { gridSize = 6; wordLen = 4; }
+      else if (level <= 15) { gridSize = 7; wordLen = 5; }
+      else { gridSize = 8; wordLen = 6; }
+
+      // Get word pool
+      if (!usedTracker[gameId]) usedTracker[gameId] = [];
+      let pool = getWords(wordLen);
+      let available = pool.filter(w => !usedTracker[gameId].includes(w));
+      if (available.length === 0) { usedTracker[gameId] = []; available = pool; }
+      const target = available[Math.floor(Math.random() * available.length)];
+      usedTracker[gameId].push(target);
+      if (usedTracker[gameId].length > 20) usedTracker[gameId].shift();
+
+      // Build grid with random letters
+      const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      let grid = [];
+      for (let i = 0; i < gridSize; i++) {
+        let row = [];
+        for (let j = 0; j < gridSize; j++) {
+          row.push(letters[Math.floor(Math.random() * 26)]);
+        }
+        grid.push(row);
+      }
+
+      // Place target horizontally in a random row
+      const rowIdx = Math.floor(Math.random() * gridSize);
+      const startCol = Math.floor(Math.random() * (gridSize - target.length + 1));
+      for (let k = 0; k < target.length; k++) {
+        grid[rowIdx][startCol + k] = target[k];
+      }
+
+      // Game state
+      let expectedIndex = 0;
+      let gameFinished = false;
+      let wrongCells = []; // to reset after wrong click
+
+      container.innerHTML = `
+        <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} found</span></div>
+        <p style="font-size:1.1rem;">Find the hidden word: <strong style="color:#ffcc00;">${target}</strong></p>
+        <div class="ws-grid" id="ws-grid" style="grid-template-columns: repeat(${gridSize}, 1fr);">
+          ${grid.flat().map((ch, idx) => `<div class="cell" data-idx="${idx}">${ch}</div>`).join('')}
+        </div>
+        <div class="feedback-box" id="ws-feedback">Click the letters in order to spell the word!</div>
+        <div class="flex-center">
+          <button class="btn btn-next" id="ws-next">➜ Next Level</button>
+          <button class="btn btn-restart" id="ws-restart">⟳ Restart</button>
+        </div>
+      `;
+
+      const fb = document.getElementById('ws-feedback');
+      const nextBtn = document.getElementById('ws-next');
+      const restartBtn = document.getElementById('ws-restart');
+      const cells = document.querySelectorAll('#ws-grid .cell');
+
+      // Reset any previous state on restart
+      function resetGame() {
+        expectedIndex = 0;
+        gameFinished = false;
+        wrongCells = [];
+        cells.forEach(cell => {
+          cell.classList.remove('correct', 'wrong', 'found');
+        });
+        fb.textContent = 'Click the letters in order to spell the word!';
+        fb.className = 'feedback-box';
+        nextBtn.classList.remove('show');
+      }
+
+      // Handle cell click
+      cells.forEach(cell => {
+        cell.addEventListener('click', function() {
+          if (gameFinished) return;
+          // If this cell is already correctly clicked or wrong, skip
+          if (this.classList.contains('correct') || this.classList.contains('found')) return;
+
+          const letter = this.textContent;
+          const expectedLetter = target[expectedIndex];
+
+          if (letter === expectedLetter) {
+            // Correct!
+            this.classList.add('correct');
+            expectedIndex++;
+            fb.textContent = `✅ ${expectedIndex}/${target.length}`;
+            fb.className = 'feedback-box correct';
+
+            if (expectedIndex === target.length) {
+              // Word complete!
+              gameFinished = true;
+              fb.textContent = '🎉 You found the word! Amazing!';
+              fb.className = 'feedback-box correct';
+              state.score++;
+              fireConfetti(40);
+              // Mark all cells of the word as found (optional)
+              // We can just show next button
+              if (state.score >= 20) nextBtn.textContent = '🎉 Mastered! Play Again';
+              nextBtn.classList.add('show');
+            }
+          } else {
+            // Wrong letter
+            this.classList.add('wrong');
+            fb.textContent = `❌ Expected "${expectedLetter}", got "${letter}". Try again.`;
+            fb.className = 'feedback-box wrong';
+            // Reset all correct clicks (remove correct class) so player starts over
+            cells.forEach(c => c.classList.remove('correct'));
+            expectedIndex = 0;
+            // Remove wrong class after a moment
+            setTimeout(() => {
+              this.classList.remove('wrong');
+              fb.textContent = 'Click the letters in order again.';
+              fb.className = 'feedback-box';
+            }, 600);
+          }
+        });
+      });
+
+      // Next level
+      function nextLevel() {
+        if (state.score >= 20) { state.score = 0; state.level = 0; usedTracker[gameId] = []; }
+        if (state.level < 20) { state.level++; gameRenderers[4](gameId, state.level); }
+        else { state.level = 1; state.score = 0; usedTracker[gameId] = []; gameRenderers[4](gameId, state.level); }
+      }
+      nextBtn.addEventListener('click', nextLevel);
+      restartBtn.addEventListener('click', function() {
+        state.level = 1;
+        state.score = 0;
+        usedTracker[gameId] = [];
+        gameRenderers[4](gameId, state.level);
+      });
+    };
+
+    // ----- Games 5–20 (placeholders with simple gameplay) -----
     // For brevity, we'll use a generic "Guess the number" game, but you can replace each with your own.
-    for (let g=4; g<=20; g++) {
+    for (let g=5; g<=20; g++) {
       gameRenderers[g] = function(gameId, level) {
         const state = gameStates[gameId];
         const container = document.getElementById('page-game-'+gameId).querySelector('.game-card .game-content');
@@ -1059,7 +1241,7 @@
     //  INIT
     // ================================================================
     navigateTo('home');
-    console.log('🚀 Dyslexia Quest loaded with all 20 games!');
+    console.log('🚀 Dyslexia Quest loaded with all 20 games – Word Search fixed!');
   </script>
 </body>
 </html>
