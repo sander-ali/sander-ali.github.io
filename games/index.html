@@ -112,9 +112,10 @@
             0%,100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
+        /* Mobile-first grid: auto-fill, min 130px columns */
         .home-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
             gap: 16px;
             margin-top: 30px;
             max-width: 1000px;
@@ -129,6 +130,8 @@
             text-align: center;
             cursor: pointer;
             transition: 0.3s;
+            min-width: 0;
+            word-break: break-word;
         }
         .home-card:hover {
             transform: translateY(-8px) scale(1.04);
@@ -325,10 +328,11 @@
         /* ----- Memory Cards specific styles ----- */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
             gap: 14px;
             max-width: 500px;
             margin: 16px auto;
+            width: 100%;
         }
         .card-grid .card {
             aspect-ratio: 1 / 1;
@@ -401,22 +405,13 @@
             50% { transform: scale(1.12); }
             100% { transform: scale(1); }
         }
-        @media (max-width: 500px) {
-            .card-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
-            .card-grid .card .card-front,
-            .card-grid .card .card-back { font-size: 2rem; }
-        }
-        @media (max-width: 400px) {
-            .card-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-            .card-grid .card .card-front,
-            .card-grid .card .card-back { font-size: 1.6rem; }
-        }
         /* ----- Word Search grid styles ----- */
         .ws-grid {
             display: grid;
             gap: 6px;
             max-width: 450px;
             margin: 16px auto;
+            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
         }
         .ws-grid .cell {
             background: rgba(255,255,255,0.06);
@@ -449,12 +444,6 @@
             border-color: #00cc66;
             cursor: default;
         }
-        @media (max-width: 500px) {
-            .ws-grid .cell { font-size: 1.2rem; padding: 10px; }
-        }
-        @media (max-width: 400px) {
-            .ws-grid .cell { font-size: 1rem; padding: 8px; }
-        }
         /* ----- CONFETTI ----- */
         .confetti-container {
             position: fixed;
@@ -474,19 +463,32 @@
             0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
             100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
         }
-        /* ----- RESPONSIVE ----- */
+        /* ----- RESPONSIVE TWEAKS (mobile-first) ----- */
+        /* Base styles already mobile-friendly.
+           Adjust for very small screens */
+        @media (max-width: 400px) {
+            .home-grid { gap: 10px; }
+            .home-card { padding: 12px 4px; }
+            .home-card .icon { font-size: 2.2rem; }
+            .home-card .name { font-size: 0.8rem; }
+            .home-card .badge { font-size: 0.55rem; padding: 1px 8px; }
+            .game-card { padding: 15px 12px; }
+            .word-big { font-size: 2rem; padding: 8px 12px; }
+            .grid-words span { font-size: 1rem; padding: 6px 12px; }
+            .card-grid { gap: 8px; }
+            .card-grid .card .card-front,
+            .card-grid .card .card-back { font-size: 2rem; }
+        }
         @media (max-width: 600px) {
             .game-card { padding: 20px 14px; max-height: 90vh; }
             .word-big { font-size: 2.2rem; padding: 8px 16px; }
             .grid-words span { font-size: 1.1rem; padding: 8px 14px; }
-            .card-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
             #page-home .hero h1 { font-size: 2.6rem; }
             .game-nav { bottom: 10px; padding: 6px 12px; gap: 6px; }
             .game-nav button { font-size: 0.7rem; padding: 4px 12px; }
         }
-        @media (max-width: 400px) {
-            .card-grid { grid-template-columns: repeat(2, 1fr); }
-            #page-home .hero p { font-size: 1.1rem; }
+        @media (min-width: 768px) {
+            .home-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
         }
     </style>
 </head>
@@ -1094,9 +1096,9 @@
             const nextBtn = document.getElementById('mem-next');
             const restartBtn = document.getElementById('mem-restart');
 
-            // Set grid columns based on pair count
-            const cols = pairCount <= 4 ? 4 : pairCount <= 6 ? 4 : 4;
-            grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+            // Set grid columns based on pair count – but we'll let auto-fill handle it
+            // We'll override the grid-template-columns to keep 4 columns for memory
+            // but we can keep auto-fill with minmax
 
             function renderCards() {
                 grid.innerHTML = '';
@@ -1247,7 +1249,7 @@
             container.innerHTML = `
         <div class="level-header"><span class="level-badge">Level ${level}/20</span><span class="progress">${state.score} found</span></div>
         <p style="font-size:1.1rem;">Find the hidden word: <strong style="color:#ffcc00;">${target}</strong></p>
-        <div class="ws-grid" id="ws-grid" style="grid-template-columns: repeat(${gridSize}, 1fr);">
+        <div class="ws-grid" id="ws-grid">
           ${grid.flat().map((ch, idx) => `<div class="cell" data-idx="${idx}">${ch}</div>`).join('')}
         </div>
         <div class="feedback-box" id="ws-feedback">Click the letters in order to spell the word!</div>
@@ -2791,47 +2793,10 @@
         }
 
         // ================================================================
-        //  RESPONSIVENESS (JavaScript-based)
-        // ================================================================
-        function adjustGridColumns() {
-            const homeGrid = document.getElementById('homeGameGrid');
-            const cardGrids = document.querySelectorAll('.card-grid, .ws-grid');
-            const width = window.innerWidth;
-
-            let homeCols = 4;
-            let cardCols = 4;
-
-            if (width < 400) {
-                homeCols = 2;
-                cardCols = 2;
-            } else if (width < 600) {
-                homeCols = 3;
-                cardCols = 3;
-            } else if (width < 900) {
-                homeCols = 4;
-                cardCols = 4;
-            } else {
-                homeCols = 5;
-                cardCols = 4;
-            }
-
-            if (homeGrid) {
-                homeGrid.style.gridTemplateColumns = `repeat(${homeCols}, 1fr)`;
-            }
-            cardGrids.forEach(grid => {
-                grid.style.gridTemplateColumns = `repeat(${cardCols}, 1fr)`;
-            });
-        }
-
-        // Run on load and resize
-        window.addEventListener('load', adjustGridColumns);
-        window.addEventListener('resize', adjustGridColumns);
-
-        // ================================================================
         //  INIT
         // ================================================================
         navigateTo('home');
-        console.log('🚀 Dyslexia Quest loaded – Pattern Path fixed, Memory Cards working!');
+        console.log('🚀 Dyslexia Quest loaded – fully responsive with mobile-first CSS!');
     </script>
 </body>
 </html>
