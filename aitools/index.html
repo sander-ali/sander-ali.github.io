@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Tools Observatory — Complete Global Directory 2026</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.0.0/index.css"/>
+<style>
+  :root{
+    --bg:#0a0b14;
+    --panel:#111320;
+    --panel-2:#161a2c;
+    --border:#1f2440;
+    --text:#e7e9f5;
+    --muted:#8b90ad;
+    --accent:#7c5cff;
+    --accent-2:#22d3ee;
+  }
+  *{box-sizing:border-box}
+  html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif}
+  .display{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em}
+  .glass{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));backdrop-filter:blur(10px);border:1px solid var(--border)}
+  .grid-bg{
+    background-image:
+      radial-gradient(1200px 600px at 10% -10%, rgba(124,92,255,0.18), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(34,211,238,0.12), transparent 60%),
+      linear-gradient(180deg,#07080f,#0a0b14);
+  }
+  .scroll-thin::-webkit-scrollbar{width:8px;height:8px}
+  .scroll-thin::-webkit-scrollbar-thumb{background:#242a4a;border-radius:8px}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.02em;border:1px solid var(--border);background:rgba(255,255,255,0.02)}
+  .btn{transition:all .2s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .fade-in{animation:fade .4s ease both}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .rating-bar{height:6px;border-radius:999px;background:#1b1f38;overflow:hidden}
+  .rating-bar>span{display:block;height:100%;background:linear-gradient(90deg,#7c5cff,#22d3ee)}
+  .tag-paid{background:linear-gradient(135deg,#f59e0b22,#f59e0b11);color:#fbbf24;border:1px solid #f59e0b33}
+  .tag-free{background:linear-gradient(135deg,#22c55e22,#22c55e11);color:#4ade80;border:1px solid #22c55e33}
+  .tag-both{background:linear-gradient(135deg,#7c5cff22,#22d3ee11);color:#a5b4fc;border:1px solid #7c5cff33}
+  .tag-cn{background:linear-gradient(135deg,#ef444422,#ef444411);color:#fca5a5;border:1px solid #ef444433}
+  .tag-kr{background:linear-gradient(135deg,#3b82f622,#3b82f611);color:#93c5fd;border:1px solid #3b82f633}
+  .tag-new{background:linear-gradient(135deg,#ec489922,#ec489911);color:#f9a8d4;border:1px solid #ec489933}
+  details[open] .chev{transform:rotate(180deg)}
+  .chev{transition:transform .25s ease}
+  .cat-btn.active{background:linear-gradient(135deg,#7c5cff,#22d3ee);color:#0a0b14;border-color:transparent}
+  .stat-card{position:relative;overflow:hidden}
+  .stat-card::after{content:"";position:absolute;inset:auto -30% -60% auto;width:200px;height:200px;background:radial-gradient(closest-side,rgba(124,92,255,0.25),transparent);border-radius:50%}
+  .origin-flag{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:700;letter-spacing:.05em}
+</style>
+</head>
+<body class="grid-bg min-h-screen">
+
+<header class="sticky top-0 z-30 border-b border-[color:var(--border)] bg-[#0a0b14]/80 backdrop-blur">
+  <div class="max-w-[1500px] mx-auto px-6 py-4 flex items-center gap-4 flex-wrap">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#7c5cff] to-[#22d3ee] flex items-center justify-center font-bold text-[#0a0b14]">AI</div>
+      <div>
+        <div class="display text-lg font-semibold">AI Tools Observatory</div>
+        <div class="text-xs text-[color:var(--muted)]">Complete Global Directory · 100+ tools · 7 categories</div>
+      </div>
+    </div>
+    <div class="ml-auto flex items-center gap-3 flex-wrap">
+      <div class="relative">
+        <input id="searchInput" type="text" placeholder="Search tools, companies, use cases…"
+          class="w-[260px] md:w-[320px] pl-10 pr-3 py-2 rounded-xl bg-[color:var(--panel)] border border-[color:var(--border)] text-sm focus:outline-none focus:border-[#7c5cff]"/>
+        <svg class="absolute left-3 top-2.5 w-4 h-4 text-[color:var(--muted)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </div>
+      <div class="flex rounded-xl border border-[color:var(--border)] overflow-hidden text-xs">
+        <button data-filter="all" class="px-3 py-2 bg-[color:var(--panel)] hover:bg-[color:var(--panel-2)] btn filter-btn">All</button>
+        <button data-filter="free" class="px-3 py-2 bg-[color:var(--panel)] hover:bg-[color:var(--panel-2)] btn filter-btn">Free</button>
+        <button data-filter="paid" class="px-3 py-2 bg-[color:var(--panel)] hover:bg-[color:var(--panel-2)] btn filter-btn">Paid</button>
+      </div>
+      <div class="flex rounded-xl border border-[color:var(--border)] overflow-hidden text-xs">
+        <button data-origin="all" class="px-3 py-2 bg-[color:var(--panel)] hover:bg-[color:var(--panel-2)] btn origin-btn">Global</button>
+        <button data-origin="CN" class="px-3 py-2 bg-[color:var(--panel)] hover:bg-[color:var(--panel-2)] btn origin-btn">🇨🇳</button>
+        <button data-origin="KR" class="px-3 py-2 bg-[color:var(--panel)] hover:bg-[color:var(--panel-2)] btn origin-btn">🇰🇷</button>
+        <button data-origin="US" class="px-3 py-2 bg-[color:var(--panel)] hover:bg-[color:var(--panel-2)] btn origin-btn">🇺🇸</button>
+        <button data-origin="EU" class="px-3 py-2 bg-[color:var(--panel)] hover:bg-[color:var(--panel-2)] btn origin-btn">🇪🇺</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1500px] mx-auto px-6 py-8">
+
+  <section class="mb-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div>
+        <div class="chip mb-3"><span class="w-1.5 h-1.5 rounded-full bg-[#22d3ee]"></span>Comprehensive · Includes Chinese, Korean, and emerging players</div>
+        <h1 class="display text-3xl md:text-4xl font-semibold">The <span class="bg-gradient-to-r from-[#7c5cff] to-[#22d3ee] bg-clip-text text-transparent">complete map</span> of online AI tools.</h1>
+        <p class="text-[color:var(--muted)] mt-3 max-w-3xl">Every major globally-accessible AI platform — from OpenAI, Anthropic, and Google to DeepSeek, Kimi, Naver, ByteDance, and NVIDIA. Paid vs. free breakdowns, ratings, and best-fit use cases.</p>
+      </div>
+      <div class="flex gap-2">
+        <select id="sortBy" class="bg-[color:var(--panel)] border border-[color:var(--border)] rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-[#7c5cff]">
+          <option value="rating">Sort: Rating ↓</option>
+          <option value="name">Sort: Name A→Z</option>
+          <option value="category">Sort: Category</option>
+          <option value="origin">Sort: Origin</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats" class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8"></section>
+
+  <section class="mb-6">
+    <div class="flex items-center gap-2 overflow-x-auto scroll-thin pb-2" id="categoryBar"></div>
+  </section>
+
+  <section id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"></section>
+
+  <footer class="mt-16 pt-8 border-t border-[color:var(--border)] text-xs text-[color:var(--muted)] flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+    <div>Curated from official product pages, market analyses, and public creator discussions. Ratings reflect aggregated ease-of-use, output quality, speed, and integrations. Tools marked 🆕 are recently launched (2024–2025).</div>
+    <div>© 2026 AI Tools Observatory · Updated quarterly</div>
+  </footer>
+</main>
+
+<script>
+const TOOLS = [
+  // ============ LARGE LANGUAGE MODELS ============
+  {name:"ChatGPT", company:"OpenAI", origin:"US", category:"Large Language Models", icon:"💬", tier:"both", rating:9.2, tags:[],
+    paid:"GPT-5.6 Pro, Deep Research, Memory, Codex CLI, 5x+ message limits, enterprise security.",
+    free:"Foundational GPT-5.6 access, lower rate limits, limited advanced tools.",
+    bestUse:"General-purpose reasoning, writing, research, and coding assistant."},
+  {name:"Claude", company:"Anthropic", origin:"US", category:"Large Language Models", icon:"🧠", tier:"both", rating:9.3, tags:[],
+    paid:"Opus 4.8, up to 20x usage (Max), Claude Design, Claude Code agentic coder.",
+    free:"Sonnet 5 access with limited daily usage.",
+    bestUse:"Long-context analysis, nuanced writing, and agentic coding workflows."},
+  {name:"Gemini", company:"Google", origin:"US", category:"Large Language Models", icon:"✨", tier:"both", rating:8.9, tags:[],
+    paid:"Gemini Advanced with 1.5/2.0 Ultra, higher quotas, Workspace integration.",
+    free:"Generous Google AI Studio tier with Gemini 2.0 Flash, fast responses.",
+    bestUse:"Multimodal prompts, long-context reasoning, and Google ecosystem integration."},
+  {name:"Grok", company:"xAI", origin:"US", category:"Large Language Models", icon:"🚀", tier:"both", rating:8.5, tags:["new"],
+    paid:"Grok-3 via X Premium+ ($165/mo), real-time X data access.",
+    free:"Limited Grok-2 mini access on X (free tier).",
+    bestUse:"Real-time commentary with live X/Twitter data and unfiltered responses."},
+  {name:"DeepSeek", company:"DeepSeek AI", origin:"CN", category:"Large Language Models", icon:"🔮", tier:"free", rating:9.0, tags:["new"],
+    paid:"API pay-per-token; enterprise hosting options.",
+    free:"DeepSeek-V3 and R1 reasoning models fully free via web and API.",
+    bestUse:"High-quality reasoning at near-zero cost; open-weights alternative to GPT/Claude."},
+  {name:"Kimi", company:"Moonshot AI", origin:"CN", category:"Large Language Models", icon:"🌙", tier:"both", rating:8.6, tags:["new"],
+    paid:"Kimi Explorer subscription with higher context and priority.",
+    free:"200K+ context window, web/file search, free tier.",
+    bestUse:"Ultra-long context document analysis and Chinese/English bilingual tasks."},
+  {name:"Qwen", company:"Alibaba", origin:"CN", category:"Large Language Models", icon:"🐯", tier:"free", rating:8.7, tags:["new"],
+    paid:"Enterprise API via Alibaba Cloud.",
+    free:"Open-weights Qwen2.5 models; free Tongyi web chat.",
+    bestUse:"Multilingual (especially CJK) tasks and on-premises deployment."},
+  {name:"GLM / ChatGLM", company:"Zhipu AI", origin:"CN", category:"Large Language Models", icon:"💎", tier:"both", rating:8.3, tags:[],
+    paid:"GLM-4 Plus via API; enterprise plans.",
+    free:"ChatGLM web interface with daily limits.",
+    bestUse:"Chinese-market applications and bilingual content generation."},
+  {name:"Ernie / Wenxin Yiyan", company:"Baidu", origin:"CN", category:"Large Language Models", icon:"🐾", tier:"both", rating:8.2, tags:[],
+    paid:"Ernie 4.5 Turbo via API; Baidu Cloud plans.",
+    free:"Wenxin Yiyan web chat with limited daily queries.",
+    bestUse:"China-optimized search-augmented LLM with deep Baidu integration."},
+  {name:"Yi", company:"01.AI", origin:"CN", category:"Large Language Models", icon:"🎯", tier:"free", rating:8.1, tags:[],
+    paid:"API via 01.AI platform.",
+    free:"Open-weights Yi-Lightning and Yi series.",
+    bestUse:"Bilingual Chinese-English open-weight models for developers."},
+  {name:"Nemotron", company:"NVIDIA", origin:"US", category:"Large Language Models", icon:"🟢", tier:"both", rating:8.4, tags:["new"],
+    paid:"Nemotron via NVIDIA API catalog; enterprise licensing.",
+    free:"Nemotron-Open via NVIDIA Build (free tier credits).",
+    bestUse:"Synthetic data generation, reward modeling, and enterprise LLM fine-tuning."},
+  {name:"HyperCLOVA X", company:"Naver", origin:"KR", category:"Large Language Models", icon:"🟩", tier:"both", rating:8.3, tags:[],
+    paid:"CLOVA Studio API; enterprise plans.",
+    free:"CLOVA Chat web interface with limited usage.",
+    bestUse:"Korean-language specialist with deep Naver search integration."},
+  {name:"EXAONE", company:"LG AI Research", origin:"KR", category:"Large Language Models", icon:"🔷", tier:"free", rating:8.0, tags:["new"],
+    paid:"Enterprise licensing via LG.",
+    free:"Open-weights EXAONE 3.5 models (multilingual).",
+    bestUse:"Korean/English/Japanese enterprise workloads with open deployment."},
+  {name:"Wrtn", company:"Wrtn Technologies", origin:"KR", category:"Large Language Models", icon:"🇰🇷", tier:"both", rating:7.9, tags:[],
+    paid:"Wrtn Pro subscription.",
+    free:"Wrtn chatbot with Korean-optimized features.",
+    bestUse:"Korean content creation, marketing copy, and customer service."},
+  {name:"Mistral", company:"Mistral AI", origin:"EU", category:"Large Language Models", icon:"🌀", tier:"both", rating:8.6, tags:[],
+    paid:"Mistral Large via API; Le Chat subscription.",
+    free:"Mistral 7B/8B open-weights; free Le Chat tier.",
+    bestUse:"European sovereign AI with strong multilingual and code capabilities."},
+  {name:"Llama", company:"Meta", origin:"US", category:"Large Language Models", icon:"🦙", tier:"free", rating:8.8, tags:[],
+    paid:"Hosted via AWS Bedrock, Azure, Groq, etc.",
+    free:"Open-weights Llama 3.x under Meta license.",
+    bestUse:"Self-hosted, customizable models for privacy-sensitive workloads."},
+  {name:"Command R / R+", company:"Cohere", origin:"US", category:"Large Language Models", icon:"📚", tier:"both", rating:8.4, tags:[],
+    paid:"Command R+ via API; enterprise RAG plans.",
+    free:"Limited API trial credits.",
+    bestUse:"Enterprise RAG and multilingual retrieval with 10+ language support."},
+  {name:"Perplexity", company:"Perplexity AI", origin:"US", category:"Large Language Models", icon:"🔎", tier:"both", rating:8.7, tags:[],
+    paid:"Unlimited Pro searches, advanced models, Max tier at $200/mo.",
+    free:"Basic cited conversational search with daily Pro limits.",
+    bestUse:"Real-time research with inline citations and source tracking."},
+  {name:"Phi", company:"Microsoft", origin:"US", category:"Large Language Models", icon:"Φ", tier:"free", rating:8.2, tags:[],
+    paid:"Hosted via Azure AI.",
+    free:"Open-weights Phi-3/4 small models.",
+    bestUse:"Small, efficient models for on-device and edge deployment."},
+  {name:"Pi", company:"Inflection AI", origin:"US", category:"Large Language Models", icon:"🤝", tier:"free", rating:7.8, tags:[],
+    paid:"Pi Personal subscription.",
+    free:"Empathetic conversational AI via web and SMS.",
+    bestUse:"Supportive, emotionally intelligent conversational companion."},
+  {name:"Jamba", company:"AI21 Labs", origin:"US", category:"Large Language Models", icon:"🌴", tier:"both", rating:7.9, tags:[],
+    paid:"Jamba 1.5 via API.",
+    free:"Limited trial credits.",
+    bestUse:"Hybrid Mamba-Transformer architecture for long-context efficiency."},
+  {name:"Falcon", company:"TII (Abu Dhabi)", origin:"EU", category:"Large Language Models", icon:"🦅", tier:"free", rating:8.0, tags:[],
+    paid:"Falcon 2 via API.",
+    free:"Open-weights Falcon 11B/40B under TII license.",
+    bestUse:"Middle-East sovereign AI with strong Arabic/English capabilities."},
+  {name:"Reka", company:"Reka AI", origin:"US", category:"Large Language Models", icon:"🏜️", tier:"both", rating:7.8, tags:[],
+    paid:"Reka Core/Edge via API.",
+    free:"Limited playground access.",
+    bestUse:"Multimodal reasoning with strong video understanding."},
+  {name:"Writer Palmyra", company:"Writer", origin:"US", category:"Large Language Models", icon:"✍️", tier:"both", rating:7.9, tags:[],
+    paid:"Writer enterprise platform with Palmyra X-00.",
+    free:"Limited trial.",
+    bestUse:"Enterprise-grade, fully trainable LLMs for regulated industries."},
+  {name:"Aleph Alpha Luminous", company:"Aleph Alpha", origin:"EU", category:"Large Language Models", icon:"🇪🇺", tier:"both", rating:7.7, tags:[],
+    paid:"Luminous via API; enterprise plans.",
+    free:"Limited playground.",
+    bestUse:"European sovereign AI with explainability and GDPR compliance."},
+  {name:"DBRX", company:"Databricks", origin:"US", category:"Large Language Models", icon:"📊", tier:"free", rating:7.8, tags:[],
+    paid:"Hosted on Databricks platform.",
+    free:"Open-weights MoE model.",
+    bestUse:"Enterprise data-focused LLM integrated with Databricks lakehouse."},
+
+  // ============ GENERATIVE IMAGING ============
+  {name:"Midjourney", company:"Midjourney Inc.", origin:"US", category:"Generative Imaging", icon:"🖼️", tier:"paid", rating:9.5, tags:[],
+    paid:"Subscription-only ($10–$60/mo); advanced stylization, consistency.",
+    free:"No free tier for direct web use.",
+    bestUse:"Concept art, brand visuals, and stylistically consistent imagery."},
+  {name:"DALL-E 3 / Bing Creator", company:"OpenAI / Microsoft", origin:"US", category:"Generative Imaging", icon:"🎨", tier:"free", rating:8.6, tags:[],
+    paid:"Via ChatGPT Plus/Pro subscriptions.",
+    free:"Bing Image Creator with DALL-E 3 access; watermarks apply.",
+    bestUse:"Quick, high-fidelity text-to-image for casual and non-commercial use."},
+  {name:"Adobe Firefly", company:"Adobe", origin:"US", category:"Generative Imaging", icon:"🔥", tier:"both", rating:8.7, tags:[],
+    paid:"Integrated into Creative Cloud ($55/mo).",
+    free:"Free experimentation tier; commercially safe training data.",
+    bestUse:"Designers needing copyright-safe imagery inside Adobe workflows."},
+  {name:"Leonardo.AI", company:"Leonardo Interactive", origin:"AU", category:"Generative Imaging", icon:"🎭", tier:"both", rating:8.8, tags:[],
+    paid:"Higher credit limits, advanced models, faster generation.",
+    free:"Daily credit allotment for experimentation.",
+    bestUse:"Game assets, character design, and fine-tuned model workflows."},
+  {name:"Ideogram", company:"Ideogram", origin:"US", category:"Generative Imaging", icon:"🔤", tier:"both", rating:8.9, tags:["new"],
+    paid:"Plus/Pro tiers with higher limits and private generations.",
+    free:"Daily free generations; best-in-class text rendering.",
+    bestUse:"Typography-heavy designs, logos, and posters with accurate text."},
+  {name:"Flux", company:"Black Forest Labs", origin:"EU", category:"Generative Imaging", icon:"⚡", tier:"both", rating:9.1, tags:["new"],
+    paid:"Flux Pro via API and partner platforms.",
+    free:"Flux Schnell open-weights; free via various hosts.",
+    bestUse:"Photorealistic output rivaling Midjourney with open-weight flexibility."},
+  {name:"Recraft", company:"Recraft", origin:"EU", category:"Generative Imaging", icon:"🎯", tier:"both", rating:8.5, tags:[],
+    paid:"Pro plans with brand kit and vector output.",
+    free:"Daily free generations.",
+    bestUse:"Brand-consistent vector graphics, icons, and illustrations."},
+  {name:"Krea AI", company:"Krea", origin:"US", category:"Generative Imaging", icon:"🎬", tier:"both", rating:8.4, tags:["new"],
+    paid:"Pro tier with higher limits and private mode.",
+    free:"Real-time generation and enhancement tools.",
+    bestUse:"Real-time AI canvas and image enhancement/upscaling."},
+  {name:"Magnific AI", company:"Magnific", origin:"EU", category:"Generative Imaging", icon:"🔍", tier:"paid", rating:8.6, tags:[],
+    paid:"Subscription-based ($39–$399/mo).",
+    free:"No free tier.",
+    bestUse:"AI upscaling and 'hallucination' detail enhancement for pro imagery."},
+  {name:"Playground AI", company:"Playground", origin:"US", category:"Generative Imaging", icon:"🎨", tier:"both", rating:8.3, tags:[],
+    paid:"Faster generation, removed limits.",
+    free:"Generous free tier for experimentation.",
+    bestUse:"Rapid prototyping of visual concepts and social media assets."},
+  {name:"Stable Diffusion (web)", company:"Stability AI", origin:"US", category:"Generative Imaging", icon:"🧩", tier:"both", rating:8.8, tags:[],
+    paid:"Managed via DreamStudio or self-hosted.",
+    free:"Open-weights core models.",
+    bestUse:"Maximum control via custom models, LoRAs, and ControlNet."},
+  {name:"NightCafe", company:"NightCafe Studio", origin:"AU", category:"Generative Imaging", icon:"🌃", tier:"both", rating:7.9, tags:[],
+    paid:"Credit packs and subscription.",
+    free:"Daily free credits; multiple algorithms.",
+    bestUse:"Casual art creation with community features and multiple styles."},
+  {name:"Craiyon", company:"Craiyon (ex-DALL-E mini)", origin:"US", category:"Generative Imaging", icon:"🖍️", tier:"free", rating:7.2, tags:[],
+    paid:"Supporter tier removes ads.",
+    free:"Unlimited free generations with ads.",
+    bestUse:"Quick, casual image generation with zero commitment."},
+  {name:"Wombo Dream", company:"Wombo", origin:"CA", category:"Generative Imaging", icon:"🌈", tier:"both", rating:7.6, tags:[],
+    paid:"Dream premium subscription.",
+    free:"Free generations with style presets.",
+    bestUse:"Mobile-first stylized art with 20+ artistic filters."},
+  {name:"Clipdrop", company:"Stability AI", origin:"US", category:"Generative Imaging", icon:"📎", tier:"both", rating:8.2, tags:[],
+    paid:"Pro tier with higher limits and API.",
+    free:"Free suite of tools (remove bg, upscale, etc.).",
+    bestUse:"All-in-one image editing toolkit (remove bg, relight, upscale)."},
+  {name:"Photoroom", company:"Photoroom", origin:"EU", category:"Generative Imaging", icon:"📸", tier:"both", rating:8.4, tags:[],
+    paid:"Pro plans with batch editing and API.",
+    free:"Free background removal and basic edits.",
+    bestUse:"E-commerce product photography and background replacement."},
+  {name:"Gemini Imaging", company:"Google", origin:"US", category:"Generative Imaging", icon:"✨", tier:"both", rating:8.3, tags:["new"],
+    paid:"Via Gemini Advanced subscription.",
+    free:"Integrated in Gemini free tier (limited).",
+    bestUse:"Native image generation and editing inside the Gemini chat interface."},
+  {name:"Jimeng / 即梦", company:"ByteDance", origin:"CN", category:"Generative Imaging", icon:"🎎", tier:"both", rating:8.5, tags:["new","cn"],
+    paid:"Premium tier with higher credits.",
+    free:"Daily free credits; strong Chinese aesthetic models.",
+    bestUse:"Chinese-market image generation with culturally-tuned aesthetics."},
+  {name:"Tongyi Wanxiang", company:"Alibaba", origin:"CN", category:"Generative Imaging", icon:"🐯", tier:"both", rating:8.2, tags:["cn"],
+    paid:"Via Alibaba Cloud API.",
+    free:"Free tier via Tongyi app.",
+    bestUse:"Chinese-market image generation integrated with Alibaba ecosystem."},
+  {name:"Hunyuan Image", company:"Tencent", origin:"CN", category:"Generative Imaging", icon:"🐧", tier:"both", rating:8.1, tags:["cn"],
+    paid:"Via Tencent Cloud API.",
+    free:"Free tier with daily limits.",
+    bestUse:"Chinese-language optimized image generation with Tencent integration."},
+  {name:"Kandinsky", company:"Sber (Russia)", origin:"EU", category:"Generative Imaging", icon:"🎨", tier:"free", rating:7.8, tags:[],
+    paid:"Via SberCloud API.",
+    free:"Free web interface and open-weights models.",
+    bestUse:"Russian/Slavic language optimized image generation."},
+  {name:"Pixlr", company:"Pixlr", origin:"SG", category:"Generative Imaging", icon:"🖌️", tier:"both", rating:7.7, tags:[],
+    paid:"Premium subscription.",
+    free:"Free AI generator and editor.",
+    bestUse:"Browser-based AI image editing with generative fill."},
+
+  // ============ AUDIO CREATION ============
+  {name:"ElevenLabs", company:"ElevenLabs", origin:"US", category:"Audio Creation", icon:"🎙️", tier:"both", rating:9.5, tags:[],
+    paid:"Higher character/minute limits, priority access, advanced cloning, API.",
+    free:"Generous character limits, 70+ languages.",
+    bestUse:"Ultra-realistic voiceovers and custom voice cloning."},
+  {name:"Suno", company:"Suno AI", origin:"US", category:"Audio Creation", icon:"🎵", tier:"both", rating:9.2, tags:["new"],
+    paid:"Pro/Premier plans with commercial rights and higher credits.",
+    free:"Daily free song generations (non-commercial).",
+    bestUse:"Full-song AI music generation with vocals from text prompts."},
+  {name:"Udio", company:"Udio", origin:"US", category:"Audio Creation", icon:"🎶", tier:"both", rating:9.0, tags:["new"],
+    paid:"Standard/Pro plans with commercial rights.",
+    free:"Daily free generations.",
+    bestUse:"High-fidelity AI music generation competing with Suno."},
+  {name:"Luvvoice", company:"Luvvoice", origin:"US", category:"Audio Creation", icon:"💖", tier:"both", rating:8.1, tags:["new"],
+    paid:"Premium plans with higher character limits.",
+    free:"Free tier with multiple neural voices.",
+    bestUse:"Affordable text-to-speech with natural-sounding voices."},
+  {name:"Inworld AI", company:"Inworld", origin:"US", category:"Audio Creation", icon:"🧠", tier:"both", rating:8.4, tags:[],
+    paid:"Studio Pro and Enterprise plans.",
+    free:"Free developer tier with limited characters.",
+    bestUse:"AI character voices and interactive NPCs for games and experiences."},
+  {name:"Murf.ai", company:"Murf", origin:"US", category:"Audio Creation", icon:"🎚️", tier:"both", rating:8.3, tags:[],
+    paid:"Larger voice library, advanced editing, team collaboration.",
+    free:"Limited trial/credits.",
+    bestUse:"Corporate presentations, e-learning, and team voiceover workflows."},
+  {name:"Descript", company:"Descript", origin:"US", category:"Audio Creation", icon:"🎧", tier:"both", rating:9.1, tags:[],
+    paid:"Higher monthly minutes, watermark-free, noise removal.",
+    free:"1 hour/month editing, basic transcription.",
+    bestUse:"Transcript-based editing for podcasts and video content."},
+  {name:"Adobe Podcast", company:"Adobe", origin:"US", category:"Audio Creation", icon:"🎤", tier:"both", rating:8.5, tags:[],
+    paid:"Creative Cloud integration.",
+    free:"30-min files, 4 hrs/day enhancement. Regional restrictions apply.",
+    bestUse:"One-click studio-grade audio cleanup and source separation."},
+  {name:"Play.ht", company:"Play.ht", origin:"US", category:"Audio Creation", icon:"▶️", tier:"both", rating:8.4, tags:[],
+    paid:"Unlimited words, ultra-realistic voices, API.",
+    free:"Limited free words.",
+    bestUse:"Long-form article-to-speech and podcast automation."},
+  {name:"LOVO", company:"LOVO AI", origin:"US", category:"Audio Creation", icon:"🔊", tier:"both", rating:8.2, tags:[],
+    paid:"Pro plans with 500+ voices and API.",
+    free:"14-day trial.",
+    bestUse:"Multilingual voiceovers for marketing and e-learning."},
+  {name:"Resemble AI", company:"Resemble", origin:"CA", category:"Audio Creation", icon:"🎭", tier:"both", rating:8.5, tags:[],
+    paid:"Custom voice cloning and API access.",
+    free:"Limited trial.",
+    bestUse:"Real-time voice cloning for games and interactive media."},
+  {name:"Speechify", company:"Speechify", origin:"US", category:"Audio Creation", icon:"📖", tier:"both", rating:8.3, tags:[],
+    paid:"Premium with GPT voices and higher speed.",
+    free:"Basic TTS for web and browser extension.",
+    bestUse:"Reading web pages, PDFs, and docs aloud with natural voices."},
+  {name:"NaturalReader", company:"NaturalSoft", origin:"CA", category:"Audio Creation", icon:"📚", tier:"both", rating:8.0, tags:[],
+    paid:"Plus/Premium with AI voices.",
+    free:"Free web reader with basic voices.",
+    bestUse:"Accessibility-focused text-to-speech for education and personal use."},
+  {name:"Voicemod", company:"Voicemod", origin:"ES", category:"Audio Creation", icon:"🎭", tier:"both", rating:8.1, tags:[],
+    paid:"Pro with all voices and soundboard.",
+    free:"Daily rotating free voices.",
+    bestUse:"Real-time voice changing for streaming, gaming, and calls."},
+  {name:"Kits AI", company:"Kits", origin:"US", category:"Audio Creation", icon:"🎤", tier:"both", rating:8.4, tags:["new"],
+    paid:"Pro/Studio with artist-licensed voices.",
+    free:"Limited free conversions.",
+    bestUse:"AI voice conversion for musicians and creators (licensed)."},
+  {name:"AIVA", company:"AIVA Technologies", origin:"EU", category:"Audio Creation", icon:"🎼", tier:"both", rating:8.0, tags:[],
+    paid:"Pro plans with commercial rights.",
+    free:"Free for non-commercial use.",
+    bestUse:"AI-composed original soundtracks for video and games."},
+  {name:"Soundraw", company:"Soundraw", origin:"JP", category:"Audio Creation", icon:"🎹", tier:"both", rating:7.9, tags:[],
+    paid:"Monthly subscription with commercial rights.",
+    free:"Limited preview.",
+    bestUse:"Customizable royalty-free music for creators and marketers."},
+  {name:"Boomy", company:"Boomy", origin:"US", category:"Audio Creation", icon:"💥", tier:"both", rating:7.7, tags:[],
+    paid:"Pro/Creator with distribution to streaming.",
+    free:"Free generations.",
+    bestUse:"Quick beat creation and distribution to Spotify/Apple Music."},
+  {name:"Mubert", company:"Mubert", origin:"EU", category:"Audio Creation", icon:"🎧", tier:"both", rating:7.8, tags:[],
+    paid:"Subscription with licensing tiers.",
+    free:"Limited generations with watermark.",
+    bestUse:"Generative music streams for content and apps."},
+  {name:"WellSaid Labs", company:"WellSaid", origin:"US", category:"Audio Creation", icon:"🗣️", tier:"paid", rating:8.3, tags:[],
+    paid:"Plans from $49/mo with premium voices.",
+    free:"No free tier; trial only.",
+    bestUse:"Enterprise-grade voiceovers with consistent brand voices."},
+  {name:"Listnr", company:"Listnr", origin:"IN", category:"Audio Creation", icon:"🎧", tier:"both", rating:7.8, tags:[],
+    paid:"Creator/Business with 1000+ voices.",
+    free:"Limited free tier.",
+    bestUse:"Blog-to-podcast conversion with multilingual voices."},
+  {name:"Typecast", company:"Typecast", origin:"KR", category:"Audio Creation", icon:"🇰🇷", tier:"both", rating:8.2, tags:[],
+    paid:"Premium plans with emotional voice control.",
+    free:"Limited free minutes.",
+    bestUse:"Korean and English emotional TTS for content creators."},
+  {name:"AudioMass", company:"AudioMass", origin:"US", category:"Audio Creation", icon:"🎛️", tier:"free", rating:7.6, tags:[],
+    paid:"N/A",
+    free:"Fully free, browser-based waveform editor.",
+    bestUse:"Quick trims, cuts, and mixes without installing software."},
+
+  // ============ VIDEO GENERATION ============
+  {name:"Sora 2", company:"OpenAI", origin:"US", category:"Video Generation", icon:"🌌", tier:"paid", rating:9.6, tags:["new"],
+    paid:"Via ChatGPT Pro ($200/mo) or Plus (limited).",
+    free:"Not publicly available as standalone free tier.",
+    bestUse:"State-of-the-art photorealistic video from text or image prompts."},
+  {name:"Veo 3.1", company:"Google DeepMind", origin:"US", category:"Video Generation", icon:"🎥", tier:"both", rating:9.5, tags:["new"],
+    paid:"Via Gemini Advanced / Google AI.",
+    free:"Limited access via Google labs.",
+    bestUse:"High-fidelity video with native audio and dialogue generation."},
+  {name:"Kling AI", company:"Kuaishou", origin:"CN", category:"Video Generation", icon:"🎬", tier:"both", rating:9.2, tags:["new","cn"],
+    paid:"Standard plan $10/mo with higher credits.",
+    free:"66 daily credits for high-quality generation.",
+    bestUse:"Cinematic, stylized storytelling with generous free access."},
+  {name:"Runway Gen-3/4", company:"Runway", origin:"US", category:"Video Generation", icon:"📽️", tier:"both", rating:9.1, tags:[],
+    paid:"Creator plan from $15/mo.",
+    free:"Limited credits for experimentation.",
+    bestUse:"Hollywood-grade video generation and integrated editing suite."},
+  {name:"Pika", company:"Pika Labs", origin:"US", category:"Video Generation", icon:"⚡", tier:"both", rating:8.9, tags:[],
+    paid:"Standard/Pro/Unlimited plans.",
+    free:"Daily free credits.",
+    bestUse:"Fluid motion video with strong stylization and effects."},
+  {name:"Luma Dream Machine", company:"Luma AI", origin:"US", category:"Video Generation", icon:"💫", tier:"both", rating:9.0, tags:["new"],
+    paid:"Subscription plans with higher generations.",
+    free:"30 free generations/month.",
+    bestUse:"Fast, high-quality cinematic video with consistent physics."},
+  {name:"Higgsfield AI", company:"Higgsfield", origin:"US", category:"Video Generation", icon:"🔬", tier:"both", rating:8.4, tags:["new"],
+    paid:"Pro plans with higher limits.",
+    free:"Free mobile app with daily credits.",
+    bestUse:"Mobile-first AI video creation with character consistency."},
+  {name:"SeeDance", company:"ByteDance", origin:"CN", category:"Video Generation", icon:"💃", tier:"both", rating:8.7, tags:["new","cn"],
+    paid:"Enterprise API access.",
+    free:"Research preview and limited web demo.",
+    bestUse:"Audio-driven dance and character animation from single images."},
+  {name:"Hedra", company:"Hedra", origin:"US", category:"Video Generation", icon:"🗣️", tier:"both", rating:8.5, tags:["new"],
+    paid:"Pro plans with longer videos.",
+    free:"Free character-1 model access.",
+    bestUse:"Expressive talking-head videos with strong emotion control."},
+  {name:"Haiper", company:"Haiper", origin:"US", category:"Video Generation", icon:"🌀", tier:"both", rating:8.3, tags:["new"],
+    paid:"Pro/Unlimited plans.",
+    free:"Daily free generations.",
+    bestUse:"Short-form cinematic clips with good motion coherence."},
+  {name:"Genmo Mochi", company:"Genmo", origin:"US", category:"Video Generation", icon:"🍡", tier:"both", rating:8.2, tags:["new"],
+    paid:"Pro plans.",
+    free:"Open-weights Mochi 1 preview.",
+    bestUse:"Open-source video generation with strong prompt adherence."},
+  {name:"PixVerse", company:"PixVerse", origin:"CN", category:"Video Generation", icon:"🎞️", tier:"both", rating:8.4, tags:["cn"],
+    paid:"Premium plans with higher limits.",
+    free:"Daily free credits.",
+    bestUse:"Anime and stylized video generation with strong Asian aesthetics."},
+  {name:"Vidu", company:"Shengshu AI", origin:"CN", category:"Video Generation", icon:"🎎", tier:"both", rating:8.3, tags:["new","cn"],
+    paid:"Subscription plans.",
+    free:"Free tier with daily credits.",
+    bestUse:"Chinese-market video generation with 4K subject reference."},
+  {name:"MiniMax (Hailuo)", company:"MiniMax", origin:"CN", category:"Video Generation", icon:"🐚", tier:"both", rating:8.6, tags:["new","cn"],
+    paid:"Via MiniMax API.",
+    free:"Free web demo (Hailuo AI).",
+    bestUse:"High-quality video generation with strong motion and realism."},
+  {name:"Tencent Hunyuan Video", company:"Tencent", origin:"CN", category:"Video Generation", icon:"🐧", tier:"free", rating:8.4, tags:["new","cn"],
+    paid:"Via Tencent Cloud API.",
+    free:"Open-weights model; free demo.",
+    bestUse:"Open-source Chinese video model with 13B parameters."},
+  {name:"HeyGen", company:"HeyGen", origin:"US", category:"Video Generation", icon:"🗣️", tier:"both", rating:8.7, tags:[],
+    paid:"Creator/Business/Enterprise plans.",
+    free:"Limited trial credits.",
+    bestUse:"Multilingual avatar-based speaking-head content at scale."},
+  {name:"Synthesia", company:"Synthesia", origin:"EU", category:"Video Generation", icon:"🧑‍💼", tier:"both", rating:8.6, tags:[],
+    paid:"Starter at $29/mo, scaling for teams.",
+    free:"Limited free demo.",
+    bestUse:"Scalable AI-avatar training and marketing videos."},
+  {name:"D-ID", company:"D-ID", origin:"IL", category:"Video Generation", icon:"🆔", tier:"both", rating:8.3, tags:[],
+    paid:"Pro/Lite/Enterprise plans.",
+    free:"Limited trial credits.",
+    bestUse:"Talking photo avatars and real-time avatar streaming API."},
+  {name:"Colossyan", company:"Colossyan", origin:"EU", category:"Video Generation", icon:"🎭", tier:"both", rating:8.1, tags:[],
+    paid:"Starter/Pro/Enterprise.",
+    free:"Limited trial.",
+    bestUse:"L&D-focused avatar videos with scenario-based learning."},
+  {name:"CapCut", company:"ByteDance", origin:"CN", category:"Video Generation", icon:"🎞️", tier:"both", rating:8.9, tags:["cn"],
+    paid:"Pro with premium features.",
+    free:"Extensive free tier.",
+    bestUse:"Social-first editing with AI features and TikTok integration."},
+  {name:"InVideo AI", company:"InVideo", origin:"IN", category:"Video Generation", icon:"📹", tier:"both", rating:8.4, tags:[],
+    paid:"Plus/Max plans.",
+    free:"Free with watermark.",
+    bestUse:"Prompt-to-video with stock footage and AI narration."},
+  {name:"Fliki", company:"Fliki", origin:"IN", category:"Video Generation", icon:"📝", tier:"both", rating:8.2, tags:[],
+    paid:"Standard/Premium plans.",
+    free:"Limited free minutes.",
+    bestUse:"Blog/text-to-video with AI voiceovers and stock media."},
+  {name:"Pictory", company:"Pictory", origin:"US", category:"Video Generation", icon:"🖼️", tier:"paid", rating:8.0, tags:[],
+    paid:"Starter $19/mo and up.",
+    free:"Free trial only.",
+    bestUse:"Long-form content to short-form clips with auto-captions."},
+  {name:"Opus Clip", company:"Opus", origin:"US", category:"Video Generation", icon:"✂️", tier:"both", rating:8.6, tags:[],
+    paid:"Growth/Pro plans.",
+    free:"Free trial with limited minutes.",
+    bestUse:"AI virality scoring and auto-clipping of long podcasts/videos."},
+  {name:"Vizard", company:"Vizard", origin:"US", category:"Video Generation", icon:"🎯", tier:"both", rating:8.1, tags:[],
+    paid:"Pro/Team plans.",
+    free:"Free tier with watermark.",
+    bestUse:"Auto-repurposing webinars into social-ready clips."},
+  {name:"Vidyo.ai", company:"Vidyo", origin:"IN", category:"Video Generation", icon:"🎬", tier:"both", rating:8.0, tags:[],
+    paid:"Essential/Growth plans.",
+    free:"75 free minutes/month.",
+    bestUse:"Podcast-to-shorts with automatic chaptering."},
+  {name:"Kaiber", company:"Kaiber", origin:"US", category:"Video Generation", icon:"🎨", tier:"both", rating:8.3, tags:[],
+    paid:"Explorer/Pro plans.",
+    free:"Free trial credits.",
+    bestUse:"Music-reactive and stylized AI animation videos."},
+
+  // ============ WORKFLOW AUTOMATION ============
+  {name:"Zapier", company:"Zapier", origin:"US", category:"Workflow Automation", icon:"⚡", tier:"both", rating:8.9, tags:[],
+    paid:"Unlimited higher-speed GPT-4 access, enterprise security.",
+    free:"100 monthly tasks, 5 Zaps.",
+    bestUse:"No-code automation across 7,000+ apps for business ops."},
+  {name:"Make", company:"Make (Integromat)", origin:"EU", category:"Workflow Automation", icon:"🔄", tier:"both", rating:8.8, tags:[],
+    paid:"Teams $38/mo, Enterprise custom.",
+    free:"1,000 monthly credits.",
+    bestUse:"Flexible, affordable multi-step automations with granular control."},
+  {name:"n8n", company:"n8n", origin:"EU", category:"Workflow Automation", icon:"🧮", tier:"both", rating:8.7, tags:[],
+    paid:"Cloud-hosted plans priced by executions.",
+    free:"Self-hosted is free.",
+    bestUse:"Developer-controlled, open-source automation with full data ownership."},
+  {name:"Workato", company:"Workato", origin:"US", category:"Workflow Automation", icon:"🏭", tier:"paid", rating:8.6, tags:[],
+    paid:"Enterprise pricing (custom).",
+    free:"No free tier.",
+    bestUse:"Enterprise-grade iPaaS with strong governance and AI copilot."},
+  {name:"Tray.io", company:"Tray.io", origin:"US", category:"Workflow Automation", icon:"🔌", tier:"paid", rating:8.2, tags:[],
+    paid:"Enterprise custom pricing.",
+    free:"No free tier.",
+    bestUse:"Enterprise API integration with embedded automation."},
+  {name:"Pabbly Connect", company:"Pabbly", origin:"IN", category:"Workflow Automation", icon:"🔗", tier:"both", rating:8.3, tags:[],
+    paid:"More affordable than Zapier.",
+    free:"100 tasks/month.",
+    bestUse:"Cost-effective alternative for high-volume task automation."},
+  {name:"IFTTT", company:"IFTTT", origin:"US", category:"Workflow Automation", icon:"🔔", tier:"both", rating:7.9, tags:[],
+    paid:"Pro ($3.99/mo) with unlimited applets.",
+    free:"2 applets, limited services.",
+    bestUse:"Simple consumer IoT and app-to-app triggers."},
+  {name:"Bardeen", company:"Bardeen", origin:"US", category:"Workflow Automation", icon:"🟪", tier:"both", rating:8.3, tags:["new"],
+    paid:"Pro with unlimited runs and AI credits.",
+    free:"Free with limited runs.",
+    bestUse:"Browser-based workflow automation with AI scraping."},
+  {name:"Relay.app", company:"Relay", origin:"CA", category:"Workflow Automation", icon:"🔁", tier:"both", rating:8.1, tags:["new"],
+    paid:"Teams/Enterprise plans.",
+    free:"Free tier with 100 tasks.",
+    bestUse:"Human-in-the-loop workflows with AI suggestions."},
+  {name:"ActivePieces", company:"ActivePieces", origin:"EU", category:"Workflow Automation", icon:"🧩", tier:"both", rating:8.0, tags:["new"],
+    paid:"Cloud plans.",
+    free:"Self-hosted is free and open-source.",
+    bestUse:"Open-source Zapier alternative with community pieces."},
+  {name:"Microsoft Power Automate", company:"Microsoft", origin:"US", category:"Workflow Automation", icon:"🏢", tier:"both", rating:8.4, tags:[],
+    paid:"Microsoft 365 integration, premium connectors.",
+    free:"Free plan with limited flows.",
+    bestUse:"Enterprise automation tightly integrated with the Microsoft stack."},
+  {name:"Lindy AI", company:"Lindy", origin:"US", category:"Workflow Automation", icon:"🤖", tier:"both", rating:8.2, tags:["new"],
+    paid:"Pro/Team plans.",
+    free:"Free tier with limited agents.",
+    bestUse:"AI employee agents for scheduling, email, and CRM tasks."},
+  {name:"Relevance AI", company:"Relevance", origin:"AU", category:"Workflow Automation", icon:"🎯", tier:"both", rating:8.1, tags:["new"],
+    paid:"Team/Enterprise plans.",
+    free:"Free tier with limited tools.",
+    bestUse:"No-code AI agent and workflow builder for teams."},
+
+  // ============ MULTIMODAL AGENTS ============
+  {name:"Devin", company:"Cognition", origin:"US", category:"Multimodal Agents", icon:"👨‍💻", tier:"paid", rating:8.8, tags:["new"],
+    paid:"$500/mo per seat (Team plan).",
+    free:"No free tier.",
+    bestUse:"Autonomous AI software engineer handling full dev tasks."},
+  {name:"OpenAI Operator", company:"OpenAI", origin:"US", category:"Multimodal Agents", icon:"🎮", tier:"paid", rating:8.7, tags:["new"],
+    paid:"Via ChatGPT Pro ($200/mo).",
+    free:"Not available standalone.",
+    bestUse:"Browser-using agent that completes tasks across the web."},
+  {name:"Anthropic Computer Use", company:"Anthropic", origin:"US", category:"Multimodal Agents", icon:"🖥️", tier:"paid", rating:8.6, tags:["new"],
+    paid:"Via Claude API (pay-per-token).",
+    free:"No free tier for computer use.",
+    bestUse:"Claude controlling a computer via screenshots and actions."},
+  {name:"Manus AI", company:"Manus", origin:"CN", category:"Multimodal Agents", icon:"✋", tier:"both", rating:8.5, tags:["new"],
+    paid:"Pro plans via invitation.",
+    free:"Limited free beta access.",
+    bestUse:"General-purpose autonomous agent with tool use and browsing."},
+  {name:"MultiOn", company:"MultiOn", origin:"US", category:"Multimodal Agents", icon:"🌐", tier:"both", rating:8.3, tags:["new"],
+    paid:"Pro/Team plans.",
+    free:"Browser extension free tier.",
+    bestUse:"Browser agent that books, buys, and browses on your behalf."},
+  {name:"Cursor", company:"Cursor (Anysphere)", origin:"US", category:"Multimodal Agents", icon:"🖱️", tier:"both", rating:9.3, tags:[],
+    paid:"Pro $20/mo, Business $40/mo.",
+    free:"Limited free premium requests.",
+    bestUse:"AI-native code editor and agentic coding assistant."},
+  {name:"Windsurf (Codeium)", company:"Codeium", origin:"US", category:"Multimodal Agents", icon:"🏄", tier:"both", rating:8.7, tags:["new"],
+    paid:"Pro $15/mo.",
+    free:"Generous free tier with completions.",
+    bestUse:"Agentic coding 'flows' with deep codebase awareness."},
+  {name:"GitHub Copilot", company:"GitHub / Microsoft", origin:"US", category:"Multimodal Agents", icon:"🐙", tier:"both", rating:9.0, tags:[],
+    paid:"Individual $10/mo, Business $19/mo.",
+    free:"Limited free tier for students/OS maintainers.",
+    bestUse:"Inline AI code completion and chat inside VS Code/JetBrains."},
+  {name:"Character.ai", company:"Character Tech", origin:"US", category:"Multimodal Agents", icon:"🎭", tier:"both", rating:8.4, tags:[],
+    paid:"c.ai+ subscription ($9.99/mo).",
+    free:"Unlimited basic chatting.",
+    bestUse:"Conversational AI characters for entertainment and roleplay."},
+  {name:"Replika", company:"Luka Inc.", origin:"US", category:"Multimodal Agents", icon:"👯", tier:"both", rating:7.9, tags:[],
+    paid:"Pro with romantic/mentor roles.",
+    free:"Friend role only.",
+    bestUse:"AI companion for emotional support and conversation."},
+  {name:"Chai", company:"Chai Research", origin:"EU", category:"Multimodal Agents", icon:"🍵", tier:"both", rating:7.8, tags:[],
+    paid:"Subscription with unlimited chats.",
+    free:"Limited daily messages.",
+    bestUse:"Mobile-first conversational AI with creator monetization."},
+  {name:"Inworld AI (Agents)", company:"Inworld", origin:"US", category:"Multimodal Agents", icon:"🧠", tier:"both", rating:8.5, tags:[],
+    paid:"Studio Pro and Enterprise.",
+    free:"Developer tier.",
+    bestUse:"NPC and character AI for games, XR, and interactive experiences."},
+  {name:"Convai", company:"Convai", origin:"US", category:"Multimodal Agents", icon:"🎙️", tier:"both", rating:8.1, tags:["new"],
+    paid:"Pro/Enterprise plans.",
+    free:"Developer tier.",
+    bestUse:"Voice-driven interactive characters for games and metaverse."},
+  {name:"Hume AI", company:"Hume", origin:"CA", category:"Multimodal Agents", icon:"😊", tier:"both", rating:8.3, tags:["new"],
+    paid:"API pricing per minute.",
+    free:"EVI demo access.",
+    bestUse:"Empathic voice interface with emotion-aware AI agents."},
+  {name:"LangGraph / CrewAI", company:"Open-source", origin:"US", category:"Multimodal Agents", icon:"🕸️", tier:"free", rating:8.6, tags:[],
+    paid:"Enterprise support.",
+    free:"Open-source on GitHub.",
+    bestUse:"Building custom multi-agent systems from the ground up."},
+  {name:"AutoGPT / AgentGPT", company:"Open-source", origin:"US", category:"Multimodal Agents", icon:"🤖", tier:"free", rating:7.8, tags:[],
+    paid:"Cloud hosting options.",
+    free:"Self-hosted is free.",
+    bestUse:"Autonomous goal-driven agents for research and tasks."},
+  {name:"Salesforce Agentforce", company:"Salesforce", origin:"US", category:"Multimodal Agents", icon:"☁️", tier:"paid", rating:8.4, tags:[],
+    paid:"Custom agents inside Salesforce (per-conversation pricing).",
+    free:"N/A",
+    bestUse:"Business-process-specific agents for CRM and service teams."},
+  {name:"ServiceNow AI Agents", company:"ServiceNow", origin:"US", category:"Multimodal Agents", icon:"🏢", tier:"paid", rating:8.2, tags:[],
+    paid:"Enterprise licensing.",
+    free:"N/A",
+    bestUse:"IT, HR, and customer service automation agents."},
+  {name:"Project Eden (VAST AI)", company:"VAST AI", origin:"US", category:"Multimodal Agents", icon:"🌐", tier:"both", rating:8.0, tags:["new"],
+    paid:"Research preview access.",
+    free:"Developer preview.",
+    bestUse:"Persistent multi-agent worlds and research frontiers."}
+];
+
+const CATEGORIES = [
+  {key:"all", label:"All Tools", icon:"🗂️"},
+  {key:"Large Language Models", label:"LLMs", icon:"💬"},
+  {key:"Generative Imaging", label:"Imaging", icon:"🎨"},
+  {key:"Audio Creation", label:"Audio", icon:"🎙️"},
+  {key:"Video Generation", label:"Video", icon:"🎬"},
+  {key:"Workflow Automation", label:"Automation", icon:"⚡"},
+  {key:"Multimodal Agents", label:"Agents", icon:"🤖"}
+];
+
+let state = { category:"all", filter:"all", origin:"all", search:"", sort:"rating" };
+
+function renderStats(){
+  const total = TOOLS.length;
+  const free = TOOLS.filter(t=>t.tier==="free"||t.tier==="both").length;
+  const paid = TOOLS.filter(t=>t.tier==="paid"||t.tier==="both").length;
+  const avg = (TOOLS.reduce((a,t)=>a+t.rating,0)/total).toFixed(1);
+  const cats = new Set(TOOLS.map(t=>t.category)).size;
+  const cn = TOOLS.filter(t=>t.origin==="CN").length;
+  const stats = [
+    {label:"Total Tools", value:total, sub:"across the global landscape", color:"#7c5cff"},
+    {label:"Free / Freemium", value:free, sub:"accessible without a credit card", color:"#22c55e"},
+    {label:"Paid Tiers", value:paid, sub:"unlocking premium models & limits", color:"#f59e0b"},
+    {label:"Avg. Rating", value:avg+"/10", sub:`${cats} categories covered`, color:"#22d3ee"},
+    {label:"Chinese Players", value:cn, sub:"DeepSeek, Kimi, ByteDance, Alibaba…", color:"#fca5a5"}
+  ];
+  document.getElementById("stats").innerHTML = stats.map(s=>`
+    <div class="stat-card glass rounded-2xl p-5">
+      <div class="text-xs uppercase tracking-wider text-[color:var(--muted)]">${s.label}</div>
+      <div class="display text-3xl font-semibold mt-2" style="color:${s.color}">${s.value}</div>
+      <div class="text-xs text-[color:var(--muted)] mt-1">${s.sub}</div>
+    </div>`).join("");
+}
+
+function renderCategories(){
+  document.getElementById("categoryBar").innerHTML = CATEGORIES.map(c=>{
+    const count = c.key==="all" ? TOOLS.length : TOOLS.filter(t=>t.category===c.key).length;
+    return `<button data-cat="${c.key}" class="cat-btn btn flex items-center gap-2 px-4 py-2 rounded-xl border border-[color:var(--border)] bg-[color:var(--panel)] text-sm whitespace-nowrap ${state.category===c.key?'active':''}">
+      <span>${c.icon}</span><span>${c.label}</span>
+      <span class="chip" style="padding:2px 8px">${count}</span>
+    </button>`;
+  }).join("");
+  document.querySelectorAll(".cat-btn").forEach(b=>{
+    b.addEventListener("click",()=>{
+      state.category = b.dataset.cat;
+      renderCategories();
+      renderTools();
+    });
+  });
+}
+
+function ratingColor(r){
+  if(r>=9) return "#22c55e";
+  if(r>=8.5) return "#22d3ee";
+  if(r>=8) return "#7c5cff";
+  return "#f59e0b";
+}
+
+function tierBadge(tier){
+  if(tier==="free") return `<span class="chip tag-free">● Free</span>`;
+  if(tier==="paid") return `<span class="chip tag-paid">● Paid</span>`;
+  return `<span class="chip tag-both">● Free + Paid</span>`;
+}
+
+function originBadge(origin){
+  const map = {
+    "US":{label:"US", cls:"tag-paid"},
+    "CN":{label:"中国", cls:"tag-cn"},
+    "KR":{label:"한국", cls:"tag-kr"},
+    "EU":{label:"EU", cls:"tag-both"},
+    "CA":{label:"CA", cls:"tag-both"},
+    "AU":{label:"AU", cls:"tag-both"},
+    "IN":{label:"IN", cls:"tag-both"},
+    "JP":{label:"JP", cls:"tag-both"},
+    "IL":{label:"IL", cls:"tag-both"},
+    "SG":{label:"SG", cls:"tag-both"}
+  };
+  const o = map[origin] || {label:origin, cls:"tag-both"};
+  return `<span class="chip ${o.cls}">${o.label}</span>`;
+}
+
+function renderTools(){
+  let list = TOOLS.slice();
+  if(state.category!=="all") list = list.filter(t=>t.category===state.category);
+  if(state.filter==="free") list = list.filter(t=>t.tier==="free"||t.tier==="both");
+  if(state.filter==="paid") list = list.filter(t=>t.tier==="paid"||t.tier==="both");
+  if(state.origin!=="all") list = list.filter(t=>t.origin===state.origin);
+  if(state.search){
+    const q = state.search.toLowerCase();
+    list = list.filter(t=>
+      t.name.toLowerCase().includes(q) ||
+      t.company.toLowerCase().includes(q) ||
+      t.category.toLowerCase().includes(q) ||
+      t.bestUse.toLowerCase().includes(q) ||
+      t.paid.toLowerCase().includes(q) ||
+      t.free.toLowerCase().includes(q)
+    );
+  }
+  if(state.sort==="rating") list.sort((a,b)=>b.rating-a.rating);
+  else if(state.sort==="name") list.sort((a,b)=>a.name.localeCompare(b.name));
+  else if(state.sort==="category") list.sort((a,b)=>a.category.localeCompare(b.category) || b.rating-a.rating);
+  else if(state.sort==="origin") list.sort((a,b)=>a.origin.localeCompare(b.origin) || b.rating-a.rating);
+
+  const grid = document.getElementById("toolsGrid");
+  if(list.length===0){
+    grid.innerHTML = `<div class="col-span-full glass rounded-2xl p-10 text-center text-[color:var(--muted)]">
+      <div class="text-4xl mb-3">🔍</div>
+      <div class="font-semibold text-[color:var(--text)]">No tools match your filters</div>
+      <div class="text-sm mt-1">Try clearing the search or switching categories.</div>
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = `<div class="col-span-full text-xs text-[color:var(--muted)] mb-2">Showing <span class="text-[color:var(--text)] font-semibold">${list.length}</span> of ${TOOLS.length} tools</div>` +
+  list.map((t,i)=>`
+    <article class="glass rounded-2xl p-5 fade-in flex flex-col" style="animation-delay:${Math.min(i*20,400)}ms">
+      <header class="flex items-start justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#7c5cff]/30 to-[#22d3ee]/20 border border-[color:var(--border)] flex items-center justify-center text-xl">${t.icon}</div>
+          <div>
+            <div class="display text-lg font-semibold leading-tight flex items-center gap-2">
+              ${t.name}
+              ${t.tags.includes("new")?'<span class="chip tag-new text-[9px]" style="padding:1px 6px">🆕 NEW</span>':''}
+            </div>
+            <div class="text-xs text-[color:var(--muted)]">${t.company} · ${t.category}</div>
+          </div>
+        </div>
+        <div class="flex flex-col items-end">
+          <div class="display text-xl font-semibold" style="color:${ratingColor(t.rating)}">${t.rating.toFixed(1)}</div>
+          <div class="text-[10px] uppercase tracking-wider text-[color:var(--muted)]">/ 10</div>
+        </div>
+      </header>
+
+      <div class="flex items-center gap-2 mt-3 flex-wrap">
+        ${tierBadge(t.tier)}
+        ${originBadge(t.origin)}
+        <span class="chip"><span class="w-1.5 h-1.5 rounded-full" style="background:${ratingColor(t.rating)}"></span>${t.rating>=9?'Top Tier':t.rating>=8.5?'Excellent':t.rating>=8?'Strong':'Solid'}</span>
+      </div>
+
+      <div class="mt-4">
+        <div class="text-[11px] uppercase tracking-wider text-[color:var(--muted)] mb-1">Best for</div>
+        <div class="text-sm text-[color:var(--text)] leading-snug">${t.bestUse}</div>
+      </div>
+
+      <div class="mt-4">
+        <div class="flex justify-between text-[11px] text-[color:var(--muted)] mb-1"><span>Overall Score</span><span>${t.rating}/10</span></div>
+        <div class="rating-bar"><span style="width:${t.rating*10}%"></span></div>
+      </div>
+
+      <details class="mt-4 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between text-xs text-[color:var(--muted)] hover:text-[color:var(--text)]">
+          <span>View paid vs. free breakdown</span>
+          <svg class="chev w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="mt-3 grid grid-cols-1 gap-2 text-xs">
+          <div class="rounded-lg p-3 bg-[#f59e0b0d] border border-[#f59e0b22]">
+            <div class="font-semibold text-[#fbbf24] mb-1 flex items-center gap-1">💎 Paid version</div>
+            <div class="text-[color:var(--text)]/90 leading-relaxed">${t.paid}</div>
+          </div>
+          <div class="rounded-lg p-3 bg-[#22c55e0d] border border-[#22c55e22]">
+            <div class="font-semibold text-[#4ade80] mb-1 flex items-center gap-1">🆓 Free version</div>
+            <div class="text-[color:var(--text)]/90 leading-relaxed">${t.free}</div>
+          </div>
+        </div>
+      </details>
+    </article>
+  `).join("");
+}
+
+// Events
+document.querySelectorAll(".filter-btn").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".filter-btn").forEach(x=>x.classList.remove("bg-[color:var(--panel-2)]"));
+    b.classList.add("bg-[color:var(--panel-2)]");
+    state.filter = b.dataset.filter;
+    renderTools();
+  });
+});
+document.querySelectorAll(".origin-btn").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".origin-btn").forEach(x=>x.classList.remove("bg-[color:var(--panel-2)]"));
+    b.classList.add("bg-[color:var(--panel-2)]");
+    state.origin = b.dataset.origin;
+    renderTools();
+  });
+});
+document.getElementById("searchInput").addEventListener("input",e=>{
+  state.search = e.target.value;
+  renderTools();
+});
+document.getElementById("sortBy").addEventListener("change",e=>{
+  state.sort = e.target.value;
+  renderTools();
+});
+
+// Init
+document.querySelector('.filter-btn[data-filter="all"]').classList.add("bg-[color:var(--panel-2)]");
+document.querySelector('.origin-btn[data-origin="all"]').classList.add("bg-[color:var(--panel-2)]");
+renderStats();
+renderCategories();
+renderTools();
+</script>
+</body>
+</html>
