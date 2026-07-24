@@ -29,9 +29,7 @@ I am currently associated with Dublin City University as an Assistant Professor.
 
 💡 I am open to new opportunities and exploring exciting roles in my field of expertise. Please feel free to contact me to discuss potential collaborations.
 
-<div style="text-align:center; margin:40px 0;">
-  <a href="/games/" style="display:inline-block; background:#ffcc00; color:#1a1f5e; padding:18px 50px; border-radius:60px; font-weight:700; font-size:1.6rem; text-decoration:none; box-shadow:0 8px 30px rgba(255,204,0,0.3);">
-    🚀 Play Dyslexia Quest
+
   </a>
 </div>
 
